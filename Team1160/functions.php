@@ -62,16 +62,25 @@ function advanced_comment($comment, $args, $depth) {
      <div class="comment-text">
          <?php comment_text() ?>
  
-    <div class="reply">
-      <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-    </div>
+	    <div class="reply">
+	      <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+	    </div>
      </div>
    <div class="clear"></div>
-<?php }function delete_comment_link($id) {
-  if (current_user_can('edit_post')) {
-    echo '<span class="delete"><a href="'.admin_url("comment.php?action=cdc&c=$id").'"><span class="fs1" aria-hidden="true" data-icon="&#xe006;"></span></a></span> ';
-    echo '<a href="'.admin_url("comment.php?action=cdc&dt=spam&c=$id").'" style="text-align:right">Spam</a>';
-  }
+<?php }
+function delete_comment_link($id) {
+  		if (current_user_can('edit_post')) {
+  				echo '<a id="button-left" class="settings-button pressed"><span></span></a>';
+  				echo '<div id="user-toolbar-options">';
+				echo '<a href="<?php echo get_comment_author_link( $comment_ID ); ?>"><i class="icon-user"></i></a>';
+    			echo '<a href="'.admin_url("comment.php?action=cdc&c=$id").'"><i class="icon-trash"></i></a>';
+    			echo '<a href="'.admin_url("comment.php?action=cdc&dt=spam&c=$id").'" style="text-align:right"><i class="icon-ban-circle"></i></a>';
+    			echo '</div>';
+		} else {
+				echo '<div id="user-toolbar-options">';
+				echo '<a href="<?php echo get_comment_author_link( $comment_ID ); ?>"><i class="icon-user"></i></a>';
+    			echo '</div>';
+		}
 } ?>
 <?php
 function register_my_menus() {

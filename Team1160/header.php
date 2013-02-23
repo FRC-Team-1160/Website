@@ -11,12 +11,12 @@
 
 		<!--LINKS-->
 		<link rel="alternate" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
-		<link rel="pingback"								href="<?php bloginfo('pingback_url'); ?>" />
+		<link rel="pingback"					href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="icon"		type="application/rss+xml"	href="<?php bloginfo('template_directory') ?>/assets/favicon.ico" />
-		<link rel="stylesheet"	type="text/css"				href="<?php bloginfo('stylesheet_url'); ?>" />
-		<link rel="stylesheet"	type="text/css"				href="<?php bloginfo('template_directory'); ?>/Linecon-Styles.css" />
-		<link rel="stylesheet"	type="text/css"				href="<?php bloginfo('template_directory'); ?>/jquery.toolbars.css" />
-		<link rel="stylesheet"	type="text/css"				href="<?php bloginfo('template_directory'); ?>/bootstrap.icons.css" />
+		<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>" />
+		<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/Linecon-Styles.css" />
+		<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/jquery.toolbars.css" />
+		<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/bootstrap.icons.css" />
 		
 		<!--SCRIPTS-->
 		<?php wp_enqueue_script('jquery') ?>
@@ -55,14 +55,13 @@
 				  });
 			</script>
 		<?php endif; ?>
-		<?php if (is_single()) : ?>
 			<script>
 				$('#vertical-toolbar').toolbar({
 					content: '#user-toolbar-options', 
-					position: 'left'
+					position: 'left',
+					hideOnClick: 'true'
 				});
 			</script>
-		<?php endif; ?>
 	</head>
 <?php flush(); ?>
 	<body>
