@@ -15,6 +15,8 @@
 		<link rel="icon"		type="application/rss+xml"	href="<?php bloginfo('template_directory') ?>/assets/favicon.ico" />
 		<link rel="stylesheet"	type="text/css"				href="<?php bloginfo('stylesheet_url'); ?>" />
 		<link rel="stylesheet"	type="text/css"				href="<?php bloginfo('template_directory'); ?>/Linecon-Styles.css" />
+		<link rel="stylesheet"	type="text/css"				href="<?php bloginfo('template_directory'); ?>/jquery.toolbars.css" />
+		<link rel="stylesheet"	type="text/css"				href="<?php bloginfo('template_directory'); ?>/bootstrap.icons.css" />
 		
 		<!--SCRIPTS-->
 		<?php wp_enqueue_script('jquery') ?>
@@ -23,6 +25,7 @@
 			<script src="<?php bloginfo('template_directory');?>/js/videoresize.js"			type="text/javascript"></script>
 			<script src="<?php bloginfo('template_directory');?>/js/readmorejavascript.js"	type="text/javascript"></script>
 			<script src="<?php bloginfo('template_directory');?>/js/retina.js"				type="text/javascript"></script>
+			<script src="<?php bloginfo('template_directory');?>/js/jquery.toolbar.min.js"	type="text/javascript"></script>
 			<!--[if lte IE 7]>
 				<script src="<?php bloginfo('template_directory'); ?>/js/lte-ie7.js"		type="text/javascript"></script>
 			<![endif]-->
@@ -50,6 +53,14 @@
 				      $("#contents").highlight(hls_query, 1, "hls");
 				    }
 				  });
+			</script>
+		<?php endif; ?>
+		<?php if (is_single()) : ?>
+			<script>
+				$('#vertical-toolbar').toolbar({
+					content: '#user-toolbar-options', 
+					position: 'left'
+				});
 			</script>
 		<?php endif; ?>
 	</head>

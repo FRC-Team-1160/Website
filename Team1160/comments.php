@@ -22,6 +22,14 @@
 	<fieldset id="comments"><legend><?php comments_number('No Replies', 'One Reply', '% Replies' );?></legend></fieldset>
  
 	<ol class="commentlist">
+		<div id="user-toolbar-options">
+			<a href="<?php echo get_comment_author_link( $comment_ID ); ?>"><i class="icon-user"></i></a>
+			<?php function delete_comment_link($id) {
+				if (current_user_can('edit_post')) {
+    				echo '<a href="'.admin_url("comment.php?action=cdc&c=$id").'"><i class="icon-delete"></i></a>';
+    				echo '<a href="'.admin_url("comment.php?action=cdc&dt=spam&c=$id").'" style="text-align:right"><i class="icon-ban"></i></a>';
+			} }?>
+		</div>
 		<?php wp_list_comments('type=comment&callback=advanced_comment');
                 ?>
 	</ol>
