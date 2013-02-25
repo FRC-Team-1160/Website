@@ -23,9 +23,52 @@
 
 			<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' );?>
 			<script src="<?php bloginfo('template_directory');?>/js/videoresize.js"			type="text/javascript"></script>
-			<script src="<?php bloginfo('template_directory');?>/js/readmorejavascript.js"	type="text/javascript"></script>
 			<script src="<?php bloginfo('template_directory');?>/js/retina.js"				type="text/javascript"></script>
 			<script src="<?php bloginfo('template_directory');?>/js/jquery.toolbar.min.js"	type="text/javascript"></script>
+			<script type="text/javascript">
+				jQuery(document).ready(function($) {
+						$(function() {
+				
+							var $el, $ps, $up, totalHeight;
+				
+							$(".sidebar-box .button").click(function() {
+				
+								// IE 7 doesn't even get this far. I didn't feel like dicking with it.
+				
+								totalHeight = 0
+				
+								$el = $(this);
+								$p  = $el.parent();
+								$up = $p.parent();
+								$ps = $up.find("p:not('.read-more')");
+				
+								// measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+								$ps.each(function() {
+									totalHeight += $(this).outerHeight();
+									// FAIL totalHeight += $(this).css("margin-bottom");
+								});
+				
+								$up
+									.css({
+										// Set height to prevent instant jumpdown when max height is removed
+										"height": $up.height(),
+										"max-height": 9999
+									})
+									.animate({
+										"height": totalHeight
+									});
+				
+								// fade out read-more
+								$p.fadeOut();
+				
+								// prevent jump-down
+								return false;
+				
+							});
+				
+						});
+				});
+			</script>
 			<!--[if lte IE 7]>
 				<script src="<?php bloginfo('template_directory'); ?>/js/lte-ie7.js"		type="text/javascript"></script>
 			<![endif]-->
