@@ -6,7 +6,7 @@
 <div class="footer-container">
 	<div class="footer-left">
 		<a href="/">
-			<img class="retina" src="<?php bloginfo('template_directory') ?>/assets/TextualLogo-black.png" width="258" alt="Titanium Robotics" />
+			<img src="<?php bloginfo('template_directory') ?>/assets/TextualLogo-black.png" width="258" alt="Titanium Robotics" />
 		</a>
 	</div>
 	<div class="footer-right">
