@@ -70,16 +70,17 @@ function advanced_comment($comment, $args, $depth) {
 <?php }
 function delete_comment_link($id) {
   		if (current_user_can('edit_post')) {
-  				echo '<a id="button-left" class="settings-button pressed"><span></span></a>';
-  				echo '<div id="user-toolbar-options">';
-				echo '<a href="<?php echo get_comment_author_link( $comment_ID ); ?>"><i class="icon-user"></i></a>';
-    			echo '<a href="'.admin_url("comment.php?action=cdc&c=$id").'"><i class="icon-trash"></i></a>';
-    			echo '<a href="'.admin_url("comment.php?action=cdc&dt=spam&c=$id").'" style="text-align:right"><i class="icon-ban-circle"></i></a>';
-    			echo '</div>';
+					echo '<div id="vertical-toolbar"><a id="button-left" class="settings-button pressed"><span></span></a>';
+					echo '<div id="user-toolbar-options">';
+					echo '<a href="'.get_author_posts_url(get_the_author_meta( 'ID' )).'"><i class="icon-user"></i></a>';
+					echo '<a href="'.admin_url("comment.php?action=cdc&c=$id").'"><i class="icon-trash"></i></a>';
+					echo '<a href="'.admin_url("comment.php?action=cdc&dt=spam&c=$id").'" style="text-align:right"><i class="icon-ban-circle"></i></a>';
+					echo '</div></div>';
 		} else {
-				echo '<div id="user-toolbar-options">';
-				echo '<a href="<?php echo get_comment_author_link( $comment_ID ); ?>"><i class="icon-user"></i></a>';
-    			echo '</div>';
+					echo '<div id="vertical-toolbar"><a id="button-left" class="settings-button pressed"><span></span></a>';
+					echo '<div id="user-toolbar-options">';
+				echo '<a href="'.get_author_posts_url(get_the_author_meta( 'ID' )).'><i class="icon-user"></i></a>';
+    			echo '</div></div>';
 		}
 } ?>
 <?php
@@ -407,9 +408,6 @@ function cb_user_extra_sortable_cols($columns) {
   );
   return wp_parse_args($custom, $columns);
 }
- 
- 
- 
 function cb_user_extra_orderby( $vars ) {
     if ( isset( $vars['orderby'] ) && 'year' == $vars['orderby'] ) {
             $vars = array_merge( $vars, array(
@@ -460,7 +458,7 @@ function remove_footer_admin (){
    global $current_user;
       get_currentuserinfo();
   echo 'Hello, ' . $current_user->user_firstname .' '. $current_user->user_lastname.'.  Welcome to the Titanium Robotics website!';
-  echo '<br />For Team and Technical Contact: <a href="mailto:titaniumrobotics@gmail.com">Email</a> | <a href="/">Website</a>';
+  echo '<br />For Team and Technical Contact: <a href="mailto:titaniumrobotics@gmail.com">Email</a> // <a href="https://docs.google.com/spreadsheet/viewform?formkey=dEE5SjJjckZkdGhFZVI1RHd4c0J6aUE6MQ#gid=0"> Report a Bug</a>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
 function contributors() {
@@ -490,27 +488,5 @@ echo "</i></small></div>";
 echo "</a>";
 echo "</li>";
 }
-}
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
- 
-function my_theme_wrapper_start() {
-  echo '<div id="contents">
-		<div class="full">
-			<div class="post">
-				<div class="entry">';
-}
- 
-function my_theme_wrapper_end() {
-  echo '</div></div></div></div>';
-}
-// Change number or products per row to 3
-add_filter('loop_shop_columns', 'loop_columns');
-if (!function_exists('loop_columns')) {
-	function loop_columns() {
-		return 3;
-	}
 }
 ?>
