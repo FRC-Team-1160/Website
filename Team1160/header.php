@@ -108,8 +108,8 @@
 	<nav id="menuwrap">
 		<div class="menu">
 			<div class="logo">
-					<img src="/wp-content/themes/Team1160/assets/logo.png" class="logo-img" alt="Titanium Robotics Logo" />
-				<a href="/" class="logo" title="Titanium Robotics, FRC Team 1160">
+				<a href="/" title="Titanium Robotics, FRC Team 1160">
+					<img src="/wp-content/themes/Team1160/assets/logo.png" class="logo-img retina" alt="Titanium Robotics Logo" />
 				</a>
 			</div>
 		<div class="navigation-links">
