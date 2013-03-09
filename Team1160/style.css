@@ -200,22 +200,9 @@ select {
 	width:337px;
 	height:70px;
 	max-width:100%;
-	position:relative;
 	z-index:10;
 	margin:auto;
 	display:inline-block;
-	-webkit-transition: float 2s, margin 2s, width 2s, height 2s;
-	-o-transition: float 2s, margin 2s, width 2s, height 2s;
-	-moz-transition: float 2s, margin 2s, width 2s, height 2s;
-	transition: float 2s, margin 2s, width 2s, height 2s;
-}
-.logo-img {
-	position:absolute;
-	z-index:8;
-	float:left;
-	left:0;
-	margin:0;
-	margin-top:0px;
 	-webkit-transition: float 2s, margin 2s, width 2s, height 2s;
 	-o-transition: float 2s, margin 2s, width 2s, height 2s;
 	-moz-transition: float 2s, margin 2s, width 2s, height 2s;
@@ -1820,230 +1807,227 @@ div.pagination a:hover {
 .errorimg img {
 	max-width:100%;
 }
-/*MEDIA QUERIES*/
-@media screen and (max-width:1024px) {
-	.menu .menu-container-1,.menu .menu-container-2,.menu .menu-container-3,.menu .menu-container-4,.menu .menu-container-5,.menu .menu-container-6,.menu .menu-container-7, .menu .arrowup {
-		display:none;
-		visibility:none;
-	}
-	.menu li:hover {
-		position:relative;
-    	background:none;
-	}
-	.logo {
-		float:none;
-		width:auto;
-		max-width:100%;
-		margin:auto;
-		margin-top:10px;
-		display:block;
-		left:0;
-	}
-	.menu {
-		width:100%;
-		margin-bottom:0;
-		padding:0;
-		line-height:0.7;
-	}
-	#menuwrap {
-		width:100%;
-		padding:0;
-	}
-	.navigation-links {
-		display:table;
-		margin:auto;
-		width:100%;
-		height:3em;
-	}
-	.menu ul {
-		float:none;
-		text-align:center;
-		margin:0 auto;
-		width:auto;
-		padding:0;
-		-webkit-transition:all 500ms;
-		-moz-transition:all 500ms;
-		-o-transition:all 500ms;
-		-ms-transition:all 500ms;
-		transition:all 500ms;
-	}
-	.menu .menu-right, .menu .left-menu {
-		float:none;
-		margin:0 auto;
-		width:auto;
-	}
-	.menu li {
-		padding:15px 5px;
-		margin:0;
-	}
-	#contents .blog {
-		width:100%;
-		margin-left:0;
-		margin-right:0;
-		padding:0;
-	}
-	#widget-1, #widget-2, #widget-3, #widget-4 {
-		width:100%;
-		float:left;
-		margin:0;
-	}
-	.profilepic {
-		margin:auto;
-		float:none;
-		width:98px;
-	}
-	.profilepic img {
-		margin:auto;
-		float:none;
-	}
-	.profiletable {
-		width:100%;
-	}
-	.profiletable th {
-		width:30%;
-	}
-	#authorlist .authorname {
-		font-size:large;
-		line-height:1;
-		padding-bottom:0;
-	}
-	#authorlist li {
-		width:50%;
-	}
-	.authorsposts li {
-		width:50%;
-	}
-	.search input {
-		text-indent:0;
-		width:100%;
-		-webkit-transition:all 200ms;
-		-moz-transition:all 200ms;
-		-o-transition:all 200ms;
-		-ms-transition:all 200ms;
-		transition:all 200ms;
-	}
-	div.results {
-	    width:100%;
-	    float:left;
-	    display:table;
-	}
-	div.searchbar {
-	    width:100%;
-	    display:table;
-	    float:left;
-	}
-	.searchhead {
-	    height:70px;
-	}
-	.searchit {
-	    width:80%;
-	}
-	.post input, .post textarea, #contactForm input, #contactForm textarea {
-	    width:95%;
-	}
-	.limit {
-		width:100%;
-	}
-	#subpages {
-		width:auto;
-		padding:5px;
-	}
-}
-@media screen and (max-width: 720px) {
-	.post img {
-		float:none;
-		margin:auto;
-		display:block;
-	}
-	.wp-caption {
-		float:none;
-		margin:auto;
-		display:block;
-	}
-	.wp-caption img {
-		margin:1em auto;
-	}
-	.entry, .categories {
-		padding:10px;
-	}
-	.categories {
-		margin-left:-10px;
-	}
-	.post-content, .cont {
-		border-width:1px 0;
-	}
-	.vcard img {
-		float:left;
-	}
-	#contents, #contents.blog {
-		width:100%;
-		margin-left:0;
-		margin-right:0;
-		padding:0;
-	}
-	.widgetwrapper {
-		width:100%;
-		padding:0px;
-		margin-bottom:-10px;
-	}
-	#widget-1, #widget-2, #widget-3 {
-		width:100%;
-		padding:0;
-		float:left;
-		list-style:none;
-		margin:0;
-	}
-	.widgetwrapper .entry {
-		padding:10px;
-	}
-	.post .shadow {
-		width:100%;
-	}
-	.navigation {
-		width:100%;
-	}
-	.profiletable th {
-		width:35%;
-	}
-	#authorlist li {
-		width:100%;
-	}
-	#authorlist img.photo {
-		float:right;
-	}
-	.authorsposts li {
-		width:100%;
-	}
-	.searchit {
-	    width:95%;
-	}
-	.center {
-		width:90%;
-	}
-	.push {
-		height:200px;
-	}
-	.footer {
-		height:200px;
-		display:table;
-	}
-	.footer-container {
-		width:100%;
-		height:150px;
-		display:table-cell;
-	}
-	.footer-left, .footer-right {
-		width:100%;
-		height:auto;
-		text-align:center;
-		display:block;
-		border:none;
-		padding:10px 0;
-	}
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	.footer {
-		background:url(assets/backgroundnew_@2X.png);
-		background-size:50%;
-     }
-   }
+			/*MEDIA QUERIES*/
+			@media screen and (max-width:1024px) {
+				.menu .menu-container-1,.menu .menu-container-2,.menu .menu-container-3,.menu .menu-container-4,.menu .menu-container-5,.menu .menu-container-6,.menu .menu-container-7, .menu .arrowup {
+					display:none;
+					visibility:none;
+				}
+				.menu li:hover {
+					position:relative;
+			    	background:none;
+				}
+				.logo, .logo-img {
+					float:none;
+					width:auto;
+					max-width:100%;
+					margin:auto;
+					margin-top:10px;
+					display:block;
+					left:0;
+				}
+				.menu {
+					width:100%;
+					margin-bottom:0;
+					padding:0;
+				}
+				#menuwrap {
+					width:100%;
+					padding:0 0 10px 0;
+				}
+				.navigation-links {
+					display:table;
+					margin:auto;
+					width:100%;
+					height:3em;
+				}
+				.menu ul {
+					float:none;
+					text-align:center;
+					margin:0 auto;
+					width:auto;
+					-webkit-transition:all 500ms;
+					-moz-transition:all 500ms;
+					-o-transition:all 500ms;
+					-ms-transition:all 500ms;
+					transition:all 500ms;
+				}
+				.menu ul, .menu li {
+					line-height:30px;
+				}
+				.menu .menu-right, .menu .left-menu {
+					float:none;
+					margin:0 auto;
+					width:auto;
+				}
+				#contents .blog {
+					width:100%;
+					margin-left:0;
+					margin-right:0;
+					padding:0;
+				}
+				#widget-1, #widget-2, #widget-3, #widget-4 {
+					width:100%;
+					float:left;
+					margin:0;
+				}
+				.profilepic {
+					margin:auto;
+					float:none;
+					width:98px;
+				}
+				.profilepic img {
+					margin:auto;
+					float:none;
+				}
+				.profiletable {
+					width:100%;
+				}
+				.profiletable th {
+					width:30%;
+				}
+				#authorlist .authorname {
+					font-size:large;
+					line-height:1;
+					padding-bottom:0;
+				}
+				#authorlist li {
+					width:50%;
+				}
+				.authorsposts li {
+					width:50%;
+				}
+				.search input {
+					text-indent:0;
+					width:100%;
+					-webkit-transition:all 200ms;
+					-moz-transition:all 200ms;
+					-o-transition:all 200ms;
+					-ms-transition:all 200ms;
+					transition:all 200ms;
+				}
+				div.results {
+				    width:100%;
+				    float:left;
+				    display:table;
+				}
+				div.searchbar {
+				    width:100%;
+				    display:table;
+				    float:left;
+				}
+				.searchhead {
+				    height:70px;
+				}
+				.searchit {
+				    width:80%;
+				}
+				.post input, .post textarea, #contactForm input, #contactForm textarea {
+				    width:95%;
+				}
+				.limit {
+					width:100%;
+				}
+				#subpages {
+					width:auto;
+					padding:5px;
+				}
+			}
+			@media screen and (max-width: 720px) {
+				.post img {
+					float:none;
+					margin:auto;
+					display:block;
+				}
+				.wp-caption {
+					float:none;
+					margin:auto;
+					display:block;
+				}
+				.wp-caption img {
+					margin:1em auto;
+				}
+				.entry, .categories {
+					padding:10px;
+				}
+				.categories {
+					margin-left:-10px;
+				}
+				.post-content, .cont {
+					border-width:1px 0;
+				}
+				.vcard img {
+					float:left;
+				}
+				#contents, #contents.blog {
+					width:100%;
+					margin-left:0;
+					margin-right:0;
+					padding:0;
+				}
+				.widgetwrapper {
+					width:100%;
+					padding:0px;
+					margin-bottom:-10px;
+				}
+				#widget-1, #widget-2, #widget-3 {
+					width:100%;
+					padding:0;
+					float:left;
+					list-style:none;
+					margin:0;
+				}
+				.widgetwrapper .entry {
+					padding:10px;
+				}
+				.post .shadow {
+					width:100%;
+				}
+				.navigation {
+					width:100%;
+				}
+				.profiletable th {
+					width:35%;
+				}
+				#authorlist li {
+					width:100%;
+				}
+				#authorlist img.photo {
+					float:right;
+				}
+				.authorsposts li {
+					width:100%;
+				}
+				.searchit {
+				    width:95%;
+				}
+				.center {
+					width:90%;
+				}
+				.push {
+					height:200px;
+				}
+				.footer {
+					height:200px;
+					display:table;
+				}
+				.footer-container {
+					width:100%;
+					height:150px;
+					display:table-cell;
+				}
+				.footer-left, .footer-right {
+					width:100%;
+					height:auto;
+					text-align:center;
+					display:block;
+					border:none;
+					padding:10px 0;
+				}
+			}
+			@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+				.footer {
+					background:url(assets/backgroundnew_@2X.png);
+					background-size:50%;
+			     }
+			   }
