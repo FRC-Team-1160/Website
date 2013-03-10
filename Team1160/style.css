@@ -198,7 +198,6 @@ select {
 .logo {
 	float:left;
 	width:337px;
-	height:70px;
 	max-width:100%;
 	z-index:10;
 	margin:auto;
@@ -207,6 +206,10 @@ select {
 	-o-transition: float 2s, margin 2s, width 2s, height 2s;
 	-moz-transition: float 2s, margin 2s, width 2s, height 2s;
 	transition: float 2s, margin 2s, width 2s, height 2s;
+}
+.logo img {
+	width:337px;
+	max-width:100%;
 }
 .menu ul, .menu li {
 	line-height:70px;
@@ -1819,7 +1822,6 @@ div.pagination a:hover {
 				}
 				.logo, .logo-img {
 					float:none;
-					width:337px;
 					max-width:100%;
 					margin:auto;
 					margin-top:10px;

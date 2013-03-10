@@ -194,7 +194,7 @@
 		<!-- START - RESOURCES -->
 		  <li>
 		  	<span>
-		  	<a href="/for-teams" class="menulink">Resources</a>
+		  	<a href="/resources" class="menulink">Resources</a>
 			<div class="arrowup"></div>
 			</span>
 		    <div class="menu-container-5">
