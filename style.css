@@ -1678,6 +1678,7 @@ a:focus {
 }
 .footer li h3 {
 	color:#FFF;
+	font-size:1em;
 	text-transform:uppercase;
 	font-weight:100;
 }
