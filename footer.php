@@ -3,14 +3,14 @@
 </div>
 <div class="push">
 	<div class="footercontainer">
-<div class="footer">
+<div id="footer">
 	<div class="footershadow"></div>
 <div class="footer-container">
 	<div class="footer-right">
 		<ul class="s">
 			<li class="header-responsive-hidden">
 				<h3>
-					// Titanium Robotics
+					Titanium Robotics
 				</h3>
 			<li>
 				<a href="/about-us">About Us</a>
@@ -36,7 +36,7 @@
 		<ul class="h">
 			<li>
 				<h3 class="header-responsive-hidden">
-					// Sub-Teams
+					Sub-Teams
 				</h3>
 			</li>
 			<li>
@@ -64,7 +64,7 @@
 		<ul class="h">
 			<li>
 				<h3 class="header-responsive-hidden">
-					// Join
+					Join
 				</h3>
 			</li>
 			<li>
@@ -80,7 +80,7 @@
 		<ul class="h">
 			<li>
 				<h3 class="header-responsive-hidden">
-					// Media
+					Media
 				</h3>
 			</li>
 			<li>

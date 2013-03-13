@@ -1268,7 +1268,7 @@ li.categories {
 	-moz-transition: float 2s, margin 2s, padding 2s, height 2s;
 	transition: float 2s, margin 2s, padding 2s, height 2s;
 }
-#widget-1 .cont, #widget-2 .cont, #widget-3 .cont, #widget-4 .cont {
+.cont {
 	padding:10px;
 	border-width: 1px;
 	border-style: solid;
@@ -1320,7 +1320,7 @@ li.categories {
 	transition: all 500ms;
 }
 .cont ul li:hover, .cont ul li:focus {
-	background: #eeeeee; /* Old browsers */
+	background: #eeeeee;
 	-webkit-transition:all 500ms;
 	-o-transition: all 500ms;
 	-moz-transition: all 500ms;
@@ -1643,7 +1643,7 @@ a:focus {
 	outline:1px dotted #0054A3;
 }
 /*Footer*/
-.footer {
+#footer {
 	width:100%;
 	position:relative;
 	z-index:2;
@@ -1654,7 +1654,7 @@ a:focus {
 	-moz-box-shadow: inset 0 0 150px 25px rgba(0, 0, 0, 0.5);
 	box-shadow: inset 0 0 150px 25px rgba(0, 0, 0, 0.5);
 }
-.footer img {
+#footer img {
 	float:none;
 	display:block;
 	margin:auto;
@@ -1671,19 +1671,19 @@ a:focus {
 	text-align:left;
 	padding:0;
 }
-.footer ul {
+#footer ul {
 	display:block;
 	float:left;
 	width:25%;
 	list-style:none;
 }
-.footer li h3 {
+#footer li h3 {
 	color:#FFF;
 	font-size:1em;
 	text-transform:uppercase;
 	font-weight:100;
 }
-.footer li {
+#footer li {
 	padding:2px 10px;
 	float:none;
 	display:block;
@@ -1825,7 +1825,7 @@ div.pagination a:hover {
 }
 			/*MEDIA QUERIES*/
 			@media screen and (min-width:3872px) {
-				.footer {
+				.footercontainer {
 					background-size:3872px;
 				}
 			}
@@ -2027,19 +2027,19 @@ div.pagination a:hover {
 				.center {
 					width:90%;
 				}
-				.footer {
+				#footer {
 					height:200px;
 					display:table;
 				}
-				.footer ul {
+				#footer ul {
 					width:100%;
 					text-align:center;
 				}
-				.footer ul .header-responsive-hidden {
+				#footer ul .header-responsive-hidden {
 					display:none;
 					visibility:none;
 				}
-				.footer ul li {
+				#footer ul li {
 					display:inline-block;
 					float:left;
 					padding:5px 10px;
@@ -2061,7 +2061,7 @@ div.pagination a:hover {
 				}
 			}
 			@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-				.footer {
+				#footer {
 					background:url(assets/backgroundnew_@2X.png);
 					background-size:50%;
 			     }
