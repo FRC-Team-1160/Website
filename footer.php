@@ -58,7 +58,7 @@
 				<a href="/resources/scouting">Scouting Team</a>
 			</li>
 			<li>
-				<a href="/resources/website">Website Team</a>
+				<a href="/resources/the-website">Website Team</a>
 			</li>
 		</ul>
 		<ul class="h">
@@ -95,7 +95,7 @@
 		</ul>
 	</div>
 	<div class="bottom">
-		Like us on <a href="http://www.facebook.com/team1160">Facebook</a> and Follow our <a href="http://twitter.com/frc1160">Twitter</a>.
+		Follow our <a href="http://www.facebook.com/team1160">Facebook</a> and <a href="http://twitter.com/frc1160">Twitter</a>.
 			<br />
 		<div class="copy">
 			&copy;<?php echo date(Y)?>&nbsp;<a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a>  //  All rights reserved  //  Valid <a href="http://validator.w3.org/check?uri=<?php echo get_home_url(); ?>">HTML5</a>

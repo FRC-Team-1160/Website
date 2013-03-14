@@ -1953,9 +1953,6 @@ div.pagination a:hover {
 					width:auto;
 					padding:5px;
 				}
-				.footercontainer {
-					background-size: 100%;
-				}
 			}
 			@media screen and (max-width: 720px) {
 				.post img {
@@ -2032,6 +2029,9 @@ div.pagination a:hover {
 					height:200px;
 					display:table;
 				}
+				.footercontainer {
+					background-size: 125% auto;
+				}
 				#footer ul {
 					width:100%;
 					text-align:center;
@@ -2042,16 +2042,16 @@ div.pagination a:hover {
 				}
 				#footer ul li {
 					display:inline-block;
-					float:left;
 					padding:5px 10px;
 					width:auto;
+					text-align:center;
 				}
 				.footer-right {
 					text-align:center;
 					display:table;
 					margin:auto;
 				}
-				.footer-right .h {
+				#footer .h {
 					display:none;
 					visibility: hidden;
 				}
