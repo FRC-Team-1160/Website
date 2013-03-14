@@ -2030,7 +2030,7 @@ div.pagination a:hover {
 					display:table;
 				}
 				.footercontainer {
-					background-size: 125% auto;
+					background-size:auto 125%;
 				}
 				#footer ul {
 					width:100%;
