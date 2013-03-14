@@ -1649,6 +1649,7 @@ a:focus {
 	z-index:2;
 	padding:35px 0;
 	display:block;
+	background:none; /*fallback*/
 	background:rgba(0, 0, 0, 0.7);
 	-webkit-box-shadow: inset 0 0 150px 25px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: inset 0 0 150px 25px rgba(0, 0, 0, 0.5);
@@ -1832,7 +1833,7 @@ div.pagination a:hover {
 			@media screen and (max-width:1024px) {
 				.menu .menu-container-1,.menu .menu-container-2,.menu .menu-container-3,.menu .menu-container-4,.menu .menu-container-5,.menu .menu-container-6,.menu .menu-container-7, .menu .arrowup {
 					display:none;
-					visibility:none;
+					visibility:hidden;
 				}
 				.menu li:hover {
 					position:relative;
@@ -2037,7 +2038,7 @@ div.pagination a:hover {
 				}
 				#footer ul .header-responsive-hidden {
 					display:none;
-					visibility:none;
+					visibility:hidden;
 				}
 				#footer ul li {
 					display:inline-block;
@@ -2052,7 +2053,7 @@ div.pagination a:hover {
 				}
 				.footer-right .h {
 					display:none;
-					visibility: none;
+					visibility: hidden;
 				}
 				.footer-container {
 					width:100%;
@@ -2060,9 +2061,3 @@ div.pagination a:hover {
 					display:table-cell;
 				}
 			}
-			@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-				#footer {
-					background:url(assets/backgroundnew_@2X.png);
-					background-size:50%;
-			     }
-			   }
