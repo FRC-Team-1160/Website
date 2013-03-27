@@ -588,14 +588,6 @@ select {
 .menu li:hover legend {
 	max-width:80%;
 }
-.center {
-	float:none;
-	margin:40px auto;
-	width:20%;
-	padding:20px;
-	border-width:1px;
-	border-style: dotted;
-}
 .button a {
 	color:#FFF;
 	padding:5px;
@@ -1655,9 +1647,8 @@ a:focus {
 	-moz-box-shadow: inset 0 0 150px 25px rgba(0, 0, 0, 0.5);
 	box-shadow: inset 0 0 150px 25px rgba(0, 0, 0, 0.5);
 }
-#footer img {
+#footer .center {
 	float:none;
-	display:block;
 	margin:auto;
 }
 .footercontainer {
@@ -2021,9 +2012,6 @@ div.pagination a:hover {
 				}
 				.searchit {
 				    width:95%;
-				}
-				.center {
-					width:90%;
 				}
 				#footer {
 					height:200px;

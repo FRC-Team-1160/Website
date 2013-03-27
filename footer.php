@@ -95,10 +95,14 @@
 		</ul>
 	</div>
 	<div class="bottom">
-		Follow our <a href="http://www.facebook.com/team1160">Facebook</a> and <a href="http://twitter.com/frc1160">Twitter</a>.
-			<br />
+
+		Follow us on <a href="http://www.facebook.com/team1160">Facebook</a> and <a href="http://twitter.com/frc1160">Twitter</a> // <a href="/resources/the-website">About the Website</a> // <a href="http://www.github.com/frc-1160">Download Theme from GitHub</a>
+		<br />
+		<a href="http://www.usfirst.org"><img class="center" src="<?php bloginfo('template_directory'); ?>/assets/FIRST.png" width="50" alt="FIRST Logo; Visit FIRST" title="Visit FIRST" /></a>
+		<br />
+		Valid <a href="http://validator.w3.org/check?uri=<?php echo get_home_url(); ?>">HTML5</a>
 		<div class="copy">
-			&copy;<?php echo date(Y)?>&nbsp;<a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a>  //  All rights reserved  //  Valid <a href="http://validator.w3.org/check?uri=<?php echo get_home_url(); ?>">HTML5</a>
+			&copy;<?php echo date(Y)?>&nbsp;<a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a>  //  All rights reserved
 		</div>
 	</div>
 <?php wp_footer(); ?>
