@@ -74,6 +74,25 @@
 
 				});
 			</script>
+
+      <!-- (1) Moot look and feel -->
+      <link rel="stylesheet" href="http://cdn.moot.it/1.0/moot.css"/>
+
+      <!-- (4) Custom CSS -->
+      <style>
+      body {
+         font-family: "myriad pro", tahoma, verdana, arial, sans-serif;
+         margin: 0; padding: 0;
+      }
+
+      .moot {
+         font-size: 18px;
+      }
+      </style>
+      
+      <!-- (1) Moot client application -->
+      <script src="http://cdn.moot.it/1.0/moot.min.js"></script>
+
 		<?php if (is_search()) : ?>
 			<style type="text/css" media="screen">
 				    .hls {font-weight:bold;}
@@ -104,6 +123,7 @@
 <?php flush(); ?>
 	<body>
 	<div class="wrapper">
+<div id="wrapper"></div>
 	<!--START - NAVIGATION-->
 	<nav id="menuwrap">
 		<div class="menu">
@@ -288,13 +308,6 @@
 					$first_name = $user_info->first_name;
 					$last_name = $user_info->last_name;
 					echo "$first_name $last_name"?>
-				<br />
-				<i style="font-size:small;">
-				<?php $user_info = wp_get_current_user();
-					$year = $user_info->year;
-					$school = $user_info->school;
-					echo "$school class of $year"?>
-				</i>
 				</div>
 				<div id="username">
 				<?php $user_info = wp_get_current_user();
@@ -323,15 +336,30 @@
 				</div>
 				</div>
 				<div class="userlinks">
-				<a href="<?php bloginfo("url")?>/wp-admin"><?php _e('Your Dashboard', 'Dashboard'); ?></a>
-				<a href="<?php bloginfo("url")?>/wp-admin/post-new.php">Add a Post</a>
-				<a href="<?php echo get_admin_url(); ?>profile.php">Edit Profile</a>
+				<ul>
+					<li>
+						<a href="<?php bloginfo("url")?>/wp-admin"><?php _e('Your Dashboard', 'Dashboard'); ?></a>
+					</li>
+					<li>
+						<a href="<?php bloginfo("url")?>/wp-admin/post-new.php">Add a Post</a>
+					</li>
+					<li>
+						<a href="<?php echo get_admin_url(); ?>profile.php">Edit Profile</a>
+					</li>
 				<?php if ( current_user_can( 'moderate_comments' ) ) { //only admins and editors can see this ?>
-				<a href="<?php echo get_admin_url(); ?>">Edit Site</a>
-				<a href="/wp-admin/edit-comments.php">Comments <div class="commentnotif"><?php $comments_count = wp_count_comments(); echo "$comments_count->moderated"; ?></div></a>
-				<a href="<?php echo esc_url( wp_logout_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="Logout">Logout</a>
+					<li>
+						<a href="<?php echo get_admin_url(); ?>">Edit Site</a>
+					</li>
+					<li>
+						<a href="/wp-admin/edit-comments.php">Comments <div class="commentnotif"><?php $comments_count = wp_count_comments(); echo "$comments_count->moderated"; ?></div></a>
+					</li>
+					<li>
+						<a href="<?php echo esc_url( wp_logout_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="Logout">Logout</a>
+					</li>
 					<?php } else { ?>
-				<a href="<?php echo esc_url( wp_logout_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="Logout">Logout</a>
+					<li>
+						<a href="<?php echo esc_url( wp_logout_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="Logout">Logout</a>
+					</li>
 					<?php } ?>
 				</div>
 			</div>
