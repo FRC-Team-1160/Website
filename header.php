@@ -87,7 +87,11 @@
 
       .moot {
          font-size: 18px;
+         max-width:none;
       }
+      .m-page {
+      	 padding-left:10px;
+      } 
       </style>
       
       <!-- (1) Moot client application -->
@@ -95,20 +99,20 @@
 
 		<?php if (is_search()) : ?>
 			<style type="text/css" media="screen">
-				    .hls {font-weight:bold;}
+				    .titanium {font-weight:bold;}
 				  </style>
 				  <script type="text/javascript">
 				  jQuery.fn.extend({
-				    highlight: function(search, insensitive, hls_class){
+				    highlight: function(search, insensitive, titanium_class){
 				      var regex = new RegExp("(<[^>]*>)|(\\b"+ search.replace(/([-.*+?^${}()|[\]\/\\])/g,"\\$1") +")", insensitive ? "ig" : "g");
 				      return this.html(this.html().replace(regex, function(a, b, c){
-				        return (a.charAt(0) == "<") ? a : "<em class=\""+ hls_class +"\">" + c + "</em>";
+				        return (a.charAt(0) == "<") ? a : "<em class=\""+ titanium_class +"\">" + c + "</em>";
 				      }));
 				    }
 				  });
 				  jQuery(document).ready(function($){
-				    if(typeof(hls_query) != 'undefined'){
-				      $("#contents").highlight(hls_query, 1, "hls");
+				    if(typeof(titanium_query) != 'undefined'){
+				      $("#contents").highlight(titanium_query, 1, "titanium");
 				    }
 				  });
 			</script>
@@ -139,19 +143,19 @@
 			<div class="arrowup"></div>
 		    <div class="menu-container-2">
 		      <div class="column-2">
-			<fieldset><legend><?php  echo mf_get_menu_name('About-Tab-1'); ?></legend></fieldset>
+			<fieldset><legend><?php  echo titanium_get_menu_name('About-Tab-1'); ?></legend></fieldset>
 		        <?php wp_nav_menu( array( 'theme_location' => 'About-Tab-1' ) );?>
 		      </div>
 		      <div class="column-2">
-			<fieldset><legend><?php  echo mf_get_menu_name('About-Tab-2'); ?></legend></fieldset>
+			<fieldset><legend><?php  echo titanium_get_menu_name('About-Tab-2'); ?></legend></fieldset>
 		        <?php wp_nav_menu( array( 'theme_location' => 'About-Tab-2' ) );?>
 		      </div>
 		      <div class="column-2">
-			<fieldset><legend><?php  echo mf_get_menu_name('About-Tab-3'); ?></legend></fieldset>
+			<fieldset><legend><?php  echo titanium_get_menu_name('About-Tab-3'); ?></legend></fieldset>
 		        <?php wp_nav_menu( array( 'theme_location' => 'About-Tab-3' ) );?>
 		      </div>
 		      <div class="column-2">
-			<fieldset><legend><?php  echo mf_get_menu_name('About-Tab-4'); ?></legend></fieldset>
+			<fieldset><legend><?php  echo titanium_get_menu_name('About-Tab-4'); ?></legend></fieldset>
 		        <?php wp_nav_menu( array( 'theme_location' => 'About-Tab-4' ) );?>
 		      </div>
 		    </div>
@@ -163,7 +167,7 @@
 			<div class="arrowup"></div>
 		    <div class="menu-container-1">
 		      <div class="column-1">
-		        <fieldset><legend><?php  echo mf_get_menu_name('Outreach-Tab'); ?></legend></fieldset>
+		        <fieldset><legend><?php  echo titanium_get_menu_name('Outreach-Tab'); ?></legend></fieldset>
 		        <?php wp_nav_menu( array( 'theme_location' => 'Outreach-Tab' ) );?>
 		      </div>
 		    </div>
@@ -175,7 +179,7 @@
 		    <div class="menu-container-5">
 
 		      <div class="column-5">
-		        <fieldset><legend><?php  echo mf_get_menu_name('Join'); ?></legend></fieldset>
+		        <fieldset><legend><?php  echo titanium_get_menu_name('Join'); ?></legend></fieldset>
 		      </div>
 		      <div class="column-5">
 		        <?php wp_nav_menu( array( 'theme_location' => 'Join' ) );?>
@@ -189,7 +193,7 @@
 		    <div class="menu-container-5">
 
 		      <div class="column-5">
-		        <fieldset><legend><?php  echo mf_get_menu_name('For-Members'); ?></legend></fieldset>
+		        <fieldset><legend><?php  echo titanium_get_menu_name('For-Members'); ?></legend></fieldset>
 		      </div>
 		      <div class="column-5">
 		        <?php wp_nav_menu( array( 'theme_location' => 'For-Members' ) );?>
@@ -205,7 +209,7 @@
 			
 		    <div class="menu-container-5">
 		      <div class="column-5">
-			<fieldset><legend><?php  echo mf_get_menu_name('About-Tab-5'); ?></legend></fieldset>
+			<fieldset><legend><?php  echo titanium_get_menu_name('About-Tab-5'); ?></legend></fieldset>
 		        <?php wp_nav_menu( array( 'theme_location' => 'About-Tab-5' ) );?>
 		      </div>
 		    </div>
@@ -219,7 +223,7 @@
 			
 		    <div class="menu-container-5">
 		      <div class="column-5">
-		        <fieldset><legend><?php  echo mf_get_menu_name('For-Teams'); ?></legend></fieldset>
+		        <fieldset><legend><?php  echo titanium_get_menu_name('For-Teams'); ?></legend></fieldset>
 		      </div>
 		      <div class="column-5">
 		        <?php wp_nav_menu( array( 'theme_location' => 'For-Teams' ) );?>
@@ -336,31 +340,32 @@
 				</div>
 				</div>
 				<div class="userlinks">
-				<ul>
-					<li>
-						<a href="<?php bloginfo("url")?>/wp-admin"><?php _e('Your Dashboard', 'Dashboard'); ?></a>
-					</li>
-					<li>
-						<a href="<?php bloginfo("url")?>/wp-admin/post-new.php">Add a Post</a>
-					</li>
-					<li>
-						<a href="<?php echo get_admin_url(); ?>profile.php">Edit Profile</a>
-					</li>
-				<?php if ( current_user_can( 'moderate_comments' ) ) { //only admins and editors can see this ?>
-					<li>
-						<a href="<?php echo get_admin_url(); ?>">Edit Site</a>
-					</li>
-					<li>
-						<a href="/wp-admin/edit-comments.php">Comments <div class="commentnotif"><?php $comments_count = wp_count_comments(); echo "$comments_count->moderated"; ?></div></a>
-					</li>
-					<li>
-						<a href="<?php echo esc_url( wp_logout_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="Logout">Logout</a>
-					</li>
-					<?php } else { ?>
-					<li>
-						<a href="<?php echo esc_url( wp_logout_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="Logout">Logout</a>
-					</li>
-					<?php } ?>
+					<ul>
+						<li>
+							<a href="<?php bloginfo("url")?>/wp-admin"><?php _e('Your Dashboard', 'Dashboard'); ?></a>
+						</li>
+						<li>
+							<a href="<?php bloginfo("url")?>/wp-admin/post-new.php">Add a Post</a>
+						</li>
+						<li>
+							<a href="<?php echo get_admin_url(); ?>profile.php">Edit Profile</a>
+						</li>
+					<?php if ( current_user_can( 'moderate_comments' ) ) { //only admins and editors can see this ?>
+						<li>
+							<a href="<?php echo get_admin_url(); ?>">Edit Site</a>
+						</li>
+						<li>
+							<a href="/wp-admin/edit-comments.php">Comments <div class="commentnotif"><?php $comments_count = wp_count_comments(); echo "$comments_count->moderated"; ?></div></a>
+						</li>
+						<li>
+							<a href="<?php echo esc_url( wp_logout_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="Logout">Logout</a>
+						</li>
+						<?php } else { ?>
+						<li>
+							<a href="<?php echo esc_url( wp_logout_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="Logout">Logout</a>
+						</li>
+						<?php } ?>
+					</ul>
 				</div>
 			</div>
 		<?php } else { ?>

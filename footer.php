@@ -64,27 +64,14 @@
 		<ul class="h">
 			<li>
 				<h3 class="header-responsive-hidden">
-					Join
-				</h3>
-			</li>
-			<li>
-				<a href="/join/student-registration">Student Application</a>
-			</li>
-			<li>
-				<a href="/join/mentor-registration">Mentor Application</a>
-			</li>
-			<li>
-				<a href="/join/parent-registration">Parent E-Mail List</a>
-			</li>
-		</ul>
-		<ul class="h">
-			<li>
-				<h3 class="header-responsive-hidden">
 					Media
 				</h3>
 			</li>
 			<li>
-				<a href="/media">Team 1160 in the News</a>
+				<a href="/media">Press</a>
+			</li>
+			<li>
+				<a href="/branding">Styles Guide</a>
 			</li>
 			<li>
 				<a href="/media/videos">Videos</a>
@@ -93,18 +80,35 @@
 				<a href="/media/photos">Photos</a>
 			</li>
 		</ul>
+		<ul class="h">
+			<li>
+				<h3 class="header-responsive-hidden">
+					Search
+				</h3>
+			</li>
+			<li>
+				<br />
+				<?php get_search_form( ); ?>
+			</li>
+		</ul>
 	</div>
 	<div class="bottom">
 
-		Follow us on <a href="http://www.facebook.com/team1160">Facebook</a> and <a href="http://twitter.com/frc1160">Twitter</a> // <a href="/resources/the-website">About the Website</a> // <a href="http://www.github.com/frc-1160">Download Theme from GitHub</a>
+		<a href="http://www.facebook.com/team1160" target="_blank">facebook/team1160</a> // <a href="http://twitter.com/frc1160" target="_blank">@frc1160</a>
 		<br />
-		<a href="http://www.usfirst.org"><img class="center" src="<?php bloginfo('template_directory'); ?>/assets/FIRST.png" width="50" alt="FIRST Logo; Visit FIRST" title="Visit FIRST" /></a>
+		<a href="/resources/the-website" target="_blank">About the Website</a> // <a href="https://github.com/nwong212/Team1160" target="_blank">Download Theme from GitHub</a>
 		<br />
-		Valid <a href="http://validator.w3.org/check?uri=<?php echo get_home_url(); ?>">HTML5</a>
+		<a href="http://www.usfirst.org" target="_blank"><img class="center" src="<?php bloginfo('template_directory'); ?>/assets/FIRST.png" width="50" alt="FIRST Logo; Visit FIRST" title="Visit FIRST" /></a>
+		<br />
+		Valid <a href="http://validator.w3.org/check?uri=<?php echo get_home_url(); ?>" target="_blank">HTML5</a>
 		<div class="copy">
 			&copy;<?php echo date(Y)?>&nbsp;<a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a>  //  All rights reserved
 		</div>
 	</div>
+</div>
+</div>
+</div>
+</div>
 <?php wp_footer(); ?>
 <script type="text/javascript">
 
@@ -119,9 +123,5 @@
   })();
 
 </script>
-</div>
-</div>
-</div>
-</div>
 </body>
 </html>
