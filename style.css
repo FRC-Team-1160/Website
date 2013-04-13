@@ -795,6 +795,8 @@ a:hover .commentnotif {
 .wrapper .blog .blog-content {
 	border-width:0 1px 0 1px;
 	float:left;
+	width:100%;
+	margin-left:-1px;
 }
 #contents .blog .post {
 	width:100%;
@@ -2191,5 +2193,9 @@ div.pagination a:hover {
 					width:100%;
 					height:150px;
 					display:table-cell;
+				}
+
+				.wp-caption-text {
+					font-size:0.6em;
 				}
 			}
