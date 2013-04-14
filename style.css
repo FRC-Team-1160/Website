@@ -1956,7 +1956,7 @@ div.pagination a:hover {
 }
 			/*MEDIA QUERIES*/
 			@media screen and (min-width:3872px) {
-				.footercontainer {
+				.push .footercontainer {
 					background-size:3872px;
 				}
 			}
