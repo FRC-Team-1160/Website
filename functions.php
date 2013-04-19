@@ -226,7 +226,7 @@ function remove_footer_admin (){
    global $current_user;
       get_currentuserinfo();
   echo 'Hello, ' . $current_user->user_firstname .' '. $current_user->user_lastname.'.  Welcome to the Titanium Robotics website!';
-  echo '<br />For Team and Technical Contact: <a href="mailto:titaniumrobotics@gmail.com">Email</a> // <a href="https://docs.google.com/spreadsheet/viewform?formkey=dEE5SjJjckZkdGhFZVI1RHd4c0J6aUE6MQ#gid=0"> Report a Bug</a>';
+  echo '<br />For Team and Technical Contact: <a href="mailto:titaniumrobotics@gmail.com">Email</a> // <a href="https://github.com/FRC-Team-1160/Website/issues"> Report a Bug</a>';
 }
 
 ?>
