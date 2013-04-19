@@ -21,6 +21,9 @@ function titanium_theme_setup() {
 	/* Add your nav menus function to the 'init' action hook. */
 	add_action( 'init', 'titanium_register_menus' );
 
+	/* Get Menu Names */
+	add_action( 'init', 'titanium_get_menu_name' );
+
 	/* Add your sidebars function to the 'widgets_init' action hook. */
 	add_action( 'widgets_init', 'titanium_register_sidebars' );
 
@@ -51,6 +54,27 @@ function titanium_theme_setup() {
 
 function titanium_register_menus() {
 	/* Register nav menus using register_nav_menu() or register_nav_menus() here. */
+	register_nav_menus(
+    array(
+      'About-Tab-1'   => __( 'Contact' ),
+      'About-Tab-2'   => __( 'People' ),
+      'About-Tab-3'   => __( 'Branding' ),
+      'About-Tab-4'   => __( 'First' ),
+      'About-Tab-5'   => __( 'Media' ),
+      'Outreach-Tab'  => __( 'Outreach' ),
+      'For-Members'   => __( 'Info for Members' ),
+      'Join'   => __( 'Join' ),
+      'For-Teams'     => __( 'Team Information' ),
+      'Main'          => __( 'Main' ),
+    )
+  );
+}
+
+function titanium_get_menu_name($location){
+    if(!has_nav_menu($location)) return false;
+    $menus = get_nav_menu_locations();
+    $menu_title = wp_get_nav_menu_object($menus[$location])->name;
+    return $menu_title;
 }
 
 function titanium_register_sidebars() {
