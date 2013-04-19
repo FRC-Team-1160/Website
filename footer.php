@@ -100,7 +100,7 @@
 
 				<a href="http://www.facebook.com/team1160" target="_blank">facebook/team1160</a> // <a href="http://twitter.com/frc1160" target="_blank">@frc1160</a>
 				<br />
-				<a href="/resources/the-website" target="_blank">About the Website</a> // <a href="https://github.com/nwong212/Team1160" target="_blank">Download Theme from GitHub</a>
+				<a href="/resources/the-website" target="_blank">About the Website</a> // <a href="https://github.com/FRC-Team-1160/Website" target="_blank">Download Theme from GitHub</a>
 				<br />
 				<a href="http://www.usfirst.org" target="_blank"><img class="center" src="<?php bloginfo('template_directory'); ?>/assets/FIRST.png" width="50" alt="FIRST Logo; Visit FIRST" title="Visit FIRST" /></a>
 				<br />
