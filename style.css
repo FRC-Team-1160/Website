@@ -1883,20 +1883,6 @@ div.pagination a:hover {
 }
 		/*MEDIA QUERIES*/
 
-			/* EXTREMELY LARGE SCREENS */
-			@media screen and (min-width:3872px) {
-				.push .footercontainer {
-					background-size:3872px;
-				}
-			}
-
-			/* LARGER SCREENS */
-			@media screen and (min-width:1500px) {
-				.push .footercontainer {
-					background-size:120%;
-				}
-			}
-
 			/* TABLET VIEW */
 			@media screen and (max-width:1095px) {
 				.menu .menu-container-1,.menu .menu-container-2,.menu .menu-container-3,.menu .menu-container-4,.menu .menu-container-5,.menu .menu-container-6,.menu .menu-container-7, .menu .arrowup {
@@ -2108,13 +2094,6 @@ div.pagination a:hover {
 				.searchit {
 				    width:95%;
 				}
-				#footer {
-					height:300px;
-				}
-				.push .footercontainer {
-					background-size:150% auto;
-					height:370px;
-				}
 				#footer ul {
 					width:100%;
 					text-align:center;
@@ -2132,7 +2111,7 @@ div.pagination a:hover {
 				}
 				.footer-right {
 					text-align:center;
-					display:table;
+					display:block;
 					margin:auto;
 				}
 				#footer .h {
@@ -2141,8 +2120,7 @@ div.pagination a:hover {
 				}
 				.footer-container {
 					width:100%;
-					height:150px;
-					display:table-cell;
+					display:block;
 				}
 
 				.wp-caption-text {

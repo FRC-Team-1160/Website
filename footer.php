@@ -81,7 +81,7 @@
 					</li>
 				</ul>
 				<ul class="s">
-					<li>
+					<li class="header-responsive-hidden">
 						<h3>
 							Social Networks
 						</h3>
