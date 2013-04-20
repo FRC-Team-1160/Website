@@ -1,7 +1,7 @@
 </div>
 <div class="clear"></div>
 		
-	<div id="footer">
+	<footer id="footer">
 		<div class="footershadow"></div>
 		
 		<div class="footer-container">
@@ -117,7 +117,7 @@
 			</div>
 
 		</div>
-	</div>
+	</footer>
 
 </div>
 <?php wp_footer(); ?>

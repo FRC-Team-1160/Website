@@ -53,6 +53,9 @@ function titanium_theme_setup() {
 
 	/* Add Footer Removal/replace */
 	add_filter('admin_footer_text', 'remove_footer_admin');
+
+	/* Add Excerpt Support on Pages */
+	add_post_type_support('page', 'excerpt');
 }
 
 function titanium_jquery_enqueue() {

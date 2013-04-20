@@ -101,6 +101,12 @@ html, body {
 	position:relative;
 	z-index:-1;
 }
+em, i {
+	font-style:italic;
+}
+strong, b {
+	font-weight:bold;
+}
 h1, h2, h3 {
 	font-family:'OpenSans', Helvetica, Verdana, Arial, Sans-Serif;
 	font-weight:bold;

@@ -2,13 +2,11 @@
 <div id="contents">
 <div class="errorpage">
 	<div class="errorimg">
-		<img src="<?php bloginfo('template_directory') ?>/assets/error404smaller.png" Alt="Iris the Robot" title="Iris the Robot" style="margin:auto; float:none; display:block;" />
+		<img src="<?php bloginfo('template_directory') ?>/assets/error404smaller.png" Alt="Robot" title="Robot" style="margin:auto; float:none; display:block;" />
 	</div>
 	<br />
 	<div class="errortemp">
 		<p><b>ERROR 404 – </b>The page you requested could not be found.</p>
-		<br />
-		<p>Seems like our robots weren't able to find that page. . .</p>
 		&nbsp;
 		<p>Perhaps you should try a search?</p>
 		&nbsp;

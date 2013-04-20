@@ -127,14 +127,14 @@
 	<div class="wrapper">
 <div id="wrapper"></div>
 	<!--START - NAVIGATION-->
-	<nav id="menuwrap">
+	<header id="menuwrap">
 		<div class="menu">
 			<div class="logo">
 				<a href="/" title="Titanium Robotics, FRC Team 1160">
 					<img src="<?php bloginfo('template_directory')?>/assets/logo.png" class="logo-img retina" alt="Titanium Robotics Logo" />
 				</a>
 			</div>
-		<div class="navigation-links">
+		<nav class="navigation-links">
 		<ul class="left-menu">
 		<!-- START - About Us-->
 		  <li><a href="/about-us" class="menulink">The Team</a>
@@ -374,8 +374,8 @@
 		<!-- END - ACCOUNT -->
 		</ul>
 		</div>
-		</div>
-	</nav>
+		</nav>
+	</header>
 	<!-- END - NAVIGATION-->
 	<div class="clear"></div>
 	<?php if(!is_front_page()) : ?>
@@ -388,11 +388,6 @@
 							?>
 						</h1></li></ul>
 					</div>
-	<?php if(is_search()) : ?>
-			<div class="links" style="width:60%">
-					<?php get_search_form( $echo ); ?>
-			</div>
-	<?php endif; ?>
 	<?php if(!is_author() && !is_search() && !is_404()) : ?>
 			<?php
 	  			if($post->post_parent)

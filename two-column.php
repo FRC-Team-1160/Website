@@ -23,7 +23,7 @@ Template Name: Two Columns
 
 		?>
 
-		<div class="sidebar-left">
+		<aside class="sidebar-left">
 			<div class="sidebar-content">
 				<?php if(!empty($post->post_excerpt)) {
 
@@ -41,8 +41,8 @@ Template Name: Two Columns
 
 		 		} ?>
 			</div>
-		</div>
-		<div class="rightcontent">
+		</aside>
+		<article class="rightcontent">
 			<div class="entry">
 
 				<fieldset><legend><?php the_title(); ?></legend></fieldset>
@@ -60,7 +60,7 @@ Template Name: Two Columns
 						<div class="clear"></div>
 				<?php endif; ?>
 			</div>
-		</div>
+		</article>
 		
 		<div class="clear"></div>
 
