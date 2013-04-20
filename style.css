@@ -259,10 +259,10 @@ fieldset a {
 	transition: float 2s, margin 2s, padding 2s;
 }
 .menu {
-	display:table;
+	display:block;
 	list-style:none;
 	width:90%;
-	max-width:2100px;
+	max-width:1280px;
 	padding:1em 0;
 	height:auto;
 	margin:auto;
@@ -392,7 +392,7 @@ fieldset a {
 }
 .limit {
 	width:90%;
-	max-width:1700px;
+	max-width:1280px;
 	float:none;
 	margin:auto;
 }
@@ -787,7 +787,7 @@ a:hover .commentnotif {
 	font-family:'OpenSans', sans-serif;
 	color:#1D1D1D;
 	width: 90%;
-	max-width:1700px;
+	max-width:1280px;
 	margin:auto;
 	float:none;
 	font-size:inherit;
@@ -1717,6 +1717,8 @@ a:focus {
 	text-shadow: 2px 2px rgba(50, 50, 50, 0.8);
 }
 #footer .footer-container {
+	max-width:1280px;
+	display:block;
 	/* Theoretically for IE 8 & 9 (more valid) */	
 	/* ...but not required as filter works too */
 	/* should come BEFORE filter */
@@ -1832,7 +1834,7 @@ a:focus {
 }
 .footer-container{
 	width:90%;
-	max-width:1700px;
+	max-width:1280px;
 	margin:auto;
 	font-weight:bold;
 	font-family:'OpenSans', sans-serif;
