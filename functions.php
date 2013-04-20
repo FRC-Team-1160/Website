@@ -168,30 +168,6 @@ function titanium_admin_area_favicon() {
 	echo '<link rel="shortcut icon" href="'.get_bloginfo('template_directory').'/assets/favicon.ico" />';
 }
 
-function register_my_menus() {
-	register_nav_menus(
-		array(
-			'About-Tab-1'   => __( 'Contact' ),
-			'About-Tab-2'   => __( 'People' ),
-			'About-Tab-3'   => __( 'Branding' ),
-			'About-Tab-4'   => __( 'First' ),
-			'About-Tab-5'   => __( 'Media' ),
-			'Outreach-Tab'  => __( 'Outreach' ),
-			'For-Members'   => __( 'Info for Members' ),
-			'Join'			=> __( 'Join' ),
-			'For-Teams'     => __( 'Team Information' ),
-			'Main'          => __( 'Main' ),
-		)
-	);
-}
-
-function titanium_get_menu_name($location){
-    if(!has_nav_menu($location)) return false;
-    $menus = get_nav_menu_locations();
-    $menu_title = wp_get_nav_menu_object($menus[$location])->name;
-    return $menu_title;
-}
-
 function my_custom_login_url() {
 	return site_url();
 }

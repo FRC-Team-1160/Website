@@ -192,6 +192,21 @@ select {
 	color:#0054A3;
 	border: 1px solid;
 }
+fieldset {
+	border-top-width: 1px;
+	border-top-style: solid;
+	margin-bottom:1em;
+}
+fieldset {
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:1.2em;
+	color:#606060;
+}
+fieldset a {
+	text-transform:uppercase;
+	font-weight:bold;
+}
 .wrapper {
 	background: #EEEEEE;
 	height:auto;
@@ -1360,22 +1375,6 @@ li.categories {
 	display:block;
 	line-height:1;
 }
-fieldset {
-	border-top-width: 1px;
-	border-top-style: solid;
-	margin-bottom:1em;
-}
-fieldset {
-	text-transform:uppercase;
-	font-weight:bold;
-	font-size:1.05em;
-	color:#606060;
-}
-fieldset a {
-	text-transform:uppercase;
-	font-weight:bold;
-	font-size:1.05em;
-}
 .menu li:hover fieldset a {
 	text-transform:uppercase;
 	font-weight:bold;
@@ -1957,6 +1956,11 @@ div.pagination a:hover {
 					background-size:3872px;
 				}
 			}
+			@media screen and (min-width:1200px) {
+				.push .footercontainer {
+					background-size:120%;
+				}
+			}
 			@media screen and (max-width:1024px) {
 				.menu .menu-container-1,.menu .menu-container-2,.menu .menu-container-3,.menu .menu-container-4,.menu .menu-container-5,.menu .menu-container-6,.menu .menu-container-7, .menu .arrowup {
 					display:none;
@@ -2172,8 +2176,9 @@ div.pagination a:hover {
 					height:200px;
 					display:table;
 				}
-				.footercontainer {
+				.push.footercontainer {
 					background-size:auto 125%;
+					height:200px;
 				}
 				#footer ul {
 					width:100%;
