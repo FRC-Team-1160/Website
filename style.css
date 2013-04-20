@@ -2121,6 +2121,8 @@ div.pagination a:hover {
 				.footer-container {
 					width:100%;
 					display:block;
+					border-width:0;
+					border-style:none;
 				}
 
 				.wp-caption-text {
