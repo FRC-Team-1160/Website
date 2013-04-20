@@ -1737,19 +1737,10 @@ a:focus {
 }
 #footer a {
 	color:#ffffff;
-	transition:color 500ms;
-	-webkit-transition:color 500ms;
-	-moz-transition:color 500ms;
-	-o-transition:color 500ms;
-	-ms-transition:color 500ms;
+	padding-bottom:1px;
 }
 #footer:hover a:hover {
-	color:#3376B5;
-	transition:color 100ms;
-	-webkit-transition:color 100ms;
-	-moz-transition:color 100ms;
-	-o-transition:color 100ms;
-	-ms-transition:color 100ms;
+	border-bottom:1px dotted #FFFFFF;
 }
 #footer li h3 {
 	color:#FFF;
@@ -1762,6 +1753,9 @@ a:focus {
 	float:none;
 	display:block;
 	margin:0;
+}
+#footer p {
+	margin:0.5em 0;
 }
 .footer-container{
 	width:90%;

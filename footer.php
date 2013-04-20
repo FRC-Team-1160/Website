@@ -106,13 +106,19 @@
 			</div>
 
 			<div class="bottom">
-				<a href="/resources/the-website" target="_blank">About the Website</a> // <a href="https://github.com/FRC-Team-1160/Website" target="_blank">Download Theme from GitHub</a>
-				<br />
-				<a href="http://www.usfirst.org" target="_blank"><img class="center" src="<?php bloginfo('template_directory'); ?>/assets/FIRST.png" width="50" alt="FIRST Logo; Visit FIRST" title="Visit FIRST" /></a>
-				<br />
-				Valid <a href="http://validator.w3.org/check?uri=<?php echo get_home_url(); ?>" target="_blank">HTML5</a>
+				<p>
+					<a href="/resources/the-website" target="_blank">About the Website</a> // <a href="https://github.com/FRC-Team-1160/Website" target="_blank">Download Theme from GitHub</a>
+				</p>
+				<p>
+					<a href="http://www.usfirst.org" target="_blank"><img class="center" src="<?php bloginfo('template_directory'); ?>/assets/FIRST.png" width="50" alt="FIRST Logo; Visit FIRST" title="Visit FIRST" /></a>
+				</p>
+				<p>
+					Valid <a href="http://validator.w3.org/check?uri=<?php echo get_home_url(); ?>" target="_blank">HTML5</a>
+				</p>
 				<div class="copy">
-					&copy;<?php echo date(Y)?>&nbsp;<a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a>  //  All rights reserved
+					<p>
+						&copy;<?php echo date(Y)?>&nbsp;<a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a>  //  All rights reserved
+					</p>
 				</div>
 			</div>
 

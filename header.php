@@ -373,8 +373,8 @@
 		</li>
 		<!-- END - ACCOUNT -->
 		</ul>
-		</div>
 		</nav>
+		</div>
 	</header>
 	<!-- END - NAVIGATION-->
 	<div class="clear"></div>
