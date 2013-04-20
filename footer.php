@@ -1,8 +1,5 @@
 </div>
 <div class="clear"></div>
-</div>
-<div class="push">
-	<div class="footercontainer"></div>
 		
 	<div id="footer">
 		<div class="footershadow"></div>
@@ -71,16 +68,28 @@
 						</h3>
 					</li>
 					<li>
-						<a href="/media">Press</a>
+						<a href="/media">Titanium Robotics Press</a>
 					</li>
 					<li>
 						<a href="/branding">Styles Guide</a>
 					</li>
 					<li>
-						<a href="/media/videos">Videos</a>
+						<a href="/media/videos">Video Gallery</a>
 					</li>
 					<li>
-						<a href="/media/photos">Photos</a>
+						<a href="/media/photos">Photo Gallery</a>
+					</li>
+				</ul>
+				<ul class="s">
+					<li>
+						<h3>
+							Social Networks
+						</h3>
+					<li>
+						<a href="http://www.facebook.com/team1160" target="_blank">facebook/team1160</a>
+					</li>
+					<li>
+							<a href="http://twitter.com/frc1160" target="_blank">@frc1160</a>
 					</li>
 				</ul>
 				<ul class="h">
@@ -97,9 +106,6 @@
 			</div>
 
 			<div class="bottom">
-
-				<a href="http://www.facebook.com/team1160" target="_blank">facebook/team1160</a> // <a href="http://twitter.com/frc1160" target="_blank">@frc1160</a>
-				<br />
 				<a href="/resources/the-website" target="_blank">About the Website</a> // <a href="https://github.com/FRC-Team-1160/Website" target="_blank">Download Theme from GitHub</a>
 				<br />
 				<a href="http://www.usfirst.org" target="_blank"><img class="center" src="<?php bloginfo('template_directory'); ?>/assets/FIRST.png" width="50" alt="FIRST Logo; Visit FIRST" title="Visit FIRST" /></a>
@@ -112,6 +118,7 @@
 
 		</div>
 	</div>
+
 </div>
 <?php wp_footer(); ?>
 <script type="text/javascript">

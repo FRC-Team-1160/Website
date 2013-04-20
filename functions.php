@@ -9,6 +9,9 @@ function titanium_theme_setup() {
 	if ( !isset( $content_width ) )
 		$content_width = 600;
 
+	/* Enque JQuery */
+	if (!is_admin()) add_action("wp_enqueue_scripts", "titanium_jquery_enqueue", 1);
+
 	/* Add theme support for automatic feed links. */	
 	add_theme_support( 'automatic-feed-links' );
 
@@ -50,6 +53,12 @@ function titanium_theme_setup() {
 
 	/* Add Footer Removal/replace */
 	add_filter('admin_footer_text', 'remove_footer_admin');
+}
+
+function titanium_jquery_enqueue() {
+   wp_deregister_script('jquery');
+   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
+   wp_enqueue_script('jquery');
 }
 
 function titanium_register_menus() {
