@@ -1713,7 +1713,6 @@ a:focus {
 	font-size:0.8em;
 	margin-top:0;
 	display:block;
-	text-shadow: 1px 1px rgba(50, 50, 50, 0.8);
 }
 #footer .center {
 	float:none;
@@ -1880,6 +1879,14 @@ div.pagination a:hover {
 .m-logo {
 	display:none;
 	visibility: hidden;
+}
+.separate {
+	width:100%;
+	margin:1em auto;
+	height:0;
+	border-top-width:1px;
+	border-top-style:solid;
+	clear:both;
 }
 		/*MEDIA QUERIES*/
 

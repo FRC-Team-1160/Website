@@ -86,10 +86,16 @@
 							Social Networks
 						</h3>
 					<li>
-						<a href="http://www.facebook.com/team1160" target="_blank">facebook/team1160</a>
+						<a href="http://www.facebook.com/team1160" target="_blank"><span style="font-family:'linecons'; display:inline-block; width:2em; text-align:center; vertical-algin:middle;">&#xe01a;</span>team1160</a>
 					</li>
 					<li>
-							<a href="http://twitter.com/frc1160" target="_blank">@frc1160</a>
+							<a href="http://twitter.com/frc1160" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/assets/twitter.png" style="width:2em; vertical-align: middle" />@frc1160</a>
+					</li>
+					<li>
+							<a href="http://www.youtube.com/titaniumrobotics" target="_blank"><span style="font-family:'linecons'; display:inline-block; width:2em; text-align:center; vertical-align:middle;">&#xe005;</span>titaniumrobotics</a>
+					</li>
+					<li>
+							<a href="http://www.youtube.com/titaniumrobotics" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/assets/GitHub.png" style="width:1em; padding:0.5em; vertical-align:middle;" />FRC-Team-1160</a>
 					</li>
 				</ul>
 				<ul class="h">

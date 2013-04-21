@@ -29,12 +29,26 @@
 
 							<fieldset><legend>
 								
-								<a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>">
-								<?php the_title(); ?></a>
+								<?php if (is_home()) { ?>
+									<a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>">
+										<?php the_title(); ?>
+									</a>
+								<?php } else { ?>
+									
+									<?php the_title(); ?>
+
+								<?php } ?>
 
 							</legend></fieldset>
 						
 							<?php the_content();?>
+
+							<?php if (!is_home() && current_user_can('edit_posts')) {?>
+							<div class="separate"></div>
+							<?php
+								edit_post_link('edit');
+
+							}?>
 
 							<div class="clear"></div>
 
@@ -82,7 +96,7 @@
 				<?php endif; ?>
 
 				<div class="clear"></div>
-				
+
 				<?php if (!is_page()) { ?>
 					<div class="navigation">
 						<?php 

@@ -8,8 +8,9 @@
       <a class="moot" href="http://api.moot.it/titaniumrobotics"></a>
 	<?php } else { ?>
 		<div class="entry">
-			<fieldset style="text-align:center;"><legend>You must log in as a user with sufficient privileges in order to view this page.</legend></fieldset>
-			<p id="login">
+			<fieldset style="text-align:center;"><legend style="padding:0 1em;">You must log in as a user with sufficient privileges in order to view this page.</legend></fieldset>
+			<p id="login" style="text-align:center;">
+				<span style="font-family:'linecons'; font-size:5em; color:#0054A3;">&#xe00d;</span>
 				<div class="center">
 				<?php wp_login_form( $args ); ?>
 				</div>

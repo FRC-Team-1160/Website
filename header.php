@@ -23,7 +23,7 @@
 			<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' );?>
 			<script src="<?php bloginfo('template_directory');?>/js/readmorejavascript.js"	type="text/javascript"></script>
 			<script src="<?php bloginfo('template_directory');?>/js/retina.js"				type="text/javascript"></script>
-			<script src="<?php bloginfo('template_directory');?>/js/jquery.toolbar.min.js"	type="text/javascript"></script>
+			<script src="<?php bloginfo('template_directory');?>/js/videoresize.js"			type="text/javascript"></script>
 			<!--[if lte IE 7]>
 				<script src="<?php bloginfo('template_directory'); ?>/js/lte-ie7.js"		type="text/javascript"></script>
 			<![endif]-->
