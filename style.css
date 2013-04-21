@@ -1668,7 +1668,7 @@ span.required, #respond p span {
 	font-weight:bold;
 	text-transform:uppercase;
 	font-size:small;
-	color:DARKGRAY;
+	color:DIMGRAY;
 }
 .label {
 	text-align:right;
@@ -1766,7 +1766,7 @@ a:focus {
 	font-weight:bold;
 	font-family:'OpenSans', sans-serif;
 	float:none;
-	display:table;
+	display:block;
 	vertical-align:middle;
 	padding:20px 0;
 	color:#FFFFFF;
@@ -1788,22 +1788,10 @@ a:focus {
 	margin:0;
 }
 /*SEARCH*/
-div.results {
-    width:60%;
-    float:left;
-    display:table-cell;
-    vertical-align:center;
-}
 .results fieldset {
     border-color:DIMGRAY;
     margin:5px 0;
     padding:0;
-}
-div.searchbar {
-	width:100%;
-	display:table-cell;
-	float:right;
-	vertical-align:center;
 }
 .search:after {
 	clear:both;

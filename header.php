@@ -409,24 +409,7 @@
 			</div>
 	  		<?php } ?>
 	<?php endif; ?>
-	<?php if( is_page('forum')) :?>
-			<div class="links">
-			<?php if (current_user_can(edit_posts) ) { ?>
-			<ul>
-				<li>
-				<a href="<?php bloginfo("url")?>/wp-admin/post-new.php?post_type=forum_post">Add a Post</a>
-				</li>
-			</ul>
-			<?php } else { ?>
-			<ul>
-				<li>
-				<a>Log in to view actions and links</a>
-				</li>
-			</ul>		
-			<?php } ?>
-			</div>
-	<?php endif;
-		if(is_single()) : ?>
+	<?php if(is_single()) : ?>
 			<div class="links">
 			<ul style="width:100%;">
 				<li style="width:100%; text-align:right; padding:0;">
