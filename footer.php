@@ -86,16 +86,29 @@
 							Social Networks
 						</h3>
 					<li>
-						<a href="http://www.facebook.com/team1160" target="_blank"><span style="font-family:'icons'; display:inline-block; width:2em; text-align:center; vertical-algin:middle;">fb</span>team1160</a>
+						<a href="http://www.facebook.com/team1160" target="_blank">
+							<div style="display:inline-block; width:2em; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe01d;">
+							</div>
+							team1160
+						</a>
 					</li>
 					<li>
-							<a href="http://twitter.com/frc1160" target="_blank"><span style="font-family:'icons'; display:inline-block; width:2em; text-align:center; vertical-algin:middle;">twit</span>@frc1160</a>
+							<a href="http://twitter.com/frc1160" target="_blank">
+								<div style="display:inline-block; width:2em; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe000;"></div>
+								@frc1160
+							</a>
 					</li>
 					<li>
-							<a href="http://www.youtube.com/titaniumrobotics" target="_blank"><span style="font-family:'icons'; display:inline-block; width:2em; text-align:center; vertical-align:middle;">yt</span>titaniumrobotics</a>
+							<a href="http://www.youtube.com/titaniumrobotics" target="_blank">
+								<div style="display:inline-block; width:2em; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe001;"></div>
+								titaniumrobotics
+							</a>
 					</li>
 					<li>
-							<a href="http://www.github.com/FRC-Team-1160" target="_blank"><span style="font-family:'icons'; display:inline-block; width:2em; text-align:center; vertical-algin:middle;">git</span>FRC-Team-1160</a>
+							<a href="http://www.github.com/FRC-Team-1160" target="_blank">
+								<div style="display:inline-block; width:2em; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe003;"></div>
+								FRC-Team-1160
+							</a>
 					</li>
 				</ul>
 				<ul class="h">
@@ -113,7 +126,7 @@
 
 			<div class="bottom">
 				<p>
-					<a href="/resources/the-website" target="_blank">About the Website</a> // <a href="https://github.com/FRC-Team-1160/Website" target="_blank">Download Theme from GitHub</a>
+					<a href="/resources/the-website" target="_blank">About the Website</a> // <a href="https://github.com/FRC-Team-1160/Website" target="_blank">Get Theme</a>
 				</p>
 				<p>
 					<a href="http://www.usfirst.org" target="_blank"><img class="center" src="<?php bloginfo('template_directory'); ?>/assets/FIRST.png" width="50" alt="FIRST Logo; Visit FIRST" title="Visit FIRST" /></a>
