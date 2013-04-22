@@ -833,6 +833,7 @@ a:hover .commentnotif {
 	float:left;
 	min-height:100%;
 	display:inline-block;
+	font-size:0.8em;
 }
 .sidebar-left .sidebar-content {
 	width:auto;
@@ -843,7 +844,10 @@ a:hover .commentnotif {
 }
 .border-right {
 	border-width: 0 1px 0 0;
-	padding:1em 0 1em 1em;
+	padding:1.2em 0;
+}
+.border-right p {
+	padding:0 1.2em;
 }
 /*SHADOWS*/
         /* Shared styles */
@@ -1322,7 +1326,7 @@ li.categories {
 }
 .cont {
 	border-width: 1px 0 0 0;
-	padding:10px;
+	padding:1em;
 }
 #widget-1, #widget-2, #widget-3, #widget-4 {
 	width:33.333333333%;
@@ -1342,15 +1346,13 @@ li.categories {
 .cont ul.tweets li .timesince {
 	display:block;
 	text-transform:Uppercase;
+	margin-top:5px;
 }
 .cont ul.tweets li a {
 	display:inline-block;
 }
-.cont ul.tweets li {
-	font-size:0.8em;
-}
 .cont .twitter-follow-button {
-	margin-top:10px;
+	margin-top:1em;
 	display:block;
 	text-transform:Uppercase;
 	font-size:0.8em;
@@ -1359,9 +1361,9 @@ li.categories {
 	display:block;
 	background:#FFF;
 	width:100%;
-	padding:5px 10px;
+	padding:5px 1em;
 	margin-top:-1px;
-	margin-left:-10px;
+	margin-left:-1em;
 	border-style: solid;
 	border-width:1px 0 1px 0;
 	-webkit-transition:all 500ms;

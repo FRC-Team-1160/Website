@@ -24,14 +24,12 @@ Template Name: Two Columns
 		?>
 
 		<aside class="sidebar-left">
-			<div class="sidebar-content">
+			<section class="sidebar-content">
 				<?php if(!empty($post->post_excerpt)) {
 
 					//This post has an excerpt, let's display it
 
-					echo '<div class="border-right"><fieldset><legend>About ';
-					the_title();
-					echo '</fieldset></legend>';
+					echo '<div class="border-right">';
 					the_excerpt();
 					echo '</div>';
 
@@ -40,7 +38,7 @@ Template Name: Two Columns
 					// This post has no excerpt
 
 		 		} ?>
-			</div>
+			</section>
 		</aside>
 		<article class="rightcontent">
 			<div class="entry">

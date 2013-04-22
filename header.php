@@ -14,9 +14,8 @@
 		<link rel="pingback"					href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="icon"		type="application/rss+xml"	href="<?php bloginfo('template_directory') ?>/assets/favicon.ico" />
 		<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>" />
-		<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/Linecon-Styles.css" />
+		<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team1160-icons.css" />
 		<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/jquery.toolbars.css" />
-		<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/bootstrap.icons.css" />
 		
 		<!--SCRIPTS-->
 			<?php wp_head(); ?>
