@@ -35,7 +35,10 @@ window.onload = function() {
 			'1160-lightning' : '&#xe01a;',
 			'1160-earth' : '&#xe01b;',
 			'1160-cloud' : '&#xe01c;',
-			'1160-facebook' : '&#xe01d;'
+			'1160-facebook' : '&#xe01d;',
+			'1160-coin' : '&#xe01e;',
+			'1160-Plain_Logo' : '&#x62;',
+			'1160-FIRST' : '&#x66;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;

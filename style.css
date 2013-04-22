@@ -128,7 +128,7 @@ h2 {
 }
 h3 {
 	font-weight:bold;
-	color:DIMGRAY;
+	color:#444;
 }
 ::selection {
 	background:#59879f;
@@ -206,7 +206,7 @@ fieldset {
 	text-transform:uppercase;
 	font-weight:bold;
 	font-size:1.2em;
-	color:#606060;
+	color:#444;
 }
 fieldset a {
 	text-transform:uppercase;
@@ -510,7 +510,7 @@ fieldset a {
 	top:auto;
 }
 .commentlabel {
-	color:DIMGRAY;
+	color:#444;
 	float:right;
 	display:inline-block;
 	font-size:small;
@@ -530,7 +530,7 @@ fieldset a {
 	line-height:1.5;
 	font-size:0.7em;
 	margin-bottom:10px;
-	color:DIMGRAY;
+	color:#444;
 }
 .menu h3, .menu h2 {
 	font-size:0.9em;
@@ -635,7 +635,7 @@ fieldset a {
 	line-height:1;
 }
 #username {
-	color:dimgray;
+	color:#444;
 	line-height:1em;
 	font-size:small;
 	text-transform:uppercase;
@@ -712,7 +712,7 @@ a:hover .commentnotif {
 .account img, .profilepic img {
 	border-width: 1px;
 	border-style: solid;
-	border-color: DimGray;
+	border-color: #444;
 }
 .account img {
 	margin-right:5px;
@@ -1083,7 +1083,7 @@ a:hover .commentnotif {
 #contents h2 a:hover {
 	font-family:'OpenSans',Sans-serif, serif;
 	font-size:inherit;
-	color:DimGray;
+	color:#444;
 }
 /*comments*/
 h3#comments,.comment-navigation,.comment-navigation:after,#respond,.comment-rss {
@@ -1386,7 +1386,7 @@ li.categories {
 	text-transform:uppercase;
 	font-weight:bold;
 	font-size:0.9em;
-	color:#606060;
+	color:#444;
 	text-indent:0;
 	text-decoration:underline;
 }
@@ -1415,7 +1415,7 @@ legend {
 	margin-bottom:10px;
 }
 .widgetwrapper h2 {
-	border-bottom:1px dashed LIGHTGRAY;
+	border-bottom:1px dashed #444;
 }
 .sidebar-box, .searchbox {
 	max-height: 30em;
@@ -1643,14 +1643,14 @@ legend span {
 	font-size:0.8em;
 	font-weight:bold;
 	text-decoration:none;
-	color:DIMGRAY;
+	color:#444;
 	text-transform: uppercase;
 }
 span.required, #respond p span {
 	color:red;
 }
 #respond .form-allowed-tags {
-	color:DIMGRAY;
+	color:#444;
 	text-transform:uppercase;
 	font-weight:bold;
 	font-size:0.9em;
@@ -1670,7 +1670,7 @@ span.required, #respond p span {
 	font-weight:bold;
 	text-transform:uppercase;
 	font-size:small;
-	color:DIMGRAY;
+	color:#444;
 }
 .label {
 	text-align:right;
@@ -1791,7 +1791,7 @@ a:focus {
 }
 /*SEARCH*/
 .results fieldset {
-    border-color:DIMGRAY;
+    border-color:#444;
     margin:5px 0;
     padding:0;
 }
@@ -1847,7 +1847,7 @@ div.pagination a:hover {
 	border-color: #c0c0c0;
 }
 .warning {
-	color:DimGray;
+	color:#444;
 	background:url('assets/background.png');
 	text-align:center;
 }

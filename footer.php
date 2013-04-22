@@ -126,13 +126,26 @@
 
 			<div class="bottom">
 				<p>
-					<a href="/resources/the-website" target="_blank">About the Website</a> // <a href="https://github.com/FRC-Team-1160/Website" target="_blank">Get Theme</a>
-				</p>
-				<p>
-					<a href="http://www.usfirst.org" target="_blank"><img class="center" src="<?php bloginfo('template_directory'); ?>/assets/FIRST.png" width="50" alt="FIRST Logo; Visit FIRST" title="Visit FIRST" /></a>
-				</p>
-				<p>
-					Valid <a href="http://validator.w3.org/check?uri=<?php echo get_home_url(); ?>" target="_blank">HTML5</a>
+					<a href="http://www.titaniumrobotics.com/resources/website" target="_blank" style="margin:0 0.5em;">
+					 	<span style="display:inline-block; font-size:3em; text-align:center; vertical-algin:middle;" title="About the Website" aria-hidden="true" data-icon="&#xe00d;">
+					 	</span>
+					</a>
+					<a href="https://github.com/FRC-Team-1160/Website" target="_blank" style="margin:0 0.5em;">
+					 	<span style="display:inline-block; font-size:3em; text-align:center; vertical-algin:middle;" title="GitHub Repo" aria-hidden="true" data-icon="&#xe002;">
+					 	</span>
+					</a>
+					<a href="http://www.titaniumrobotics.com" style="margin:0 0.5em;">
+					 	<span style="display:inline-block; text-align:center; font-size:3em; vertical-algin:middle;" title="Team1160 Homepage" aria-hidden="true" data-icon="b">
+					 	</span>
+					</a>
+					<a href="http://www.usfirst.org" target="_blank" style="margin:0 0.5em;">
+					  	<span style="display:inline-block; text-align:center; vertical-algin:middle; font-size:3em;" title="U.S. FIRST Homepage" aria-hidden="true" data-icon="f">
+					  	</span>
+					</a>
+					<a href="http://validator.w3.org/check?uri=<?php echo get_home_url(); ?>" target="_blank">
+						<span style="display:inline-block; text-align:center; vertical-algin:middle; font-size:3em;" title="Valid HTML5" aria-hidden="true" data-icon="&#xe007;">
+					  	</span>
+					</a>
 				</p>
 				<div class="copy">
 					<p>
