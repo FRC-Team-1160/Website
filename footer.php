@@ -126,8 +126,8 @@
 
 			<div class="bottom">
 				<p>
-					<a href="http://www.titaniumrobotics.com/resources/website" target="_blank" style="margin:0 0.5em;">
-					 	<span style="display:inline-block; font-size:3em; text-align:center; vertical-algin:middle;" title="About the Website" aria-hidden="true" data-icon="&#xe00d;">
+					<a href="http://www.titaniumrobotics.com/donations" target="_blank" style="margin:0 0.5em;">
+					 	<span style="display:inline-block; font-size:3em; text-align:center; vertical-algin:middle;" title="Donate" aria-hidden="true" data-icon="&#xe00d;">
 					 	</span>
 					</a>
 					<a href="https://github.com/FRC-Team-1160/Website" target="_blank" style="margin:0 0.5em;">

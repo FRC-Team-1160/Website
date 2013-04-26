@@ -122,6 +122,9 @@
 			</script>
 	</head>
 <?php flush(); ?>
+
+<!--		<BODY> START		-->
+
 	<body>
 	<div class="wrapper">
 <div id="wrapper"></div>
@@ -377,7 +380,7 @@
 	</header>
 	<!-- END - NAVIGATION-->
 	<div class="clear"></div>
-	<?php if(!is_front_page()) : ?>
+	<?php if(!is_front_page() && !is_404()) : ?>
 			<div id="subpages"><div class="limit">
 				<div class="table">
 					<div class="title">
