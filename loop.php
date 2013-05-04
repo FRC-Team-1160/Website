@@ -17,6 +17,24 @@
 
 						<article class="entry">
 
+							<?php if( !is_page() && !is_single() ) { ?>
+							
+								<fieldset><legend>
+									
+									<?php if (is_home()) { ?>
+										<a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>">
+											<?php the_title(); ?>
+										</a>
+									<?php } else { ?>
+										
+										<?php the_title(); ?>
+
+									<?php } ?>
+
+								</legend></fieldset>
+
+							<?php } else { } ?>
+
 							<?php if ( !is_page() ) { ?>
 							<div class="time">
 								
@@ -27,20 +45,6 @@
 
 							} ?>
 
-							<fieldset><legend>
-								
-								<?php if (is_home()) { ?>
-									<a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>">
-										<?php the_title(); ?>
-									</a>
-								<?php } else { ?>
-									
-									<?php the_title(); ?>
-
-								<?php } ?>
-
-							</legend></fieldset>
-						
 							<?php the_content();?>
 
 							<?php if (!is_home() && current_user_can('edit_posts')) {?>
@@ -97,7 +101,7 @@
 
 				<div class="clear"></div>
 
-				<?php if (!is_page()) { ?>
+				<?php if (!is_page() && !is_single()) { ?>
 					<div class="navigation">
 						<?php 
 						global $wp_rewrite;			

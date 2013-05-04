@@ -414,7 +414,7 @@
 	<?php if(is_single()) : ?>
 			<div class="links">
 			<ul style="width:100%;">
-				<li style="width:100%; text-align:right; padding:0;">
+				<li style="width:100%; padding:0;">
 					<?php the_breadcrumb(); ?>
 				</li>
 			</ul>

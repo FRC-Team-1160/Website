@@ -36,12 +36,6 @@ Template Name: Home Landing Page
 
 							</legend></fieldset>
 
-							<div class="time">
-
-								Posted <?php the_time('F jS, Y') ?>
-
-							</div>
-
 							<fieldset><legend>
 
 								<a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>">
@@ -52,13 +46,20 @@ Template Name: Home Landing Page
 
 							</legend></fieldset>
 
+							<div class="time">
+
+								Posted <?php the_time('F jS, Y') ?>
+
+							</div>
+
 							<?php the_content();?>
 						
-								<div class="clear"></div>
+							<div class="clear"></div>
 
 							<a class="button" href="<?php echo get_permalink( get_option('page_for_posts' ) ); ?>" style="float:right;">Read More Posts &rarr;</a>
 
-								<div class="clear"></div>
+							<div class="clear"></div>
+						
 						</div>
 					</div></div>
 				</div>

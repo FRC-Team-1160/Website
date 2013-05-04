@@ -68,7 +68,10 @@
 						</h3>
 					</li>
 					<li>
-						<a href="/media">Titanium Robotics Press</a>
+						<a href="/media">News & Media</a>
+					</li>
+					<li>
+						<a href="/blog">Blog</a>
 					</li>
 					<li>
 						<a href="/branding">Styles Guide</a>
