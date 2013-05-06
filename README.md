@@ -11,4 +11,6 @@ Major Updates:
 2. New Splash Page (Cleaner, Easier to navigate, More Modern, More Unique)
 3. Update to Fonts (Now using Google Webfonts to quicken load times, Change to sizing of Headings., Update to the Icon Font)
 
-All images COPYRIGHT 2013 TITANIUM ROBOTICS & Nathan Wong (itsallwong.com)
+Live Version of this Website: [beta.titanumrobotics.com](http://beta.titaniumrobotics.com)
+
+All images COPYRIGHT 2013 [TITANIUM ROBOTICS](http://www.titaniumrobotics.com) & [Nathan Wong](http://www.itsallwong.com)
