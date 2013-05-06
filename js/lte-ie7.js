@@ -23,7 +23,7 @@ window.onload = function() {
 			'1160-bubbles' : '&#xe00e;',
 			'1160-wrench' : '&#xe00f;',
 			'1160-laptop' : '&#xe010;',
-			'1160-screen' : '&#xe011;',
+			'1160-monitor' : '&#xe011;',
 			'1160-mobile' : '&#xe012;',
 			'1160-tablet' : '&#xe013;',
 			'1160-calendar' : '&#xe014;',
@@ -37,8 +37,14 @@ window.onload = function() {
 			'1160-cloud' : '&#xe01c;',
 			'1160-facebook' : '&#xe01d;',
 			'1160-coin' : '&#xe01e;',
+			'1160-user-2' : '&#xe01f;',
+			'1160-menu' : '&#xe020;',
+			'1160-enter' : '&#xe021;',
 			'1160-Plain_Logo' : '&#x62;',
-			'1160-FIRST' : '&#x66;'
+			'1160-FIRST' : '&#x66;',
+			'1160-pen' : '&#x21;',
+			'1160-untitled' : '&#x23;',
+			'1160-Textual-Logo' : '&#x74;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;

@@ -67,19 +67,10 @@ function titanium_jquery_enqueue() {
 function titanium_register_menus() {
 	/* Register nav menus using register_nav_menu() or register_nav_menus() here. */
 	register_nav_menus(
-    array(
-      'About-Tab-1'   => __( 'Contact' ),
-      'About-Tab-2'   => __( 'People' ),
-      'About-Tab-3'   => __( 'Branding' ),
-      'About-Tab-4'   => __( 'First' ),
-      'About-Tab-5'   => __( 'Media' ),
-      'Outreach-Tab'  => __( 'Outreach' ),
-      'For-Members'   => __( 'Info for Members' ),
-      'Join'   => __( 'Join' ),
-      'For-Teams'     => __( 'Team Information' ),
-      'Main'          => __( 'Main' ),
-    )
-  );
+		array(
+			'Main-Navigation'   => __( 'Main' ),
+		)
+	);
 }
 
 function titanium_get_menu_name($location){
@@ -156,19 +147,79 @@ function autoblank($text) {
 
 function custom_login_logo() {
 	echo '<style type="text/css">
+	html, body.login {
+		background: url('.get_bloginfo('template_directory').'/assets/birdbackground.jpg) #000000;
+		background-attachment:fixed;
+		background-position:center center;
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
 	h1 a {
-	background-image: url('.get_bloginfo('template_directory').'/assets/logoupdown.png) !important;
-	background-size: 250px 118px !important;
-	height:118px !important;
+		background-image: url('.get_bloginfo('template_directory').'/assets/birdbeta.jpg) !important;
+		background-size: auto!important;
+		height:150px !important;
+		width:100% !important;
+	}
+	.login form {
+		-webkit-box-shadow:none!important;
+		box-shadow:none!important;
+		margin:0 !important;
+		-webkit-border-radius:0!important;
+		border-radius:0!important;
+		border:none!important;
+		padding:0 0 46px!important;
+		background:none!important;
+	}
+	.login form .input, .login input[type="text"] {
+		font-size:16px;
+	}
+	#login #login_error, #login .message {
+		margin-left:0 !important;
+		position:absolute;
+		left:-240px;
+		width:200px;
 	}
 	 #login {
 		 position:absolute!important;
-		 top:0!important;
-		 bottom:0!important;
 		 left:0!important;
 		 right:0!important;
+		 top:0 !important;
+		 bottom:0 !important;
+		 height:366px;!important;
+		 width:200px;
 		 margin:auto!important;
-		 height:500px!important;
+		 padding:26px 24px!important;
+		 background:#222222!important;
+		 border:1px solid #333!important;
+		 -webkit-border-radius:3px!important;
+		 border-radius:3px!important;
+		 -webkit-box-shadow: 0 0 10px #000;
+		 box-shadow: 0 0 10px #000;
+	 }
+	 .login #nav, .login #backtoblog {
+	 	text-shadow:none;
+	 	margin:0 !important;
+	 	padding:0 !important;
+	 }
+	 #backtoblog {
+	 	padding:12px 0 0 !important;
+	}
+	 @media only all and (max-height:490px) {
+	 	#login {
+	 		position:relative !important;
+	 		margin-top:2em !important;
+	 	}
+	 }
+	 @media only all and (max-width:740px) {
+		#login #login_error, #login .message {
+			margin-left:0 !important;
+			position:relative;
+			left:0;
+			width:auto;
+		}
+		#login {
+			height:446px;
+	}
 	 }
 	</style>';
 	echo '<link rel="icon" href="'.get_bloginfo('template_directory').'/assets/favicon.ico" />';

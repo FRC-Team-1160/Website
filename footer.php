@@ -1,6 +1,10 @@
 </div>
 <div class="clear"></div>
-		
+<?php wp_reset_query(); ?>
+<?php if(is_page_template('home-page.php')) { ?>
+
+<?php } else { ?>
+
 	<footer id="footer">
 		<div class="footershadow"></div>
 		
@@ -9,9 +13,9 @@
 			<div class="footer-right">
 				<ul class="s">
 					<li class="header-responsive-hidden">
-						<h3>
+						<h5>
 							Titanium Robotics
-						</h3>
+						</h5>
 					<li>
 						<a href="/about-us">About Us</a>
 					</li>
@@ -35,9 +39,9 @@
 				</ul>
 				<ul class="h">
 					<li>
-						<h3 class="header-responsive-hidden">
-							Sub-Teams
-						</h3>
+						<h5 class="header-responsive-hidden">
+							Teams
+						</h5>
 					</li>
 					<li>
 						<a href="/resources/business">Business Team</a>
@@ -63,15 +67,12 @@
 				</ul>
 				<ul class="h">
 					<li>
-						<h3 class="header-responsive-hidden">
+						<h5 class="header-responsive-hidden">
 							Media
-						</h3>
+						</h5>
 					</li>
 					<li>
-						<a href="/media">News & Media</a>
-					</li>
-					<li>
-						<a href="/blog">Blog</a>
+						<a href="/media">Titanium Robotics Press</a>
 					</li>
 					<li>
 						<a href="/branding">Styles Guide</a>
@@ -85,40 +86,36 @@
 				</ul>
 				<ul class="s">
 					<li class="header-responsive-hidden">
-						<h3>
-							Social Networks
-						</h3>
-					<li>
+						<h5>
+							Follow
+						</h5>
+					<li class="follow">
 						<a href="http://www.facebook.com/team1160" target="_blank">
-							<div style="display:inline-block; width:2em; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe01d;">
-							</div>
-							team1160
+							<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe01d;">
+							</span>
 						</a>
 					</li>
-					<li>
+					<li class="follow">
 							<a href="http://twitter.com/frc1160" target="_blank">
-								<div style="display:inline-block; width:2em; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe000;"></div>
-								@frc1160
+								<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe000;"></span>
 							</a>
 					</li>
-					<li>
+					<li class="follow">
 							<a href="http://www.youtube.com/titaniumrobotics" target="_blank">
-								<div style="display:inline-block; width:2em; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe001;"></div>
-								titaniumrobotics
+								<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe001;"></span>
 							</a>
 					</li>
-					<li>
+					<li class="follow">
 							<a href="http://www.github.com/FRC-Team-1160" target="_blank">
-								<div style="display:inline-block; width:2em; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe003;"></div>
-								FRC-Team-1160
+								<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe003;"></span>
 							</a>
 					</li>
 				</ul>
 				<ul class="h">
 					<li>
-						<h3 class="header-responsive-hidden">
+						<h5 class="header-responsive-hidden">
 							Search
-						</h3>
+						</h5>
 					</li>
 					<li>
 						<br />
@@ -128,6 +125,7 @@
 			</div>
 
 			<div class="bottom">
+
 				<p>
 					<a href="http://www.titaniumrobotics.com/donations" target="_blank" style="margin:0 0.5em;">
 					 	<span style="display:inline-block; font-size:3em; text-align:center; vertical-algin:middle;" title="Donate" aria-hidden="true" data-icon="&#xe00d;">
@@ -159,9 +157,11 @@
 
 		</div>
 	</footer>
-
-</div>
+	
+<?php } ?>
 <?php wp_footer(); ?>
+<?php
+/* THIS IS HIDDEN BECAUSE I DON'T WANT GOOGLE TO TRACK THESE PAGES YET
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -175,5 +175,17 @@
   })();
 
 </script>
+*/
+?>
+
+<!-- NAVIGATION HOOK-UP -->
+		<script>
+			var navigation = responsiveNav("#nav", {
+				animation:true,
+				transition:500,
+				label:"Open Menu",
+				customToggle:"toggle",
+			});
+		</script>
 </body>
 </html>

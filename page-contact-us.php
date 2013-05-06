@@ -52,75 +52,8 @@ Template Name: Contact
 ?>
 <?php get_header(); ?>
 <div id="contents">
-	<?php if (have_posts()) : ?>
-<?php while (have_posts()) : the_post(); ?>
-<div class="post"><div class="post-content">
-					<?php
-					if ( has_post_thumbnail() ) {
-						echo '<div class="thumbnail"><div class="drop-shadow curved curved-hz-1"><div class="featured">';
-						the_post_thumbnail();
-						echo '</div></div></div>';
-					}
-					else {
-							
-					}
-					?>
-<div class="entry">
-<fieldset><legend>
-<?php the_title(); ?></legend></fieldset>
-<?php the_content();?>
-<div class="clear"></div>
-					<div class="entry-content">
-						<?php if(isset($emailSent) && $emailSent == true) { ?>
-							<div class="thanks">
-								<p>Thanks, your email was sent successfully.</p>
-							</div>
-						<?php } else { ?>
-							<?php if(isset($hasError) || isset($captchaError)) { ?>
-								<p class="error">Sorry, an error occured: please check the fields with error messages.<p>
-							<?php } ?>
 
-<p style="font-size:1.3em; font-weight:100; color: #0054A3">Contact Titanium Robotics!</p>
-<p style="color:red; font-weight:bold; font-size:small;"><sup>*</sup> &mdash; required</p>
-<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
-							<ul class="contactform">
-							<li>
-			<label for="contactName">Name<sup style="color:red; font-weight:bold">*</sup></label>
-								<?php if($nameError != '') { ?>
-									<span class="error"><?=$nameError;?></span>
-								<?php } ?>
-			<input type="text" required="required" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" placeholder="Mr. Roboto" class="required requiredField" />
-							</li>
+	<?php require('loop.php');
+	get_required_files(); ?>
 
-							<li>
-			<label for="email">Email<sup style="color:red; font-weight:bold">*</sup></label>
-								<?php if($emailError != '') { ?>
-									<span class="error"><?=$emailError;?></span>
-								<?php } ?>
-			<input type="email" required="required" name="email" id="email" placeholder="domoarigato@mr-roboto.com" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="required requiredField email" />
-							</li>
-
-							<li>
-			<label for="commentsText">Message<sup style="color:red; font-weight:bold">*</sup></label>
-								<?php if($commentError != '') { ?>
-									<span class="error"><?=$commentError;?></span>
-								<?php } ?>
-			<textarea name="comments" required="required" id="commentsText" rows="8" placeholder="Dear Titanium Robotics. . ."
-		class="required requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
-							</li>
-
-							<li>
-							<button type="submit">Submit</button>
-							</li>
-						</ul>
-						<input type="hidden" name="submitted" id="submitted" value="true" />
-					</form>
-				<?php } ?>
-<?php edit_post_link('edit'); ?>
-<div class="clear"></div>
-<?php endwhile; ?>
-<?php endif; ?>
-</div>
-</div></div>
-</div>
 <?php get_footer(); ?>

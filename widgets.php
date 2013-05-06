@@ -30,11 +30,11 @@ Template Name: Home Landing Page
 
 						<div class="entry">
 		
-							<fieldset style="margin-bottom:0;"><legend>
+							<h2>
 
 								From Our <a href="<?php echo get_permalink( get_option('page_for_posts') ); ?>">Blog</a>
 
-							</legend></fieldset>
+							</h2>
 
 							<fieldset><legend>
 
@@ -54,12 +54,11 @@ Template Name: Home Landing Page
 
 							<?php the_content();?>
 						
-							<div class="clear"></div>
+								<div class="clear"></div>
 
 							<a class="button" href="<?php echo get_permalink( get_option('page_for_posts' ) ); ?>" style="float:right;">Read More Posts &rarr;</a>
 
-							<div class="clear"></div>
-						
+								<div class="clear"></div>
 						</div>
 					</div></div>
 				</div>

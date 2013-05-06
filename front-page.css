@@ -1,0 +1,195 @@
+/* FRONT PAGE STYLES */
+h1, h2, h3, h4, h5, h6 {
+	margin:0;
+	font-weight:100;
+	color:#0054A3;
+}
+p {
+	font-family:'Roboto', 'Open Sans', sans-serif;
+	font-weight:100;
+	font-size:1em;
+}
+strong, em {
+	font-weight:normal;
+	font-style:normal;
+}
+.frontpage.wrapper {
+	background-color:#FFF;
+}
+.frontpage.wrapper #contents {
+	width:100%;
+}
+.homecontainer {
+	background-image: url('');
+	background-size: cover;
+	background-position:center center;
+}
+.homecontainer .entry {
+	padding:1em;
+	display:block;
+	text-align:left;
+}
+.homecontainer p {
+	padding:1em;
+	margin:0;
+}
+#contents .entry a {
+	border-bottom:1px dotted;
+}
+
+/* TITLE */
+#contents .title.homecontainer {
+	background:url('assets/birdjacket.JPG') center center;
+	background-size:cover;
+}
+#contents .withshadow.title.homecontainer, 
+#contents .withshadow.title.homecontainer .entry {
+	-moz-box-shadow:	inset 0  0.6em 0.6em -0.6em #333, 
+						inset 0 -0.6em 0.6em -0.6em #333;
+	-webkit-box-shadow:	inset 0  0.6em 0.6em -0.6em #333, 
+						inset 0 -0.6em 0.6em -0.6em #333;
+		box-shadow:		inset 0  0.6em 0.6em -0.6em #333, 
+						inset 0 -0.6em 0.6em -0.6em #333;
+}
+#contents .title .entry {
+	background:rgba(0, 0, 0, 0.6);
+	color:#fff;
+	text-align:center;
+}
+#contents .title .entry p {
+	margin:auto;
+}
+#contents .title .titletext {
+	font-size:3em;
+	display:block;
+	color:#fff;
+	float:none;
+	line-height:0.7em;
+	vertical-align:middle;
+	padding:1em;
+}
+
+/* MENUS */
+.fronticon {
+	padding:0 0.33em;
+	display:inline-block;
+	font-size: 3em;
+	float:none;
+	vertical-align:middle;
+}
+#contents .basics a {
+	border-bottom:none;
+}
+.basics.homecontainer .entry {
+	text-align: center;
+}
+
+/* BLOG */
+.homecontainer .entry.posted article {
+	padding:2em;
+	text-align:left;
+}
+
+/* FIRST */
+#contents .first.homecontainer {
+	background-image:url('assets/first-background.png');
+}
+#contents .first p {
+	margin-bottom:0;
+	padding-bottom:0;
+}
+
+/* LOCATION */
+#contents .location.homecontainer {
+	color:#0054A3;
+	background:url('assets/san-marino-map.png') center center;
+	background-size: cover;
+}
+
+/* INNER SHADOW */
+#contents .withshadow.homecontainer {
+	-moz-box-shadow:	inset 0  0.6em 0.6em -0.6em #888888, 
+						inset 0 -0.6em 0.6em -0.6em #888888;
+	-webkit-box-shadow:	inset 0  0.6em 0.6em -0.6em #888888, 
+						inset 0 -0.6em 0.6em -0.6em #888888;
+		box-shadow:		inset 0  0.6em 0.6em -0.6em #888888, 
+						inset 0 -0.6em 0.6em -0.6em #888888;
+}
+#contents .withshadow .entry {
+	-moz-box-shadow:	inset 0  0.6em 0.6em -0.6em #888888, 
+						inset 0 -0.6em 0.6em -0.6em #888888;
+	-webkit-box-shadow:	inset 0  0.6em 0.6em -0.6em #888888, 
+						inset 0 -0.6em 0.6em -0.6em #888888;
+		box-shadow:		inset 0  0.6em 0.6em -0.6em #888888, 
+						inset 0 -0.6em 0.6em -0.6em #888888;
+}
+
+/* CONTAINER ON THE RIGHT */
+.homecontainer .entry.rightside {
+	min-height:300px;
+	background:rgba(255, 255, 255, 0.6);
+	width:65%;
+	float:right;
+	color:#0054A3;
+	text-align:left;
+}
+
+/* CONTAINER ON THE LEFT */
+.homecontainer .entry.leftside {
+	min-height:300px;
+	background:rgba(255, 255, 255, 0.8);
+	width:65%;
+	color:#0054A3;
+	text-align:left;
+	display:inline-block;
+}
+.homecontainer .entry.leftside div {
+	height:100%;
+	display:inline-block;
+	vertical-align: middle;
+}
+
+/* WHITE BACKGROUND & BORDERS */
+#contents .white.homecontainer {
+	float:left;
+	width:100%;
+	padding:0;
+	display:block;
+	border-width:0 0 1px;
+}
+
+/* SOCIAL */
+#contents .social .entry a,
+#contents .sponsors.entry a {
+	font-size:2em;
+	padding:0.5em;
+	border:none;
+}
+.social.homecontainer {
+	float:left;
+	width:100%;
+	padding:0;
+	display:block;
+}
+.social.homecontainer p {
+	text-align:center;
+}
+
+/* SPONSORS */
+.frontpage .sponsors table {
+	width:100%;
+}
+.frontpage .sponsors table td {
+	width:100%;
+	padding:0;
+	text-align:center;
+}
+#contents .sponsors.entry a {
+	font-weight:100;
+	font-size:1.4em;
+}
+@media screen and (max-width:720px) {
+	#contents .title .titletext {
+		font-size:1.5em;
+	}
+}
