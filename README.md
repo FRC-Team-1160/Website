@@ -1,7 +1,7 @@
 TEAM1160 v3.0
 ==========================
-theme by Nathan Wong and Titanium Robotics
--------------------------------------------
+Theme by Titanium Robotics & Nathan Wong
+------------------------------------------------
 
 This is the third version of the Titanium Robotics Theme for titaniumrobotics.com.  You are allowed to download and use this theme on your own blog, but it was designed specifically for the titaniumrobotics.com web structure and is therefore, personalized with specific urls and icons.
 
