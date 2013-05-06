@@ -1,4 +1,4 @@
-TEAM1160 v3.0
+Titanium Robotics Theme v3.0
 ==========================
 Theme by Titanium Robotics & Nathan Wong
 ------------------------------------------------
@@ -13,4 +13,4 @@ Major Updates:
 
 Live Version of this Website: [beta.titanumrobotics.com](http://beta.titaniumrobotics.com)
 
-All images COPYRIGHT 2013 [TITANIUM ROBOTICS](http://www.titaniumrobotics.com) & [Nathan Wong](http://www.itsallwong.com)
+All images COPYRIGHT 2013 [TITANIUM ROBOTICS](http://www.titaniumrobotics.com)
