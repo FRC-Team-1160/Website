@@ -186,6 +186,12 @@
 				label:"Open Menu",
 				customToggle:"toggle",
 			});
+			var navigation = responsiveNav("#account-toggle", {
+				animation:true,
+				transition:500,
+				label:"Open Menu",
+				customToggle:"toggle",
+			});
 		</script>
 </body>
 </html>
