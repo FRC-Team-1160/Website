@@ -160,33 +160,10 @@
 	
 <?php } ?>
 <?php wp_footer(); ?>
-<?php
-/* THIS IS HIDDEN BECAUSE I DON'T WANT GOOGLE TO TRACK THESE PAGES YET
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36416864-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-*/
-?>
 
 <!-- NAVIGATION HOOK-UP -->
 		<script>
 			var navigation = responsiveNav("#nav", {
-				animation:true,
-				transition:500,
-				label:"Open Menu",
-				customToggle:"toggle",
-			});
-			var navigation = responsiveNav("#account-toggle", {
 				animation:true,
 				transition:500,
 				label:"Open Menu",

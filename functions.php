@@ -83,46 +83,6 @@ function titanium_get_menu_name($location){
 function titanium_register_sidebars() {
 	/* Register dynamic sidebars using register_sidebar() here. */
 	register_sidebars(1, array(
-		'name' => 'Sidebar 1',
-		'id' => 'sidebar1',
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<fieldset><legend class="rounded">',
-		'after_title' => '</legend></fieldset>',
-	) );
-	register_sidebars(1, array(
-		'name' => 'Main Home Content',
-		'id' => 'home',
-		'before_widget' => '<div class="post"><div class="entry"><div class="cont">',
-		'after_widget' => '<div class="clear"></div></div></div></div>',
-		'before_title' => '<fieldset><legend class="rounded">',
-		'after_title' => '</legend></fieldset>',
-	) );
-	register_sidebars(1, array(
-		'name' => 'Home Page Column 1 (Left)',
-		'id' => 'home_1',
-		'before_widget' => '<div class="entry"><div class="cont">',
-		'after_widget' => '<div class="clear"></div></div></div>',
-		'before_title' => '<fieldset><legend class="rounded">',
-		'after_title' => '</legend></fieldset>',
-	) );
-	register_sidebars(1, array(
-		'name' => 'Home Page Column 2 (Center)',
-		'id' => 'home_2',
-		'before_widget' => '<div class="entry"><div class="cont">',
-		'after_widget' => '<div class="clear"></div></div></div>',
-		'before_title' => '<fieldset><legend class="rounded">',
-		'after_title' => '</legend></fieldset>',
-	) );
-	register_sidebars(1, array(
-		'name' => 'Home Page Column 3 (Right)',
-		'id' => 'home_3',
-		'before_widget' => '<div class="entry"><div class="cont">',
-		'after_widget' => '<div class="clear"></div></div></div>',
-		'before_title' => '<fieldset><legend class="rounded">',
-		'after_title' => '</legend></fieldset>',
-	) );
-	register_sidebars(1, array(
 		'name' => 'Home Page Sidebar',
 		'id' => 'home_sidebar',
 		'before_widget' => '<div class="entry"><div class="cont">',
@@ -155,7 +115,7 @@ function custom_login_logo() {
 		background-repeat:no-repeat;
 	}
 	h1 a {
-		background-image: url('.get_bloginfo('template_directory').'/assets/birdbeta.jpg) !important;
+		background-image: url('.get_bloginfo('template_directory').'/assets/bird.png) !important;
 		background-size: auto!important;
 		height:150px !important;
 		width:100% !important;
