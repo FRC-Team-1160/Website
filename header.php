@@ -115,22 +115,6 @@
 						 		</a>
 						 	</div>
 						 	<div class="icon">
-						 		<?php if (is_user_logged_in()) { ?>
-										<?php $user_info = wp_get_current_user();
-											$first_name = $user_info->first_name;
-											$last_name = $user_info->last_name;
-											?>
-									<a href="<?php echo get_admin_url( 'profile.php' ); ?>" title="<?php echo "$first_name $last_name"?>'s Account" >
-										<span aria-hidden="true" data-icon="&#xe01f;">
-							 			</span>
-							 		</a>
-							 	<?php } else { ?>
-							 		<a href="<?php echo esc_url( wp_login_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="Log In">
-							 			<span aria-hidden="true" data-icon="&#xe021;"></span>
-							 		</a>
-							 	<?php } ?>
-						 	</div>
-						 	<div class="icon">
 								<a href="#nav" id="toggle" title="Open Menu" >
 									<span aria-hidden="true" data-icon="&#xe020;">
 				 					</span>
