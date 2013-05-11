@@ -39,7 +39,7 @@ strong, em {
 
 /* TITLE */
 #contents .title.homecontainer {
-	background:url('assets/birdjacket.JPG') center center;
+	background:url('assets/birdjacket.jpg') center center;
 	background-size:cover;
 }
 #contents .withshadow.title.homecontainer, 
