@@ -13,9 +13,6 @@ strong, em {
 	font-weight:normal;
 	font-style:normal;
 }
-.frontpage.wrapper {
-	background-color:#FFF;
-}
 .frontpage.wrapper #contents {
 	width:100%;
 }
@@ -23,6 +20,7 @@ strong, em {
 	background-image: url('');
 	background-size: cover;
 	background-position:center center;
+	background-color:#F5F5F5;
 }
 .homecontainer .entry {
 	padding:1em;

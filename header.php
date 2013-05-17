@@ -108,17 +108,49 @@
 						</div>
 
 						<div class="menu-right">
+							<?php if (is_user_logged_in()) { ?>
 						 	<div class="icon">
-								<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contact Us' ) ) ); ?>" title="Say Hi!">
-									<span aria-hidden="true" data-icon="&#x0021;">
-						 			</span>
-						 		</a>
-						 	</div>
-						 	<div class="icon">
+								<?php
+									global $current_user;
+									get_currentuserinfo();
+									echo get_avatar( $current_user->ID, 64 );
+								?>
+							</div>
+								
+							<div id="userinfo">
+								<div class="fullname">
+									<?php
+										$user_info = wp_get_current_user();
+										$first_name = $user_info->first_name;
+										$last_name = $user_info->last_name;
+										echo "$first_name $last_name";
+									?>
+								</div>
+
+								<div class="username">
+									<?php
+										$user_info = wp_get_current_user();
+										$username = $user_info->user_login;
+										echo "$username";
+									?>
+									<br />
+									<a href="<?php echo get_admin_url(); ?>">Dashboard</a> | <a href="<?php echo esc_url( wp_logout_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="Logout">Logout</a>
+								</div>
+							</div>
+								<?php } else { ?>
+							<div class="icon">
+								<a href="<?php echo esc_url( wp_login_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="login">
+									<span aria-hidden="true" data-icon="&#xe021;">
+									</span>
+								</a>
+							</div>
+							<?php }?>
+
+							<div class="icon">
 								<a href="#nav" id="toggle" title="Open Menu" >
 									<span aria-hidden="true" data-icon="&#xe020;">
-				 					</span>
-				 				</a>
+									</span>
+								</a>
 							</div>
 						</div>
 					</div>

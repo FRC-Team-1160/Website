@@ -1,5 +1,4 @@
 </div>
-</div>
 <div class="clear"></div>
 <?php wp_reset_query(); ?>
 <?php if(is_page_template('home-page.php')) { ?>
@@ -160,6 +159,7 @@
 	</footer>
 	
 <?php } ?>
+</div>
 <?php wp_footer(); ?>
 
 <!-- NAVIGATION HOOK-UP -->
