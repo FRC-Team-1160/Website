@@ -19,8 +19,8 @@
 			<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Roboto:400,300,100' rel='stylesheet' type='text/css'>
 
 		<!--CSS-->
-			<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>" />
+			<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
 			<link rel="stylesheet"	type="text/css"	href="//cdn.moot.it/1/moot.css" />
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />
 		<?php if(is_front_page()) { ?>
@@ -129,7 +129,7 @@
 						'theme_location'	=>	'Main-Navigation',
 						'container_id'		=>	'nav',
 						'container_class'	=>	'navigation-links',
-						'menu_id'			=>	'',
+						'menu_id'			=>	'menu',
 						'menu_class'		=>	'',
 					)
 				);?>

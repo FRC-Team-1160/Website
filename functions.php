@@ -59,9 +59,9 @@ function titanium_theme_setup() {
 }
 
 function titanium_jquery_enqueue() {
-   wp_deregister_script('jquery');
-   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
-   wp_enqueue_script('jquery');
+	 wp_deregister_script('jquery');
+	 wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
+	 wp_enqueue_script('jquery');
 }
 
 function titanium_register_menus() {
@@ -74,10 +74,10 @@ function titanium_register_menus() {
 }
 
 function titanium_get_menu_name($location){
-    if(!has_nav_menu($location)) return false;
-    $menus = get_nav_menu_locations();
-    $menu_title = wp_get_nav_menu_object($menus[$location])->name;
-    return $menu_title;
+	if(!has_nav_menu($location)) return false;
+	$menus = get_nav_menu_locations();
+	$menu_title = wp_get_nav_menu_object($menus[$location])->name;
+	return $menu_title;
 }
 
 function titanium_register_sidebars() {
@@ -157,18 +157,18 @@ function custom_login_logo() {
 		 box-shadow: 0 0 10px #000;
 	 }
 	 .login #nav, .login #backtoblog {
-	 	text-shadow:none;
-	 	margin:0 !important;
-	 	padding:0 !important;
+		text-shadow:none;
+		margin:0 !important;
+		padding:0 !important;
 	 }
 	 #backtoblog {
-	 	padding:12px 0 0 !important;
+		padding:12px 0 0 !important;
 	}
 	 @media only all and (max-height:490px) {
-	 	#login {
-	 		position:relative !important;
-	 		margin-top:2em !important;
-	 	}
+		#login {
+			position:relative !important;
+			margin-top:2em !important;
+		}
 	 }
 	 @media only all and (max-width:740px) {
 		#login #login_error, #login .message {
@@ -204,15 +204,15 @@ function is_sidebar_active($index) {
 }
 
 function titanium_set_query() {
-  $query  = attribute_escape(get_search_query());
+	$query  = attribute_escape(get_search_query());
 
-  if(strlen($query) > 0){
-    echo '
-      <script type="text/javascript">
-        var titanium_query  = "'.$query.'";
-      </script>
-    ';
-  }
+	if(strlen($query) > 0){
+	echo '
+		<script type="text/javascript">
+		var titanium_query  = "'.$query.'";
+		</script>
+	';
+	}
 }
 
 function filter_where($where = '') {
@@ -220,7 +220,7 @@ function filter_where($where = '') {
 		$exclude = array(1615);	
 
 		for($x=0;$x<count($exclude);$x++){
-		  $where .= " AND ID != ".$exclude[$x];
+			$where .= " AND ID != ".$exclude[$x];
 		}
 	}
 	return $where;
@@ -246,10 +246,10 @@ function the_breadcrumb() {
 }
 
 function remove_footer_admin (){
-   global $current_user;
-      get_currentuserinfo();
-  echo 'Hello, ' . $current_user->user_firstname .' '. $current_user->user_lastname.'.  Welcome to the Titanium Robotics website!';
-  echo '<br />For Team and Technical Contact: <a href="mailto:titaniumrobotics@gmail.com">Email</a> // <a href="https://github.com/FRC-Team-1160/Website/issues"> Report a Bug</a>';
+	global $current_user;
+		get_currentuserinfo();
+	echo 'Hello, ' . $current_user->user_firstname .' '. $current_user->user_lastname.'.  Welcome to the Titanium Robotics website!';
+	echo '<br />For Team and Technical Contact: <a href="mailto:titaniumrobotics@gmail.com">Email</a> // <a href="https://github.com/FRC-Team-1160/Website/issues"> Report a Bug</a>';
 }
 
 ?>
