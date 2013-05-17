@@ -1,4 +1,5 @@
 </div>
+</div>
 <div class="clear"></div>
 <?php wp_reset_query(); ?>
 <?php if(is_page_template('home-page.php')) { ?>

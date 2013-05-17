@@ -228,15 +228,14 @@ img.aligncenter {
 	font-family:'Roboto', sans-serif;
 	float:left;
 	font-size:0.5em;
-	font-weight:100;
+	font-weight:300;
 	margin:0;
 	width:100%;
-	display:inline-block;
 	vertical-align: middle;
-	padding-bottom:0.4em;
+	border-bottom-width:1px;
 }
 #nav ul {
-	width:90%;
+	width:100%;
 	margin:auto;
 	text-align:center;
 }
@@ -244,32 +243,40 @@ img.aligncenter {
 	text-align:left;
 	width:auto;
 	display:inline-block;
-	padding:1em;
-	margin:0;
+	padding:0.5em 0;
+	margin:0 0.5em;
+}
+.wrapper #nav li.current-menu-item {
+	border-bottom:2px solid #0054A3;
 }
 #nav li a {
 	display:block;
-	color:#D5D5D5;
+	color:#737373;
 }
-#nav li .current-menu-item a {
+#nav li.current-menu-item a {
 	color:#000;
 	font-weight:normal;
-	border-bottom:1px solid #0054A3;
 }
-#nav li a:hover {
+#nav li:hover a {
 	color:#000;
-	border-bottom:1px solid #0054A3;
 	transition:color 100ms;
 	-webkit-transition:color 100ms;
 	-moz-transition:color 100ms;
 	-o-transition:color 100ms;
 	-ms-transition:color 100ms;
 }
+#nav li:hover {
+	border-bottom:2px solid #0054A3;
+	transition:border-bottom 100ms;
+	-webkit-transition:border-bottom 100ms;
+	-moz-transition:border-bottom 100ms;
+	-o-transition:border-bottom 100ms;
+	-ms-transition:border-bottom 100ms;
+}
 #icon-nav {
 	float:left;
 	width:100%;
 	height:100%;
-	border-bottom:1px solid #0068ca;
 }
 .logo {
 	color:#FFF;
@@ -294,7 +301,6 @@ img.aligncenter {
 	margin:0;
 	float:left;
 	list-style:none;
-	border-left:1px solid #0068ca;
 }
 .menu .menu-right {
 	margin:auto;
@@ -302,7 +308,6 @@ img.aligncenter {
 	line-height:2em;
 	margin:0;
 	position: relative;
-	border-right:1px solid #0068ca;
 	float:right;
 	display:inline-block;
 	height:100%;
@@ -310,11 +315,13 @@ img.aligncenter {
 .menu {
 	vertical-align:middle;
 	list-style:none;
-	width:90%;
+	width:100%;
 	height:100%;
-	max-width:1280px;
 	padding:0;
 	margin:0 auto;
+}
+#toggle {
+	display:none;
 }
 
 /* SUBPAGES */
@@ -325,7 +332,7 @@ img.aligncenter {
 	width:100%;
 	margin:0 auto;
 	padding:10px 0;
-	background: rgb(245, 245, 245);
+	background: #F0F0F0;
 	border-bottom-width:1px;
 }
 #subpages ul {
@@ -1309,30 +1316,13 @@ div.pagination a:hover {
 
 			/* MOBILE VIEW */
 			@media screen and (max-width: 720px) {
+				#toggle {
+					display:inline-block;
+				}
 				.menu {
 					width:100%;
 					margin:auto;
 					display:inline-block;
-				}
-				#nav ul {
-					width:100%;
-				}
-				#nav {
-					text-align:left;
-					display:inline-block;
-					margin:auto;
-				}
-				#nav li {
-					width:100%;
-					display:inline-block;
-					margin:0;
-					padding:0;
-				}
-				#nav li a {
-					display:block;
-					width:auto;
-					padding:1em;
-					margin:0;
 				}
 				#subpages .links {
 					width:100%;

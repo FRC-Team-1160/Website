@@ -297,10 +297,10 @@
 						<h1>Team 1160 is a FIRST<sup>&reg;</sup> Team</h1>
 						<h4>What is FIRST<sup>&reg;</sup> and what do they do?</h4>
 					<p>
-						<span style="font-size:10em; float:left; padding:0 15px 0 0;" title="FIRST" aria-hidden="true" data-icon="f"></span>Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow" target="_blank"><strong>Dean Kamen</strong></a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow" target="_blank"><strong><em>FIRST</em></strong></a><em><sup> ®</sup></em><em> </em>(For Inspiration and Recognition of Science and Technology) in 1989 to inspire appreciation of science and technology in young people.
+						<span style="font-size:10em; float:left; padding:0 15px 0 0;" title="FIRST" aria-hidden="true" data-icon="f"></span>Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow"><strong>Dean Kamen</strong></a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow"><strong><em>FIRST</em></strong></a><em><sup> ®</sup></em><em> </em>(For Inspiration and Recognition of Science and Technology) in 1989 to inspire appreciation of science and technology in young people.
 					</p>
 					<p>
-						The way of life FIRST promotes, Gracious Professionalism<sup>™</sup>, is a way of working that encourages high-quality work, emphasizes the value of others, and respects individuals and the community. To learn more about <em>FIRST<sup>&reg;</sup></em>, visit <strong><a target="_blank" href="http://www.usfirst.org/" rel="nofollow" target="_blank">www.usfirst.org </a></strong>
+						The way of life FIRST promotes, Gracious Professionalism<sup>™</sup>, is a way of working that encourages high-quality work, emphasizes the value of others, and respects individuals and the community. To learn more about <em>FIRST<sup>&reg;</sup></em>, visit <strong><a target="_blank" href="http://www.usfirst.org/" rel="nofollow">www.usfirst.org </a></strong>
 					</p>
 					<p>
 						<a href="/about-first">Read the Full Article</a>
@@ -328,7 +328,11 @@ $post_image_id = get_post_thumbnail_id($post->ID);
 		style="background-image: url('<?php echo $thumbnail ?>') !important;">
 			<div class="entry rightside">
 				<article>
-					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></h1></a>
+					<h1>
+						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
+							<?php the_title(); ?>
+						</a>
+					</h1>
 					<?php the_excerpt(); ?>
 				</article>
 			</div>

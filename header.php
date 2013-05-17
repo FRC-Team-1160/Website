@@ -122,17 +122,18 @@
 							</div>
 						</div>
 					</div>
+					
 				</div>
 
-				<?php wp_nav_menu(
-					array(
-						'theme_location'	=>	'Main-Navigation',
-						'container_id'		=>	'nav',
-						'container_class'	=>	'navigation-links',
-						'menu_id'			=>	'menu',
-						'menu_class'		=>	'',
-					)
-				);?>
+					<?php wp_nav_menu(
+						array(
+							'theme_location'	=>	'Main-Navigation',
+							'container_id'		=>	'nav',
+							'container_class'	=>	'navigation-links',
+							'menu_id'			=>	'menu',
+							'menu_class'		=>	'',
+						)
+					);?>
 				
 			</header>
 		<div class="clear"></div>
