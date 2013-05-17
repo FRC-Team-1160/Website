@@ -253,25 +253,28 @@ img.aligncenter {
 	display:block;
 	color:#737373;
 }
+#nav li {
+	border-bottom:2px solid transparent;
+}
 #nav li.current-menu-item a {
 	color:#000;
 	font-weight:normal;
 }
 #nav li:hover a {
 	color:#000;
-	transition:color 100ms;
-	-webkit-transition:color 100ms;
-	-moz-transition:color 100ms;
-	-o-transition:color 100ms;
-	-ms-transition:color 100ms;
+	transition:color 200ms;
+	-webkit-transition:color 200ms;
+	-moz-transition:color 200ms;
+	-o-transition:color 200ms;
+	-ms-transition:color 200ms;
 }
 #nav li:hover {
 	border-bottom:2px solid #0054A3;
-	transition:border-bottom 100ms;
-	-webkit-transition:border-bottom 100ms;
-	-moz-transition:border-bottom 100ms;
-	-o-transition:border-bottom 100ms;
-	-ms-transition:border-bottom 100ms;
+	transition:border-bottom 200ms;
+	-webkit-transition:border-bottom 200ms;
+	-moz-transition:border-bottom 200ms;
+	-o-transition:border-bottom 200ms;
+	-ms-transition:border-bottom 200ms;
 }
 #icon-nav {
 	float:left;
@@ -390,9 +393,8 @@ img.aligncenter {
 	margin:0;
 }
 #subpages li a {
-	color:rgb(100, 100, 100);
-	padding:5px;
-	border:0px solid;
+	color:#737373;
+	border-bottom:2px solid transparent;
 	-webkit-transition:border 200ms;
 	-o-transition:border 200ms;
 	-moz-transition:border 200ms;
@@ -414,8 +416,7 @@ img.aligncenter {
 }
 #subpages li.current-menu-item a, #subpages li a:hover, #subpages li.current_page_item a {
 	position:relative;
-	padding-bottom:-3px;
-	border-bottom:3px solid #0054A3;
+	border-bottom:2px solid #0054A3;
 	-webkit-transition:border 200ms;
 	-o-transition:border 200ms;
 	-moz-transition:border 200ms;
@@ -1040,19 +1041,19 @@ a {
 	font-weight:inherit;
 	text-decoration:none;
 	display:inline;
-	transition:color 100ms;
-	-webkit-transition:color 100ms;
-	-moz-transition:color 100ms;
-	-o-transition:color 100ms;
-	-ms-transition:color 100ms;
+	transition:color 200ms;
+	-webkit-transition:color 200ms;
+	-moz-transition:color 200ms;
+	-o-transition:color 200ms;
+	-ms-transition:color 200ms;
 }
 a:hover {
 	color:#3376B5;
-	transition:color 100ms;
-	-webkit-transition:color 100ms;
-	-moz-transition:color 100ms;
-	-o-transition:color 100ms;
-	-ms-transition:color 100ms;
+	transition:color 200ms;
+	-webkit-transition:color 200ms;
+	-moz-transition:color 200ms;
+	-o-transition:color 200ms;
+	-ms-transition:color 200ms;
 }
 a:focus {
 	outline:1px dotted #0054A3;
@@ -1318,6 +1319,17 @@ div.pagination a:hover {
 			@media screen and (max-width: 720px) {
 				#toggle {
 					display:inline-block;
+				}
+				.wrapper #nav ul li {
+					width:100%;
+					display:block;
+					margin:0;
+					padding:0;
+				}
+				.wrapper #nav ul li a {
+					display:block;
+					padding:0.5em;
+					width:auto;
 				}
 				.menu {
 					width:100%;
