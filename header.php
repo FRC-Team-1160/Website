@@ -109,33 +109,14 @@
 
 						<div class="menu-right">
 							<?php if (is_user_logged_in()) { ?>
-						 	<div class="icon">
-								<?php
-									global $current_user;
-									get_currentuserinfo();
-									echo get_avatar( $current_user->ID, 64 );
-								?>
-							</div>
-								
-							<div id="userinfo">
-								<div class="fullname">
+						 	<div class="icon user">
+						 		<a href="<?php echo get_admin_url(); ?>">
 									<?php
-										$user_info = wp_get_current_user();
-										$first_name = $user_info->first_name;
-										$last_name = $user_info->last_name;
-										echo "$first_name $last_name";
+										global $current_user;
+										get_currentuserinfo();
+										echo get_avatar( $current_user->ID, 60 );
 									?>
-								</div>
-
-								<div class="username">
-									<?php
-										$user_info = wp_get_current_user();
-										$username = $user_info->user_login;
-										echo "$username";
-									?>
-									<br />
-									<a href="<?php echo get_admin_url(); ?>">Dashboard</a> | <a href="<?php echo esc_url( wp_logout_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="Logout">Logout</a>
-								</div>
+								</a>
 							</div>
 								<?php } else { ?>
 							<div class="icon">
@@ -157,15 +138,29 @@
 					
 				</div>
 
-					<?php wp_nav_menu(
-						array(
-							'theme_location'	=>	'Main-Navigation',
-							'container_id'		=>	'nav',
-							'container_class'	=>	'navigation-links',
-							'menu_id'			=>	'menu',
-							'menu_class'		=>	'',
-						)
-					);?>
+					<?php
+					if(is_front_page()):
+						wp_nav_menu(
+							array(
+								'theme_location'	=>	'Main-Navigation',
+								'container_id'		=>	'nav',
+								'container_class'	=>	'navigation-links home-links',
+								'menu_id'			=>	'menu',
+								'menu_class'		=>	'',
+							)
+						);
+					else:
+						wp_nav_menu(
+							array(
+								'theme_location'	=>	'Main-Navigation',
+								'container_id'		=>	'nav',
+								'container_class'	=>	'navigation-links',
+								'menu_id'			=>	'menu',
+								'menu_class'		=>	'',
+							)
+						);
+					endif;
+					?>
 				
 			</header>
 		<div class="clear"></div>
@@ -180,7 +175,7 @@
 							?>
 						</h1></li></ul>
 					</div>
-	<?php if(!is_author() && !is_search() && !is_404()) : ?>
+	<?php if(!is_author() && !is_search() && !is_404() &&!is_home()) : ?>
 			<?php
 	  			if($post->post_parent)
 	  			$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
