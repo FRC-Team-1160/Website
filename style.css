@@ -246,7 +246,7 @@ img.aligncenter {
 	padding:0.5em 0;
 	margin:0 0.5em;
 }
-.wrapper #nav li.current-menu-item {
+.wrapper #nav li.current-menu-item, .wrapper #nav li.current-page-ancestor {
 	border-bottom:2px solid #0054A3;
 }
 #nav li a {
@@ -256,7 +256,7 @@ img.aligncenter {
 #nav li {
 	border-bottom:2px solid transparent;
 }
-#nav li.current-menu-item a {
+#nav li.current-menu-item a, #nav li.current-page-ancestor a {
 	color:#000;
 	font-weight:normal;
 }
