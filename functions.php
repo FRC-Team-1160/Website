@@ -12,6 +12,9 @@ function titanium_theme_setup() {
 	/* Enque JQuery */
 	if (!is_admin()) add_action("wp_enqueue_scripts", "titanium_jquery_enqueue", 1);
 
+	/* Custom Post Type */
+	add_action( 'init', 'titanium_post_types' );
+
 	/* Add theme support for automatic feed links. */	
 	add_theme_support( 'automatic-feed-links' );
 
@@ -58,6 +61,32 @@ function titanium_theme_setup() {
 	add_post_type_support('page', 'excerpt');
 }
 
+function titanium_post_types() {
+	register_post_type( 'press', 
+		array(
+			'labels' => array(
+				'name' => __( 'Press Releases' ),
+				'singular_name' => __( 'Press Release' ),
+				'add_new' => __( 'Add New' ),
+				'add_new_item' => __( 'Add New Press Release' ),
+				'edit' => __( 'Edit' ),
+				'edit_item' => __( 'Edit Press Release' ),
+				'new_item' => __( 'New Press Release' ),
+				'view' => __( 'View Press Release' ),
+				'view_item' => __( 'View Press Release' ),
+				'search_items' => __( 'Search Press Releases' ),
+				'not_found' => __( 'No Press Releases found' ),
+				'not_found_in_trash' => __( 'No Press Releases found in Trash' ),
+				'parent' => __( 'Parent Press Release' ),
+			),
+			'public' => true,
+			'rewrite' => array( 'slug' => 'press-release', 'with_front' => false ),
+			'taxonomies' => array( 'post_tag', 'category '),
+			'can_export' => true,
+		)
+	);
+}
+
 function titanium_jquery_enqueue() {
 	 wp_deregister_script('jquery');
 	 wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
@@ -83,13 +112,23 @@ function titanium_get_menu_name($location){
 function titanium_register_sidebars() {
 	/* Register dynamic sidebars using register_sidebar() here. */
 	register_sidebars(1, array(
-		'name' => 'Home Page Sidebar',
-		'id' => 'home_sidebar',
+		'name' => 'Right Sidebar',
+		'id' => 'sidebar_right',
 		'before_widget' => '<div class="entry"><div class="cont">',
 		'after_widget' => '<div class="clear"></div></div></div>',
 		'before_title' => '<fieldset><legend class="rounded">',
 		'after_title' => '</legend></fieldset>',
-	) );
+		)
+	);
+	register_sidebars(1, array(
+		'name' => 'Left Sidebar',
+		'id' => 'sidebar_left',
+		'before_widget' => '<div class="entry"><div class="cont">',
+		'after_widget' => '<div class="clear"></div></div></div>',
+		'before_title' => '<fieldset><legend class="rounded">',
+		'after_title' => '</legend></fieldset>',
+		)
+	);
 }
 
 function titanium_load_scripts() {

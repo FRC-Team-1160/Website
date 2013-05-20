@@ -497,13 +497,28 @@ img.aligncenter {
 	width:66.666666666666%;
 	float:left;
 }
+#contents .press .post {
+	border-bottom-width:1px;
+	margin:0;
+	width:100%;
+	float:left;
+}
+#contents .press .press-content {
+	float:left;
+	width:50%;
+}
+#contents .press {
+	border-left-width:1px;
+	border-right-width: 1px;
+	float:left;
+}
 #contents .blog .home .post-content {
 	border-width: 0 1px 0 0;
 }
 #contents .blog .post-content {
 	border-width:0 1px 1px 0;
 }
-.wrapper .blog {
+.wrapper .blog, .wrapper .press {
 	width:100%;
 	background:#FFF;
 	min-height:100%;
@@ -544,7 +559,7 @@ img.aligncenter {
 	width:100%;
 	overflow:hidden;
 }
-.post .thumbnail {
+.post .thumbnail, .press .thumbnail {
 	width:100%;
 	padding-bottom:10px;
 	background:#FFF;
@@ -557,7 +572,7 @@ img.aligncenter {
 	-moz-transition: float 2s, margin 2s, padding 2s;
 	transition: float 2s, margin 2s, padding 2s;
 }
-.post .thumbnail img {
+.post .thumbnail img, .press .thumbnail img {
 	margin:auto;
 	display:block;
 	float:none;
@@ -604,6 +619,10 @@ img.aligncenter {
 	min-height:300px;
 	display:block;
 }
+.press .post-content {
+	min-height:0;
+	border-width:0 auto 1px;
+}
 .entry {
 	border:0;
 	padding:1em;
@@ -636,7 +655,7 @@ img.aligncenter {
 	padding:0 0.5em 0;
 	margin:0;
 }
-.post img, #widget-1 img, #widget-2 img, #widget-3 img, #widget-4 img {
+.post img, .side img {
 	max-width:100%;
 	height:auto;
 }
@@ -653,7 +672,11 @@ img.aligncenter {
 	-moz-transition: float 2s, margin 2s, padding 2s;
 	transition: float 2s, margin 2s, padding 2s;
 }
-#widget-1 .entry, #widget-2 .entry, #widget-3 .entry, #widget-4 .entry {
+.press .side {
+	width:25%;
+	font-size:0.8em;
+}
+.side .entry {
 	float:left;
 	display:block;
 	width:100%;
@@ -667,15 +690,11 @@ img.aligncenter {
 	-moz-transition: float 2s, margin 2s, padding 2s, height 2s;
 	transition: float 2s, margin 2s, padding 2s, height 2s;
 }
-#widget-2 .cont {
-	border-width: 1px 1px 0 1px;
-	border-style: solid;
-}
-#widget-4 .cont {
+.side .cont {
 	border-width: 0 0 1px 0;
 	border-style: solid;
 }
-#widget-4 {
+.side {
 	border-left-width:1px;
 	margin-left:-1px;
 }
@@ -683,34 +702,13 @@ img.aligncenter {
 	border-width: 1px 0 0 0;
 	padding:1em;
 }
-#widget-1, #widget-2, #widget-3, #widget-4 {
+.side {
 	width:33.333333333%;
 	float:left;
-}
-#widget-2 {
-	margin:0;
-	-webkit-transition:margin 2s;
-	-o-transition: margin 2s;
-	-moz-transition: margin 2s;
-	transition: margin 2s;
 }
 .cont ul {
 	list-style:none;
 	margin:0;
-}
-.cont ul.tweets li .timesince {
-	display:block;
-	text-transform:Uppercase;
-	margin-top:5px;
-}
-.cont ul.tweets li a {
-	display:inline-block;
-}
-.cont .twitter-follow-button {
-	margin-top:1em;
-	display:block;
-	text-transform:Uppercase;
-	font-size:0.8em;
 }
 .cont ul li {
 	display:block;
@@ -745,7 +743,7 @@ img.aligncenter {
 #contents .sponsors a {
 	border-width:0;
 }
-.sponsors {
+.normal.wrapper.sponsors {
 	width:100%;
 }
 .sponsors img {
@@ -944,7 +942,8 @@ img.aligncenter {
 button,
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
+input[type="button"],
+select {
 		background: #eee; /* Old browsers */
 		background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
 		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
@@ -968,13 +967,15 @@ input[type="button"] {
 	  margin-bottom: 20px;
 	  line-height: normal;
 	  padding: 8px 10px;
+	  font-family:inherit;
 }
 
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-input[type="button"]:hover {
+input[type="button"]:hover,
+select:hover {
 		color: #222;
 		background: #ddd; /* Old browsers */
 		background: #ddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
@@ -992,7 +993,8 @@ input[type="button"]:hover {
 button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
-input[type="button"]:active {
+input[type="button"]:active,
+select:active {
 		border: 1px solid #666;
 		background: #ccc; /* Old browsers */
 		background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
@@ -1027,8 +1029,7 @@ input[type="search"],
 input[type="text"],
 input[type="password"],
 input[type="email"],
-textarea,
-select {
+textarea{
 	border: 1px solid #ccc;
 	padding: 6px 4px;
 	outline: none;
@@ -1043,11 +1044,14 @@ select {
 	margin-bottom: 20px;
 	background: #fff;
 	font-size:1em;
+	font-family:inherit;
 	-webkit-appearance:none;
 	-moz-appearance:none;
 }
 select {
 	cursor:pointer;
+	-webkit-appearance:none;
+	-moz-appearance:none;
 }
 input[type="search"]:focus,
 input[type="text"]:focus,
@@ -1278,15 +1282,21 @@ div.pagination a:hover {
 				#contents .blog .post-content {
 					border-width:0 1px 1px;
 				}
-				#contents .blog .post, #contents .home .post {
+				#contents .press .press-content, #contents .press {
+					border-width:0;
+				}
+				#contents .blog .post,
+				#contents .home .post,
+				#contents .press .press-content {
 					width:100%;
 					border-width:0;
 				}
-				.wrapper .blog .blog-content {
+				.wrapper .blog .blog-content,
+				.wrapper .press .press-content {
 					margin-left:0;
 					border-width:0;
 				}
-				#widget-1, #widget-2, #widget-3, #widget-4 {
+				.press .side, .side {
 					width:100%;
 					float:left;
 					margin:0;
@@ -1294,14 +1304,12 @@ div.pagination a:hover {
 				.navigation {
 					border-width:0 1px;
 				}
-				.cont, 
-				#widget-1 .cont,
-				#widget-2 .cont,
-				#widget-3 .cont,
-				#widget-4 .cont {
-					border-width:1px 1px 0;
+				.cont,
+				.side .cont {
+					border-width:0 1px 1px;
 				}
-				#widget-4 {
+				.press .side,
+				.side {
 					margin-left:0;
 					border-left-width:0;
 				}
@@ -1434,15 +1442,12 @@ div.pagination a:hover {
 					width:100%;
 					padding:0px;
 				}
-				#widget-1, #widget-2, #widget-3 {
+				.side {
 					width:100%;
 					padding:0;
 					float:left;
 					list-style:none;
 					margin:0;
-				}
-				.widgetwrapper .entry {
-					padding:10px;
 				}
 				.post .shadow {
 					width:100%;

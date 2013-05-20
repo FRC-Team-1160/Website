@@ -72,7 +72,7 @@
 						</h5>
 					</li>
 					<li>
-						<a href="/media">Titanium Robotics Press</a>
+						<a href="/press">Press</a>
 					</li>
 					<li>
 						<a href="/branding">Styles Guide</a>

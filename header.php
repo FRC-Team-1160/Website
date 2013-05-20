@@ -92,7 +92,7 @@
 
 	<body>
 
-		<div class="<?php if (is_front_page()) : ?>frontpage <?php else: endif; ?>wrapper">
+		<div class="<?php if (is_front_page()) : ?>frontpage wrapper <?php else:?>normal wrapper<?php endif; ?>">
 		
 			<!--START - NAVIGATION-->
 		
