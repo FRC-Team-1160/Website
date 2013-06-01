@@ -706,11 +706,15 @@ img.aligncenter {
 	width:33.333333333%;
 	float:left;
 }
-.cont ul {
+.cont li {
 	list-style:none;
 	margin:0;
 }
-.cont ul li {
+.cont li {
+	margin:0;
+	padding:0;
+}
+.cont li a {
 	display:block;
 	background:#FFF;
 	width:100%;
@@ -724,14 +728,14 @@ img.aligncenter {
 	-moz-transition: all 500ms;
 	transition: all 500ms;
 }
-.cont ul li:hover, .cont ul li:focus {
+.cont li a:hover, .cont li a:focus {
 	background: #eeeeee;
 	-webkit-transition:all 500ms;
 	-o-transition: all 500ms;
 	-moz-transition: all 500ms;
 	transition: all 500ms;
 }
-.cont ul li a {
+.cont li a {
 	display:block;
 	line-height:1;
 }

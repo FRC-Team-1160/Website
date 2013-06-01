@@ -129,6 +129,15 @@ function titanium_register_sidebars() {
 		'after_title' => '</legend></fieldset>',
 		)
 	);
+	register_sidebars(1, array(
+		'name' => 'Bookmarks Bar',
+		'id' => 'bookmarks',
+		'before_widget' => '<div class="cont">',
+		'after_widget' => '<div class="clear"></div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+		)
+	);
 }
 
 function titanium_load_scripts() {

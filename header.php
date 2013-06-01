@@ -15,7 +15,6 @@
 			<link rel="icon"		type="application/rss+xml"	href="<?php bloginfo('template_directory') ?>/assets/favicon.ico" />
 
 		<!--FONTS-->
-			<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>-->
 			<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Roboto:400,300,100' rel='stylesheet' type='text/css'>
 
 		<!--CSS-->
@@ -61,22 +60,22 @@
 
 		<?php if (is_search()) : ?>
 			<style type="text/css" media="screen">
-				    .titanium {font-weight:bold;}
-				  </style>
-				  <script type="text/javascript">
-				  jQuery.fn.extend({
-				    highlight: function(search, insensitive, titanium_class){
-				      var regex = new RegExp("(<[^>]*>)|(\\b"+ search.replace(/([-.*+?^${}()|[\]\/\\])/g,"\\$1") +")", insensitive ? "ig" : "g");
-				      return this.html(this.html().replace(regex, function(a, b, c){
-				        return (a.charAt(0) == "<") ? a : "<em class=\""+ titanium_class +"\">" + c + "</em>";
-				      }));
-				    }
-				  });
-				  jQuery(document).ready(function($){
-				    if(typeof(titanium_query) != 'undefined'){
-				      $("#contents").highlight(titanium_query, 1, "titanium");
-				    }
-				  });
+					.titanium {font-weight:bold;}
+					</style>
+					<script type="text/javascript">
+					jQuery.fn.extend({
+					highlight: function(search, insensitive, titanium_class){
+						var regex = new RegExp("(<[^>]*>)|(\\b"+ search.replace(/([-.*+?^${}()|[\]\/\\])/g,"\\$1") +")", insensitive ? "ig" : "g");
+						return this.html(this.html().replace(regex, function(a, b, c){
+						return (a.charAt(0) == "<") ? a : "<em class=\""+ titanium_class +"\">" + c + "</em>";
+						}));
+					}
+					});
+					jQuery(document).ready(function($){
+					if(typeof(titanium_query) != 'undefined'){
+						$("#contents").highlight(titanium_query, 1, "titanium");
+					}
+					});
 			</script>
 		<?php endif; ?>
 			<script>
@@ -103,14 +102,14 @@
 						<div class="logo">
 							<a href="/" title="Titanium Robotics, FRC Team 1160">
 								<span aria-hidden="true" data-icon="b">
-						 		</span>
+								</span>
 							</a>
 						</div>
 
 						<div class="menu-right">
 							<?php if (is_user_logged_in()) { ?>
-						 	<div class="icon user">
-						 		<a href="<?php echo get_admin_url(); ?>">
+							<div class="icon user">
+								<a href="<?php echo get_admin_url(); ?>">
 									<?php
 										global $current_user;
 										get_currentuserinfo();
@@ -177,14 +176,14 @@
 					</div>
 	<?php if(!is_author() && !is_search() && !is_404() &&!is_home()) : ?>
 			<?php
-	  			if($post->post_parent)
-	  			$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
-	 			 else
-	 			 $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
-	  			if ($children) { 
+				if($post->post_parent)
+				$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+				 else
+				 $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+				if ($children) { 
 					$parent_title = get_the_title($post->post_parent);?>
 			<div class="links">
-	  			<ul>
+				<ul>
 					<li<?php 
 	if (is_page($post->post_parent))
 	{ 
@@ -192,9 +191,9 @@
 	}
 	?>><a href="<?php echo get_permalink($post->post_parent) ?>"><?php echo $parent_title;?></a></li>
 					<?php echo $children; ?>
-	 			 </ul>
+				 </ul>
 			</div>
-	  		<?php } ?>
+			<?php } ?>
 	<?php endif; ?>
 	<?php if(is_single()) : ?>
 			<div class="links">

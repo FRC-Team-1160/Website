@@ -82,6 +82,18 @@ strong, em {
 	text-align: center;
 }
 
+/* VIDEO */
+
+.video.homecontainer {
+	padding:0;
+}
+.video iframe {
+	min-width:100%;
+	padding:0;
+	margin:0;
+	float:left;
+}
+
 /* BLOG */
 .homecontainer .entry.posted article {
 	padding:2em;

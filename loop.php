@@ -21,24 +21,34 @@
 								}
 							?>
 
-	<?php // SIDEBAR FOR TWO COLUMN ?>
+	<?php // SIDEBAR FOR TWO COLUMN & BOOKMARKS ?>
 
-							<?php if (is_page_template('two-column.php')) { ?>
+							<?php if (is_page_template('two-column.php', 'bookmarks.php')) { ?>
 								<aside class="sidebar-left">
 									<section class="sidebar-content">
-										<?php if(!empty($post->post_excerpt)) {
+										<div class="border-right">
 
-											//This post has an excerpt, let's display it
+											<?php if(is_page_template('bookmarks.php')) : ?>
 
-											echo '<div class="border-right">';
-											the_excerpt();
-											echo '</div>';
+												<?php 
+												if (function_exists('dynamic_sidebar') && dynamic_sidebar('bookmarks')) : 
+												else : 
+												?>
+												<?php endif; ?>
 
-								 		} else {
+											<?php endif; ?>
 
-											// This post has no excerpt
+											<?php if(!empty($post->post_excerpt)) {
 
-								 		} ?>
+												//This post has an excerpt, let's display it
+												the_excerpt();
+
+									 		} else {
+
+												// This post has no excerpt
+
+									 		} ?>
+								 		</div>
 									</section>
 								</aside>
 
@@ -266,6 +276,10 @@
 		<div class="basics homecontainer">
 			<div class="entry basics">
 				<p>
+					<a href="#video">
+						<span class="fronticon" title="Featured Youtube Video" aria-hidden="true" data-icon="&#xe001;">
+						</span>
+					</a>
 					<a href="#FIRST">
 						<span class="fronticon" title="About FIRST" aria-hidden="true" data-icon="f">
 						</span>
@@ -287,6 +301,14 @@
 				</p>
 			</div>
 			<div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div id="video" class="video homecontainer">
+			<iframe id="ytplayer" type="text/html" width="640" height="390"
+  src="http://www.youtube.com/embed/sZsngCANVb4?autohide=1&origin=http://www.titaniumrobotics.com&theme=light&modestbranding=1"
+  frameborder="0"></iframe>
 		</div>
 
 		<div class="clear"></div>
