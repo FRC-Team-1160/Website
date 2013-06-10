@@ -817,7 +817,7 @@ a {
 	-ms-transition:color 300ms;
 }
 a:hover {
-	color:#3376B5;
+	color:#6CABE7;
 	transition:color 300ms;
 	-webkit-transition:color 300ms;
 	-moz-transition:color 300ms;
@@ -1002,6 +1002,9 @@ div.pagination a:hover {
 
 			/* TABLET VIEW */
 			@media screen and (max-width:1024px) {
+				.featured {
+					height:350px;
+				}
 				.press .side, .side {
 					width:100%;
 					float:left;
@@ -1100,6 +1103,9 @@ div.pagination a:hover {
 				}
 				#subpages .title li {
 					text-align:center;
+				}
+				.featured {
+					height:200px;
 				}
 				#contents img {
 					float:none;
