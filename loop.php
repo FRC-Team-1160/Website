@@ -9,17 +9,27 @@
 			<div class="post-content">
 
 	<?php // FEATURED IMAGE ?>
+		<?php if(has_post_thumbnail( $post_id )) {?>
 
-							<?php
-								if ( has_post_thumbnail() ) {
-									echo '<div class="thumbnail"><div class="drop-shadow curved curved-hz-1"><div class="featured">';
-									the_post_thumbnail();
-									echo '</div></div></div>';
-								}
-								else {
-										
-								}
-							?>
+				<?php
+					$post_image_id = get_post_thumbnail_id($post_to_use->ID);
+					if ($post_image_id) {
+						$thumbnail = wp_get_attachment_image_src( $post_image_id, 'post-thumbnail', false);
+						if ($thumbnail) (string)$thumbnail = $thumbnail[0];
+					}
+					if (!empty($thumbnail)) {
+				?>
+						<div class="thumbnail">
+							<div class="featured" style="background-image: url('<?php echo $thumbnail; ?>')!important;">
+							</div>
+						</div>
+
+				<?php }
+
+		} else { ?>
+				<div class="no-thumbnail"></div>
+		<?php } ?>
+
 
 	<?php // SIDEBAR FOR TWO COLUMN & BOOKMARKS ?>
 
@@ -65,7 +75,7 @@
 
 								<?php if( !is_page() && !is_single() ) { ?>
 								
-									<fieldset><legend>
+									<fieldset class="title"><legend>
 										
 										<?php if (is_home()) { ?>
 											<a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>">
@@ -84,11 +94,11 @@
 	<?php // TIME ?>
 
 								<?php if ( !is_page() ) { ?>
-								<div class="time">
+								<aside class="time">
 									
-									Posted <?php the_time('F jS, Y') ?>
+									<?php the_time('n/j/y') ?>
 			
-								</div>
+								</aside>
 								<?php } else {
 
 								} ?>
@@ -113,49 +123,39 @@
 										<h1>
 											Contact Titanium Robotics
 										</h1>
-
-										<h5 style="color:red;">
-											The <sup>*</sup> represents a required field.
-										</h5>
 										
-										<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
-											<ul class="contactform">
-											<li>
-												<label for="contactName">Name<sup style="color:red; font-weight:bold">*</sup></label>
+										<form action="<?php the_permalink(); ?>" class="pure-form" id="contactForm" method="post">
+											<fieldset class="pure-group contactform">
+											
+											<!--NAME -->
+													<?php if($nameError != '') { ?>
+														<span class="error"><?=$nameError;?></span>
+													<?php } ?>
+
+												<input type="text" required="required" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" placeholder="Name" class="pure-input-1-2" />
 												
-												<?php if($nameError != '') { ?>
-													<span class="error"><?=$nameError;?></span>
-												<?php } ?>
+											<!-- EMAIL -->
+													<?php if($emailError != '') { ?>
+														<span class="error"><?=$emailError;?></span>
+													<?php } ?>
 
-												<input type="text" required="required" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" placeholder="Mr. Roboto" class="required requiredField" />
-											</li>
-
-											<li>
-												<label for="email">Email<sup style="color:red; font-weight:bold">*</sup></label>
+												<input type="email" required="required" name="email" id="email" placeholder="Email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="pure-input-1-2" />
 												
-												<?php if($emailError != '') { ?>
-													<span class="error"><?=$emailError;?></span>
-												<?php } ?>
+											<!-- EMAIL -->
+												<input type="text" required name="subject" id="email" placeholder="Subject" class="pure-input-1-2" />
 
-												<input type="email" required="required" name="email" id="email" placeholder="domoarigato@mr-roboto.com" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="required requiredField email" />
-											</li>
-
-											<li>
-												<label for="commentsText">Message<sup style="color:red; font-weight:bold">*</sup></label>
+											</fieldset>
 												
-												<?php if($commentError != '') { ?>
-													<span class="error"><?=$commentError;?></span>
-												<?php } ?>
+											<!-- COMMENT -->
+													<?php if($commentError != '') { ?>
+														<span class="error"><?=$commentError;?></span>
+													<?php } ?>
 
-												<textarea name="comments" required="required" id="commentsText" rows="8" placeholder="Dear Titanium Robotics. . ." class="required requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
-											</li>
-
-											<li>
-												<button type="submit">Submit</button>
-											</li>
-										</ul>
-
-										<input type="hidden" name="submitted" id="submitted" value="true" />
+												<textarea name="comments" required="required" id="commentsText" rows="8" placeholder="Message" class="pure-input-1-2"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
+											<div class="clear"></div>		
+												<input type="submit" class="pure-button pure-input-1-2"></button>
+										
+												<input type="hidden" name="submitted" id="submitted" value="true" />
 									
 									</form>
 								<?php } ?>
@@ -185,8 +185,8 @@
 
 						</div>
 
-				<?php endwhile; ?>
-				<?php else: ?>
+		<?php endwhile; ?>
+		<?php else: ?>
 
 	<?php // NO POSTS TO DISPLAY ?>
 
@@ -227,7 +227,7 @@
 
 					<?php } ?>
 
-					<?php endif; ?>
+		<?php endif; ?>
 
 	<?php // PAGINATION LINKS ?>
 
@@ -258,57 +258,15 @@
 
 							echo '<div class="pagination">' . paginate_links($pagination) . '</div>'; 		
 							?>
+							<div class="clear"></div>
 						</div>
 					<? } ?>
 				</div>
 <?php } else { ?>
-		<div class="withshadow title homecontainer">
-			<div class="entry">
-				<p class="titletext">
-					<span style="font-size:4em; display:block;" title="Titanium Robotics" aria-hidden="true" data-icon="b">
-					</span>
-					<span title="Titanium Robotics" aria-hidden="true" data-icon="t">
-					</span>
-				</p>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="basics homecontainer">
-			<div class="entry basics">
-				<p>
-					<a href="#video">
-						<span class="fronticon" title="Featured Youtube Video" aria-hidden="true" data-icon="&#xe001;">
-						</span>
-					</a>
-					<a href="#FIRST">
-						<span class="fronticon" title="About FIRST" aria-hidden="true" data-icon="f">
-						</span>
-					</a>
-					<a href="#blog">
-						<span class="fronticon" title="Blog" aria-hidden="true" data-icon="&#xe015;">
-						</span>
-					</a>
-					<a href="#location">
-						<span class="fronticon" title="Location" aria-hidden="true" data-icon="&#xe017;"></span>
-					</a>
-					<a href="#sponsors">
-						<span class="fronticon" title="Sponsors" aria-hidden="true" data-icon="&#xe018;">
-						</span>
-					</a>
-					<a href="#social">
-						<span class="fronticon" title="Social Networks" aria-hidden="true" data-icon="&#xe00e;"></span>
-					</a>
-				</p>
-			</div>
-			<div class="clear"></div>
-		</div>
-
 		<div class="clear"></div>
 
 		<div id="video" class="video homecontainer">
-			<iframe id="ytplayer" type="text/html" width="640" height="390"
-  src="http://www.youtube.com/embed/sZsngCANVb4?autohide=1&origin=http://www.titaniumrobotics.com&theme=light&modestbranding=1"
-  frameborder="0"></iframe>
+			<iframe id="ytplayer" width="560" height="315" src="http://www.youtube.com/embed/sZsngCANVb4?autohide=1&origin=http://www.titaniumrobotics.com&theme=light&modestbranding=1" frameborder="0"></iframe>
 		</div>
 
 		<div class="clear"></div>

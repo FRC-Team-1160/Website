@@ -1,8 +1,11 @@
+html {
+	background:#EEE;
+}
 /* FRONT PAGE STYLES */
 h1, h2, h3, h4, h5, h6 {
 	margin:0;
 	font-weight:100;
-	color:#0054A3;
+	color:#0067C6;
 }
 p {
 	font-family:'Roboto', 'Open Sans', sans-serif;
@@ -13,8 +16,34 @@ strong, em {
 	font-weight:normal;
 	font-style:normal;
 }
-.frontpage.wrapper #contents {
+.frontpage.wrapper {
+	height:100%;
 	width:100%;
+	background:url('assets/birdjacket.jpg') center center;
+	background-size:cover !important;
+	background-color:transparent;
+}
+.front #contents {
+	width:100%;
+}
+.frontpage.wrapper #menuwrap #icon-nav,
+.frontpage.wrapper #menuwrap #nav {
+	position:relative;
+	z-index:2;
+}
+.blackout {
+	background:rgba(0, 0, 0, 0.4);
+	height:100%;
+}
+#nav li a,
+#nav li.current-menu-item a,
+#nav li.current-page-ancestor a {
+	color:#FFF;
+}
+.frontpage.wrapper #menuwrap,
+.frontpage.wrapper #nav,
+.frontpage.wrapper #subpages {
+	background:transparent !important;
 }
 .homecontainer {
 	background-image: url('');
@@ -31,40 +60,48 @@ strong, em {
 	padding:1em;
 	margin:0;
 }
-#contents .entry a {
-	border-bottom:1px dotted;
-}
 
 /* TITLE */
-#contents .title.homecontainer {
-	background:url('assets/birdjacket.jpg') center center;
-	background-size:cover;
+.wrapper .title {
+	position:absolute;
+	top:0;
+	z-index:0;
+	background-color:transparent;
+	display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+	display: -moz-box;      /* OLD: Firefox (buggy) */ 
+	display: -ms-flexbox;   /* MID: IE 10 */
+	display: -webkit-flex;  /* NEW, Chrome 21+ */
+	display: flex;          /* NEW: Opera 12.1, Firefox 22+ */
+
+	-webkit-box-align: center; -moz-box-align: center; /* OLD… */
+	-ms-flex-align: center; /* You know the drill now… */
+	-webkit-align-items: center;
+	align-items: center;
+	
+	-webkit-box-pack: center; -moz-box-pack: center; 
+	-ms-flex-pack: center; 
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	margin: 0;
+	height: 100%;
+	width: 100% /* needed for Firefox */
 }
-#contents .withshadow.title.homecontainer, 
-#contents .withshadow.title.homecontainer .entry {
-	-moz-box-shadow:	inset 0  0.6em 0.6em -0.6em #333, 
-						inset 0 -0.6em 0.6em -0.6em #333;
-	-webkit-box-shadow:	inset 0  0.6em 0.6em -0.6em #333, 
-						inset 0 -0.6em 0.6em -0.6em #333;
-		box-shadow:		inset 0  0.6em 0.6em -0.6em #333, 
-						inset 0 -0.6em 0.6em -0.6em #333;
-}
-#contents .title .entry {
-	background:rgba(0, 0, 0, 0.6);
+.wrapper .title .entry {
 	color:#fff;
 	text-align:center;
 }
-#contents .title .entry p {
+.wrapper .title .entry p {
 	margin:auto;
 }
-#contents .title .titletext {
+.wrapper .title .titletext {
 	font-size:3em;
 	display:block;
 	color:#fff;
 	float:none;
 	line-height:0.7em;
 	vertical-align:middle;
-	padding:1em;
+	padding:0;
 }
 
 /* MENUS */
@@ -74,12 +111,23 @@ strong, em {
 	font-size: 3em;
 	float:none;
 	vertical-align:middle;
+	bottom:0;
 }
-#contents .basics a {
+.wrapper .links {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:1;
+	width:100%;
+	text-align:center;
+}
+.wrapper .links a {
 	border-bottom:none;
+	color:#FFF;
 }
-.basics.homecontainer .entry {
-	text-align: center;
+.wrapper .links a:hover {
+	color:#0067C6;
 }
 
 /* VIDEO */
@@ -111,36 +159,18 @@ strong, em {
 
 /* LOCATION */
 #contents .location.homecontainer {
-	color:#0054A3;
+	color:#0067C6;
 	background:url('assets/san-marino-map.png') center center;
 	background-size: cover;
-}
-
-/* INNER SHADOW */
-#contents .withshadow.homecontainer {
-	-moz-box-shadow:	inset 0  0.6em 0.6em -0.6em #888888, 
-						inset 0 -0.6em 0.6em -0.6em #888888;
-	-webkit-box-shadow:	inset 0  0.6em 0.6em -0.6em #888888, 
-						inset 0 -0.6em 0.6em -0.6em #888888;
-		box-shadow:		inset 0  0.6em 0.6em -0.6em #888888, 
-						inset 0 -0.6em 0.6em -0.6em #888888;
-}
-#contents .withshadow .entry {
-	-moz-box-shadow:	inset 0  0.6em 0.6em -0.6em #888888, 
-						inset 0 -0.6em 0.6em -0.6em #888888;
-	-webkit-box-shadow:	inset 0  0.6em 0.6em -0.6em #888888, 
-						inset 0 -0.6em 0.6em -0.6em #888888;
-		box-shadow:		inset 0  0.6em 0.6em -0.6em #888888, 
-						inset 0 -0.6em 0.6em -0.6em #888888;
 }
 
 /* CONTAINER ON THE RIGHT */
 .homecontainer .entry.rightside {
 	min-height:300px;
-	background:rgba(255, 255, 255, 0.6);
+	background:rgba(255, 255, 255, 0.8);
 	width:65%;
 	float:right;
-	color:#0054A3;
+	color:#0067C6;
 	text-align:left;
 }
 
@@ -149,7 +179,7 @@ strong, em {
 	min-height:300px;
 	background:rgba(255, 255, 255, 0.8);
 	width:65%;
-	color:#0054A3;
+	color:#0067C6;
 	text-align:left;
 	display:inline-block;
 }
@@ -186,10 +216,10 @@ strong, em {
 }
 
 /* SPONSORS */
-.frontpage .sponsors table {
+.front .sponsors table {
 	width:100%;
 }
-.frontpage .sponsors table td {
+.front .sponsors table td {
 	width:100%;
 	padding:0;
 	text-align:center;
@@ -199,7 +229,19 @@ strong, em {
 	font-size:1.4em;
 }
 @media screen and (max-width:720px) {
-	#contents .title .titletext {
+	.frontpage.wrapper .title .titletext {
 		font-size:1.5em;
+	}
+	#nav li a{
+		color:#737373;;
+	}
+	#nav li.current-menu-item a,
+	#nav li.current-page-ancestor a {
+		color:#000;
+	}
+	.fronticon {
+		padding:0 0.5em;
+		display:inline-block;
+		font-size: 2em;
 	}
 }

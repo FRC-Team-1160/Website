@@ -80,7 +80,7 @@ function titanium_post_types() {
 				'parent' => __( 'Parent Press Release' ),
 			),
 			'public' => true,
-			'rewrite' => array( 'slug' => 'press-release', 'with_front' => false ),
+			'rewrite' => array( 'slug' => 'press', 'with_front' => false ),
 			'taxonomies' => array( 'post_tag', 'category '),
 			'can_export' => true,
 		)
@@ -116,7 +116,7 @@ function titanium_register_sidebars() {
 		'id' => 'sidebar_right',
 		'before_widget' => '<div class="entry"><div class="cont">',
 		'after_widget' => '<div class="clear"></div></div></div>',
-		'before_title' => '<fieldset><legend class="rounded">',
+		'before_title' => '<fieldset class="title"><legend class="rounded">',
 		'after_title' => '</legend></fieldset>',
 		)
 	);
@@ -125,7 +125,7 @@ function titanium_register_sidebars() {
 		'id' => 'sidebar_left',
 		'before_widget' => '<div class="entry"><div class="cont">',
 		'after_widget' => '<div class="clear"></div></div></div>',
-		'before_title' => '<fieldset><legend class="rounded">',
+		'before_title' => '<fieldset class="title"><legend class="rounded">',
 		'after_title' => '</legend></fieldset>',
 		)
 	);

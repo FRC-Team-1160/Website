@@ -15,13 +15,14 @@
 			<link rel="icon"		type="application/rss+xml"	href="<?php bloginfo('template_directory') ?>/assets/favicon.ico" />
 
 		<!--FONTS-->
-			<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Roboto:400,300,100' rel='stylesheet' type='text/css'>
+			<link href='http://fonts.googleapis.com/css?family=Roboto:400italic,400,500,500italic,300,300italic,100,100italic' rel='stylesheet' type='text/css'>
 
 		<!--CSS-->
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>" />
-			<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
+			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
 			<link rel="stylesheet"	type="text/css"	href="//cdn.moot.it/1/moot.css" />
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />
+			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css" />
 		<?php if(is_front_page()) { ?>
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css" />
 		<?php } ?>
@@ -89,9 +90,9 @@
 
 <!--		<BODY> START		-->
 
-	<body>
+	<body class="<?php if (is_front_page()) : ?>front<?php else:?><?php endif; ?>">
 
-		<div class="<?php if (is_front_page()) : ?>frontpage wrapper <?php else:?>normal wrapper<?php endif; ?>">
+		<div class="<?php if (is_front_page()) : ?>frontpage wrapper"><div class="blackout"><?php else:?>normal wrapper"><?php endif; ?>
 		
 			<!--START - NAVIGATION-->
 		
@@ -163,6 +164,46 @@
 				
 			</header>
 		<div class="clear"></div>
+		<?php if(is_front_page()) : ?>
+
+			<div class="title">
+				<div class="entry">
+					<p class="titletext">
+						<span style="font-size:4em; display:block;" title="Titanium Robotics" aria-hidden="true" data-icon="b">
+						</span>
+						<span title="Titanium Robotics" aria-hidden="true" data-icon="t">
+						</span>
+					</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="links">
+				<a href="#video">
+					<span class="fronticon" title="Featured Youtube Video" aria-hidden="true" data-icon="&#xe001;">
+					</span>
+				</a>
+				<a href="#FIRST">
+					<span class="fronticon" title="About FIRST" aria-hidden="true" data-icon="f">
+					</span>
+				</a>
+				<a href="#blog">
+					<span class="fronticon" title="Blog" aria-hidden="true" data-icon="&#xe015;">
+					</span>
+				</a>
+				<a href="#location">
+					<span class="fronticon" title="Location" aria-hidden="true" data-icon="&#xe017;"></span>
+				</a>
+				<a href="#sponsors">
+					<span class="fronticon" title="Sponsors" aria-hidden="true" data-icon="&#xe018;">
+					</span>
+				</a>
+				<a href="#social">
+					<span class="fronticon" title="Social Networks" aria-hidden="true" data-icon="&#xe00e;"></span>
+				</a>
+			</div>
+		</div></div>
+		<?php endif; ?>
 
 	<?php if(!is_front_page() && !is_404()) : ?>
 			<div id="subpages"><div class="limit">
