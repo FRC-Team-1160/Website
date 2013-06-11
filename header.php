@@ -23,9 +23,6 @@
 			<link rel="stylesheet"	type="text/css"	href="//cdn.moot.it/1/moot.css" />
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css" />
-		<?php if(is_front_page()) { ?>
-			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css" />
-		<?php } ?>
 		
 		<!--SCRIPTS-->
 			<?php wp_head(); ?>
@@ -47,6 +44,17 @@
 			<!--[if lt IE 9]>
 				<script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
 			<![endif]-->
+		<?php if(is_front_page()) { ?>
+			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css" />
+			<script src="http://www.blurjs.com/blur.min.js"	type="text/javascript"></script>
+			<script type="text/javascript">
+					$('.links').blurjs({
+						source: '.wrapper',
+						overlay: 'rgba(255,255,255,0.3)',
+						radius:10
+					});
+			</script>
+		<?php } ?>
 
 		<!-- MOOT -->
 			<style>
@@ -178,7 +186,7 @@
 				<div class="clear"></div>
 			</div>
 
-			<div class="links">
+			<div id="overlayBlur" class="links">
 				<a href="#video">
 					<span class="fronticon" title="Featured Youtube Video" aria-hidden="true" data-icon="&#xe001;">
 					</span>

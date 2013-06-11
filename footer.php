@@ -12,11 +12,6 @@
 			
 			<div class="footer-right">
 				<ul class="s">
-					<li class="header-responsive-hidden">
-						<h5>
-							Titanium Robotics
-						</h5>
-					<li>
 						<a href="/about-us">About Us</a>
 					</li>
 					<li>
@@ -37,58 +32,7 @@
 						<a href="/team-leadership">Team Leadership</a>
 					</li>
 				</ul>
-				<ul class="h">
-					<li>
-						<h5 class="header-responsive-hidden">
-							Teams
-						</h5>
-					</li>
-					<li>
-						<a href="/resources/business">Business Team</a>
-					</li>
-					<li>
-						<a href="/resources/mechanical">Mechanical Team</a>
-					</li>
-					<li>
-						<a href="/resources/programming">Programming Team</a>
-					</li>
-					<li>
-						<a href="/resources/cad">CAD Team</a>
-					</li>
-					<li>
-						<a href="/resources/electrical">Electrical Team</a>
-					</li>
-					<li>
-						<a href="/resources/scouting">Scouting Team</a>
-					</li>
-					<li>
-						<a href="/resources/the-website">Website Team</a>
-					</li>
-				</ul>
-				<ul class="h">
-					<li>
-						<h5 class="header-responsive-hidden">
-							Media
-						</h5>
-					</li>
-					<li>
-						<a href="/press">Press</a>
-					</li>
-					<li>
-						<a href="/branding">Styles Guide</a>
-					</li>
-					<li>
-						<a href="/media/videos">Video Gallery</a>
-					</li>
-					<li>
-						<a href="/media/photos">Photo Gallery</a>
-					</li>
-				</ul>
 				<ul class="s">
-					<li class="header-responsive-hidden">
-						<h5>
-							Follow
-						</h5>
 					<li class="follow">
 						<a href="http://www.facebook.com/team1160" target="_blank">
 							<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe01d;">
@@ -109,17 +53,6 @@
 							<a href="http://www.github.com/FRC-Team-1160" target="_blank">
 								<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe003;"></span>
 							</a>
-					</li>
-				</ul>
-				<ul class="h">
-					<li>
-						<h5 class="header-responsive-hidden">
-							Search
-						</h5>
-					</li>
-					<li>
-						<br />
-						<?php get_search_form( ); ?>
 					</li>
 				</ul>
 			</div>

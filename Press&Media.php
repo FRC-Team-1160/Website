@@ -69,16 +69,9 @@ Template Name: Press & Media
 									<?php the_time('j F Y') ?>
 			
 								</p>
+								<?php the_excerpt();?>
 								<div class="clear"></div>
 						</div>
-
-								<?php if (current_user_can('edit_posts')) {?>
-								<div class="separate"></div>
-								<?php
-									edit_post_link('edit');
-								?>
-
-								<?php }?>
 
 								<div class="clear"></div>
 					</div></div>

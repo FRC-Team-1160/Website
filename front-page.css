@@ -16,7 +16,7 @@ strong, em {
 	font-weight:normal;
 	font-style:normal;
 }
-.frontpage.wrapper {
+.wrapper {
 	height:100%;
 	width:100%;
 	background:url('assets/birdjacket.jpg') center center;
@@ -111,9 +111,9 @@ strong, em {
 	font-size: 3em;
 	float:none;
 	vertical-align:middle;
-	bottom:0;
+	height:100%;
 }
-.wrapper .links {
+.links {
 	position:absolute;
 	bottom:0;
 	left:0;
@@ -121,13 +121,15 @@ strong, em {
 	z-index:1;
 	width:100%;
 	text-align:center;
+	float:left;
+	background:rgba(255,255,255,0.3);
 }
 .wrapper .links a {
 	border-bottom:none;
-	color:#FFF;
+	color:#fff;
 }
 .wrapper .links a:hover {
-	color:#0067C6;
+	color:#6CABE7;
 }
 
 /* VIDEO */
@@ -225,7 +227,7 @@ strong, em {
 	text-align:center;
 }
 #contents .sponsors.entry a {
-	font-weight:100;
+	font-weight:300;
 	font-size:1.4em;
 }
 @media screen and (max-width:720px) {
