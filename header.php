@@ -35,7 +35,7 @@
 					animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
 					animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
 					animation-duration:1s;
-					animation-delay: 1.5s;
+					animation-delay: 2s;
 					-webkit-animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
 					-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
 					-webkit-animation-duration:1s;
