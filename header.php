@@ -27,6 +27,14 @@
 			<?php if(is_front_page()) { ?>
 				<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css" />
 			<?php } ?>
+				<!--[if lt IE 9]>
+				<style>
+					#menuwrap {
+						top:0;
+						position:relative;
+					}
+				</style>
+				<![endif]-->
 			<style>
 				.moot {
 					font-size: 18px;
