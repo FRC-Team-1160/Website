@@ -22,6 +22,9 @@
 						<div class="thumbnail">
 							<div class="featured" style="background-image: url('<?php echo $thumbnail; ?>')!important;">
 							</div>
+							<h1>
+								<?php the_title(); ?>
+							</h1>
 						</div>
 
 				<?php }
@@ -266,7 +269,9 @@
 		<div class="clear"></div>
 
 		<div id="video" class="video homecontainer">
-			<iframe id="ytplayer" width="560" height="315" src="http://www.youtube.com/embed/sZsngCANVb4?autohide=1&origin=http://www.titaniumrobotics.com&theme=light&modestbranding=1" frameborder="0"></iframe>
+			<div class="entry">
+				<iframe id="ytplayer" width="16" height="9" src="http://www.youtube.com/embed/sZsngCANVb4?autohide=1&origin=http://www.titaniumrobotics.com&theme=light&modestbranding=1" frameborder="0"></iframe>
+			</div>
 		</div>
 
 		<div class="clear"></div>

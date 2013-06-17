@@ -189,7 +189,7 @@ input[readonly],
 select[readonly],
 textarea[readonly] {
   cursor: not-allowed;
-  background-color: #eaeded;
+  background-color: #eaeded !important;
   color: #cad2d3;
   border-color: transparent;
 }
@@ -206,7 +206,7 @@ select:focus:invalid:focus {
 }
 select {
   border: 1px solid #ccc;
-  background-color: white;
+  background-color: white !important;
 }
 select[multiple] {
 	height: auto;
@@ -364,7 +364,7 @@ select {
 	color: #fff;
 	border: 1px solid #999;  /*IE 6/7/8*/
 	border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
-	background-color: #0067C6;
+	background-color: #0067C6 !important;
 	text-decoration: none;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -436,7 +436,7 @@ select:active; {
 .pure-button-selected,
 a.pure-button-primary,
 a.pure-button-selected {
-	background-color: rgb(0, 120, 231);
+	background-color: rgb(0, 120, 231) !important;
 	color: #fff;
 }
 
