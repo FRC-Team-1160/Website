@@ -5,13 +5,12 @@
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,">
 			<meta name="keywords" content="robotics, FRC, Team 1160, FRC 1160, Titanium Robotics, Titanium FRC, Titanium 1160, Team Titanium, FRC Robotics, San Marino, San Marino High School, FRC Team 1160, Team 1160 FRC, San Marino Robotics, Firebird Robotics" />
-			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 		<!--TITLE-->
 			<title><?php bloginfo('name'); ?> <?php wp_title('/'); ?></title>
 
 		<!--LINKS-->
-			<link rel="alternate" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
+			<link rel="alternate"	title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 			<link rel="pingback"					href="<?php bloginfo('pingback_url'); ?>" />
 			<link rel="icon"		type="application/rss+xml"	href="<?php bloginfo('template_directory') ?>/assets/favicon.ico" />
 
@@ -21,7 +20,7 @@
 		<!--CSS-->
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>" />
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
-			<link rel="stylesheet" href="https://cdn.moot.it/1/moot.css">
+			<link rel="stylesheet"					href="https://cdn.moot.it/1/moot.css">
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css" />
 			<?php if(is_front_page()) { ?>
@@ -32,6 +31,11 @@
 					#menuwrap {
 						top:0;
 						position:relative;
+					}
+					.thumbnail h1, .title .entry .titletext {
+						top:0;
+						bottom:0;
+						text-align:center;
 					}
 				</style>
 				<![endif]-->
@@ -272,7 +276,7 @@
 		</div>
 		<?php endif; ?>
 
-	<?php if(!is_front_page() && !is_404()) : ?>
+	<?php if(!is_front_page() && !is_404() && !is_search() && !is_home()) : ?>
 			<div id="subpages"><div class="limit">
 				<div class="table">
 					<?php if(!has_post_thumbnail( $post_id )) {?>

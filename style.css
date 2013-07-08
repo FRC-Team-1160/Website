@@ -27,7 +27,7 @@ html, body {
 	height:100%;
 	font-style:normal;
 	font-weight:300;
-	font-size:12pt;
+	font-size:14pt;
 	padding:0;
 	margin-top:0;
 	position:relative;
@@ -52,24 +52,25 @@ strong, b {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family:'Roboto', 'Helvetica Neue', sans-serif;
-	font-weight:100;
+	font-weight:300;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	font-weight:300;
 }
 h1 {
-	font-size:24pt;
+	font-size:30pt;
+	font-weight:100;
 }
 h2 {
-	font-size:20pt;
+	font-size:24pt;
 }
 h3 {
-	font-size:16pt;
+	font-size:20pt;
 }
 h4,
 h5,
 h6 {
-	font-size:14pt;
+	font-size:16pt;
 }
 p {
 	margin-bottom:1em;
@@ -128,7 +129,7 @@ td {
 	min-height:100%;
 }
 
-/* IMAGES */
+/* IMAGES & GALLERIES */
 img {
 	line-height:1;
 }
@@ -149,20 +150,28 @@ img.aligncenter {
 .wp-caption-text {
 	font-size:1em;
 	color: #484848;
-	font-weight:100;
+	font-weight:400;
 	text-align:center;
 }
 .wp-caption {
 	margin: 0.5em 1em;
 	background:#FFF;
 	max-width:100%;
+	border-width:1px;
+	border-radius:4px 4px 0 0;
+}
+.wp-caption p {
+	margin:0;
+	padding:0.5em;
+	font-size:10pt;
 }
 .wp-caption img {
 	float:none;
 	display:block;
-	margin:1em auto;
-	max-width:100%;
+	margin:0;
+	width:100%;
 	text-align:center;
+	border-radius:4px 4px 0 0;
 }
 .alignright {
 	float:right;
@@ -175,6 +184,69 @@ img.aligncenter {
 	margin-left: auto;
 	margin-right: auto
 }
+.gallery {
+	margin: 0 auto 18px;
+}
+.gallery .gallery-item {
+	float: left;
+	margin-top: 0;
+	text-align: center;
+	position:relative;
+}
+.gallery-columns-2 .gallery-item,
+.gallery-columns-3 .gallery-item,
+.gallery-columns-4 .gallery-item,
+.gallery-columns-5 .gallery-item,
+.gallery-columns-6 .gallery-item,
+.gallery-columns-7 .gallery-item
+.gallery-columns-8 .gallery-item
+.gallery-columns-9 .gallery-item {
+	width:auto;
+	width:20%;
+	float:left;
+}
+.gallery img {
+	height:100%;
+	float:left;
+	height:auto;
+}
+.attachment-medium {
+	max-width: 92%;
+	height: auto;
+}
+.attachment-thumbnail {
+	max-width: 84%;
+	height: auto;
+}
+.gallery .gallery-item .gallery-caption {
+	color:#FFF;
+	text-shadow:0 0 3px #222;
+	position:absolute;
+	left:10px;
+	right:10px;
+	bottom:-5em;
+	opacity:0;
+	transition:			opacity 300ms, bottom 300ms;
+	-webkit-transition:	opacity 300ms, bottom 300ms;
+	-moz-transition:	opacity 300ms, bottom 300ms;
+	-o-transition:		opacity 300ms, bottom 300ms;
+	-ms-transition:		opacity 300ms, bottom 300ms;
+}
+.gallery .gallery-item:hover .gallery-caption {
+	opacity:1;
+	bottom:10px;
+	transition:			opacity 300ms, bottom 300ms;
+	-webkit-transition:	opacity 300ms, bottom 300ms;
+	-moz-transition:	opacity 300ms, bottom 300ms;
+	-o-transition:		opacity 300ms, bottom 300ms;
+	-ms-transition:		opacity 300ms, bottom 300ms;
+}
+.gallery dl, .gallery dt {
+	margin: 0;
+}
+.gallery br {
+	display: none;
+}
 
 /* NAVIGATION */
 #menuwrap {
@@ -185,16 +257,16 @@ img.aligncenter {
 	font-size:2em;
 	background:#0067C6;
 	display:block;
-	top:-999em;
+	top:-99em;
 	position:relative;
 	animation:jump ease 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
 	animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-	animation-duration:1s;
-	animation-delay: 0.5s;
+	animation-duration:2s;
+	animation-delay: 1s;
 	-webkit-animation:jump ease 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
 	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-	-webkit-animation-duration:1s;
-	-webkit-animation-delay: 0.5s;
+	-webkit-animation-duration:2s;
+	-webkit-animation-delay: 1s;
 }
 #nav {
 	background:#f5f5f5;
@@ -234,7 +306,7 @@ img.aligncenter {
 #nav li a {
 	display:block;
 	padding:0.5em 0;
-	font-weight:100;
+	font-weight:300;
 	color:#737373;
 	transition:border-bottom 300ms;
 	-webkit-transition:border-bottom 300ms;
@@ -388,9 +460,8 @@ img.aligncenter {
 	position:relative;
 	z-index:10;
 	height:100%;
-	padding:0;
+	padding:0 2em 0 0;
 	margin:0;
-	width:70%;
 }
 #subpages .links.withthumbnail {
 	width:100%;
@@ -405,10 +476,9 @@ img.aligncenter {
 	position:relative;
 	z-index:10;
 	height:100%;
-	width:30%;
+	padding-left:2em;
 }
 #subpages .title li {
-	padding:0.5em;
 	margin:0;
 	text-align:left;
 }
@@ -430,15 +500,15 @@ img.aligncenter {
 	height:100%;
 	display:inline-block;
 	margin:0.5em;
+}
+#subpages li a {
+	font-weight:300;
+	color:#737373;
 	border-bottom:1px solid transparent;
 	-webkit-transition:border 300ms;
 	-o-transition:border 300ms;
 	-moz-transition:border 300ms;
 	transition:border 300ms;
-}
-#subpages li a {
-	font-weight:100;
-	color:#737373;
 }
 #subpages li a:hover {
 	color:#000;
@@ -454,16 +524,16 @@ img.aligncenter {
 	width:100%;
 }
 .limit {
-	width:90%;
+	width:100%;
 	max-width:1280px;
 	float:none;
 	margin:auto;
 }
+
 /* CONTENTS CONTAINER */
 #contents {
 	color:#1D1D1D;
-	width: 90%;
-	max-width:1280px;
+	width: 100%;
 	margin:auto;
 	float:none;
 	font-size:inherit;
@@ -472,6 +542,7 @@ img.aligncenter {
 	-o-transition: float 2s, margin 2s, padding 2s;
 	-moz-transition: float 2s, margin 2s, padding 2s;
 	transition: float 2s, margin 2s, padding 2s;
+	font-size:16pt;
 }
 #contents .blog .post {
 	width:100%;
@@ -517,10 +588,10 @@ img.aligncenter {
 	float:left;
 }
 .border-right {
-	padding:1em 0;
+	padding:2em 0;
 }
 .border-right p {
-	padding:0 1em;
+	padding:0 2em;
 }
 
 /* FEATURED IMAGES */
@@ -560,7 +631,8 @@ img.aligncenter {
 .thumbnail h1 {
 	position: absolute;
 	text-align: center;
-	color: #EFEFEF;
+	color: #FFF;
+	text-shadow:0 0 10px #222;
 	font-weight:100;
 	font-size:3em;
 	display: -webkit-box;
@@ -584,11 +656,11 @@ img.aligncenter {
 	animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
 	animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
 	animation-duration:1s;
-	animation-delay: 2s;
+	animation-delay: 3s;
 	-webkit-animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
 	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
 	-webkit-animation-duration:1s;
-	-webkit-animation-delay: 2s;
+	-webkit-animation-delay: 3s;
 }
 
 /* CLEAR CLASSES */
@@ -611,10 +683,10 @@ img.aligncenter {
 	margin:auto;
 	display:block;
 	background:#FFF;
-	-webkit-transition: float 2s, margin 2s, padding 2s;
-	-o-transition: float 2s, margin 2s, padding 2s;
-	-moz-transition: float 2s, margin 2s, padding 2s;
-	transition: float 2s, margin 2s, padding 2s;
+	-webkit-transition:	float 2s, margin 2s, padding 2s;
+	-o-transition:		float 2s, margin 2s, padding 2s;
+	-moz-transition:	float 2s, margin 2s, padding 2s;
+	transition:			float 2s, margin 2s, padding 2s;
 }
 .post-content {
 	min-height:300px;
@@ -629,7 +701,7 @@ fieldset.title {
 }
 .entry {
 	border:0;
-	padding:1em;
+	padding:2em;
 }
 .more {
 	width:50%;
@@ -671,17 +743,17 @@ fieldset.title {
 	list-style:none;
 	display:inline;
 	height:auto;
-	-webkit-transition: float 2s, margin 2s, padding 2s, height 2s;
-	-o-transition: float 2s, margin 2s, padding 2s, height 2s;
-	-moz-transition: float 2s, margin 2s, padding 2s, height 2s;
-	transition: float 2s, margin 2s, padding 2s, height 2s;
+	-webkit-transition:	float 2s, margin 2s, padding 2s, height 2s;
+	-o-transition:		float 2s, margin 2s, padding 2s, height 2s;
+	-moz-transition:	float 2s, margin 2s, padding 2s, height 2s;
+	transition:			float 2s, margin 2s, padding 2s, height 2s;
 }
 .side .cont {
 }
 .side {
 }
 .cont {
-	padding:1em;
+	padding:2em;
 }
 .side {
 	width:33.333333333%;
@@ -701,10 +773,10 @@ fieldset.title {
 	width:100%;
 	padding:5px 1em;
 	border-style: solid;
-	-webkit-transition:all 500ms;
-	-o-transition: all 500ms;
-	-moz-transition: all 500ms;
-	transition: all 500ms;
+	-webkit-transition:	all 500ms;
+	-o-transition:		all 500ms;
+	-moz-transition:	all 500ms;
+	transition:			all 500ms;
 }
 .cont li a:hover, .cont li a:focus {
 	background: #eeeeee;
@@ -857,11 +929,11 @@ a {
 	font-weight:inherit;
 	text-decoration:none;
 	display:inline;
-	transition:color 300ms;
-	-webkit-transition:color 300ms;
-	-moz-transition:color 300ms;
-	-o-transition:color 300ms;
-	-ms-transition:color 300ms;
+	transition:			color 300ms;
+	-webkit-transition:	color 300ms;
+	-moz-transition:	color 300ms;
+	-o-transition:		color 300ms;
+	-ms-transition:		color 300ms;
 }
 a:hover {
 	color:#6CABE7;
@@ -883,27 +955,23 @@ a:focus {
 	margin-top:0;
 	display:block;
 	color:#FFF;
-}
-#footer .center {
-	float:none;
-	margin:auto;
+	height:90px;
 }
 .footer-right {
-	width:100%;
-	float:left;
-	padding:0;
+	padding:0 1em;
 	text-align:center;
 	display:block;
 	margin:auto;
+	height:90px;
+	line-height:90px;
 }
 #footer ul {
-	display:block;
 	float:left;
 	list-style:none;
-	margin-bottom:1em;
-	width:100%;
+	margin:0;
 	text-align:center;
 	margin:0;
+	height:90px;
 }
 #footer a {
 	color:#ffffff;
@@ -928,23 +996,21 @@ a:focus {
 	display:block;
 	margin:0;
 	display:inline-block;
-	padding:5px 10px;
+	padding:0 10px;
 	width:auto;
 	text-align:center;
 }
 #footer p {
-	margin:0.5em 0;
+	margin:0;
 }
 .footer-container{
-	width:90%;
-	max-width:1280px;
+	width:100%;
 	background:#0067C6;
 	margin:auto;
 	font-family:inherit;
 	float:none;
 	display:block;
 	vertical-align:middle;
-	padding:20px 0;
 	color:#FFFFFF;
 	text-align:center;
 }
@@ -958,6 +1024,8 @@ a:focus {
 }
 .copy {
 	font-size:0.9em;
+	float:right;
+	height:90px;
 }
 
 /* SEARCH */
@@ -1058,6 +1126,10 @@ div.pagination a:hover {
 	border-top-style:solid;
 	clear:both;
 }
+.onlymobile,
+.onlytablet {
+	display:none;
+}
 
 /* ANIMATIONS */
 
@@ -1070,7 +1142,7 @@ div.pagination a:hover {
 	}
 }
 
-@-webkit-keyframes fadeIn /* Safari and Chrome */ {
+@-webkit-keyframes fadeIn {
 	from {
 		opacity:0;
 	}
@@ -1081,7 +1153,7 @@ div.pagination a:hover {
 
 @keyframes jump {
 	from {
-		top:-999em;
+		top:-99em;
 	}
 	to {
 		top:0;
@@ -1090,13 +1162,12 @@ div.pagination a:hover {
 
 @-webkit-keyframes jump {
 	from {
-		top:-999em;
+		top:-99em;
 	}
 	to {
 		top:0;
 	}
 }
-
 		/*MEDIA QUERIES*/
 
 			/* TABLET VIEW */
@@ -1140,13 +1211,6 @@ div.pagination a:hover {
 				    float:left;
 				    display:table;
 				}
-				.limit {
-					width:100%;
-				}
-				#subpages {
-					width:auto;
-					padding:1em;
-				}
 				.sidebar .sidebar-left {
 					width:100%;
 				}
@@ -1161,14 +1225,21 @@ div.pagination a:hover {
 				#contents .blog .post {
 					width:100%;
 				}
+				.onlytablet {
+					display:block;
+				}
 			}
 
 			/* MOBILE VIEW */
 			@media screen and (max-width: 720px) {
+				#menuwrap {
+					top:0;
+				}
 				#subpages .links {
 					width:100%;
 					display:block;
 					text-align:center;
+					padding:0;
 				}
 				#subpages ul, #subpages .title ul {
 					width:100%;
@@ -1178,6 +1249,7 @@ div.pagination a:hover {
 					width:100%;
 					display:block;
 					text-align:center;
+					padding:0;
 				}
 				#subpages .title li {
 					text-align:center;
@@ -1195,7 +1267,7 @@ div.pagination a:hover {
 				}
 				.wp-caption {
 					float:none;
-					margin:auto;
+					margin:1em auto;
 					display:block;
 				}
 				.wp-caption img {
@@ -1231,8 +1303,28 @@ div.pagination a:hover {
 				.footer-container {
 					width:100%;
 					display:block;
+					height:180px;
+					text-align:center;
 				}
-			
+				#footer ul,
+				.copy {
+					width:100%;
+				}
+				.gallery-columns-2 .gallery-item,
+				.gallery-columns-3 .gallery-item,
+				.gallery-columns-4 .gallery-item,
+				.gallery-columns-5 .gallery-item,
+				.gallery-columns-6 .gallery-item,
+				.gallery-columns-7 .gallery-item
+				.gallery-columns-8 .gallery-item
+				.gallery-columns-9 .gallery-item {
+					width: 33.333333333333333%;
+					float:left;
+				}
+				.720-only {
+					display:block;
+				}
+			}
 			/* MENUS IN MOBILE */
 			@media screen and (max-width: 720px) and (max-height:500px), (max-width:720px), (max-height:500px) {
 				#toggle {

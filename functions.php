@@ -59,6 +59,9 @@ function titanium_theme_setup() {
 
 	/* Add Excerpt Support on Pages */
 	add_post_type_support('page', 'excerpt');
+
+	/* REMOVE DEFAULT GALLERY STYLES */
+	add_filter( 'use_default_gallery_style', '__return_false' );
 }
 
 function titanium_post_types() {

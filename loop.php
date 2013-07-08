@@ -105,8 +105,14 @@
 								<?php } else {
 
 								} ?>
+	
+	<?php // THE_CONTENT ?>
 
 								<?php the_content();?>
+
+	<?php // CALENDAR ?>
+
+								
 
 	<?php // CONTACT PAGE SPECIFIC ?>
 
@@ -270,7 +276,7 @@
 
 		<div id="video" class="video homecontainer">
 			<div class="entry">
-				<iframe id="ytplayer" width="16" height="9" src="http://www.youtube.com/embed/sZsngCANVb4?autohide=1&origin=http://www.titaniumrobotics.com&theme=light&modestbranding=1" frameborder="0"></iframe>
+				<iframe id="ytplayer" width="16" height="9" src="http://www.youtube.com/embed/sZsngCANVb4?autohide=1&amp;origin=http://www.titaniumrobotics.com&amp;theme=light&amp;modestbranding=1"></iframe>
 			</div>
 		</div>
 
@@ -294,20 +300,20 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-<?php
+		<?php
 
-if(have_posts()) :						
+		if(have_posts()) :						
 
-query_posts( 'showposts=1' );
+		query_posts( 'showposts=1' );
 
-while(have_posts()) : the_post();
+		while(have_posts()) : the_post();
 
-$post_image_id = get_post_thumbnail_id($post->ID);
-		if ($post_image_id) {
-			$thumbnail = wp_get_attachment_image_src( $post_image_id, 'post-thumbnail', false);
-			if ($thumbnail) (string)$thumbnail = $thumbnail[0];
-		}
-?>
+		$post_image_id = get_post_thumbnail_id($post->ID);
+				if ($post_image_id) {
+					$thumbnail = wp_get_attachment_image_src( $post_image_id, 'post-thumbnail', false);
+					if ($thumbnail) (string)$thumbnail = $thumbnail[0];
+				}
+		?>
 
 		<div id="blog" class="announcement homecontainer"
 		style="background-image: url('<?php echo $thumbnail ?>') !important;">

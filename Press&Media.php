@@ -14,7 +14,7 @@ Template Name: Press & Media
 					?>
 					<?php endif; ?>
 				</div>
-
+				<div class="onlytablet separate"></div>
 				<div class="press-content">
 					<div class="post-content">
 						<div class="entry">
