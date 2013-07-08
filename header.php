@@ -7,7 +7,7 @@
 			<meta name="keywords" content="robotics, FRC, Team 1160, FRC 1160, Titanium Robotics, Titanium FRC, Titanium 1160, Team Titanium, FRC Robotics, San Marino, San Marino High School, FRC Team 1160, Team 1160 FRC, San Marino Robotics, Firebird Robotics" />
 
 		<!--TITLE-->
-			<title><?php bloginfo('name'); ?> <?php wp_title('/'); ?></title>
+			<title><?php wp_title(''); ?> // <?php bloginfo('name'); ?></title>
 
 		<!--LINKS-->
 			<link rel="alternate"	title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
@@ -162,7 +162,7 @@
 		
 			<!--START - NAVIGATION-->
 		
-			<header id="menuwrap">
+			<header id="menuwrap" class="custom-background">
 				
 				<div id="icon-nav">
 					<div class="menu">

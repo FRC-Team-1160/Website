@@ -916,6 +916,43 @@ fieldset.title {
 	border-style: solid;
 }
 
+/* COLUMNED PAGE */
+#contents .press .post.columned {
+	width:25%;
+	float:left;
+	position:relative;
+	overflow:hidden;
+}
+#contents .press .post.columned.two {
+	width:50%;
+}
+.columned.two .everything {
+	height:auto;
+}
+.columned .everything {
+	height:15em;
+	overflow:hidden;
+}
+.columned .clip.thumbnail, .columned .clip.no-thumbnail {
+	width:200px;
+	height:200px;
+	margin:auto;
+	background-size:cover;
+	background-position: center center;
+}
+.columned .entry {
+	padding:1em;
+	float:left;
+}
+.clip {
+	width:190px;
+	max-width:100%;
+	-webkit-clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
+	-moz-clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
+	-ms-clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
+	clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
+}
+
 /* LINKS */
 a {
 	color:#0067C6;
@@ -1181,6 +1218,14 @@ div.pagination a:hover {
 				.authorsposts li {
 					width:50%;
 				}
+				#contents .press .post.columned {
+					width:33.3333333%;
+					float:left;
+				}
+				.columned .clip.thumbnail {
+					width:150px;
+					height:150px;
+				}
 				div.results {
 				    width:100%;
 				    float:left;
@@ -1274,6 +1319,18 @@ div.pagination a:hover {
 				}
 				.authorsposts li {
 					width:100%;
+				}
+				#contents .press .post.columned {
+					width:50%;
+					float:left;
+				}
+				#contents .press .post.columned.two {
+					width:100%;
+					float:left;
+				}
+				.columned .clip.thumbnail {
+					width:140px;
+					height:140px;
 				}
 				.footer-container {
 					width:100%;

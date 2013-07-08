@@ -5,7 +5,7 @@
 
 <?php } else { ?>
 
-	<footer id="footer">
+	<footer id="footer" class="custom-background">
 		
 		<div class="footer-container">
 			
@@ -34,7 +34,7 @@
 					</li>
 				</ul>
 				<div class="copy">
-						&copy;<?php echo date(Y)?>&nbsp;<a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a>  //  All rights reserved
+					&copy;<?php echo date(Y)?>&nbsp;<a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a>  //  All rights reserved
 				</div>
 			</div>
 		</div>

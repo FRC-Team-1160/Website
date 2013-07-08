@@ -12,6 +12,15 @@ function titanium_theme_setup() {
 	/* Enque JQuery */
 	if (!is_admin()) add_action("wp_enqueue_scripts", "titanium_jquery_enqueue", 1);
 
+	/* CUSTOM BACKGROUNDS */
+	$defaults = array(
+		'default-color'          => '0067C6',
+		'default-image'          => '',
+		'wp-head-callback'       => '_custom_background_cb',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => ''
+	);
+
 	/* Custom Post Type */
 	add_action( 'init', 'titanium_post_types' );
 
@@ -22,7 +31,7 @@ function titanium_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	/* Add theme support for custom backgrounds. */
-	add_custom_background();
+	add_theme_support( 'custom-background', $defaults );
 
 	/* Add your nav menus function to the 'init' action hook. */
 	add_action( 'init', 'titanium_register_menus' );
@@ -62,6 +71,9 @@ function titanium_theme_setup() {
 
 	/* REMOVE DEFAULT GALLERY STYLES */
 	add_filter( 'use_default_gallery_style', '__return_false' );
+
+	// CUSTOM POST TYPE HACK FOR IFTTT
+	add_filter('wp_insert_post_data', 'redirect_xmlrpc_to_custom_post_type', 99, 2);
 }
 
 function titanium_post_types() {
@@ -81,6 +93,14 @@ function titanium_post_types() {
 				'not_found' => __( 'No Press Releases found' ),
 				'not_found_in_trash' => __( 'No Press Releases found in Trash' ),
 				'parent' => __( 'Parent Press Release' ),
+			),
+			'supports' => array(
+				'title',
+				'author',
+				'excerpt',
+				'editor',
+				'thumbnail',
+				'revisions'
 			),
 			'public' => true,
 			'rewrite' => array( 'slug' => 'press-release', 'with_front' => false ),
@@ -105,8 +125,47 @@ function titanium_post_types() {
 				'not_found_in_trash' => __( 'No Profiles found in Trash' ),
 				'parent' => __( 'Parent Profile' ),
 			),
+			'supports' => array(
+				'title',
+				'author',
+				'excerpt',
+				'editor',
+				'thumbnail',
+				'revisions'
+			),
 			'public' => true,
 			'rewrite' => array( 'slug' => 'mentor', 'with_front' => false ),
+			'taxonomies' => array( 'post_tag', 'category '),
+			'can_export' => true,
+		)
+	);
+	register_post_type( 'videos', 
+		array(
+			'labels' => array(
+				'name' => __( 'videos' ),
+				'singular_name' => __( 'video' ),
+				'add_new' => __( 'Add New video' ),
+				'add_new_item' => __( 'Add New video' ),
+				'edit' => __( 'Edit' ),
+				'edit_item' => __( 'Edit video' ),
+				'new_item' => __( 'New video' ),
+				'view' => __( 'View videos' ),
+				'view_item' => __( 'View video' ),
+				'search_items' => __( 'Search videos' ),
+				'not_found' => __( 'No videos Found' ),
+				'not_found_in_trash' => __( 'No videos found in Trash' ),
+				'parent' => __( 'Parent video' ),
+			),
+			'supports' => array(
+				'title',
+				'author',
+				'excerpt',
+				'editor',
+				'thumbnail',
+				'revisions'
+			),
+			'public' => true,
+			'rewrite' => array( 'slug' => 'video', 'with_front' => false ),
 			'taxonomies' => array( 'post_tag', 'category '),
 			'can_export' => true,
 		)
@@ -326,4 +385,16 @@ function remove_footer_admin (){
 	echo '<br />For Team and Technical Contact: <a href="mailto:titaniumrobotics@gmail.com">Email</a> // <a href="https://github.com/FRC-Team-1160/Website/issues"> Report a Bug</a>';
 }
 
+function redirect_xmlrpc_to_custom_post_type ($data, $postarr) {
+    // This function detects a XML-RPC request and modifies it before posting
+
+    $p2_custom_post_type = 'videos'; // Define your Custom post type
+
+    if (defined('XMLRPC_REQUEST') || defined('APP_REQUEST')) {
+        $data['post_type'] = $p2_custom_post_type; // sets the request post type to custom post type instead of the default 'Post'.
+        return $data;
+    }
+    return $data;
+
+}
 ?>
