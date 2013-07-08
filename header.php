@@ -19,10 +19,10 @@
 
 		<!--CSS-->
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>" />
-			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
 			<link rel="stylesheet"					href="https://cdn.moot.it/1/moot.css">
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css" />
+			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
 			<?php if(is_front_page()) { ?>
 				<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css" />
 			<?php } ?>
@@ -150,13 +150,8 @@
 			<!--[if lt IE 9]>
 				<script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
 			<![endif]-->
-			<script>
-				$('#vertical-toolbar').toolbar({
-					content: '#user-toolbar-options', 
-					position: 'left',
-				});
-			</script>
 	</head>
+
 <?php flush(); ?>
 
 <!--		<BODY> START		-->
@@ -180,22 +175,14 @@
 
 						<div class="menu-right">
 							<?php if (is_user_logged_in()) { ?>
-							<div class="icon user">
-								<a href="<?php echo get_admin_url(); ?>">
-									<?php
-										global $current_user;
-										get_currentuserinfo();
-										echo get_avatar( $current_user->ID, 60 );
-									?>
-								</a>
-							</div>
-								<?php } else { ?>
-							<div class="icon">
-								<a href="<?php echo esc_url( wp_login_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="login">
-									<span aria-hidden="true" data-icon="&#xe021;">
-									</span>
-								</a>
-							</div>
+							
+							<?php } else { ?>
+								<div class="icon">
+									<a href="<?php echo esc_url( wp_login_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="login">
+										<span aria-hidden="true" data-icon="&#xe021;">
+										</span>
+									</a>
+								</div>
 							<?php }?>
 
 							<div class="icon">
@@ -217,7 +204,7 @@
 								'container_id'		=>	'nav',
 								'container_class'	=>	'navigation-links home-links',
 								'menu_id'			=>	'menu',
-								'menu_class'		=>	'',
+								'menu_class'		=>	'ti22',
 							)
 						);
 					else:
@@ -227,7 +214,7 @@
 								'container_id'		=>	'nav',
 								'container_class'	=>	'navigation-links',
 								'menu_id'			=>	'menu',
-								'menu_class'		=>	'',
+								'menu_class'		=>	'ti22',
 							)
 						);
 					endif;

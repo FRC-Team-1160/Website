@@ -45,9 +45,8 @@
 <?php wp_footer(); ?>
 
 <!-- NAVIGATION HOOK-UP -->
-		<script>
+		<script type="text/javascript">
 			var navigation = responsiveNav("#nav", {
-				animation:true,
 				transition:500,
 				label:"Open Menu",
 				customToggle:"toggle",

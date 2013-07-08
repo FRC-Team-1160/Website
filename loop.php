@@ -107,8 +107,11 @@
 								} ?>
 	
 	<?php // THE_CONTENT ?>
-
+							<?php if (!is_home()) : ?>
 								<?php the_content();?>
+							<?php else : ?>
+								<?php the_excerpt(); ?>
+							<?php endif; ?>
 
 	<?php // CALENDAR ?>
 
