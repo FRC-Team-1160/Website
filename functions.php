@@ -88,6 +88,29 @@ function titanium_post_types() {
 			'can_export' => true,
 		)
 	);
+	register_post_type( 'Mentors', 
+		array(
+			'labels' => array(
+				'name' => __( 'Mentors' ),
+				'singular_name' => __( 'Mentor' ),
+				'add_new' => __( 'Add New Mentor Profile' ),
+				'add_new_item' => __( 'Add New Mentor' ),
+				'edit' => __( 'Edit' ),
+				'edit_item' => __( 'Edit Profile' ),
+				'new_item' => __( 'New Profile' ),
+				'view' => __( 'View Profile' ),
+				'view_item' => __( 'View Profile' ),
+				'search_items' => __( 'Search Profiles' ),
+				'not_found' => __( 'No Profiles Found' ),
+				'not_found_in_trash' => __( 'No Profiles found in Trash' ),
+				'parent' => __( 'Parent Profile' ),
+			),
+			'public' => true,
+			'rewrite' => array( 'slug' => 'mentor', 'with_front' => false ),
+			'taxonomies' => array( 'post_tag', 'category '),
+			'can_export' => true,
+		)
+	);
 }
 
 function titanium_jquery_enqueue() {
