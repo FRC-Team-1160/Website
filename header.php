@@ -66,7 +66,6 @@
 				}
 			</style>
 
-
 			<?php if (is_search()) : ?>
 				<style type="text/css" media="screen">
 						.titanium {font-weight:bold;}
@@ -90,6 +89,7 @@
 		
 		<!--SCRIPTS-->
 			<?php wp_head(); ?>
+
 			<!-- RESPONSIVE VIDEOS -->
 			<script type="text/javascript">
 				jQuery(function ($) {

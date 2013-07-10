@@ -97,11 +97,11 @@
 	<?php // TIME ?>
 
 								<?php if ( !is_page() ) { ?>
-								<aside class="time">
+								<time class="time">
 									
 									<?php the_time('n/j/y') ?>
 			
-								</aside>
+								</time>
 								<?php } else {
 
 								} ?>
@@ -165,7 +165,7 @@
 
 												<textarea name="comments" required="required" id="commentsText" rows="8" placeholder="Message" class="pure-input-1-2"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
 											<div class="clear"></div>		
-												<input type="submit" class="pure-button pure-input-1-2"></button>
+												<input type="submit" class="pure-button pure-input"></button>
 										
 												<input type="hidden" name="submitted" id="submitted" value="true" />
 									
@@ -276,12 +276,12 @@
 				</div>
 <?php } else { ?>
 		<div class="clear"></div>
-
-		<div id="video" class="video homecontainer">
-			<div class="entry">
-				<iframe id="ytplayer" width="16" height="9" src="http://www.youtube.com/embed/sZsngCANVb4?autohide=1&amp;origin=http://www.titaniumrobotics.com&amp;theme=light&amp;modestbranding=1"></iframe>
+			<div id="video" class="homecontainer">
+				<div class="entry">
+					<iframe width="321" height="181" src="http://www.youtube.com/embed/sZsngCANVb4" allowfullscreen></iframe>
+					<div class="clear"></div>
+				</div>
 			</div>
-		</div>
 
 		<div class="clear"></div>
 
@@ -297,7 +297,7 @@
 						The way of life FIRST promotes, Gracious Professionalism<sup>™</sup>, is a way of working that encourages high-quality work, emphasizes the value of others, and respects individuals and the community. To learn more about <em>FIRST<sup>&reg;</sup></em>, visit <strong><a target="_blank" href="http://www.usfirst.org/" rel="nofollow">www.usfirst.org </a></strong>
 					</p>
 					<p>
-						<a href="/about-first">Read the Full Article</a>
+						<a class="button" href="/about-first">Read the Full Article</a>
 					</p>
 				</div>
 			</div>

@@ -5,6 +5,7 @@
 			<div class="entry">
 				<div class="errorimg">
 					<img src="<?php bloginfo('template_directory') ?>/assets/error404smaller.png" Alt="Robot" title="Robot" style="margin:auto; float:none; display:block;" />
+					<p style="font-size:small; color:DIMGRAY; text-align:center;">Artwork by <a href="http://www.itsallwong.com">Nathan Wong</a></p>
 				</div>
 
 				<div class="errortemp">
@@ -16,7 +17,6 @@
 					<?php get_search_form(); ?>
 					</div>
 					<div class="clear"></div>
-					<p style="text-align:center; color:DIMGRAY; font-size:xx-small;">Artwork by <a href="http://www.itsallwong.com">Nathan Wong</a></p>
 				</div>
 
 				<div class="clear"></div>

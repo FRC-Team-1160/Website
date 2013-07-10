@@ -19,6 +19,9 @@ Template Name: Press & Media
 					<div class="post-content">
 						<div class="entry">
 							<h2>Press Releases</h2>
+							<p style="text-align:center;">
+								<a class="pure-button" href="http://www.titaniumrobotics.com/feed/?post_type=press">RSS Feed</a>
+							</p>
 						</div>
 					</div>
 

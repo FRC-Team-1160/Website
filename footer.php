@@ -12,6 +12,12 @@
 			<div class="footer-right">
 				<ul class="s">
 					<li class="follow">
+						<a href="http://www.titaniumrobotics.com/for-students/donations/">
+							<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe00d;">
+							</span>
+						</a>
+					</li>
+					<li class="follow">
 						<a href="http://www.facebook.com/team1160" target="_blank">
 							<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe01d;">
 							</span>
