@@ -327,7 +327,7 @@ img.aligncenter {
 	-ms-transition:color 300ms;
 }
 #nav li:hover a {
-	color:#0067C6;
+	color:#000;
 	transition:color 300ms;
 	-webkit-transition:color 300ms;
 	-moz-transition:color 300ms;
@@ -1381,7 +1381,7 @@ div.pagination a:hover {
 			}
 			@media only screen and (max-width: 30em) {
 				.entry {
-					padding:2em;
+					padding:2em;	
 				}
 			}
 

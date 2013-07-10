@@ -45,6 +45,11 @@
 								<?php the_content();?>
 								<div class="clear"></div>
 							</div>
+							<p style="text-align:center;">
+								<a style="margin-left:0;" class="button" href="<?php the_permalink() ?>" rel="link" title="Link to <?php the_title(); ?>">
+									Read More
+								</a>
+							</p>
 						</div>
 
 								<div class="clear"></div>
