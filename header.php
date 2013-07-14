@@ -270,11 +270,9 @@
 						<div class="title">
 							<ul>
 								<li>
-									<h1>
 										<?php
 											wp_title("", true);
 										?>
-									</h1>
 								</li>
 							</ul>
 						</div>
