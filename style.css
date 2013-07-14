@@ -459,6 +459,7 @@ img.aligncenter {
 }
 #subpages .links.withthumbnail {
 	width:100%;
+	padding:0;
 }
 #subpages .links.withthumbnail ul {
 	text-align:center;

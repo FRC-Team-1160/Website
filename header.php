@@ -265,6 +265,7 @@
 
 	<?php if(!is_front_page() && !is_404() && !is_search() && !is_home()) : ?>
 			<div id="subpages"><div class="limit">
+				<div class="table">
 					<?php if(!has_post_thumbnail( $post_id )) {?>
 						<div class="title">
 							<ul>
@@ -306,6 +307,7 @@
 				</ul>
 				</div>
 		<?php endif; ?>
+		</div>
 	</div></div>
 	<div class="clear"></div>
 	<?php endif; ?>
