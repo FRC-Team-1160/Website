@@ -29,7 +29,7 @@ Template Name: Press & Media
   $temp = $wp_query; 
   $wp_query = null; 
   $wp_query = new WP_Query(); 
-  $wp_query->query('showposts=5&post_type=press'.'&paged='.$paged); 
+  $wp_query->query('showposts=20&post_type=press'.'&paged='.$paged); 
 
   while ($wp_query->have_posts()) : $wp_query->the_post(); 
 ?>
@@ -72,7 +72,6 @@ Template Name: Press & Media
 									<?php the_time('j F Y') ?>
 			
 								</p>
-								<?php the_excerpt();?>
 								<div class="clear"></div>
 						</div>
 

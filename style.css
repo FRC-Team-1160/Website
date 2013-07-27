@@ -27,7 +27,7 @@ html, body {
 	height:100%;
 	font-style:normal;
 	font-weight:300;
-	font-size:14pt;
+	font-size:12pt;
 	padding:0;
 	margin-top:0;
 	position:relative;
@@ -53,25 +53,35 @@ strong, b {
 h1, h2, h3, h4, h5, h6 {
 	font-family:'Roboto', 'Helvetica Neue', sans-serif;
 	font-weight:300;
+	color:#000;
+	font:'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif, normal, 48px, 62px, #000000;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	font-weight:300;
 }
 h1 {
-	font-size:40pt;
+	font-size:42pt;
 	font-weight:100;
+	font-family:inherit;
+	color:#000;
 }
 h2 {
-	font-size:24pt;
+	font-size:36pt;
+	font-family:inherit;
+	color:#000;
 }
 h3 {
-	font-size:18pt;
+	font-size:30pt;
+	font-family:inherit;
+	color:#000;
 }
 h4,
 h5,
 h6 {
-	font-size:16pt;
+	font-size:24pt;
 	font-weight:400;
+	font-family:inherit;
+	color:#737373;
 }
 p {
 	margin-bottom:1em;
@@ -130,6 +140,9 @@ td {
 	min-height:100%;
 }
 
+/* FRAMES */
+.embed-container {position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;} .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
 /* IMAGES & GALLERIES */
 img {
 	line-height:1;
@@ -164,7 +177,7 @@ img.aligncenter {
 .wp-caption p {
 	margin:0;
 	padding:0.5em;
-	font-size:10pt;
+	font-size:9pt;
 }
 .wp-caption img {
 	float:none;
@@ -472,7 +485,7 @@ img.aligncenter {
 	z-index:10;
 	height:100%;
 	padding-left:80pt;
-	font-size:28pt;
+	font-size:30pt;
 	font-weight:300;
 }
 #subpages .title li {
@@ -538,7 +551,7 @@ img.aligncenter {
 	-o-transition: float 2s, margin 2s, padding 2s;
 	-moz-transition: float 2s, margin 2s, padding 2s;
 	transition: float 2s, margin 2s, padding 2s;
-	font-size:16pt;
+	font-size:15pt;
 }
 #contents .blog .post {
 	width:100%;
@@ -574,7 +587,7 @@ img.aligncenter {
 	float:left;
 	min-height:100%;
 	display:inline-block;
-	font-size:0.9em;
+	font-size:12pt;
 }
 .sidebar-left .sidebar-content {
 	width:auto;
@@ -672,7 +685,7 @@ img.aligncenter {
 
 /* SINGLE POSTS */
 .post-edit-link {
-	font-size:0.7em;
+	font-size:12pt;
 }
 .post {
 	font-size:inherit;
@@ -705,7 +718,7 @@ fieldset.title {
 .more {
 	width:50%;
 	float:left;
-	font-size:0.9em;
+	font-size:12pt;
 	display:inline-block;
 }
 .time {
@@ -728,7 +741,7 @@ fieldset.title {
 }
 .press .side {
 	width:25%;
-	font-size:0.9em;
+	font-size:12pt;
 }
 .press .entry {
 	border-top-width:0;
@@ -860,7 +873,7 @@ fieldset.title {
 .profiletable th {
 	width:20%;
 	text-align:left;
-	font-size:large;
+	font-size:36pt;
 	padding-top:1em;
 }
 .profiletable .first {
@@ -923,25 +936,57 @@ fieldset.title {
 }
 
 /* COLUMNED PAGE */
-#contents .press .post.columned {
-	width:25%;
+#contents .press {
+	background:#FFF;
+}
+#contents .post.columned {
+	width:16.666666666%;
 	float:left;
 	position:relative;
 	overflow:hidden;
+	display:inline-block;
+	text-align:center;
 }
-#contents .press .post.columned.two {
+#contents .post.columned.two {
 	width:50%;
+}
+#contents .everything {
+	background:#FFF;
+	border-radius:3px;
+	float:left;
+	position:relative;
+	width:100%;
+}
+#contents .entry.profile {
+	float:left;
+	padding:0;
+	width:95%;
+	float:none;
+	margin:1em auto;
 }
 .columned.two .everything {
 	height:auto;
 }
-.columned .everything {
-	height:15em;
-	overflow:hidden;
+.everything .thumbnail {
+	float:left;
+	width:15%;
+	border-radius:3px 0 0 3px;
+}
+.everything .thumbnail .featured {
+	border-radius:3px 0 0 3px;
+}
+.everything .descriptions {
+	width:85%;
+	float:left;
+	padding:48pt 0;
+}
+.everything .descriptions p,
+.everything .descriptions h3 {
+	padding:0 48pt;
 }
 .columned .clip.thumbnail, .columned .clip.no-thumbnail {
-	width:200px;
-	height:200px;
+	width:100px;
+	height:100px;
 	margin:auto;
 	background-size:cover;
 	background-position: center center;
@@ -1059,7 +1104,7 @@ a:focus {
 	line-height:2;
 }
 .copy {
-	font-size:0.9em;
+	font-size:12pt;
 	float:right;
 	height:90px;
 }
@@ -1079,7 +1124,7 @@ fieldset.contactform {
 .error {
 	color:red;
 	font-weight:normal;
-	font-size:small;
+	font-size:9em;
 }
 .thanks {
 	color:#0067C6;
@@ -1111,7 +1156,7 @@ div.pagination {
 	border-bottom-width:1px;
 }
 div.pagination span, div.pagination a {
-	font-size: 1.5em;
+	font-size: 48pt;
 	display:inline-block;
 	background: #F5F5F5;
 	border-width: 0px 1px 0px 0px;
@@ -1193,6 +1238,9 @@ div.pagination a:hover {
 				.featured {
 					height:350px;
 				}
+				.everything .thumbnail {
+					width:100%;
+				}
 				.thumbnail h1 {
 					font-size:36pt;
 				}
@@ -1217,7 +1265,7 @@ div.pagination a:hover {
 					width:30%;
 				}
 				#authorlist .authorname {
-					font-size:large;
+					font-size:36pt;
 					line-height:1;
 					padding-bottom:0;
 				}
@@ -1289,7 +1337,7 @@ div.pagination a:hover {
 					height:200px;
 				}
 				.thumbnail h1 {
-					font-size:25pt;
+					font-size:24pt;
 				}
 				#contents img {
 					float:none;
