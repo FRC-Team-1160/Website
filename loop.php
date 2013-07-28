@@ -115,7 +115,7 @@
 
 							<?php if (is_single()) : ?>
 
-								<a class="moot" href="https://moot.it/i/titaniumrobotics/blog/<?php sanitize_title( the_title() ) ?>">
+								<a class="moot" href="https://moot.it/i/titaniumrobotics/blog/<?php global $post; $post_slug=$post->post_name; echo $post_slug; ?>">
 								Comments
 								</a>
 
