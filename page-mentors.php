@@ -14,7 +14,7 @@
 						<div class="post-content">
 							<div class="entry">
 <?php // FEATURED IMAGE ?>
-								<a href="#<?php sanitize_title_with_dashes( the_title() ) ?>" rel="link" title="Link to <?php the_title(); ?>">
+								<a href="#<?php the_title_attribute(  ); ?>" rel="link" title="<?php the_title_attribute(  ); ?>">
 									<?php if(has_post_thumbnail( $post_id )) {?>
 
 											<?php
@@ -57,7 +57,7 @@
 			  while ($wp_query->have_posts()) : $wp_query->the_post(); 
 			?>
 
-						<div class="entry profile" id="<?php sanitize_title_with_dashes( the_title() ) ?>">
+						<div class="entry profile" id="<?php the_title_attribute(  ); ?>">
 
 							<div class="everything">
 								<div class="text">

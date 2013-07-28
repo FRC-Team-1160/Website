@@ -139,6 +139,8 @@
 			</script>
 			<!-- NAVIGATION -->
 			<script src="<?php bloginfo('template_directory');?>/js/responsive-nav.min.js"	type="text/javascript"></script>
+			<!-- SMOOTH SCROLL -->
+			<script src="<?php bloginfo('template_directory');?>/js/smoothscroll.js"		type="text/javascript"></script>
 			<!-- MOOT -->
 			<script src="https://cdn.moot.it/1/moot.min.js"></script>
 			<!-- ICONS FONT FOR IE9 -->
