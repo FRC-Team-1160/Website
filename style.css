@@ -1156,7 +1156,7 @@ div.pagination {
 	border-bottom-width:1px;
 }
 div.pagination span, div.pagination a {
-	font-size: 48pt;
+	font-size: 24pt;
 	display:inline-block;
 	background: #F5F5F5;
 	border-width: 0px 1px 0px 0px;
