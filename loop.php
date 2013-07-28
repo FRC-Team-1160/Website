@@ -113,6 +113,16 @@
 								<?php the_excerpt(); ?>
 							<?php endif; ?>
 
+							<?php if (is_single()) : ?>
+
+								<a class="moot" href="https://moot.it/i/titaniumrobotics/blog/<?php sanitize_title( the_title() ) ?>">
+								Comments
+								</a>
+
+							<?php else :?> 
+
+							<?php endif ?>
+
 	<?php // CALENDAR ?>
 
 								
@@ -277,9 +287,8 @@
 <?php } else { ?>
 		<div class="clear"></div>
 			<div id="video" class="homecontainer">
-				<div class="entry">
+				<div class="entry" style="width:100%; padding:0; float:none;">
 					<iframe width="321" height="181" src="http://www.youtube.com/embed/sZsngCANVb4" allowfullscreen></iframe>
-					<div class="clear"></div>
 				</div>
 			</div>
 

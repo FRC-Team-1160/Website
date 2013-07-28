@@ -52,6 +52,7 @@
 					-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
 					-webkit-animation-duration:1s;
 					-webkit-animation-delay: 2s;
+					min-height:300px;
 				}
 				.m-page {
 					padding-left:10px;
@@ -63,6 +64,9 @@
 					-webkit-border-radius:inherit;
 					-moz-border-radius:inherit;
 					border-radius: inherit;
+				}
+				.m-help {
+					z-index:2;
 				}
 			</style>
 
