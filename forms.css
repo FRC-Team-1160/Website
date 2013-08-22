@@ -321,6 +321,7 @@ legend {
   vertical-align: middle;
   font-size: 90%;
 }
+.tags a,
 .pure-button,
 button,
 input[type="submit"],
@@ -352,7 +353,7 @@ a:focus {
 	outline: none;
 }
 
-
+.tags a,
 .pure-button,
 .button,
 button,
@@ -383,10 +384,17 @@ select {
 	background-color:#0067C6 !important;
 	box-shadow: 0 6px #004d94;
 }
+.tags a {
+	font-size:0.7em;
+	padding:5px 7px;
+	margin:7px 0 0 7px;
+	box-shadow: 0 3px #004d94;
+}
 
 select {
 	margin:15px 0;
 }
+.tags a:hover,
 .pure-button-hover,
 .pure-button:hover,
 .button:hover,
@@ -396,7 +404,11 @@ select:hover {
 	box-shadow: 0 8px #004d94;
 	top: -2px;
 }
+.tags a:hover {
+	box-shadow: 0 5px #004d94;
+}
 
+.tags a:active,
 .pure-button-active,
 .pure-button:active,
 .button:active,
@@ -407,6 +419,9 @@ select:active {
 	-moz-box-shadow: 0 0 #004d94;
 	box-shadow: 0 0 #004d94;
 	top: 6px;
+}
+.tags a:active {
+	top: 3px;
 }
 
 .pure-button[disabled],

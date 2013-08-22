@@ -36,7 +36,7 @@
 
 	<?php // SIDEBAR FOR TWO COLUMN & BOOKMARKS ?>
 
-							<?php if (is_page_template('two-column.php', 'bookmarks.php')) { ?>
+							<?php if (is_page_template('two-column.php', 'bookmarks.php') || is_single() || is_home()) { ?>
 								<aside class="sidebar-left">
 									<section class="sidebar-content">
 										<div class="border-right">
@@ -48,6 +48,41 @@
 												else : 
 												?>
 												<?php endif; ?>
+
+											<?php elseif(is_home()||is_single()): ?>
+												<div class="cont">
+													<div class="information">
+														<time class="time">
+															<span class="year">
+																<?php the_time('Y') ?>
+															</span>
+																<?php the_time('M j') ?>
+														</time>
+														<?php if(is_single()): ?>
+															<h6>Categories</h6>
+																<?php
+																	// get the category IDs assigned to post
+																	$categories = wp_get_post_categories( $post->ID, array( 'fields' => 'ids' ) );
+																	// separator between links
+																	$separator = ', ';
+
+																	if ( $categories ) {
+
+																		$cat_ids = implode( ',' , $categories );
+																		$cats = wp_list_categories( 'title_li=&style=none&echo=0&include=' . $cat_ids );
+																		$cats = rtrim( trim( str_replace( '<br />',  $separator, $cats ) ), $separator );
+																		
+																		// display post categories
+																		echo  $cats;
+																	}
+																?>
+															<h6>Tags</h6>
+															<section class="tags">
+																<?php the_tags( '', '&nbsp;', '' ); ?> 
+															</section>
+														<?php endif; ?>
+													</div>
+												</div>
 
 											<?php endif; ?>
 
@@ -93,18 +128,6 @@
 									</legend></fieldset>
 
 								<?php } else { } ?>
-
-	<?php // TIME ?>
-
-								<?php if ( !is_page() ) { ?>
-								<time class="time">
-									
-									<?php the_time('n/j/y') ?>
-			
-								</time>
-								<?php } else {
-
-								} ?>
 	
 	<?php // THE_CONTENT ?>
 							<?php if (!is_home()) : ?>
