@@ -96,6 +96,7 @@
 			<?php wp_head(); ?>
 
 			<!-- RESPONSIVE VIDEOS -->
+			<?php if(!is_front_page()) { ?>
 			<script type="text/javascript">
 				jQuery(function ($) {
 					"use strict";
@@ -142,6 +143,7 @@
 
 				});
 			</script>
+			<?php } ?>	
 
 		<!-- NAVIGATION -->
 			<script src="<?php bloginfo('template_directory');?>/js/responsive-nav.min.js"	type="text/javascript"></script>

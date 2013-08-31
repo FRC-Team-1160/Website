@@ -314,6 +314,9 @@
 			<div id="item-2" class="control-operator"></div>
 			<div id="item-3" class="control-operator"></div>
 			<div id="item-4" class="control-operator"></div>
+			<figure class="item noafter">
+					<iframe width="16" height="9" src="http://www.youtube.com/embed/sZsngCANVb4" allowfullscreen></iframe>
+			</figure>
 			<?php
 
 				if(have_posts()) :						
@@ -332,8 +335,8 @@
 
 			<figure id="blog" class="item"
 				style="background-image: url('<?php echo $thumbnail ?>') !important; background-size:cover !important; background-position:center center;">
-					<div class="entry rightside">
-						<article>
+					<div class="rightside">
+						<article class="entry">
 							<h1>
 								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
 									<?php the_title(); ?>
@@ -345,9 +348,6 @@
 					<div class="clear"></div>
 			</figure>
 			<?php endwhile; endif; ?>
-			<figure class="entry item" style="padding:0;">
-						<iframe width="321" height="181" src="http://www.youtube.com/embed/sZsngCANVb4" allowfullscreen></iframe>
-			</figure>
 			<div class="controls">
 			<a href="#item-1" class="control-button">&mdash;</a>
 			<a href="#item-2" class="control-button">&mdash;</a>

@@ -53,12 +53,16 @@
   -webkit-animation: none;
   -o-animation: none;
   animation: none;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .gallery .control-operator:target ~ .controls .control-button {
   -webkit-animation: none;
   -o-animation: none;
   animation: none;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 @-webkit-keyframes controlAnimation-2 {
@@ -167,12 +171,16 @@
   -webkit-animation: controlAnimation-2 14s infinite;
   -o-animation: controlAnimation-2 14s infinite;
   animation: controlAnimation-2 14s infinite;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .items-2.autoplay .item {
   -webkit-animation: galleryAnimation-2 14s infinite;
   -o-animation: galleryAnimation-2 14s infinite;
   animation: galleryAnimation-2 14s infinite;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .items-2 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
@@ -305,12 +313,16 @@
   -webkit-animation: controlAnimation-3 21s infinite;
   -o-animation: controlAnimation-3 21s infinite;
   animation: controlAnimation-3 21s infinite;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .items-3.autoplay .item {
   -webkit-animation: galleryAnimation-3 21s infinite;
   -o-animation: galleryAnimation-3 21s infinite;
   animation: galleryAnimation-3 21s infinite;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .items-3 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
@@ -455,12 +467,16 @@
   -webkit-animation: controlAnimation-4 28s infinite;
   -o-animation: controlAnimation-4 28s infinite;
   animation: controlAnimation-4 28s infinite;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .items-4.autoplay .item {
   -webkit-animation: galleryAnimation-4 28s infinite;
   -o-animation: galleryAnimation-4 28s infinite;
   animation: galleryAnimation-4 28s infinite;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .items-4 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
@@ -608,12 +624,16 @@
   -webkit-animation: controlAnimation-5 35s infinite;
   -o-animation: controlAnimation-5 35s infinite;
   animation: controlAnimation-5 35s infinite;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .items-5.autoplay .item {
   -webkit-animation: galleryAnimation-5 35s infinite;
   -o-animation: galleryAnimation-5 35s infinite;
   animation: galleryAnimation-5 35s infinite;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .items-5 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
@@ -698,7 +718,7 @@
   height: 400px;
   overflow: hidden;
   text-align: center;
-  background: #4d87e2;
+  background: #222;
 }
 
 .gallery .controls {
@@ -722,7 +742,7 @@
 }
 
 figure .rightside {
-	width:33.33333%;
+	width:33.333333333%;
 	position:absolute;
 	right:2em;
 	top:2em;
@@ -731,36 +751,57 @@ figure .rightside {
 	text-align:left;
 	background:#222;
 	color:#FFF;
+}
+figure .entry {
+	padding:3em;
 	overflow: hidden;
 }
 
 figure:after {
 	content:"//";
 	font-size:5em;
+	width:100%;
 	font-weight:bold;
 	position:absolute;
-	color:#ccc;
+	color:#333;
 	line-height:1;
-	text-align:center;
+	text-align:right;
 	bottom:5px;
 	right:20px;
+}
+
+figure.noafter:after {
+	content:"";
+	height:0;
 }
 
 figure h1 {
 	font-size:18pt;
 }
 
+iframe {
+	padding:0;
+	width:100%;
+	height:80%;
+	position:absolute;
+	top:0;
+	bottom:5em;
+	left:0;
+	right:0;
+}
+
 /* HOME CONTAINERS */
 .homecontainer {
 	width:96%;
-	border-radius:6px;
-	background:#FFF;
 	float:none;
 	margin:auto;
 	margin-bottom:0.5em;
 }
 .homecontainer .entry {
 	padding:2em;
+	border:1px solid #ddd;
+	border-radius:6px;
+	background:#FFF;
 }
 .sponsored {
 	width:66.66666%;
@@ -786,3 +827,4 @@ figure h1 {
 					margin:auto;
 					margin-bottom:0.5em;	
 				}
+			}
