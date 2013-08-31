@@ -23,6 +23,7 @@
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css" />
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
+
 			<?php if(is_front_page()) { ?>
 				<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css" />
 			<?php } ?>
@@ -141,21 +142,29 @@
 
 				});
 			</script>
-			<!-- NAVIGATION -->
+
+		<!-- NAVIGATION -->
 			<script src="<?php bloginfo('template_directory');?>/js/responsive-nav.min.js"	type="text/javascript"></script>
-			<!-- SMOOTH SCROLL -->
+			
+		<!-- SMOOTH SCROLL -->
 			<script src="<?php bloginfo('template_directory');?>/js/smoothscroll.js"		type="text/javascript"></script>
-			<!-- MOOT -->
+			
+		<!-- MOOT -->
 			<script src="https://cdn.moot.it/1/moot.min.js"></script>
-			<!-- ICONS FONT FOR IE9 -->
+			
+		<!-- ICONS FONT FOR IE9 -->
 			<!--[if lte IE 7]>
 				<script src="<?php bloginfo('template_directory'); ?>/js/lte-ie7.js"		type="text/javascript"></script>
 			<![endif]-->
 
-			<!-- HTML5 FOR IE9 -->
+		<!-- HTML5 FOR IE9 -->
 			<!--[if lt IE 9]>
 				<script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
 			<![endif]-->
+			
+		<!-- BLUR -->
+			<script src="<?php bloginfo('template_directory');?>/js/blur.js"				type="text/javascript"></script>
+
 	</head>
 
 <?php flush(); ?>
@@ -164,7 +173,7 @@
 
 	<body class="<?php if (is_front_page()) : ?>front<?php else:?><?php endif; ?>">
 
-		<div class="<?php if (is_front_page()) : ?>frontpage wrapper"><div class="background"><div class="blackout"></div></div><?php else:?>normal wrapper"><?php endif; ?>
+		<div class="<?php if (is_front_page()) : ?>frontpage wrapper"><?php else:?>normal wrapper"><?php endif; ?>
 		
 			<!--START - NAVIGATION-->
 		
@@ -203,17 +212,6 @@
 				</div>
 
 					<?php
-					if(is_front_page()):
-						wp_nav_menu(
-							array(
-								'theme_location'	=>	'Main-Navigation',
-								'container_id'		=>	'nav',
-								'container_class'	=>	'navigation-links home-links',
-								'menu_id'			=>	'menu',
-								'menu_class'		=>	'ti22',
-							)
-						);
-					else:
 						wp_nav_menu(
 							array(
 								'theme_location'	=>	'Main-Navigation',
@@ -223,52 +221,10 @@
 								'menu_class'		=>	'ti22',
 							)
 						);
-					endif;
 					?>
 				
 			</header>
 		<div class="clear"></div>
-		<?php if(is_front_page()) : ?>
-
-			<div class="title">
-				<div class="entry">
-					<p class="titletext">
-						<span class="bird" style="font-size:4em; display:block;" title="Titanium Robotics" aria-hidden="true" data-icon="b">
-						</span>
-						<span title="Titanium Robotics" aria-hidden="true" data-icon="t">
-						</span>
-					</p>
-				</div>
-				<div class="clear"></div>
-			</div>
-
-			<div id="overlayBlur" class="links">
-				<a href="#video">
-					<span class="fronticon" title="Featured Youtube Video" aria-hidden="true" data-icon="&#xe001;">
-					</span>
-				</a>
-				<a href="#FIRST">
-					<span class="fronticon" title="About FIRST" aria-hidden="true" data-icon="f">
-					</span>
-				</a>
-				<a href="#blog">
-					<span class="fronticon" title="Blog" aria-hidden="true" data-icon="&#xe015;">
-					</span>
-				</a>
-				<a href="#location">
-					<span class="fronticon" title="Location" aria-hidden="true" data-icon="&#xe017;"></span>
-				</a>
-				<a href="#sponsors">
-					<span class="fronticon" title="Sponsors" aria-hidden="true" data-icon="&#xe018;">
-					</span>
-				</a>
-				<a href="#social">
-					<span class="fronticon" title="Social Networks" aria-hidden="true" data-icon="&#xe00e;"></span>
-				</a>
-			</div>
-		</div>
-		<?php endif; ?>
-
 	<?php if(!is_front_page() && !is_404() && !is_search() && !is_home()) : ?>
 			<div id="subpages"><div class="limit">
 				<div class="table">

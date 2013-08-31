@@ -1,310 +1,788 @@
-html {
-	background:#EEE;
+.gallery .control-operator:target ~ .controls .control-button {
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.4);
 }
-/* FRONT PAGE STYLES */
-h1, h2, h3, h4, h5, h6 {
-	margin:0;
-	font-weight:100;
-	color:#0067C6;
+
+.gallery .control-button:first-of-type,
+.items-2 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
+.items-2 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
+.items-3 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
+.items-3 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
+.items-3 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),
+.items-4 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
+.items-4 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
+.items-4 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),
+.items-4 .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4),
+.items-5 .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
+.items-5 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
+.items-5 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),
+.items-5 .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4),
+.items-5 .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
 }
-p {
-	font-family:'Roboto', 'Open Sans', sans-serif;
-	font-weight:100;
-	font-size:1em;
+
+.gallery .item:first-of-type {
+  position: relative;
+  opacity: 1;
+  z-index:15;
 }
-strong, em {
-	font-weight:normal;
-	font-style:normal;
+
+.gallery .item {
+  position: absolute;
+  z-index:0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
 }
-.wrapper {
-	background: #0067c6; /* Old browsers */
-	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDY3YzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMjYzZTkzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-	background: -moz-radial-gradient(center, ellipse cover, #0067c6 0%, #263e93 100%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#0067c6), color-stop(100%,#263e93)); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover, #0067c6 0%,#263e93 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover, #0067c6 0%,#263e93 100%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover, #0067c6 0%,#263e93 100%); /* IE10+ */
-	background: radial-gradient(ellipse at center, #0067c6 0%,#263e93 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0067c6', endColorstr='#263e93',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+.gallery .control-operator {
+  display: none;
 }
-.void {
-	background:none!important;
+
+.gallery .control-operator:target ~ .item {
+  pointer-events: none;
+  opacity: 0;
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none;
 }
-.wrapper .background {
-	height:100%;
-	width:100%;
-	background:url('assets/birdjacket.jpg') center center;
-	background-size:cover !important;
-	background-color:transparent;
-	background-repeat:no-repeat;
-	background-attachment: scroll;
+
+.gallery .control-operator:target ~ .controls .control-button {
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes controlAnimation-2 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  14.3%, 50% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  64.3%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-o-keyframes controlAnimation-2 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  14.3%, 50% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  64.3%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes controlAnimation-2 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  14.3%, 50% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  64.3%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-webkit-keyframes galleryAnimation-2 {
+  0% {
+    left:-99em;
+    z-index:-100;
+  }
+
+  14.3%, 50% {
+    left:0em;
+    z-index:11;
+  }
+
+  64.3%, 100% {
+    right:-99em;
+    z-index:-100;
+  }
+}
+
+@-o-keyframes galleryAnimation-2 {
+  0% {
+    left:-99em;
+    z-index:-100;
+  }
+
+  14.3%, 50% {
+    left:0em;
+    z-index:11;
+  }
+
+  64.3%, 100% {
+    right:-99em;
+    z-index:-100;
+  }
+}
+
+@keyframes galleryAnimation-2 {
+  0% {
+    left:-99em;
+    z-index:-100;
+  }
+
+  14.3%, 50% {
+    left:0em;
+    z-index:11;
+  }
+
+  64.3%, 100% {
+    right:-99em;
+    z-index:-100;
+  }
+}
+
+.items-2.autoplay .control-button {
+  -webkit-animation: controlAnimation-2 14s infinite;
+  -o-animation: controlAnimation-2 14s infinite;
+  animation: controlAnimation-2 14s infinite;
+}
+
+.items-2.autoplay .item {
+  -webkit-animation: galleryAnimation-2 14s infinite;
+  -o-animation: galleryAnimation-2 14s infinite;
+  animation: galleryAnimation-2 14s infinite;
+}
+
+.items-2 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-2 .control-button:nth-of-type(1),
+.items-2 .item:nth-of-type(1) {
+  -webkit-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.items-2 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-2 .control-button:nth-of-type(2),
+.items-2 .item:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+@-webkit-keyframes controlAnimation-3 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  9.5%, 33.3% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  42.9%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-o-keyframes controlAnimation-3 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  9.5%, 33.3% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  42.9%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes controlAnimation-3 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  9.5%, 33.3% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  42.9%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-webkit-keyframes galleryAnimation-3 {
+  0% {
+    left:-99em;
+    z-index:-100;
+  }
+
+  14.3%, 50% {
+    left:0em;
+    z-index:11;
+  }
+
+  64.3%, 100% {
+    right:-99em;
+    z-index:-100;
+  }
+}
+
+@-o-keyframes galleryAnimation-3 {
+  0% {
+    left:-99em;
+    z-index:-100;
+  }
+
+  14.3%, 50% {
+    left:0em;
+    z-index:11;
+  }
+
+  64.3%, 100% {
+    right:-99em;
+    z-index:-100;
+  }
+}
+
+@keyframes galleryAnimation-3 {
+  0% {
+    left:-99em;
+    z-index:-100;
+  }
+
+  14.3%, 50% {
+    left:0em;
+    z-index:11;
+  }
+
+  64.3%, 100% {
+    right:-99em;
+    z-index:-100;
+  }
+}
+
+.items-3.autoplay .control-button {
+  -webkit-animation: controlAnimation-3 21s infinite;
+  -o-animation: controlAnimation-3 21s infinite;
+  animation: controlAnimation-3 21s infinite;
+}
+
+.items-3.autoplay .item {
+  -webkit-animation: galleryAnimation-3 21s infinite;
+  -o-animation: galleryAnimation-3 21s infinite;
+  animation: galleryAnimation-3 21s infinite;
+}
+
+.items-3 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-3 .control-button:nth-of-type(1),
+.items-3 .item:nth-of-type(1) {
+  -webkit-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.items-3 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-3 .control-button:nth-of-type(2),
+.items-3 .item:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.items-3 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-3 .control-button:nth-of-type(3),
+.items-3 .item:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+@-webkit-keyframes controlAnimation-4 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  7.1%, 25% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  32.1%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-o-keyframes controlAnimation-4 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  7.1%, 25% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  32.1%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes controlAnimation-4 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  7.1%, 25% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  32.1%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-webkit-keyframes galleryAnimation-4 {
+  0% {
+    left:-99em;
+    z-index:-100;
+  }
+
+  14.3%, 50% {
+    left:0em;
+    z-index:11;
+  }
+
+  64.3%, 100% {
+    right:-99em;
+    z-index:-100;
+  }
+}
+
+@-o-keyframes galleryAnimation-4 {
+  0% {
+    left:-99em;
+    z-index:-100;
+  }
+
+  14.3%, 50% {
+    left:0em;
+    z-index:11;
+  }
+
+  64.3%, 100% {
+    right:-99em;
+    z-index:-100;
+  }
+}
+
+@keyframes galleryAnimation-4 {
+  0% {
+    left:-99em;
+    z-index:-100;
+  }
+
+  14.3%, 50% {
+    left:0em;
+    z-index:11;
+  }
+
+  64.3%, 100% {
+    right:-99em;
+    z-index:-100;
+  }
+}
+
+.items-4.autoplay .control-button {
+  -webkit-animation: controlAnimation-4 28s infinite;
+  -o-animation: controlAnimation-4 28s infinite;
+  animation: controlAnimation-4 28s infinite;
+}
+
+.items-4.autoplay .item {
+  -webkit-animation: galleryAnimation-4 28s infinite;
+  -o-animation: galleryAnimation-4 28s infinite;
+  animation: galleryAnimation-4 28s infinite;
+}
+
+.items-4 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-4 .control-button:nth-of-type(1),
+.items-4 .item:nth-of-type(1) {
+  -webkit-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.items-4 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-4 .control-button:nth-of-type(2),
+.items-4 .item:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.items-4 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-4 .control-button:nth-of-type(3),
+.items-4 .item:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+.items-4 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-4 .control-button:nth-of-type(4),
+.items-4 .item:nth-of-type(4) {
+  -webkit-animation-delay: 19s;
+  -o-animation-delay: 19s;
+  animation-delay: 19s;
+}
+
+@-webkit-keyframes controlAnimation-5 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  5.7%, 20% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  25.7%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-o-keyframes controlAnimation-5 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  5.7%, 20% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  25.7%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes controlAnimation-5 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  5.7%, 20% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  25.7%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-webkit-keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0;
+  }
+
+  5.7%, 20% {
+    opacity: 1;
+  }
+
+  25.7%, 100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0;
+  }
+
+  5.7%, 20% {
+    opacity: 1;
+  }
+
+  25.7%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0;
+  }
+
+  5.7%, 20% {
+    opacity: 1;
+  }
+
+  25.7%, 100% {
+    opacity: 0;
+  }
+}
+
+.items-5.autoplay .control-button {
+  -webkit-animation: controlAnimation-5 35s infinite;
+  -o-animation: controlAnimation-5 35s infinite;
+  animation: controlAnimation-5 35s infinite;
+}
+
+.items-5.autoplay .item {
+  -webkit-animation: galleryAnimation-5 35s infinite;
+  -o-animation: galleryAnimation-5 35s infinite;
+  animation: galleryAnimation-5 35s infinite;
+}
+
+.items-5 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-5 .control-button:nth-of-type(1),
+.items-5 .item:nth-of-type(1) {
+  -webkit-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.items-5 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-5 .control-button:nth-of-type(2),
+.items-5 .item:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.items-5 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-5 .control-button:nth-of-type(3),
+.items-5 .item:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+.items-5 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-5 .control-button:nth-of-type(4),
+.items-5 .item:nth-of-type(4) {
+  -webkit-animation-delay: 19s;
+  -o-animation-delay: 19s;
+  animation-delay: 19s;
+}
+
+.items-5 .control-operator:nth-of-type(5):target ~ .item:nth-of-type(5) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-5 .control-button:nth-of-type(5),
+.items-5 .item:nth-of-type(5) {
+  -webkit-animation-delay: 26s;
+  -o-animation-delay: 26s;
+  animation-delay: 26s;
+}
+
+.gallery .control-button {
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.gallery .control-button:hover {
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*
+	Theme controls how everything looks in Gallery CSS.
+*/
+
+.gallery {
+  position: relative;
+}
+
+.gallery .item {
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+  background: #4d87e2;
+}
+
+.gallery .controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index:100;
+}
+
+.gallery .control-button {
+  display: inline-block;
+  font-weight:bold;
+  margin: 0 .02em;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: color .1s;
+  -o-transition: color .1s;
+  transition: color .1s;
+}
+
+figure .rightside {
+	width:33.33333%;
 	position:absolute;
-	top:0;
-	bottom:0;
-	display:none;
-}
-.front #contents {
-	width:100%;
-}
-.frontpage.wrapper #menuwrap #icon-nav,
-.frontpage.wrapper #menuwrap #nav {
-	position:relative;
-	z-index:2;
-	padding-bottom:2px;
-}
-#nav li a,
-#nav li.current-menu-item a,
-#nav li.current-page-ancestor a {
+	right:2em;
+	top:2em;
+	bottom:4.5em;
+	font-size:12pt;
+	text-align:left;
+	background:#222;
 	color:#FFF;
-	position:relative;
-	z-index:3;
+	overflow: hidden;
 }
-.wrapper #nav li.current-menu-item a,
-.wrapper #nav li.current-page-ancestor a,
-#subpages li.current-menu-item a,
-#subpages li.current_page_item a {
-	border-bottom:1px solid #FFF;
+
+figure:after {
+	content:"//";
+	font-size:5em;
+	font-weight:bold;
+	position:absolute;
+	color:#ccc;
+	line-height:1;
+	text-align:center;
+	bottom:5px;
+	right:20px;
 }
-#nav li a:hover,
-#nav li.current-menu-item a:hover,
-#nav li.current-page-ancestor a:hover {
-	color:#FFF;
-	border-bottom:1px solid #FFF;
+
+figure h1 {
+	font-size:18pt;
 }
-.frontpage.wrapper #menuwrap,
-.frontpage.wrapper #nav,
-.frontpage.wrapper #subpages {
-	background:transparent !important;
-}
+
+/* HOME CONTAINERS */
 .homecontainer {
-	background-image: url('');
-	background-size: cover;
-	background-position:center center;
-	background-color:#F5F5F5;
+	width:96%;
+	border-radius:6px;
+	background:#FFF;
+	float:none;
+	margin:auto;
+	margin-bottom:0.5em;
 }
 .homecontainer .entry {
-	padding:1em;
-}
-.video .entry {
-	width:100%;
-	padding:0;
-}
-/*.homecontainer.video .entry {
-	padding:0;
-	width:100%;
-	float:left;
-}*/
-.homecontainer p {
-	padding:1em;
-	margin:0;
-}
-/* TITLE */
-.wrapper .title {
-	position:absolute;
-	top:0;
-	z-index:0;
-	background-color:transparent;
-	display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
-	display: -moz-box;      /* OLD: Firefox (buggy) */ 
-	display: -ms-flexbox;   /* MID: IE 10 */
-	display: -webkit-flex;  /* NEW, Chrome 21+ */
-	display: flex;          /* NEW: Opera 12.1, Firefox 22+ */
-
-	-webkit-box-align: center; -moz-box-align: center; /* OLD… */
-	-ms-flex-align: center; /* You know the drill now… */
-	-webkit-align-items: center;
-	align-items: center;
-	
-	-webkit-box-pack: center; -moz-box-pack: center; 
-	-ms-flex-pack: center; 
-	-webkit-justify-content: center;
-	justify-content: center;
-
-	margin: 0;
-	height: 100%;
-	width: 100%; /* needed for Firefox */
-	opacity:0;  /* make things invisible upon start */
-	animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-	animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-	animation-duration:1s;
-	animation-delay: 2s;
-	-webkit-animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-	-webkit-animation-duration:1s;
-	-webkit-animation-delay: 2s;
-}
-.wrapper .title .entry {
-	color:#fff;
-	text-align:center;
-}
-.wrapper .title .entry p {
-	margin:auto;
-}
-.wrapper .title .titletext {
-	font-size:2em;
-	display:block;
-	color:#fff;
-	float:none;
-	line-height:0.7em;
-	vertical-align:middle;
-	padding:0;
-}
-
-/* MENUS */
-.fronticon {
-	padding:0 0.33em;
-	display:inline-block;
-	font-size: 3em;
-	float:none;
-	vertical-align:middle;
-	height:100%;
-}
-.links {
-	position:absolute;
-	bottom:0;
-	left:0;
-	right:0;
-	z-index:1;
-	width:100%;
-	text-align:center;
-	float:left;
-	padding:10px 0;
-	background:rgba(255,255,255,0.3);
-}
-.wrapper .links a {
-	border-bottom:none;
-	color:#fff;
-}
-.wrapper .links a:hover {
-	color:#6CABE7;
-}
-
-/* VIDEO */
-
-.video.homecontainer {
-	padding:0;
-}
-
-/* BLOG */
-.homecontainer .entry.posted article {
 	padding:2em;
-	text-align:left;
 }
-
-/* FIRST */
-#contents .first.homecontainer {
-	background-image:url('assets/first-background.png');
-}
-#contents .first p {
-	margin-bottom:0;
-	padding-bottom:0;
-}
-
-/* LOCATION */
-#contents .location.homecontainer {
-	color:#0067C6;
-	background:url('assets/san-marino-map.png') center center;
-	background-size: cover;
-}
-
-/* CONTAINER ON THE RIGHT */
-.homecontainer .entry.rightside {
-	min-height:300px;
-	background:rgba(255, 255, 255, 0.8);
-	width:65%;
-	float:right;
-	color:#0067C6;
-	text-align:left;
-}
-
-/* CONTAINER ON THE LEFT */
-.homecontainer .entry.leftside {
-	min-height:300px;
-	background:rgba(255, 255, 255, 0.8);
-	width:65%;
-	color:#0067C6;
-	text-align:left;
-	display:inline-block;
-}
-.homecontainer .entry.leftside div {
-	height:100%;
-	display:inline-block;
-	vertical-align: middle;
-}
-
-/* WHITE BACKGROUND & BORDERS */
-#contents .white.homecontainer {
+.sponsored {
+	width:66.66666%;
+	margin-right:1%;
+	margin-left:2%;
 	float:left;
-	width:100%;
-	padding:0;
-	display:block;
-	border-width:0 0 1px;
 }
-
-/* SOCIAL */
-#contents .social .entry a,
-#contents .sponsors.entry a {
-	font-size:2em;
-	padding:0.5em;
-	border:none;
-}
-.social.homecontainer {
+.social {
+	width:28.3333333%;
 	float:left;
-	width:100%;
-	padding:0;
-	display:block;
 }
-.social.homecontainer p {
-	text-align:center;
+.social p {
+	font-size:27pt;
+	text-align: center;
 }
 
-/* SPONSORS */
-.front .sponsors table {
-	width:100%;
-}
-.front .sponsors table td {
-	width:100%;
-	padding:0;
-	text-align:center;
-}
-#contents .sponsors.entry a {
-	font-weight:300;
-	font-size:1.4em;
-}
-@media screen and (max-height:500px) {
-	.bird {
-		display:none !important;
-		visibility:hidden;
-	}
-}
-@media screen and (max-width:720px) {
-	.frontpage.wrapper .title .titletext {
-		font-size:1.8em;
-	}
-	#nav li a{
-		color:#737373;;
-	}
-	#nav li.current-menu-item a,
-	#nav li.current-page-ancestor a {
-		color:#000;
-	}
-	.fronticon {
-		padding:0 0.5em;
-		display:inline-block;
-		font-size: 2em;
-	}
-	.homecontainer .entry.leftside,
-	.homecontainer .entry.rightside {
-		width:100%;
-		padding:2em 0;
-	}
-}
-@media screen and (max-width:410px) and (max-height:400px), (max-width:410px) {
-	.fronticon {
-		font-size:1em;
-	}
-	.frontpage.wrapper .title .titletext {
-		font-size:1.5em;
-	}
-}
+			@media screen and (max-width: 720px) {
+				.sponsored, .social {
+					width:96%;
+					border-radius:6px;
+					background:#FFF;
+					float:none;
+					margin:auto;
+					margin-bottom:0.5em;	
+				}

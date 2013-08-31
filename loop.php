@@ -309,15 +309,56 @@
 				</div>
 <?php } else { ?>
 		<div class="clear"></div>
-			<div id="video" class="homecontainer">
-				<div class="entry" style="width:100%; padding:0; float:none;">
-					<iframe width="321" height="181" src="http://www.youtube.com/embed/sZsngCANVb4" allowfullscreen></iframe>
-				</div>
+			<div class="gallery autoplay items-4">
+			<div id="item-1" class="control-operator"></div>
+			<div id="item-2" class="control-operator"></div>
+			<div id="item-3" class="control-operator"></div>
+			<div id="item-4" class="control-operator"></div>
+			<?php
+
+				if(have_posts()) :						
+
+				query_posts( 'showposts=3' );
+
+				while(have_posts()) : the_post();
+
+				$post_image_id = get_post_thumbnail_id($post->ID);
+						if ($post_image_id) {
+							$thumbnail = wp_get_attachment_image_src( $post_image_id, 'post-thumbnail', false);
+							if ($thumbnail) (string)$thumbnail = $thumbnail[0];
+						}
+				?>
+
+
+			<figure id="blog" class="item"
+				style="background-image: url('<?php echo $thumbnail ?>') !important; background-size:cover !important; background-position:center center;">
+					<div class="entry rightside">
+						<article>
+							<h1>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
+									<?php the_title(); ?>
+								</a>
+							</h1>
+							<?php the_excerpt(); ?>
+						</article>
+					</div>
+					<div class="clear"></div>
+			</figure>
+			<?php endwhile; endif; ?>
+			<figure class="entry item" style="padding:0;">
+						<iframe width="321" height="181" src="http://www.youtube.com/embed/sZsngCANVb4" allowfullscreen></iframe>
+			</figure>
+			<div class="controls">
+			<a href="#item-1" class="control-button">&mdash;</a>
+			<a href="#item-2" class="control-button">&mdash;</a>
+			<a href="#item-3" class="control-button">&mdash;</a>
+			<a href="#item-4" class="control-button">&mdash;</a>
+			</div>
 			</div>
 
 		<div class="clear"></div>
 
-		<div id="FIRST" class="withshadow first homecontainer">
+		<div id="FIRST" class="first homecontainer">
 			<div class="entry leftside">
 				<div>
 						<h1>Team 1160 is a FIRST<sup>&reg;</sup> Team</h1>
@@ -335,42 +376,12 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-		<?php
-
-		if(have_posts()) :						
-
-		query_posts( 'showposts=1' );
-
-		while(have_posts()) : the_post();
-
-		$post_image_id = get_post_thumbnail_id($post->ID);
-				if ($post_image_id) {
-					$thumbnail = wp_get_attachment_image_src( $post_image_id, 'post-thumbnail', false);
-					if ($thumbnail) (string)$thumbnail = $thumbnail[0];
-				}
-		?>
-
-		<div id="blog" class="announcement homecontainer"
-		style="background-image: url('<?php echo $thumbnail ?>') !important;">
-			<div class="entry rightside">
-				<article>
-					<h1>
-						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
-							<?php the_title(); ?>
-						</a>
-					</h1>
-					<?php the_excerpt(); ?>
-				</article>
-			</div>
-			<div class="clear"></div>
-		</div>
-
-<?php endwhile; endif; ?>
 
 		<div class="clear"></div>
 
-		<div id="location" class="withshadow location homecontainer">
+		<div id="location" class="location homecontainer">
 			<div class="entry leftside">
+				<span style="color:red; font-size:9em; float:left; padding:0 15px 0 0;" title="FIRST" aria-hidden="true" data-icon="&#xe017;"></span>
 				<div>
 					<h1>
 						Team 1160 is located in San Marino, CA.
@@ -385,10 +396,10 @@
 		
 		<div class="clear"></div>
 
-		<div id="sponsors" class="white sponsored homecontainer">
+		<div id="sponsors" class="sponsored homecontainer">
 			<div class="entry sponsors">
 				<h1>Titanium Sponsors</h1>
-				<table>
+				<table style="width:100%;">
 					<tbody>
 						<tr>
 							<td>
@@ -401,9 +412,7 @@
 			</div>
 		</div>
 
-		<div class="clear"></div>
-
-		<div id="social" class="white social homecontainer">
+		<div id="social" class="social homecontainer">
 			<div class="entry">
 				<h1>Follow Us</h1>
 				<p>

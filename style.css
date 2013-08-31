@@ -18,7 +18,7 @@ Version: 3.0
 	border-width:0;
 	border-style:solid;
 	border-color:#D5D5D5;
-	font-family:'Roboto', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+	font-family:'Helvetica', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
 }
 
 /*BODY AND ALL TAG STYLES*/
@@ -51,17 +51,11 @@ strong, b {
 	font-weight:400;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family:'Roboto', 'Helvetica Neue', sans-serif;
-	font-weight:300;
+	font-weight:bold;
 	color:#000;
-	font:'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif, normal, 48px, 62px, #000000;
-}
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	font-weight:300;
 }
 h1 {
 	font-size:42pt;
-	font-weight:100;
 	font-family:inherit;
 	color:#000;
 }
@@ -77,19 +71,16 @@ h3 {
 }
 h4 {
 	font-size:24pt;
-	font-weight:400;
 	font-family:inherit;
 	color:#737373;
 }
 h5 {
 	font-size:21pt;
-	font-weight:400;
 	font-family:inherit;
 	color:#737373;
 }
 h6 {
 	font-size:18pt;
-	font-weight:400;
 	font-family:inherit;
 	color:#878787;
 }

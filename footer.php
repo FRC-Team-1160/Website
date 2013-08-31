@@ -1,9 +1,6 @@
 </div>
 <div class="clear"></div>
 <?php wp_reset_query(); ?>
-<?php if(is_page_template('home-page.php')) { ?>
-
-<?php } else { ?>
 
 	<footer id="footer" class="custom-background">
 		
@@ -46,8 +43,6 @@
 		</div>
 	</footer>
 </div>
-	
-<?php } ?>
 <?php wp_footer(); ?>
 
 <!-- NAVIGATION HOOK-UP -->
