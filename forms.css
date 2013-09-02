@@ -151,7 +151,7 @@ textarea {
 input,
 select,
 textarea {
-	font-family:'Roboto';
+	font-family:'helvetica';
 	font-weight:300;
 	padding: 0.5em;
 	display: inline-block;
@@ -210,7 +210,7 @@ select {
 }
 select[multiple] {
 	height: auto;
-	font-family:'Roboto';
+	font-family:'helvetica';
 }
 label {
   margin: 0.5em 0 0.2em;

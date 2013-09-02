@@ -14,19 +14,52 @@
 			<link rel="pingback"					href="<?php bloginfo('pingback_url'); ?>" />
 			<link rel="icon"		type="application/rss+xml"	href="<?php bloginfo('template_directory') ?>/assets/favicon.ico" />
 
-		<!--FONTS-->
-			<link href='http://fonts.googleapis.com/css?family=Roboto:400italic,400,500,500italic,300,300italic,100,100italic' rel='stylesheet' type='text/css'>
-
 		<!--CSS-->
+			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>" />
-			<link rel="stylesheet"					href="https://cdn.moot.it/1/moot.css">
+			<?php if(is_single() || is_page_template('comments.php') || is_page('forum') ): ?>
+				<link rel="stylesheet"				href="https://cdn.moot.it/1/moot.css" />
+
+				<style>
+					.moot {
+						font-size: 18px;
+						max-width:none;
+						opacity:0;  /* make things invisible upon start */
+						animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+						animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+						animation-duration:1s;
+						animation-delay: 2s;
+						-webkit-animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+						-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+						-webkit-animation-duration:1s;
+						-webkit-animation-delay: 2s;
+						min-height:300px;
+					}
+					.m-page {
+						padding-left:10px;
+					}
+					.m-header {
+						background-color:#EEEEEE;
+					}
+					.m-search [type=text] {
+						-webkit-border-radius:inherit;
+						-moz-border-radius:inherit;
+						border-radius: inherit;
+					}
+					.m-help {
+						z-index:2;
+					}
+				</style>
+
+			<?php endif; ?>
+
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css" />
-			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
 
 			<?php if(is_front_page()) { ?>
 				<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css" />
 			<?php } ?>
+
 				<!--[if lt IE 9]>
 				<style>
 					#menuwrap {
@@ -40,36 +73,6 @@
 					}
 				</style>
 				<![endif]-->
-			<style>
-				.moot {
-					font-size: 18px;
-					max-width:none;
-					opacity:0;  /* make things invisible upon start */
-					animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-					animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-					animation-duration:1s;
-					animation-delay: 2s;
-					-webkit-animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-					-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-					-webkit-animation-duration:1s;
-					-webkit-animation-delay: 2s;
-					min-height:300px;
-				}
-				.m-page {
-					padding-left:10px;
-				}
-				.m-header {
-					background-color:#EEEEEE;
-				}
-				.m-search [type=text] {
-					-webkit-border-radius:inherit;
-					-moz-border-radius:inherit;
-					border-radius: inherit;
-				}
-				.m-help {
-					z-index:2;
-				}
-			</style>
 
 			<?php if (is_search()) : ?>
 				<style type="text/css" media="screen">
@@ -94,66 +97,62 @@
 		
 		<!--SCRIPTS-->
 			<?php wp_head(); ?>
+		
+			<?php if(is_single() || is_page_template('comments.php') || is_page('forum') ): ?>
+			<!-- MOOT -->
+				<script src="https://cdn.moot.it/1/moot.min.js"></script>
+			<?php endif; ?>
 
 			<!-- RESPONSIVE VIDEOS -->
 			<?php if(!is_front_page()) { ?>
-			<script type="text/javascript">
-				jQuery(function ($) {
-					"use strict";
-					$(function () {
+				<script type="text/javascript">
+					jQuery(function ($) {
+						"use strict";
+						$(function () {
 
-					// Find all YouTube videos
-						var $allVideos = $("iframe"),
+						// Find all YouTube videos
+							var $allVideos = $("iframe"),
 
-						// The element that is fluid width
-							$fluidEl = $(".entry");
+							// The element that is fluid width
+								$fluidEl = $(".entry");
 
-					// Figure out and save aspect ratio for each video
-						$allVideos.each(function () {
-
-							$(this)
-								.data('aspectRatio', this.height / this.width)
-
-								// and remove the hard coded width/height
-								.removeAttr('height')
-								.removeAttr('width');
-
-						});
-
-					// When the window is resized
-					// (You'll probably want to debounce this)
-						$(window).resize(function () {
-
-							var newWidth = $fluidEl.width();
-
-						// Resize all videos according to their own aspect ratio
+						// Figure out and save aspect ratio for each video
 							$allVideos.each(function () {
 
-								var $el = $(this);
-								$el
-									.width(newWidth)
-									.height(newWidth * $el.data('aspectRatio'));
+								$(this)
+									.data('aspectRatio', this.height / this.width)
+
+									// and remove the hard coded width/height
+									.removeAttr('height')
+									.removeAttr('width');
 
 							});
 
-					// Kick off one resize to fix all videos on page load
-						}).resize();
+						// When the window is resized
+						// (You'll probably want to debounce this)
+							$(window).resize(function () {
+
+								var newWidth = $fluidEl.width();
+
+							// Resize all videos according to their own aspect ratio
+								$allVideos.each(function () {
+
+									var $el = $(this);
+									$el
+										.width(newWidth)
+										.height(newWidth * $el.data('aspectRatio'));
+
+								});
+
+						// Kick off one resize to fix all videos on page load
+							}).resize();
+
+						});
 
 					});
+				</script>
+			<?php } ?>
 
-				});
-			</script>
-			<?php } ?>	
-
-		<!-- NAVIGATION -->
-			<script src="<?php bloginfo('template_directory');?>/js/responsive-nav.min.js"	type="text/javascript"></script>
-			
-		<!-- SMOOTH SCROLL -->
-			<script src="<?php bloginfo('template_directory');?>/js/smoothscroll.js"		type="text/javascript"></script>
-			
-		<!-- MOOT -->
-			<script src="https://cdn.moot.it/1/moot.min.js"></script>
-			
 		<!-- ICONS FONT FOR IE9 -->
 			<!--[if lte IE 7]>
 				<script src="<?php bloginfo('template_directory'); ?>/js/lte-ie7.js"		type="text/javascript"></script>
@@ -163,9 +162,6 @@
 			<!--[if lt IE 9]>
 				<script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
 			<![endif]-->
-			
-		<!-- BLUR -->
-			<script src="<?php bloginfo('template_directory');?>/js/blur.js"				type="text/javascript"></script>
 
 	</head>
 

@@ -39,7 +39,7 @@
 							<?php if (is_page_template('two-column.php', 'bookmarks.php') || is_single() || is_home()) { ?>
 								<aside class="sidebar-left">
 									<section class="sidebar-content">
-										<div class="border-right">
+										<div class="sidebarpad">
 
 											<?php if(is_page_template('bookmarks.php')) : ?>
 
@@ -139,7 +139,7 @@
 							<?php if (is_single()) : ?>
 
 								<a class="moot" href="https://moot.it/i/titaniumrobotics/blog/<?php global $post; $post_slug=$post->post_name; echo $post_slug; ?>">
-								Comments
+								Comments for <?php the_title(); ?>
 								</a>
 
 							<?php else :?> 
@@ -315,7 +315,9 @@
 			<div id="item-3" class="control-operator"></div>
 			<div id="item-4" class="control-operator"></div>
 			<figure class="item noafter">
-					<iframe width="16" height="9" src="http://www.youtube.com/embed/sZsngCANVb4" allowfullscreen></iframe>
+					<a href="http://www.youtube.com/embed/sZsngCANVb4" data-lightbox="lightbox">
+						<iframe width="16" height="9" src="http://www.youtube.com/embed/sZsngCANVb4" allowfullscreen></iframe>
+					</a>
 			</figure>
 			<?php
 
@@ -362,7 +364,7 @@
 			<div class="entry leftside">
 				<div>
 						<h1>Team 1160 is a FIRST<sup>&reg;</sup> Team</h1>
-						<h4>What is FIRST<sup>&reg;</sup> and what do they do?</h4>
+						<h3>What is FIRST<sup>&reg;</sup> and what do they do?</h3>
 					<p>
 						<span style="font-size:10em; float:left; padding:0 15px 0 0;" title="FIRST" aria-hidden="true" data-icon="f"></span>Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow"><strong>Dean Kamen</strong></a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow"><strong><em>FIRST</em></strong></a><em><sup> ®</sup></em><em> </em>(For Inspiration and Recognition of Science and Technology) in 1989 to inspire appreciation of science and technology in young people.
 					</p>
@@ -386,9 +388,9 @@
 					<h1>
 						Team 1160 is located in San Marino, CA.
 					</h1>
-					<p>
+					<h4>
 						We have been fortunate enough to be able to convert a small classroom into a workshop.  We also use the College &amp; Career Center as a computer lab.
-					</p>
+					</h4>
 				</div>
 			</div>
 			<div class="clear"></div>

@@ -43,7 +43,14 @@
 		</div>
 	</footer>
 </div>
+	
 <?php wp_footer(); ?>
+
+		<!-- NAVIGATION -->
+			<script src="<?php bloginfo('template_directory');?>/js/responsive-nav.min.js"	type="text/javascript"></script>
+			
+		<!-- SMOOTH SCROLL -->
+			<script src="<?php bloginfo('template_directory');?>/js/smoothscroll.js"		type="text/javascript"></script>
 
 <!-- NAVIGATION HOOK-UP -->
 		<script type="text/javascript">
