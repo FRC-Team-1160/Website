@@ -783,7 +783,7 @@ fieldset.title {
 	font-size:12pt;
 }
 .sidebar .sidebar-left {
-	width:20%;
+	width:33%;
 	float:left;
 	min-height:100%;
 	display:inline-block;
@@ -793,7 +793,7 @@ fieldset.title {
 	width:auto;
 }
 .sidebar .rightcontent {
-	width:80%;
+	width:67%;
 	float:left;
 }
 .sidebarpad {

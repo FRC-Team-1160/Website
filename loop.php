@@ -49,7 +49,7 @@
 												?>
 												<?php endif; ?>
 
-											<?php elseif(is_home()||is_single()): ?>
+											<?php elseif(is_home()||is_single()||is_search()): ?>
 												<div class="cont">
 													<div class="information">
 														<time class="time">
@@ -59,7 +59,8 @@
 																<?php the_time('M j') ?>
 														</time>
 														<?php if(is_single()): ?>
-															<h6>Categories</h6>
+														<h6>A Post by <?php the_author(); ?></h6>
+															<h4>Categories</h4>
 																<?php
 																	// get the category IDs assigned to post
 																	$categories = wp_get_post_categories( $post->ID, array( 'fields' => 'ids' ) );
@@ -76,7 +77,7 @@
 																		echo  $cats;
 																	}
 																?>
-															<h6>Tags</h6>
+															<h4>Tags</h4>
 															<section class="tags">
 																<?php the_tags( '', '&nbsp;', '' ); ?> 
 															</section>
