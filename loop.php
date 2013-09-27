@@ -393,6 +393,7 @@
 						We have been fortunate enough to be able to convert a small classroom into a workshop.  We also use the College &amp; Career Center as a computer lab.
 					</h4>
 				</div>
+				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
 		</div>

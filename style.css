@@ -26,7 +26,7 @@ html, body {
 	-webkit-text-size-adjust: none;
 	height:100%;
 	font-style:normal;
-	font-weight:300;
+	font-weight:400;
 	font-size:12pt;
 	padding:0;
 	margin-top:0;
@@ -57,34 +57,19 @@ h1, h2, h3, h4, h5, h6 {
 	line-height:1;
 }
 h1 {
-	font-size:42pt;
+	font-size:24pt;
 	font-family:inherit;
 	color:#222;
 }
-h2 {
-	font-size:36pt;
+h2, h3 {
+	font-size:18pt;
 	font-family:inherit;
 	color:#333;
 }
-h3 {
-	font-size:30pt;
-	font-family:inherit;
+h4, h5, h6 {
+	font-size:12pt;
+	font-weight:bold;
 	color:#444;
-}
-h4 {
-	font-size:24pt;
-	font-family:inherit;
-	color:#737373;
-}
-h5 {
-	font-size:21pt;
-	font-family:inherit;
-	color:#737373;
-}
-h6 {
-	font-size:18pt;
-	font-family:inherit;
-	color:#878787;
 }
 p {
 	margin-bottom:1em;
@@ -180,7 +165,6 @@ img.aligncenter {
 .wp-caption p {
 	margin:0;
 	padding:0.5em;
-	font-size:9pt;
 }
 .wp-caption img {
 	float:none;
@@ -285,7 +269,7 @@ img.aligncenter {
 	background:#f5f5f5;
 	font-family:inherit;
 	float:left;
-	font-size:0.5em;
+	font-size:12pt;
 	font-weight:400;
 	margin:0;
 	width:100%;
@@ -374,7 +358,7 @@ img.aligncenter {
 #subpages li.current_page_item ul a,
 .wrapper #nav li ul a,
 #subpages li ul a {
-	font-weight:300;
+	font-weight:400;
 	color:#737373;
 	border-bottom:1px solid transparent;
 	transition:border-bottom 300ms;
@@ -392,7 +376,7 @@ img.aligncenter {
 #subpages li.current_page_item ul a:hover,
 .wrapper #nav li ul a:hover,
 #subpages li ul a:hover {
-	font-weight:300;
+	font-weight:400;
 	color:#222;
 	border-bottom:1px solid #0067C6;
 	transition:border-bottom 300ms;
@@ -450,7 +434,7 @@ img.aligncenter {
 }
 .menu a {
 	height:94px;
-	font-weight:300;
+	font-weight:400;
 	color:#fff;
 	display:inline-block;
 	vertical-align: middle;
@@ -550,8 +534,8 @@ img.aligncenter {
 	z-index:10;
 	height:100%;
 	padding-left:80pt;
-	font-size:30pt;
-	font-weight:300;
+	font-size:24pt;
+	font-weight:400;
 }
 #subpages .title li {
 	margin:0;
@@ -578,7 +562,7 @@ img.aligncenter {
 	margin:0.5em;
 }
 #subpages li a {
-	font-weight:300;
+	font-weight:400;
 	color:#737373;
 	border-bottom:1px solid transparent;
 	-webkit-transition:border 300ms;
@@ -611,13 +595,11 @@ img.aligncenter {
 	width: 100%;
 	margin:auto;
 	float:none;
-	font-size:inherit;
 	word-wrap: break-word;
 	-webkit-transition: float 2s, margin 2s, padding 2s;
 	-o-transition: float 2s, margin 2s, padding 2s;
 	-moz-transition: float 2s, margin 2s, padding 2s;
 	transition: float 2s, margin 2s, padding 2s;
-	font-size:15pt;
 }
 #contents .blog .post {
 	width:100%;
@@ -679,7 +661,6 @@ img.aligncenter {
 	clear:both;
 	visibility:hidden;
 	height:0;
-	font-size:0;
 }
 .thumbnail h1 {
 	position: absolute;
@@ -687,7 +668,7 @@ img.aligncenter {
 	color: #FFF;
 	text-shadow:0 0 10px #222;
 	font-weight:100;
-	font-size:48pt;
+	font-size:24pt;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -730,6 +711,7 @@ img.aligncenter {
 /* SINGLE POSTS */
 .post-edit-link {
 	font-size:12pt;
+	font-style:italic;
 }
 .post {
 	font-size:inherit;
@@ -783,7 +765,7 @@ fieldset.title {
 	font-size:12pt;
 }
 .sidebar .sidebar-left {
-	width:33%;
+	width:25%;
 	float:left;
 	min-height:100%;
 	display:inline-block;
@@ -793,7 +775,7 @@ fieldset.title {
 	width:auto;
 }
 .sidebar .rightcontent {
-	width:67%;
+	width:75%;
 	float:left;
 }
 .sidebarpad {
@@ -816,7 +798,7 @@ time {
 	color:#444;
 	display:block;
 	line-height:1;
-	font-size:18pt;
+	font-size:12pt;
 	font-weight:700;
 }
 .press .entry {
@@ -947,7 +929,7 @@ time {
 .profiletable th {
 	width:20%;
 	text-align:left;
-	font-size:36pt;
+	font-size:24pt;
 	padding-top:1em;
 }
 .profiletable .first {
@@ -1172,7 +1154,7 @@ a:focus {
 }
 #footer li.follow {
 	display:inline-block;
-	font-size:2em;
+	font-size:24pt;
 	width:auto;
 }
 .bottom {
@@ -1199,7 +1181,7 @@ fieldset.contactform {
 .error {
 	color:red;
 	font-weight:normal;
-	font-size:9em;
+	font-size:24pt;
 }
 .thanks {
 	color:#0067C6;
@@ -1316,9 +1298,6 @@ div.pagination a:hover {
 				.everything .thumbnail {
 					width:100%;
 				}
-				.thumbnail h1 {
-					font-size:36pt;
-				}
 				.press .side, .side {
 					width:100%;
 					float:left;
@@ -1340,7 +1319,6 @@ div.pagination a:hover {
 					width:30%;
 				}
 				#authorlist .authorname {
-					font-size:36pt;
 					line-height:1;
 					padding-bottom:0;
 				}
@@ -1410,9 +1388,6 @@ div.pagination a:hover {
 				}
 				.featured {
 					height:200px;
-				}
-				.thumbnail h1 {
-					font-size:24pt;
 				}
 				#contents img {
 					float:none;
