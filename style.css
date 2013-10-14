@@ -34,6 +34,7 @@ html, body {
 	z-index:-1;
 	line-height:1.3;
 	color:#222;
+	background:#EEE;
 }
 ::selection {
 	background: #005aae;
@@ -122,10 +123,11 @@ td {
 
 /* WRAPPER STYLES */
 .wrapper {
-	background: #E6E6E6;
 	height:auto;
 	position:relative;
 	min-height:100%;
+	max-width:960px;
+	margin:auto;
 }
 
 /* FRAMES */
@@ -150,17 +152,16 @@ img.aligncenter {
 	float:none;
 }
 .wp-caption-text {
-	font-size:1em;
+	font-size:10px;
 	color: #484848;
-	font-weight:400;
-	text-align:center;
+	font-weight:bold;
+	text-align:left;
 }
 .wp-caption {
 	margin: 0.5em 1em;
 	background:#FFF;
 	max-width:100%;
-	border-width:1px;
-	border-radius:4px 4px 0 0;
+	border-width:0 0 2px 0;
 }
 .wp-caption p {
 	margin:0;
@@ -171,8 +172,7 @@ img.aligncenter {
 	display:block;
 	margin:0;
 	width:100%;
-	text-align:center;
-	border-radius:4px 4px 0 0;
+	text-align:left;
 }
 .alignright {
 	float:right;
@@ -259,14 +259,12 @@ img.aligncenter {
 	float:left;
 	margin-top:0;
 	font-size:2em;
-	background:#0067C6;
 	display:block;
 }
 .stuck {
 	position:fixed;
 }
 #nav {
-	background:#f5f5f5;
 	font-family:inherit;
 	float:left;
 	font-size:12pt;
@@ -301,8 +299,8 @@ img.aligncenter {
 }
 #nav ul#menu li:hover ul.sub-menu {
 	left:0;
-	box-shadow:0 2px 1px 0px #9B9B9B;
-	box-shadow:0 2px 1px 0px rgba(0, 0, 0, 0.3);
+	box-shadow:0 2px 0px 0px #9B9B9B;
+	box-shadow:0 2px 0px 0px rgba(0, 0, 0, 0.3);
 }
 .wrapper #nav li {
 	text-align:left;
@@ -409,6 +407,8 @@ img.aligncenter {
 	float:left;
 	width:100%;
 	padding:0.25em 0;
+	background:#0067C6;
+	border-radius:0 0 10px 10px;
 }
 .logo {
 	color:#FFF;
@@ -498,7 +498,6 @@ img.aligncenter {
 	width:100%;
 	margin:0 auto;
 	padding:0;
-	background: #E6E6E6;
 }
 #subpages ul {
 	margin:0px auto 0px auto;
@@ -516,7 +515,7 @@ img.aligncenter {
 	position:relative;
 	z-index:10;
 	height:100%;
-	padding:0 80pt 0 0;
+	padding:0 60pt 0 0;
 	margin:0;
 }
 #subpages .links.withthumbnail {
@@ -533,7 +532,7 @@ img.aligncenter {
 	position:relative;
 	z-index:10;
 	height:100%;
-	padding-left:80pt;
+	padding-left:60pt;
 	font-size:24pt;
 	font-weight:400;
 }
@@ -592,10 +591,13 @@ img.aligncenter {
 /* CONTENTS CONTAINER */
 #contents {
 	color:#1D1D1D;
-	width: 100%;
 	margin:auto;
 	float:none;
 	word-wrap: break-word;
+	background:#FFF;
+	border-width:1px 1px 0 1px;
+	border-color:#CACACA;
+	border-style: solid;
 	-webkit-transition: float 2s, margin 2s, padding 2s;
 	-o-transition: float 2s, margin 2s, padding 2s;
 	-moz-transition: float 2s, margin 2s, padding 2s;
@@ -1090,18 +1092,16 @@ a:focus {
 	width:100%;
 	position:relative;
 	z-index:0;
-	margin-top:0;
+	margin-top:12pt;
 	display:block;
-	color:#FFF;
-	height:90px;
 }
 .footer-right {
-	padding:0 1em;
+	padding:1em 1em;
 	text-align:center;
 	display:block;
 	margin:auto;
-	height:90px;
-	line-height:90px;
+	width:90%;
+	border-top:2px solid #0067C6;
 }
 #footer ul {
 	float:left;
@@ -1109,10 +1109,9 @@ a:focus {
 	margin:0;
 	text-align:center;
 	margin:0;
-	height:90px;
 }
 #footer a {
-	color:#ffffff;
+	color:#0067C6;
 	border-bottom:1px solid transparent;
 	transition:			border 300ms;
 	-webkit-transition:	border 300ms;
@@ -1121,7 +1120,7 @@ a:focus {
 	-ms-transition:		border 300ms;
 }
 #footer:hover a:hover {
-	border-bottom:1px solid #FFFFFF;
+	border-bottom:1px solid #CACACA;
 	transition:			border 300ms;
 	-webkit-transition:	border 300ms;
 	-moz-transition:	border 300ms;
@@ -1143,27 +1142,28 @@ a:focus {
 }
 .footer-container{
 	width:100%;
-	background:#0067C6;
 	margin:auto;
 	font-family:inherit;
 	float:none;
 	display:block;
 	vertical-align:middle;
-	color:#FFFFFF;
+	color:#969696;
 	text-align:center;
 }
+#footer .red a {color:#f9343e;} #footer .twitterblue a {color:#33ccff;} #footer .black a {color:#222;}
 #footer li.follow {
 	display:inline-block;
-	font-size:24pt;
+	font-size:18pt;
 	width:auto;
 }
 .bottom {
 	line-height:2;
 }
 .copy {
-	font-size:12pt;
+	font-size:9pt;
 	float:right;
-	height:90px;
+	font-weight:bold;
+	text-align:right;
 }
 
 /* SEARCH */
@@ -1406,7 +1406,6 @@ div.pagination a:hover {
 					margin:1em auto;
 				}
 				#contents {
-					width:100%;
 					padding:0;
 				}
 				.entry {
@@ -1455,12 +1454,14 @@ div.pagination a:hover {
 					line-height:1.5;
 					padding:1em 0;
 					float:left;
+					text-align:center;
 				}
 				#footer ul,
 				.copy {
 					width:100%;
 					height:auto;
 					float:left;
+					text-align:center;
 					line-height:1.5;
 				}
 				.gallery-columns-2 .gallery-item,

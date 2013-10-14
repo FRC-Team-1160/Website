@@ -240,12 +240,19 @@ function autoblank($text) {
 
 function custom_login_logo() {
 	echo '<style type="text/css">
-	html, body.login {
-		background: url('.get_bloginfo('template_directory').'/assets/birdbackground.jpg) #000000;
-		background-attachment:fixed;
-		background-position:center center;
-		background-size:cover;
-		background-repeat:no-repeat;
+
+	::selection {
+		background: #005aae;
+		color:#fff;
+		text-shadow:none
+	}
+	::-moz-selection {
+		background: #005aae;
+		color:#fff;
+		text-shadow:none
+	}
+	.login {
+		 background:#E6E6E6!important;
 	}
 	h1 a {
 		background-image: url('.get_bloginfo('template_directory').'/assets/bird.png) !important;
@@ -264,7 +271,9 @@ function custom_login_logo() {
 		background:none!important;
 	}
 	.login form .input, .login input[type="text"] {
-		font-size:16px;
+		border-width:1px!important;
+		border-style:solid!important;
+		border-color:#CACACA!important;
 	}
 	#login #login_error, #login .message {
 		margin-left:0 !important;
@@ -282,12 +291,6 @@ function custom_login_logo() {
 		 width:200px;
 		 margin:auto!important;
 		 padding:26px 24px!important;
-		 background:#222222!important;
-		 border:1px solid #333!important;
-		 -webkit-border-radius:3px!important;
-		 border-radius:3px!important;
-		 -webkit-box-shadow: 0 0 10px #000;
-		 box-shadow: 0 0 10px #000;
 	 }
 	 .login #nav, .login #backtoblog {
 		text-shadow:none;

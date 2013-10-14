@@ -882,8 +882,7 @@ iframe {
 }
 .homecontainer .entry {
 	padding:2em;
-	border:1px solid #ddd;
-	border-radius:3px;
+	border-bottom:1px solid #ddd;
 	background:#FFF;
 }
 .sponsored {

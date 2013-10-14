@@ -1,4 +1,3 @@
-</div>
 <div class="clear"></div>
 <?php wp_reset_query(); ?>
 
@@ -7,8 +6,13 @@
 		<div class="footer-container">
 			
 			<div class="footer-right">
+				<div class="copy">
+					<p class="nomargin">&copy;<?php echo date(Y)?>&nbsp;<a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a>. All rights reserved.</p>
+					<p>Designed by Nathan Wong</p>
+				</div>
+
 				<ul class="s">
-					<li class="follow">
+					<li class="follow red">
 						<a href="http://www.titaniumrobotics.com/for-students/donations/">
 							<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe00d;">
 							</span>
@@ -20,28 +24,29 @@
 							</span>
 						</a>
 					</li>
-					<li class="follow">
+					<li class="follow twitterblue">
 							<a href="http://twitter.com/frc1160" target="_blank">
 								<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe000;"></span>
 							</a>
 					</li>
-					<li class="follow">
+					<li class="follow red">
 							<a href="http://www.youtube.com/titaniumrobotics" target="_blank">
 								<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe001;"></span>
 							</a>
 					</li>
-					<li class="follow">
+					<li class="follow black">
 							<a href="http://www.github.com/FRC-Team-1160" target="_blank">
 								<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe003;"></span>
 							</a>
 					</li>
 				</ul>
-				<div class="copy">
-					&copy;<?php echo date(Y)?>&nbsp;<a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a>  //  All rights reserved
-				</div>
+				<div class="clear"></div>
 			</div>
 		</div>
+		<div class="clear"></div>
 	</footer>
+</div>
+<div class="clear"></div>
 </div>
 	
 <?php wp_footer(); ?>

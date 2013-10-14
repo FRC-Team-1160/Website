@@ -381,8 +381,7 @@ select {
 	-moz-transition: none;
 	transition: none;
 	color:#FFF;
-	background-color:#0067C6 !important;
-	box-shadow: 0 6px #004d94;
+	background-color:#0067C6;
 }
 .tags a {
 	font-size:0.7em;
@@ -401,8 +400,7 @@ select {
 button:hover,
 input[type="submit"]:hover,
 select:hover {
-	box-shadow: 0 8px #004d94;
-	top: -2px;
+	background-color:#0074e0;
 }
 .tags a:hover {
 	box-shadow: 0 5px #004d94;
@@ -415,10 +413,7 @@ select:hover {
 button:active,
 input[type="submit"]:active,
 select:active {
-	-webkit-box-shadow: 0 0 #004d94;
-	-moz-box-shadow: 0 0 #004d94;
-	box-shadow: 0 0 #004d94;
-	top: 6px;
+	background-color:#005aad;
 }
 .tags a:active {
 	top: 3px;

@@ -316,9 +316,7 @@
 			<div id="item-3" class="control-operator"></div>
 			<div id="item-4" class="control-operator"></div>
 			<figure class="item noafter">
-					<a href="http://www.youtube.com/embed/sZsngCANVb4" data-lightbox="lightbox">
-						<iframe width="16" height="9" src="http://www.youtube.com/embed/sZsngCANVb4" allowfullscreen></iframe>
-					</a>
+				<iframe width="16" height="9" src="http://www.youtube.com/embed/sZsngCANVb4" allowfullscreen></iframe>
 			</figure>
 			<?php
 
@@ -336,7 +334,7 @@
 				?>
 
 
-			<figure id="blog" class="item"
+			<figure class="item"
 				style="background-image: url('<?php echo $thumbnail ?>') !important; background-size:cover !important; background-position:center center;">
 					<div class="rightside">
 						<article class="entry">
@@ -437,5 +435,6 @@
 			</div>
 			<div class="clear"></div>
 		</div>
+			<div class="clear"></div>
 
 <?php } ?> 
