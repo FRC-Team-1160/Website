@@ -14,29 +14,32 @@
 				<ul class="s">
 					<li class="follow red">
 						<a href="http://www.titaniumrobotics.com/for-students/donations/">
-							<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe00d;">
-							</span>
+							<span class="team1160-heart-outline"></span>
 						</a>
 					</li>
 					<li class="follow">
 						<a href="http://www.facebook.com/team1160" target="_blank">
-							<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe01d;">
-							</span>
+							<span class="team1160-social-facebook-circular"></span>
 						</a>
 					</li>
 					<li class="follow twitterblue">
 							<a href="http://twitter.com/frc1160" target="_blank">
-								<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe000;"></span>
+								<span class="team1160-social-twitter-circular"></span>
 							</a>
 					</li>
 					<li class="follow red">
 							<a href="http://www.youtube.com/titaniumrobotics" target="_blank">
-								<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe001;"></span>
+								<span class="team1160-video-outline"></span>
 							</a>
 					</li>
 					<li class="follow black">
 							<a href="http://www.github.com/FRC-Team-1160" target="_blank">
-								<span style="display:inline-block; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe003;"></span>
+								<span class="team1160-social-github-circular"></span>
+							</a>
+					</li>
+					<li class="follow blue">
+							<a href="mailto:titaniumrobotics@gmail.com" target="_blank">
+								<span class="team1160-social-at-circular"></span>
 							</a>
 					</li>
 				</ul>
@@ -60,7 +63,7 @@
 <!-- NAVIGATION HOOK-UP -->
 		<script type="text/javascript">
 			var navigation = responsiveNav("#nav", {
-				transition:500,
+				transition:400,
 				label:"Open Menu",
 				customToggle:"toggle",
 			});

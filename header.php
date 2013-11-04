@@ -97,6 +97,8 @@
 		
 		<!--SCRIPTS-->
 			<?php wp_head(); ?>
+
+			<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/liga.js"></script>
 		
 			<?php if(is_single() || is_page_template('comments.php') || is_page('forum') ): ?>
 			<!-- MOOT -->
@@ -155,7 +157,8 @@
 
 		<!-- ICONS FONT FOR IE9 -->
 			<!--[if lte IE 7]>
-				<script src="<?php bloginfo('template_directory'); ?>/js/lte-ie7.js"		type="text/javascript"></script>
+				<script src="<?php bloginfo('template_directory'); ?>/fonts/ie7.js"		type="text/javascript"></script>
+				<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/fonts/ie7.css" />
 			<![endif]-->
 
 		<!-- HTML5 FOR IE9 -->
@@ -181,29 +184,32 @@
 					<div class="menu">
 						<div class="logo">
 							<a href="/" title="Titanium Robotics, FRC Team 1160">
-								<span aria-hidden="true" data-icon="b">
-								</span>
+								<span class="team1160-bird"></span>
 							</a>
 						</div>
 
 						<div class="menu-right">
-							<?php if (is_user_logged_in()) { ?>
-							
-							<?php } else { ?>
-								<div class="icon">
-									<a href="<?php echo esc_url( wp_login_url( $_SERVER['REQUEST_URI'] ) ); ?>" title="login">
-										<span aria-hidden="true" data-icon="&#xe021;">
-										</span>
-									</a>
-								</div>
-							<?php }?>
-
 							<div class="icon">
-								<a href="#nav" id="toggle" title="Open Menu" >
-									<span aria-hidden="true" data-icon="&#xe020;">
+								<a href="#" id="toggle" title="Open Menu" >
+									<span class="team1160-th-menu">
 									</span>
 								</a>
 							</div>
+						</div>
+
+						<div id="login">
+							<?php wp_loginout( get_permalink() ); ?>
+							<?php if(is_user_logged_in()) {
+								echo "&nbsp;|&nbsp;";
+							$url = admin_url( '', 'http' );
+							?>
+							<a href="<?php echo $url; ?>">Dashboard</a>
+							<?php
+							}
+							else {
+
+							}
+							?>
 						</div>
 					</div>
 					
@@ -239,10 +245,16 @@
 					<?php } ?>
 		<?php if(!is_author() && !is_search() && !is_404() &&!is_home()) : ?>
 				<?php
+
 					if($post->post_parent)
-					$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
-					 else
-					 $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+						$children = wp_list_pages(
+							"title_li=&child_of=".$post->post_parent."&echo=0"
+						);
+					else
+						$children = wp_list_pages(
+							"title_li=&child_of=".$post->ID."&echo=0"
+						);
+					
 					if ($children) { 
 						$parent_title = get_the_title($post->post_parent);?>
 				<div class="links <?php if(!has_post_thumbnail( $post_id )) {} else{?>withthumbnail<?php } ?>">

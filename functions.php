@@ -142,7 +142,7 @@ function titanium_post_types() {
 	register_post_type( 'videos', 
 		array(
 			'labels' => array(
-				'name' => __( 'videos' ),
+				'name' => __( 'Videos' ),
 				'singular_name' => __( 'video' ),
 				'add_new' => __( 'Add New video' ),
 				'add_new_item' => __( 'Add New video' ),
@@ -166,6 +166,37 @@ function titanium_post_types() {
 			),
 			'public' => true,
 			'rewrite' => array( 'slug' => 'video', 'with_front' => false ),
+			'taxonomies' => array( 'post_tag', 'category '),
+			'can_export' => true,
+		)
+	);
+	register_post_type( 'cabinet', 
+		array(
+			'labels' => array(
+				'name' => __( 'Leadership' ),
+				'singular_name' => __( 'Leadership' ),
+				'add_new' => __( 'Add New Leadership Member' ),
+				'add_new_item' => __( 'Add New Leadership Member' ),
+				'edit' => __( 'Edit' ),
+				'edit_item' => __( 'Edit Leadership Member' ),
+				'new_item' => __( 'New Leadership Member' ),
+				'view' => __( 'View Leadership Members' ),
+				'view_item' => __( 'View Leadership Member' ),
+				'search_items' => __( 'Search Leadership Members' ),
+				'not_found' => __( 'No Members Found' ),
+				'not_found_in_trash' => __( 'No Members found in Trash' ),
+				'parent' => __( 'Parent Leadership Member' ),
+			),
+			'supports' => array(
+				'title',
+				'author',
+				'excerpt',
+				'editor',
+				'thumbnail',
+				'revisions'
+			),
+			'public' => true,
+			'rewrite' => array( 'slug' => 'team-leadership', 'with_front' => false ),
 			'taxonomies' => array( 'post_tag', 'category '),
 			'can_export' => true,
 		)
@@ -255,8 +286,8 @@ function custom_login_logo() {
 		 background:#E6E6E6!important;
 	}
 	h1 a {
-		background-image: url('.get_bloginfo('template_directory').'/assets/bird.png) !important;
-		background-size: auto!important;
+		background-image: url('.get_bloginfo('template_directory').'/assets/bird.jpg) !important;
+		background-size: auto 134px!important;
 		height:150px !important;
 		width:100% !important;
 	}
@@ -288,7 +319,7 @@ function custom_login_logo() {
 		 top:0 !important;
 		 bottom:0 !important;
 		 height:366px;!important;
-		 width:200px;
+		 width:283px;
 		 margin:auto!important;
 		 padding:26px 24px!important;
 	 }
@@ -301,9 +332,12 @@ function custom_login_logo() {
 		padding:12px 0 0 !important;
 	}
 	 @media only all and (max-height:490px) {
+	 	body {
+	 		height:auto!important;
+	 	}
 		#login {
 			position:relative !important;
-			margin-top:2em !important;
+			margin-top:0!important;
 		}
 	 }
 	 @media only all and (max-width:740px) {
@@ -404,4 +438,90 @@ function filter_ptags_on_images($content){
     return preg_replace('/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '\1', $content);
 }
 add_filter('the_content', 'filter_ptags_on_images');
+
+function wp_new_excerpt($text)
+{
+	if ($text == '')
+	{
+		$text = get_the_content('');
+		$text = strip_shortcodes( $text );
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]>', ']]>', $text);
+		$text = strip_tags($text);
+		$text = nl2br($text);
+		$excerpt_length = apply_filters('excerpt_length', 40);
+		$words = explode(' ', $text, $excerpt_length + 1);
+		if (count($words) > $excerpt_length) {
+			array_pop($words);
+			array_push($words, '. . .');
+			$text = implode(' ', $words);
+		}
+	}
+	return $text;
+}
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'wp_new_excerpt');
+
+
+//**************************************************************************************
+
+
+//THIS IS FOR SELECTING PRIVATE PAGES AS PARENTS! DELETE AFTER IT IS FIXED!!!
+function admin_private_parent_metabox($output)
+{
+	global $post;
+
+	$args = array(
+		'post_type'			=> $post->post_type,
+		'exclude_tree'		=> $post->ID,
+		'selected'			=> $post->post_parent,
+		'name'				=> 'parent_id',
+		'show_option_none'	=> __('(no parent)'),
+		'sort_column'		=> 'menu_order, post_title',
+		'echo'				=> 0,
+		'post_status'		=> array('publish', 'private'),
+	);
+
+	$defaults = array(
+		'depth'					=> 0,
+		'child_of'				=> 0,
+		'selected'				=> 0,
+		'echo'					=> 1,
+		'name'					=> 'page_id',
+		'id'					=> '',
+		'show_option_none'		=> '',
+		'show_option_no_change'	=> '',
+		'option_none_value'		=> '',
+	);
+
+	$r = wp_parse_args($args, $defaults);
+	extract($r, EXTR_SKIP);
+
+	$pages = get_pages($r);
+	$name = esc_attr($name);
+	// Back-compat with old system where both id and name were based on $name argument
+	if (empty($id))
+	{
+		$id = $name;
+	}
+
+	if (!empty($pages))
+	{
+		$output = "<select name=\"$name\" id=\"$id\">\n";
+
+		if ($show_option_no_change)
+		{
+			$output .= "\t<option value=\"-1\">$show_option_no_change</option>";
+		}
+		if ($show_option_none)
+		{
+			$output .= "\t<option value=\"" . esc_attr($option_none_value) . "\">$show_option_none</option>\n";
+		}
+		$output .= walk_page_dropdown_tree($pages, $depth, $r);
+		$output .= "</select>\n";
+	}
+
+	return $output;
+}
+add_filter('wp_dropdown_pages', 'admin_private_parent_metabox');
 ?>

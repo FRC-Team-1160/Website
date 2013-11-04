@@ -315,14 +315,11 @@
 			<div id="item-2" class="control-operator"></div>
 			<div id="item-3" class="control-operator"></div>
 			<div id="item-4" class="control-operator"></div>
-			<figure class="item noafter">
-				<iframe width="16" height="9" src="http://www.youtube.com/embed/sZsngCANVb4" allowfullscreen></iframe>
-			</figure>
 			<?php
 
 				if(have_posts()) :						
 
-				query_posts( 'showposts=3' );
+				query_posts( 'showposts=4' );
 
 				while(have_posts()) : the_post();
 
@@ -338,12 +335,11 @@
 				style="background-image: url('<?php echo $thumbnail ?>') !important; background-size:cover !important; background-position:center center;">
 					<div class="rightside">
 						<article class="entry">
-							<h1>
-								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
+							<h3>
 									<?php the_title(); ?>
-								</a>
-							</h1>
+							</h3>
 							<?php the_excerpt(); ?>
+							<a class="button" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">Read the Article</a>
 						</article>
 					</div>
 					<div class="clear"></div>
@@ -365,7 +361,7 @@
 						<h1>Team 1160 is a FIRST<sup>&reg;</sup> Team</h1>
 						<h3>What is FIRST<sup>&reg;</sup> and what do they do?</h3>
 					<p>
-						<span style="font-size:10em; float:left; padding:0 15px 0 0;" title="FIRST" aria-hidden="true" data-icon="f"></span>Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow"><strong>Dean Kamen</strong></a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow"><strong><em>FIRST</em></strong></a><em><sup> ®</sup></em><em> </em>(For Inspiration and Recognition of Science and Technology) in 1989 to inspire appreciation of science and technology in young people.
+						<span class="team1160-first" style="font-size:10em; float:left; padding:0 15px 0 0;" title="FIRST Logo"></span>Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow"><strong>Dean Kamen</strong></a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow"><strong><em>FIRST</em></strong></a><em><sup> ®</sup></em><em> </em>(For Inspiration and Recognition of Science and Technology) in 1989 to inspire appreciation of science and technology in young people.
 					</p>
 					<p>
 						The way of life FIRST promotes, Gracious Professionalism<sup>™</sup>, is a way of working that encourages high-quality work, emphasizes the value of others, and respects individuals and the community. To learn more about <em>FIRST<sup>&reg;</sup></em>, visit <strong><a target="_blank" href="http://www.usfirst.org/" rel="nofollow">www.usfirst.org </a></strong>
@@ -382,7 +378,7 @@
 
 		<div id="location" class="location homecontainer">
 			<div class="entry leftside">
-				<span style="color:red; font-size:9em; float:left; padding:0 15px 0 0;" title="FIRST" aria-hidden="true" data-icon="&#xe017;"></span>
+				<span class="red team1160-location-outline" style="font-size:9em; float:left; padding:0 15px 0 0;" title="Location Pin"></span>
 				<div>
 					<h1>
 						Team 1160 is located in San Marino, CA.
@@ -417,21 +413,33 @@
 		<div id="social" class="social homecontainer">
 			<div class="entry">
 				<h1>Follow Us</h1>
-				<p>
-					<a href="http://www.facebook.com/team1160" target="_blank">
-							<span style="display:inline-block; color:#0054A3; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe01d;">
-							</span>
-					</a>
-					<a href="http://twitter.com/frc1160" target="_blank">
-						<span style="display:inline-block; color: rgb(0, 172, 237); text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe000;"></span>
-					</a>
-					<a href="http://www.youtube.com/titaniumrobotics" target="_blank">
-						<span style="display:inline-block; color: darkred; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe001;"></span>
-					</a>
-					<a href="http://www.github.com/FRC-Team-1160" target="_blank">
-						<span style="display:inline-block; color: black; text-align:center; vertical-algin:middle;" aria-hidden="true" data-icon="&#xe003;"></span>
-					</a>
-				</p>
+				<ul>
+					<li class="follow">
+						<a href="http://www.facebook.com/team1160" target="_blank">
+							<span class="team1160-social-facebook-circular"></span>
+						</a>
+					</li>
+					<li class="follow twitterblue">
+							<a href="http://twitter.com/frc1160" target="_blank">
+								<span class="team1160-social-twitter-circular"></span>
+							</a>
+					</li>
+					<li class="follow red">
+							<a href="http://www.youtube.com/titaniumrobotics" target="_blank">
+								<span class="team1160-video-outline"></span>
+							</a>
+					</li>
+					<li class="follow black">
+							<a href="http://www.github.com/FRC-Team-1160" target="_blank">
+								<span class="team1160-social-github-circular"></span>
+							</a>
+					</li>
+					<li class="follow blue">
+							<a href="mailto:titaniumrobotics@gmail.com" target="_blank">
+								<span class="team1160-social-at-circular"></span>
+							</a>
+					</li>
+				</ul>
 			</div>
 			<div class="clear"></div>
 		</div>
