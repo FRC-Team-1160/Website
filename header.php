@@ -152,7 +152,7 @@
 					<div class="menu">
 						<div class="logo">
 							<a href="/" title="Titanium Robotics, FRC Team 1160">
-								<img src="<?php bloginfo('template_directory'); ?>/assets/titanium-robotics-logo-white.svg" height="94px">
+								<img src="<?php bloginfo('template_directory'); ?>/assets/titanium-robotics-logo-white.svg" style="margin-top:10px;" height="74px">
 							</a>
 						</div>
 
