@@ -139,9 +139,7 @@
 
 							<?php if (is_single()) : ?>
 
-								<a class="moot" href="https://moot.it/i/titaniumrobotics/blog/<?php global $post; $post_slug=$post->post_name; echo $post_slug; ?>">
-								Comments for <?php the_title(); ?>
-								</a>
+								<?php comments_template(); ?> 
 
 							<?php else :?> 
 
@@ -336,9 +334,10 @@
 					<div class="rightside">
 						<article class="entry">
 							<h3>
-									<?php the_title(); ?>
+									<span><?php the_title(); ?></span>
 							</h3>
-							<?php the_excerpt(); ?>
+							<?php $excerpt = get_the_excerpt( ) ?>
+							<p><span><?php echo $excerpt ?></span></p>
 							<a class="button" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">Read the Article</a>
 						</article>
 					</div>

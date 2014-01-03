@@ -824,17 +824,15 @@
 }
 
 figure .rightside {
-	width:33.333333333%;
+	width:40%;
 	position:absolute;
-	right:2em;
-	top:2em;
+	left:2em;
+	top:4em;
 	bottom:4.5em;
 	font-size:12pt;
 	text-align:left;
-	background:#EEE;
 	color:#222;
 	overflow: hidden;
-	box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4);
 }
 figure .entry {
 	padding:2em;
@@ -885,6 +883,12 @@ figure h1 {
 	text-align: center;
 	margin:0;
 }
+.rightside .entry span {
+	background: rgba(220, 220, 220, 0.75);
+	line-height: 2;
+	padding: 5px;
+	margin: 0;
+}
 
 			@media screen and (max-width: 720px) {
 				.sponsored, .social {
@@ -896,10 +900,23 @@ figure h1 {
 					margin-bottom:0.5em;	
 				}
 				figure .rightside {
-					width:50%;
+					left: 2em;
+					right: 2em;
+					width: auto;
+					top: 6em;
 				}
 				figure .entry {
 					padding:2em;
 					overflow: hidden;
+				}
+				@media screen and (max-width: 720px) {
+				.rightside p {
+						display: none;
+						
+						visibility: hidden;
+				}
+				.rightside h3 {
+						position:absolute;
+						bottom:3em;
 				}
 			}

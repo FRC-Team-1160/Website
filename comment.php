@@ -8,14 +8,11 @@ Template Name: With Comments
 	<?php if (have_posts()) : ?>
 		<?php while (have_posts()) : the_post(); ?>
 			<div class="post"><div class="post-content"><div class="entry">
-				<fieldset>
-					<legend>
-						<?php the_title(); ?>
-					</legend>
-				</fieldset>
 				<?php the_content();?>
-				<?php edit_post_link('edit'); ?>
 				<?php comments_template(); ?>
+
+				
+				<?php edit_post_link('edit'); ?>
 			</div></div></div>
 		<?php endwhile; ?>
 	<?php else: ?>

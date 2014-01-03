@@ -14,44 +14,17 @@
 			<link rel="pingback"					href="<?php bloginfo('pingback_url'); ?>" />
 			<link rel="icon"		type="application/rss+xml"	href="<?php bloginfo('template_directory') ?>/assets/favicon.ico" />
 
+		<!--TITANIUM ROBOTICS LOGO || USES REL=LOGO (RELOGO.ORG) FOR MAINTAINING THE LOGO-->
+			<link rel="logo" 
+				type="image/svg" 
+				href="<?php bloginfo('template_directory'); ?>/assets/titanium-robotics-logo.svg"/>
+
 		<!--CSS-->
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>" />
-			<?php if(is_single() || is_page_template('comments.php') || is_page('forum') ): ?>
-				<link rel="stylesheet"				href="https://cdn.moot.it/1/moot.css" />
-
-				<style>
-					.moot {
-						font-size: 18px;
-						max-width:none;
-						opacity:0;  /* make things invisible upon start */
-						animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-						animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-						animation-duration:1s;
-						animation-delay: 2s;
-						-webkit-animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-						-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-						-webkit-animation-duration:1s;
-						-webkit-animation-delay: 2s;
-						min-height:300px;
-					}
-					.m-page {
-						padding-left:10px;
-					}
-					.m-header {
-						background-color:#EEEEEE;
-					}
-					.m-search [type=text] {
-						-webkit-border-radius:inherit;
-						-moz-border-radius:inherit;
-						border-radius: inherit;
-					}
-					.m-help {
-						z-index:2;
-					}
-				</style>
-
-			<?php endif; ?>
+			<!--START GOOGLE FONTS-SOURCE SANS PRO-->
+			<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+			<!--END GOOGLE FONTS-SOURCE SANS PRO-->
 
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css" />
@@ -99,11 +72,6 @@
 			<?php wp_head(); ?>
 
 			<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/liga.js"></script>
-		
-			<?php if(is_single() || is_page_template('comments.php') || is_page('forum') ): ?>
-			<!-- MOOT -->
-				<script src="https://cdn.moot.it/1/moot.min.js"></script>
-			<?php endif; ?>
 
 			<!-- RESPONSIVE VIDEOS -->
 			<?php if(!is_front_page()) { ?>
@@ -184,7 +152,7 @@
 					<div class="menu">
 						<div class="logo">
 							<a href="/" title="Titanium Robotics, FRC Team 1160">
-								<span class="team1160-bird"></span>
+								<img src="<?php bloginfo('template_directory'); ?>/assets/titanium-robotics-logo.svg" height="94px">
 							</a>
 						</div>
 
