@@ -1,0 +1,58 @@
+html, body {
+	background:none;
+}
+img.print {
+    height: 74px;
+    margin: 10px 0 0;
+}
+.print {
+	display:inherit;
+}
+#icon-nav {
+    background: none;
+}
+.screen {
+    display: none!important;
+}
+.menu .logo a {
+    padding: 0;
+}
+.thumbnail h1 {
+    position: relative;
+    color: black;
+    text-shadow: none;
+    font-weight: bold;
+    text-align: left;
+    display: inline-block;
+    -webkit-animation: none;
+    animation: none;
+    opacity: 1;
+    padding: 1em 1em 0;
+}
+img.alignleft, img.aligncenter, img.alignright {
+    float: none;
+    margin: auto;
+    display: block;
+}
+.normal,.wrapper {
+    width: 98%;
+    max-width: none;
+}
+#contents {
+    border: none;
+}
+.entry {
+    padding: 1em;
+}
+.gce-page-list .description {
+    background:none;
+    color:black;
+    font-weight:bold;
+}
+.gce-page-list .description a {
+    color:black;
+    text-decoration: underline;
+}
+.gce-page-list .gce-list p.description span, .gce-page-list .gce-list div.description span{
+    color:black;
+}

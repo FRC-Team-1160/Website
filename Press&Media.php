@@ -47,7 +47,7 @@ Template Name: Press & Media
 										if (!empty($thumbnail)) {
 									?>
 											<div class="thumbnail">
-												<div class="featured" style="background-image: url('<?php echo $thumbnail; ?>')!important;">
+												<div class="featured screen" style="background-image: url('<?php echo $thumbnail; ?>')!important;">
 												</div>
 											</div>
 

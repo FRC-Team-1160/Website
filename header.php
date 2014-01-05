@@ -17,7 +17,7 @@
 		<!--TITANIUM ROBOTICS LOGO || USES REL=LOGO (RELOGO.ORG) FOR MAINTAINING THE LOGO-->
 			<link rel="logo" 
 				type="image/svg" 
-				href="<?php bloginfo('template_directory'); ?>/assets/titanium-robotics-logo.svg"/>
+				href="<?php bloginfo('template_directory'); ?>/assets/logo.svg"/>
 
 		<!--CSS-->
 			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
@@ -133,6 +133,7 @@
 			<!--[if lt IE 9]>
 				<script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
 			<![endif]-->
+			<style>@import url('<?php bloginfo('template_directory'); ?>/print.css') print;</style>
 
 	</head>
 
@@ -152,11 +153,12 @@
 					<div class="menu">
 						<div class="logo">
 							<a href="/" title="Titanium Robotics, FRC Team 1160">
-								<img src="<?php bloginfo('template_directory'); ?>/assets/titanium-robotics-logo-white.svg" style="margin-top:10px;" height="74px">
+								<img class="screen" src="<?php bloginfo('template_directory'); ?>/assets/titanium-robotics-logo-white.svg" style="margin-top:10px;" height="74px">
+								<img class="print" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" height="2.5em" />
 							</a>
 						</div>
 
-						<div class="menu-right">
+						<div class="menu-right screen">
 							<div class="icon">
 								<a href="#" id="toggle" title="Open Menu" >
 									<span class="team1160-th-menu">
@@ -165,7 +167,7 @@
 							</div>
 						</div>
 
-						<div id="login">
+						<div id="login" class="screen">
 							<?php wp_loginout( get_permalink() ); ?>
 							<?php if(is_user_logged_in()) {
 								echo "&nbsp;|&nbsp;";
@@ -188,7 +190,7 @@
 							array(
 								'theme_location'	=>	'Main-Navigation',
 								'container_id'		=>	'nav',
-								'container_class'	=>	'navigation-links',
+								'container_class'	=>	'navigation-links screen',
 								'menu_id'			=>	'menu',
 								'menu_class'		=>	'ti22',
 							)

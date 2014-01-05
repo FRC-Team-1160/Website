@@ -9,6 +9,9 @@ Version: 3.0
 .
 .
 */
+.print {
+	display:none;
+}
 /*RESET*/
 * {
 	margin: 0px;
@@ -1584,9 +1587,9 @@ table.meetings tr:nth-of-type(odd) {
 					padding:2em;	
 				}
 			}
-
-			/* MENUS IN MOBILE */
-			@media screen and (max-width: 720px) and (max-height:500px), (max-width:720px), (max-height:500px) {
+ 
+			/* MENUS IN MOBILE AND TABLET */
+			@media screen and (max-width: 1024px) and (max-height:500px), (max-width:1024px), (max-height:500px) {
 				#toggle {
 					display:inline-block;
 				}
@@ -1638,5 +1641,8 @@ table.meetings tr:nth-of-type(odd) {
 					-moz-transition:border-bottom 300ms;
 					-o-transition:border-bottom 300ms;
 					-ms-transition:border-bottom 300ms;
+				}
+				#icon-nav {
+					border-radius:0;
 				}
 			}

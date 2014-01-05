@@ -286,7 +286,7 @@ function custom_login_logo() {
 		 background:#E6E6E6!important;
 	}
 	h1 a {
-		background-image: url('.get_bloginfo('template_directory').'/assets/bird.jpg) !important;
+		background-image: url('.get_bloginfo('template_directory').'/assets/logo.svg) !important;
 		background-size: auto 134px!important;
 		height:150px !important;
 		width:100% !important;

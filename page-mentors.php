@@ -15,7 +15,7 @@
 							<div class="everything">
 								<div class="text">
 									<div class="descriptions">
-									<div class="featured">
+									<div class="featured screen">
 										<a href="#<?php global $post; $post_slug=$post->post_name; echo $post_slug; ?>" rel="link" title="<?php the_title()?>">
 											<?php if(has_post_thumbnail( $post_id )) {?>
 
