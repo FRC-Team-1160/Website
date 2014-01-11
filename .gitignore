@@ -2,10 +2,9 @@
 js/.DS_Store
 assets/.DS_Store
 fonts/.DS_Store
-js/raptorize/raptorize.js
 
-js/raptorize/raptor.png
+js/_/jquery.raptorize.1.0.js
 
-js/raptorize/jquery.raptorize.1.0.js
+js/_/raptor.png
 
-js/raptorize.js
+js/_/raptorize.js
