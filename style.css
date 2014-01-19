@@ -5,7 +5,7 @@ Description: A theme customized for FIRST Team 1160, Titanium Robotics.
 Sleeker, more unique, modern look; newer, more content-specific coding; HTML5 Valid (most of the time).
 Author: Nathan Wong
 Author URI: www.itsallwong.com
-Version: 3.0
+Version: 3.1
 .
 .
 */
@@ -153,9 +153,13 @@ img.aligncenter {
 }
 .alignright {
 	float:right;
+	margin-right:-5em;
+	margin-right:-5rem;
 }
 .alignleft {
 	float:left;
+	margin-left:-5em;
+	margin-left:-5rem;
 }
 .aligncenter {
 	display: block;
