@@ -121,3 +121,7 @@ blockquote {
 	/* 35px / 24px */
 	}
 }
+p {
+	margin:1rem 0;
+	line-height:1.4;
+}
