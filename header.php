@@ -20,19 +20,207 @@
 				href="<?php bloginfo('template_directory'); ?>/assets/logo.svg"/>
 
 		<!--CSS-->
-			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
-			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>" />
-			<!--START GOOGLE FONTS-SOURCE SANS PRO-->
-			<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
-			<!--END GOOGLE FONTS-SOURCE SANS PRO-->
+		
+		<!-- MAIN STYLES WERE MOVED TO THE FOOTER SO THEY WOULD BE QUICKER -->
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/schedules.css" />
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/assets/typography.css" />
+			
+			<?php
+				$custom_fields = get_post_custom();
+				$construction = $custom_fields['construction'];
+					if(!empty($construction)) {
+						foreach ( $construction as $key => $value ) {
+						if ($value == 'under construction') {
+			?>
+							<style>
+							.team1160-flash-outline {
+								float:left;
+								margin:auto;
+								width:2em;
+								font-size:5em;
+								color:#0067C6;
+								padding:1em 0;
+								position:relative;
+								text-align:center;
+							    -webkit-animation-name: ColorChange;
+							    -moz-animation-name: ColorChange;
+							    -o-animation-name: ColorChange;
+							    animation-name: ColorChange;
+							    -webkit-animation-duration: 10s;
+							    -moz-animation-duration: 10s;
+							    -o-animation-duration: 10s;
+							    animation-duration: 10s;
+							    -webkit-animation-iteration-count: infinite;
+							    -moz-animation-iteration-count: infinite;
+							    -o-animation-iteration-count: infinite;
+							    animation-iteration-count: infinite;
+							    -webkit-animation-timing-function: linear;
+							    -moz-animation-timing-function: linear;
+							    -o-animation-timing-function: linear;
+							    animation-timing-function: linear;
+							}
+							.team1160-flash-outline .team1160-starburst-outline {
+								font-size:2em;
+								color:#0067C6;
+								position:absolute;
+								top: 0.25em;
+								left: 0;
+								right: 0;
+								bottom: 0.28em;
+								-webkit-animation-duration: 25s;
+								-webkit-animation-name: rotate;
+								-webkit-animation-iteration-count: infinite;
+								-webkit-animation-timing-function: linear;
+								-o-animation-duration: 25s;
+								-o-animation-name: rotate;
+								-o-animation-iteration-count: infinite;
+								-o-animation-timing-function: linear;
+								-moz-animation-duration: 25s;
+								-moz-animation-name: rotate;
+								-moz-animation-iteration-count: infinite;
+								-moz-animation-timing-function: linear;
+								animation-duration: 25s;
+								animation-name: rotate;
+								animation-iteration-count: infinite;
+								animation-timing-function: linear;
+							}
+							@keyframes rotate {
+							    from {
+							        transform:rotate(0deg)
+							    }
+							    to {
+							        transform:rotate(360deg)
+							    }
+							}
+							@-o-keyframes rotate {
+							    from {
+							        -o-transform:rotate(0deg)
+							    }
+							    to {
+							        -o-transform:rotate(360deg)
+							    }
+							}
+							@-webkit-keyframes rotate {
+							    from {
+							        -webkit-transform:rotate(0deg)
+							    }
+							    to {
+							        -webkit-transform:rotate(360deg)
+							    }
+							}
+							@-moz-keyframes rotate {
+							    from {
+							        -moz-transform:rotate(0deg)
+							    }
+							    to {
+							        -moz-transform:rotate(360deg)
+							    }
+							}
+							.team1160-starburst-outline.reverse {
+							    -webkit-animation-name: reverse;
+							    -moz-animation-name: reverse;
+							    -o-animation-name: reverse;
+							    animation-name: reverse;
+							    color:#7fb3e2;
+							    font-weight:normal;
+							}
 
-			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />
-			<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css" />
+							@keyframes reverse {
+							    from {
+							        transform:rotate(0deg)
+							    }
+							    to {
+							        transform:rotate(-360deg)
+							    }
+							}
+							@-o-keyframes reverse {
+							    from {
+							        -o-transform:rotate(0deg)
+							    }
+							    to {
+							        -o-transform:rotate(-360deg)
+							    }
+							}
+							@-webkit-keyframes reverse {
+							    from {
+							        -webkit-transform:rotate(0deg)
+							    }
+							    to {
+							        -webkit-transform:rotate(-360deg)
+							    }
+							}
+							@-moz-keyframes reverse {
+							    from {
+							        -moz-transform:rotate(0deg)
+							    }
+							    to {
+							        -moz-transform:rotate(-360deg)
+							    }
+							}
 
-			<?php if(is_front_page()) { ?>
-				<link rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css" />
-			<?php } ?>
-
+							@keyframes ColorChange {
+							    0% {
+							    	color:#1B9120;
+							    }
+							    16% {
+							    	color:#7F00C6;
+							    }
+							    49% {
+							        color:#0067C6;
+							    }
+							    82% {
+							    	color:#1B9120;
+							    }
+							}
+							@-o-keyframes ColorChange {
+							    0% {
+							    	color:#1B9120;
+							    }
+							    16% {
+							    	color:#7F00C6;
+							    }
+							    49% {
+							        color:#0067C6;
+							    }
+							    82% {
+							    	color:#1B9120;
+							    }
+							}
+							@-webkit-keyframes ColorChange {
+							    0% {
+							    	color:#1B9120;
+							    }
+							    16% {
+							    	color:#7F00C6;
+							    }
+							    49% {
+							        color:#0067C6;
+							    }
+							    82% {
+							    	color:#1B9120;
+							    }
+							}
+							@-moz-keyframes ColorChange {
+							    0% {
+							    	color:#1B9120;
+							    }
+							    16% {
+							    	color:#7F00C6;
+							    }
+							    49% {
+							        color:#0067C6;
+							    }
+							    82% {
+							    	color:#1B9120;
+							    }
+							}
+							</style>
+			<?php
+						}
+					}
+				}
+			?>
 				<!--[if lt IE 9]>
 				<style>
 					#menuwrap {
@@ -46,82 +234,9 @@
 					}
 				</style>
 				<![endif]-->
-
-			<?php if (is_search()) : ?>
-				<style type="text/css" media="screen">
-						.titanium {font-weight:bold;}
-						</style>
-						<script type="text/javascript">
-						jQuery.fn.extend({
-						highlight: function(search, insensitive, titanium_class){
-							var regex = new RegExp("(<[^>]*>)|(\\b"+ search.replace(/([-.*+?^${}()|[\]\/\\])/g,"\\$1") +")", insensitive ? "ig" : "g");
-							return this.html(this.html().replace(regex, function(a, b, c){
-							return (a.charAt(0) == "<") ? a : "<em class=\""+ titanium_class +"\">" + c + "</em>";
-							}));
-						}
-						});
-						jQuery(document).ready(function($){
-						if(typeof(titanium_query) != 'undefined'){
-							$("#contents").highlight(titanium_query, 1, "titanium");
-						}
-						});
-				</script>
-			<?php endif; ?>
 		
 		<!--SCRIPTS-->
 			<?php wp_head(); ?>
-
-			<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/liga.js"></script>
-
-			<!-- RESPONSIVE VIDEOS -->
-			<?php if(!is_front_page()) { ?>
-				<script type="text/javascript">
-					jQuery(function ($) {
-						"use strict";
-						$(function () {
-
-						// Find all YouTube videos
-							var $allVideos = $("iframe"),
-
-							// The element that is fluid width
-								$fluidEl = $(".entry");
-
-						// Figure out and save aspect ratio for each video
-							$allVideos.each(function () {
-
-								$(this)
-									.data('aspectRatio', this.height / this.width)
-
-									// and remove the hard coded width/height
-									.removeAttr('height')
-									.removeAttr('width');
-
-							});
-
-						// When the window is resized
-						// (You'll probably want to debounce this)
-							$(window).resize(function () {
-
-								var newWidth = $fluidEl.width();
-
-							// Resize all videos according to their own aspect ratio
-								$allVideos.each(function () {
-
-									var $el = $(this);
-									$el
-										.width(newWidth)
-										.height(newWidth * $el.data('aspectRatio'));
-
-								});
-
-						// Kick off one resize to fix all videos on page load
-							}).resize();
-
-						});
-
-					});
-				</script>
-			<?php } ?>
 
 		<!-- ICONS FONT FOR IE9 -->
 			<!--[if lte IE 7]>
@@ -133,7 +248,20 @@
 			<!--[if lt IE 9]>
 				<script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
 			<![endif]-->
-			<style>@import url('<?php bloginfo('template_directory'); ?>/print.css') print;</style>
+
+		<!-- ANNOUNCE THAT IE ISN'T IDEAL - STYLES -->
+		<!--[if IE]>
+			<style>
+				#ie-announcement {
+					background: #7fb3e2;
+					line-height:1.5;
+					text-align:center;
+					padding:10px;
+					box-sizing:border-box;
+					display:block;
+				}
+			</style>
+		<![endif]-->
 
 	</head>
 
@@ -142,30 +270,15 @@
 <!--		<BODY> START		-->
 
 	<body class="<?php if (is_front_page()) : ?>front<?php else:?><?php endif; ?>">
-
-		<div class="<?php if (is_front_page()) : ?>frontpage wrapper"><?php else:?>normal wrapper"><?php endif; ?>
 		
+			<!--TELL IE USERS THAT THE WEBSITE IS GOING TO LOOK WEIRD-->
+			<!--[if IE]>
+				<div id="ie-announcement">Hey! You're using Internet Explorer, which may cause our website to look funny!  The solution is to <a href="http://browsehappy.com/">try a different browser</a>.  <a href="http://blogs.computerworld.com/18552/12_reasons_not_to_use_internet_explorer_ever">Why?</a></div>
+			<![endif]-->
+
+		<div class="<?php if (is_front_page()) : ?>frontpage wrapper<?php else:?>normal wrapper<?php endif; ?>" id="page">
+
 			<!--START - NAVIGATION-->
-		
-			<header id="menuwrap" class="custom-background">
-				
-				<div id="icon-nav">
-					<div class="menu">
-						<div class="logo">
-							<a href="/" title="Titanium Robotics, FRC Team 1160">
-								<img class="screen" src="<?php bloginfo('template_directory'); ?>/assets/titanium-robotics-logo-white.svg" style="margin-top:10px;" height="74px">
-								<img class="print" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" height="2.5em" />
-							</a>
-						</div>
-
-						<div class="menu-right screen">
-							<div class="icon">
-								<a href="#" id="toggle" title="Open Menu" >
-									<span class="team1160-th-menu">
-									</span>
-								</a>
-							</div>
-						</div>
 
 						<div id="login" class="screen">
 							<?php wp_loginout( get_permalink() ); ?>
@@ -180,6 +293,26 @@
 
 							}
 							?>
+						</div>
+		
+			<header id="menuwrap" class="custom-background">
+				
+				<div id="icon-nav">
+					<div class="menu">
+						<div class="logo">
+							<a href="/" title="Titanium Robotics, FRC Team 1160">
+								<img class="screen" src="<?php bloginfo('template_directory'); ?>/assets/titanium-robotics-logo-white.svg" style="margin-top:10px; height:74px" height="74" alt="logo-bird">
+								<img class="print" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" style="height:2.5em" alt="logo-text" />
+							</a>
+						</div>
+
+						<div class="menu-right screen">
+							<div class="icon">
+								<a href="#" id="toggle" title="Open Menu" >
+									<span class="team1160-th-menu">
+									</span>
+								</a>
+							</div>
 						</div>
 					</div>
 					
@@ -206,9 +339,11 @@
 						<div class="title">
 							<ul>
 								<li>
-										<?php
-											wp_title("", true);
-										?>
+										<h3>
+											<?php
+												wp_title("", true);
+											?>
+										</h3>
 								</li>
 							</ul>
 						</div>

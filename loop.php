@@ -1,5 +1,5 @@
 <?php if (!is_page_template('home-page.php')){ ?>
-	
+
 <div class="post">
 
 		<?php if(have_posts()) :?>
@@ -131,6 +131,22 @@
 								<?php } else { } ?>
 	
 	<?php // THE_CONTENT ?>
+
+<?php
+/* FOR PAGES THAT ARE UNDER CONSTRUCTION */
+				$custom_fields = get_post_custom();
+				$construction = $custom_fields['construction'];
+				if(!empty($construction)) {
+						foreach ( $construction as $key => $value ) {
+						if ($value == 'under construction') {
+?>
+							<div class="clear"></div>
+							<div class="team1160-flash-outline"><span class="team1160-starburst-outline reverse"></span><span class="team1160-starburst-outline"></span></div>
+							<h1 style="text-align:center; margin-top:1em; color:#444; font-weight:bold;">This page is currently under construction</h1>
+							<div class="clear"></div>
+<?php
+						}}} else {
+?>
 							<?php if (!is_home()) : ?>
 								<?php the_content();?>
 							<?php else : ?>
@@ -144,6 +160,7 @@
 							<?php else :?> 
 
 							<?php endif ?>
+<?php } ?>
 
 	<?php // CALENDAR ?>
 
@@ -401,7 +418,7 @@
 						<tr>
 							<td>
 								<a href="http://www.boeing.com" target="_blank"><img alt="Boeing" src="http://www.titaniumrobotics.com/wp-content/themes/Website-master/assets/sponsor1.png" /></a><a href="http://www.nasa.gov" target="_blank">
-								<img alt="NASA" src="http://www.titaniumrobotics.com/wp-content/themes/Website-master/assets/sponsor2.png" /></a><a href="http://www.jpl.nasa.gov" target="_blank"><img alt="JPL" src="http://www.titaniumrobotics.com/wp-content/themes/Website-master/assets/sponsor3.png" /></a><a href="http://www.ccsm.org" target="_blank"><img alt="Chinese Club" src="http://beta.titaniumrobotics.com/wp-content/themes/Website-master/assets/sponsor4.png" /></a><a href="http://www.sanmarinohs.org" target="_blank">SMHS PTSA</a>
+								<img alt="NASA" src="http://www.titaniumrobotics.com/wp-content/themes/Website-master/assets/sponsor2.png" /></a><a href="http://www.jpl.nasa.gov" target="_blank"><img alt="JPL" src="http://www.titaniumrobotics.com/wp-content/themes/Website-master/assets/sponsor3.png" /></a><a href="http://www.ccsm.org" target="_blank"><img alt="Chinese Club" src="http://www.titaniumrobotics.com/wp-content/themes/Website-master/assets/sponsor4.png" /></a><a href="http://www.sanmarinohs.org" target="_blank">SMHS PTSA</a>
 							</td>
 						</tr>
 					</tbody>
@@ -444,4 +461,5 @@
 		</div>
 			<div class="clear"></div>
 
-<?php } ?> 
+<?php }
+?> 

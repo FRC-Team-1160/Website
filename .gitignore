@@ -2,9 +2,28 @@
 js/.DS_Store
 assets/.DS_Store
 fonts/.DS_Store
+index/_/blue-footed-booby.js
 
-js/_/jquery.raptorize.1.0.js
+index/_/raptor-sound.mp3
+
+index/_/raptor-sound.ogg
+
+index/_/raptor.png
+
+index/_/raptorize.js
+
+index/index.html
+
+js/_/blue-footed-booby.js
+
+js/_/raptor-sound.mp3
+
+js/_/raptor-sound.ogg
 
 js/_/raptor.png
 
 js/_/raptorize.js
+
+.htaccess
+
+index.html

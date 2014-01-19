@@ -899,11 +899,14 @@ figure h1 {
 					margin:auto;
 					margin-bottom:0.5em;	
 				}
+				.gallery .item {
+					height:250px;
+				}
 				figure .rightside {
 					left: 2em;
 					right: 2em;
 					width: auto;
-					top: 6em;
+					top: 4em;
 				}
 				figure .entry {
 					padding:2em;

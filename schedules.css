@@ -1,0 +1,43 @@
+.gce-list li {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-left:3px solid #7fb3e2;
+}
+.gce-list-event {
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.gce-list li:nth-child(odd) {
+    background: #cce0f3;
+}
+.gce-page-list .gce-list .gce-list-event {
+    background:none;
+}
+.gce-page-list .gce-list p span, .gce-page-list .gce-list div span {
+    display:inline-block;
+    width:6em;
+    font-weight:bold;
+}
+.gce-page-list .description {
+    display:inline;
+    padding:0;
+    background:#0067c6;
+    color:#FFF;
+}
+.gce-page-list .description a {
+    color:#FFF;
+}
+.gce-page-list .gce-list p.description span, .gce-page-list .gce-list div.description span{
+    color:#FFF;
+}
+li.gce-feed-2 {
+    border-left:3px solid #f8c79a;
+}
+li.gce-feed-3 {
+    border-left:3px solid #98DF98;
+}
