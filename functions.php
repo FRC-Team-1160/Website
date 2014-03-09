@@ -14,7 +14,7 @@ function titanium_theme_setup() {
 
 	/* CUSTOM BACKGROUNDS */
 	$defaults = array(
-		'default-color'          => '0067C6',
+		'default-color'          => '0067c6',
 		'default-image'          => '',
 		'wp-head-callback'       => '_custom_background_cb',
 		'admin-head-callback'    => '',

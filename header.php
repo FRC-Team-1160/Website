@@ -39,7 +39,7 @@
 								margin:auto;
 								width:2em;
 								font-size:5em;
-								color:#0067C6;
+								color:#0067c6;
 								padding:1em 0;
 								position:relative;
 								text-align:center;
@@ -62,7 +62,7 @@
 							}
 							.team1160-flash-outline .team1160-starburst-outline {
 								font-size:2em;
-								color:#0067C6;
+								color:#0067c6;
 								position:absolute;
 								top: 0.25em;
 								left: 0;
@@ -167,7 +167,7 @@
 							    	color:#7F00C6;
 							    }
 							    49% {
-							        color:#0067C6;
+							        color:#0067c6;
 							    }
 							    82% {
 							    	color:#1B9120;
@@ -181,7 +181,7 @@
 							    	color:#7F00C6;
 							    }
 							    49% {
-							        color:#0067C6;
+							        color:#0067c6;
 							    }
 							    82% {
 							    	color:#1B9120;
@@ -195,7 +195,7 @@
 							    	color:#7F00C6;
 							    }
 							    49% {
-							        color:#0067C6;
+							        color:#0067c6;
 							    }
 							    82% {
 							    	color:#1B9120;
@@ -209,7 +209,7 @@
 							    	color:#7F00C6;
 							    }
 							    49% {
-							        color:#0067C6;
+							        color:#0067c6;
 							    }
 							    82% {
 							    	color:#1B9120;
@@ -221,6 +221,38 @@
 					}
 				}
 			?>
+			<?php if(is_page_template('albums.php')) { ?>
+				<style>
+					img.alignleft, .alignleft {
+						float:left;
+						padding:0.5em!important;
+						box-sizing:border-box;
+						margin:0!important;
+						width:33.3333333333333333%!important;
+					}
+					.wp-caption-text {
+						font-size:1em!important;
+						color: #484848;
+						font-weight:bold;
+						text-align:left;
+					}
+						@media screen and (max-width: 720px) {
+
+							img.alignleft, .alignleft {
+								width:50%!important;
+								float:left!important;
+								margin:0;
+							}
+						}
+						@media screen and (max-width:360px) {
+							img.alignleft, .alignleft {
+								float:none!important;
+								margin:auto!important;
+								width:100%!important;
+							}
+						}
+				</style>
+			<?php }?>
 				<!--[if lt IE 9]>
 				<style>
 					#menuwrap {
