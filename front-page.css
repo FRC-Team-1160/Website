@@ -795,7 +795,9 @@
 }
 
 .gallery .item {
-	height: 400px;
+	height: 0;
+	width:100%;
+	padding-bottom:45%;
 	overflow: hidden;
 	text-align: center;
 	background: #222;
@@ -845,15 +847,14 @@ figure h1 {
 
 /* HOME CONTAINERS */
 .homecontainer {
-	width:96%;
-	float:none;
+	width:100%;
+	float:left;
 	margin:auto;
-	margin-bottom:0.5em;
 }
 .homecontainer .entry {
-	padding:2em;
-	border-bottom:2px solid #ddd;
-	background:#FFF;
+	padding:6em 0;
+	width:80%;
+	margin:auto;
 }
 .sponsored {
 	width:66.66666%;
@@ -888,6 +889,12 @@ figure h1 {
 	line-height: 2;
 	padding: 5px;
 	margin: 0;
+}
+#location {
+	background-color:#444;
+	color:#FFF;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 			@media screen and (max-width: 720px) {
