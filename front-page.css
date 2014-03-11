@@ -885,7 +885,7 @@ figure h1 {
 	margin:0;
 }
 .rightside .entry span {
-	background: rgba(220, 220, 220, 0.75);
+	background: rgba(255, 255, 255, 0.75);
 	line-height: 2;
 	padding: 5px;
 	margin: 0;
@@ -919,7 +919,13 @@ figure h1 {
 					padding:2em;
 					overflow: hidden;
 				}
-				@media screen and (max-width: 720px) {
+				.feature-icon {
+					display:block;
+					float:none !important;
+					margin:0!important;
+					width:100%;
+					text-align:center;
+				}
 				.rightside p {
 						display: none;
 						
