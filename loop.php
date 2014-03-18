@@ -458,5 +458,7 @@
 		</div>
 			<div class="clear"></div>
 
-<?php }
-?> 
+<?php } elseif (is_page_template('attachment.php')) {
+
+}
+ ?> 

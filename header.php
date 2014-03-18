@@ -43,22 +43,22 @@
 								padding:1em 0;
 								position:relative;
 								text-align:center;
-							    -webkit-animation-name: ColorChange;
-							    -moz-animation-name: ColorChange;
-							    -o-animation-name: ColorChange;
-							    animation-name: ColorChange;
-							    -webkit-animation-duration: 10s;
-							    -moz-animation-duration: 10s;
-							    -o-animation-duration: 10s;
-							    animation-duration: 10s;
-							    -webkit-animation-iteration-count: infinite;
-							    -moz-animation-iteration-count: infinite;
-							    -o-animation-iteration-count: infinite;
-							    animation-iteration-count: infinite;
-							    -webkit-animation-timing-function: linear;
-							    -moz-animation-timing-function: linear;
-							    -o-animation-timing-function: linear;
-							    animation-timing-function: linear;
+								-webkit-animation-name: ColorChange;
+								-moz-animation-name: ColorChange;
+								-o-animation-name: ColorChange;
+								animation-name: ColorChange;
+								-webkit-animation-duration: 10s;
+								-moz-animation-duration: 10s;
+								-o-animation-duration: 10s;
+								animation-duration: 10s;
+								-webkit-animation-iteration-count: infinite;
+								-moz-animation-iteration-count: infinite;
+								-o-animation-iteration-count: infinite;
+								animation-iteration-count: infinite;
+								-webkit-animation-timing-function: linear;
+								-moz-animation-timing-function: linear;
+								-o-animation-timing-function: linear;
+								animation-timing-function: linear;
 							}
 							.team1160-flash-outline .team1160-starburst-outline {
 								font-size:2em;
@@ -86,134 +86,134 @@
 								animation-timing-function: linear;
 							}
 							@keyframes rotate {
-							    from {
-							        transform:rotate(0deg)
-							    }
-							    to {
-							        transform:rotate(360deg)
-							    }
+								from {
+									transform:rotate(0deg)
+								}
+								to {
+									transform:rotate(360deg)
+								}
 							}
 							@-o-keyframes rotate {
-							    from {
-							        -o-transform:rotate(0deg)
-							    }
-							    to {
-							        -o-transform:rotate(360deg)
-							    }
+								from {
+									-o-transform:rotate(0deg)
+								}
+								to {
+									-o-transform:rotate(360deg)
+								}
 							}
 							@-webkit-keyframes rotate {
-							    from {
-							        -webkit-transform:rotate(0deg)
-							    }
-							    to {
-							        -webkit-transform:rotate(360deg)
-							    }
+								from {
+									-webkit-transform:rotate(0deg)
+								}
+								to {
+									-webkit-transform:rotate(360deg)
+								}
 							}
 							@-moz-keyframes rotate {
-							    from {
-							        -moz-transform:rotate(0deg)
-							    }
-							    to {
-							        -moz-transform:rotate(360deg)
-							    }
+								from {
+									-moz-transform:rotate(0deg)
+								}
+								to {
+									-moz-transform:rotate(360deg)
+								}
 							}
 							.team1160-starburst-outline.reverse {
-							    -webkit-animation-name: reverse;
-							    -moz-animation-name: reverse;
-							    -o-animation-name: reverse;
-							    animation-name: reverse;
-							    color:#7fb3e2;
-							    font-weight:normal;
+								-webkit-animation-name: reverse;
+								-moz-animation-name: reverse;
+								-o-animation-name: reverse;
+								animation-name: reverse;
+								color:#7fb3e2;
+								font-weight:normal;
 							}
 
 							@keyframes reverse {
-							    from {
-							        transform:rotate(0deg)
-							    }
-							    to {
-							        transform:rotate(-360deg)
-							    }
+								from {
+									transform:rotate(0deg)
+								}
+								to {
+									transform:rotate(-360deg)
+								}
 							}
 							@-o-keyframes reverse {
-							    from {
-							        -o-transform:rotate(0deg)
-							    }
-							    to {
-							        -o-transform:rotate(-360deg)
-							    }
+								from {
+									-o-transform:rotate(0deg)
+								}
+								to {
+									-o-transform:rotate(-360deg)
+								}
 							}
 							@-webkit-keyframes reverse {
-							    from {
-							        -webkit-transform:rotate(0deg)
-							    }
-							    to {
-							        -webkit-transform:rotate(-360deg)
-							    }
+								from {
+									-webkit-transform:rotate(0deg)
+								}
+								to {
+									-webkit-transform:rotate(-360deg)
+								}
 							}
 							@-moz-keyframes reverse {
-							    from {
-							        -moz-transform:rotate(0deg)
-							    }
-							    to {
-							        -moz-transform:rotate(-360deg)
-							    }
+								from {
+									-moz-transform:rotate(0deg)
+								}
+								to {
+									-moz-transform:rotate(-360deg)
+								}
 							}
 
 							@keyframes ColorChange {
-							    0% {
-							    	color:#1B9120;
-							    }
-							    16% {
-							    	color:#7F00C6;
-							    }
-							    49% {
-							        color:#0067c6;
-							    }
-							    82% {
-							    	color:#1B9120;
-							    }
+								0% {
+									color:#1B9120;
+								}
+								16% {
+									color:#7F00C6;
+								}
+								49% {
+									color:#0067c6;
+								}
+								82% {
+									color:#1B9120;
+								}
 							}
 							@-o-keyframes ColorChange {
-							    0% {
-							    	color:#1B9120;
-							    }
-							    16% {
-							    	color:#7F00C6;
-							    }
-							    49% {
-							        color:#0067c6;
-							    }
-							    82% {
-							    	color:#1B9120;
-							    }
+								0% {
+									color:#1B9120;
+								}
+								16% {
+									color:#7F00C6;
+								}
+								49% {
+									color:#0067c6;
+								}
+								82% {
+									color:#1B9120;
+								}
 							}
 							@-webkit-keyframes ColorChange {
-							    0% {
-							    	color:#1B9120;
-							    }
-							    16% {
-							    	color:#7F00C6;
-							    }
-							    49% {
-							        color:#0067c6;
-							    }
-							    82% {
-							    	color:#1B9120;
-							    }
+								0% {
+									color:#1B9120;
+								}
+								16% {
+									color:#7F00C6;
+								}
+								49% {
+									color:#0067c6;
+								}
+								82% {
+									color:#1B9120;
+								}
 							}
 							@-moz-keyframes ColorChange {
-							    0% {
-							    	color:#1B9120;
-							    }
-							    16% {
-							    	color:#7F00C6;
-							    }
-							    49% {
-							        color:#0067c6;
-							    }
-							    82% {
-							    	color:#1B9120;
-							    }
+								0% {
+									color:#1B9120;
+								}
+								16% {
+									color:#7F00C6;
+								}
+								49% {
+									color:#0067c6;
+								}
+								82% {
+									color:#1B9120;
+								}
 							}
 							</style>
 			<?php
@@ -301,13 +301,13 @@
 
 <!--		<BODY> START		-->
 
-	<body class="<?php if (is_front_page()) : ?>front<?php else:?><?php endif; ?>">
+	<body class="<?php if (is_front_page()) : ?>front<?php elseif(is_attachment()):?>attachments<?php else: endif; ?>">
 		
 			<!--TELL IE USERS THAT THE WEBSITE IS GOING TO LOOK WEIRD-->
 			<!--[if IE]>
 				<div id="ie-announcement">Hey! You're using Internet Explorer, which may cause our website to look funny!  The solution is to <a href="http://browsehappy.com/">try a different browser</a>.  <a href="http://blogs.computerworld.com/18552/12_reasons_not_to_use_internet_explorer_ever">Why?</a></div>
 			<![endif]-->
-
+<?php if(!is_attachment()) { ?>
 		<div class="<?php if (is_front_page()) : ?>frontpage wrapper<?php else:?>normal wrapper<?php endif; ?>" id="page">
 
 			<!--START - NAVIGATION-->
@@ -355,9 +355,9 @@
 							array(
 								'theme_location'	=>	'Main-Navigation',
 								'container_id'		=>	'nav',
-								'container_class'	=>	'navigation-links screen',
+								'container_class'	=>	'nav screen',
 								'menu_id'			=>	'menu',
-								'menu_class'		=>	'ti22',
+								'menu_class'		=>	'ti22 menu-1',
 							)
 						);
 					?>
@@ -420,3 +420,10 @@
 	</div></div>
 	<div class="clear"></div>
 	<?php endif; ?>
+<?php } else { ?>
+	<div id="close">
+		<a href="<?php print $_SERVER['HTTP_REFERER'];?>">
+			<span class="team1160-delete-outline"></span>
+		</a>
+	</div>
+<?php } ?>

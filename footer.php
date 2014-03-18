@@ -1,6 +1,6 @@
 <div class="clear"></div>
 <?php wp_reset_query(); ?>
-
+<?php if(!is_attachment()) { ?>
 	<footer id="footer" class="custom-background">
 		
 		<div class="footer-container">
@@ -51,6 +51,7 @@
 </div>
 <div class="clear"></div>
 </div>
+<?php } ?>
 	
 <?php wp_footer(); ?>
 
@@ -124,7 +125,7 @@
 <!--GOOGLE SUGGESTED THAT WE LOAD ALL UNIMPORTANT SCRIPTS HERE, SO HERE YA GO, BUT HTML5 STATES THAT IT REQUIRES THE PROPERTY TAG, SO THATS WHY THAT'S THERE...-->
 
 			<!--MAIN STYLES-->
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>?ver=3.2.3" />
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>?ver=3.4.1" />
 			<link property="stylesheet" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/print.css?ver=1.0" media="print" />
 			<!--end MAIN STYLES-->
 

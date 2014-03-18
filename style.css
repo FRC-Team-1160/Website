@@ -86,7 +86,7 @@ blockquote {
 }
 img {
 	max-width:100%;
-	max-height:auto;
+	height:auto;
 }
 td {
 	text-align:center;
@@ -311,7 +311,7 @@ img.aligncenter {
 .wrapper #nav li {
 	text-align:left;
 	width:auto;
-	padding:0 0.5em;
+	padding:0 0.25em;
 	display:inline-block;
 	margin:0;
 	border-radius:6px 6px 0 0;
@@ -642,7 +642,6 @@ img.aligncenter {
 }
 .post .thumbnail, .press .thumbnail {
 	width:100%;
-	background:#FFF;
 	overflow:hidden;
 	border:none;
 	position:relative;
@@ -1327,6 +1326,38 @@ table.meetings tr:nth-of-type(odd) {
 	to {
 		opacity:1;
 	}
+}
+
+/*ATTACHMENTS*/
+#close {
+	position:absolute;
+	top:40px; right:40px;
+	width:50px;
+	height:50px;
+	font-size:50px;
+	padding:0;
+	margin:0;
+	color:#444;
+}
+#close a {
+	color:#444;
+}
+.attachments {
+	background:#222;
+	min-height:100%;
+	height:auto;
+}
+#attachments {
+	width:70%;
+	margin:auto;
+}
+.image {
+	float:left;
+	height:auto;
+	margin-top:100px;
+}
+.download-links {
+	width:100%;
 }
 		/*MEDIA QUERIES*/
 
