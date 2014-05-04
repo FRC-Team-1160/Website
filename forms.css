@@ -380,8 +380,8 @@ select {
 	-webkit-transition: none;
 	-moz-transition: none;
 	transition: none;
-	color:#FFF;
-	background-color:#0067C6;
+	color:#0067C6;
+	border:2px solid;
 }
 .tags a {
 	font-size:0.7em;
@@ -392,15 +392,6 @@ select {
 
 select {
 	margin:15px 0;
-}
-.tags a:hover,
-.pure-button-hover,
-.pure-button:hover,
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-select:hover {
-	background-color:#0074e0;
 }
 .tags a:hover {
 	box-shadow: 0 5px #004d94;

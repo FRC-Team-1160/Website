@@ -1,4 +1,4 @@
-<?php if (!is_page_template('home-page.php')){ ?>
+<?php if (!is_page_template('home-page.php')): ?>
 
 <div class="post">
 
@@ -320,7 +320,7 @@
 						</div>
 					<? } ?>
 				</div>
-<?php } else { ?>
+<?php else: ?>
 		<div class="clear"></div>
 			<div class="screen gallery autoplay items-4">
 			<div id="item-1" class="control-operator"></div>
@@ -374,10 +374,11 @@
 						<h1>Team 1160 is a FIRST<sup>&reg;</sup> Team</h1>
 						<h3>What is FIRST<sup>&reg;</sup> and what do they do?</h3>
 					<p>
-						<span class="feature-icon team1160-first" style="font-size:10em; float:left; padding:0 15px 0 0;" title="FIRST Logo"></span>Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow"><strong>Dean Kamen</strong></a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow"><strong><em>FIRST</em></strong></a><em><sup> ®</sup></em><em> </em>(For Inspiration and Recognition of Science and Technology) in 1989 to inspire appreciation of science and technology in young people.
+						<img style="width:194px; padding-right:1rem; float:left" src="http://ti-static.titaniumrobotics.com/logos/FIRST/FIRST.svg"><!--
+						-->Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow"><strong>Dean Kamen</strong></a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow"><strong><em>FIRST</em></strong></a><em><sup> ®</sup></em><em> </em>(For Inspiration and Recognition of Science and Technology) in 1989 to inspire appreciation of science and technology in young people.
 					</p>
 					<p>
-						The way of life FIRST promotes, Gracious Professionalism<sup>™</sup>, is a way of working that encourages high-quality work, emphasizes the value of others, and respects individuals and the community. To learn more about <em>FIRST<sup>&reg;</sup></em>, visit <strong><a target="_blank" href="http://www.usfirst.org/" rel="nofollow">www.usfirst.org </a></strong>
+						The way of life FIRST promotes, Gracious Professionalism<sup>™</sup>, is a way of working that encourages high-quality work, emphasizes the value of others, and respects individuals and the community. To learn more about <em>FIRST<sup>&reg;</sup></em>, visit <strong><a target="_blank" href="http://www.usfirst.org/" rel="nofollow">www.usfirst.org </a></strong>.
 					</p>
 					<p>
 						<a class="button" href="/about-first">Read the Full Article</a>
@@ -427,7 +428,7 @@
 			<div class="entry">
 				<h1>Follow Us</h1>
 				<ul>
-					<li class="follow">
+					<li class="follow blue">
 						<a href="http://www.facebook.com/team1160" target="_blank">
 							<span class="team1160-social-facebook-circular"></span>
 						</a>
@@ -457,8 +458,4 @@
 			<div class="clear"></div>
 		</div>
 			<div class="clear"></div>
-
-<?php } elseif (is_page_template('attachment.php')) {
-
-}
- ?> 
+ <?php endif ?>

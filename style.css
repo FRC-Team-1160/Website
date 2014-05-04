@@ -1,11 +1,11 @@
 /*
-Theme Name: 1160
+Theme Name: Beryllium
 Theme URI: http://www.TitaniumRobotics.com
 Description: A theme customized for FIRST Team 1160, Titanium Robotics.
 Sleeker, more unique, modern look; newer, more content-specific coding; HTML5 Valid (most of the time).
 Author: Nathan Wong
 Author URI: www.itsallwong.com
-Version: 3.1
+Version: 4.0
 .
 .
 */
@@ -291,7 +291,7 @@ img.aligncenter {
 }
 #nav ul.sub-menu {
 	width:100%;
-	background:#E6E6E6;
+	background:#E2E2E2;
 	position:absolute;
 	left:-999em;
 	z-index:200;
@@ -389,7 +389,7 @@ img.aligncenter {
 	-ms-transition:border-bottom 300ms;
 }
 #nav li:hover {
-	background:#E6E6E6;
+	background:#E2E2E2;
 }
 #nav li:hover a {
 	color:#222;
@@ -410,10 +410,7 @@ img.aligncenter {
 }
 #icon-nav {
 	float:left;
-	width:100%;
-	padding:0.25em 0;
-	background:#0067c6;
-	border-radius:0 0 1em 1em;
+	width:100%;	background:#0067c6;
 }
 .logo {
 	color:#FFF;
@@ -427,6 +424,9 @@ img.aligncenter {
 	display:inline-block;
 	vertical-align:middle;
 }
+.logo img {
+	float:left;
+}
 .logo span {
 	height:100%;
 	display:inline-block;
@@ -434,39 +434,13 @@ img.aligncenter {
 	line-height:94px;
 }
 .menu .logo a {
-	padding:0 0.25em;
+	padding:0 0.25em 0 0;
 	color:#FFF;
 }
 .menu a {
-	height:94px;
 	color:#fff;
 	display:inline-block;
 	vertical-align: middle;
-}
-.menu .menu-right .icon {
-	margin:0;
-	float:left;
-	display:inline-block;
-	vertical-align:middle;
-	height:100%;
-	padding:0;
-}
-.menu .menu-right .icon a {
-	height:auto;
-	padding:0.5em 0;
-	margin:0 0.25em;
-	display:inline-block;
-	vertical-align: middle;
-}
-.menu .menu-right {
-	margin:auto;
-	line-height:2em;
-	margin:0 5px 0 0;
-	position: relative;
-	float:right;
-	display:inline-block;
-	height:100%;
-	max-width:208px;
 }
 .menu {
 	list-style:none;
@@ -476,8 +450,43 @@ img.aligncenter {
 	margin:0 auto;
 	float:left;
 }
+.menu-right {
+	position: absolute;
+	top:60px;
+	left:0;
+	right:0;
+	text-align:center;
+	z-index:99999;
+}
+.menu-right .icon {
+	display:inline;
+	margin:auto;
+}
 #toggle {
-	display:none;
+	padding:20px 0 0;
+	-o-transition:		-o-transform 400ms ease,
+						padding 1s ease;
+	-moz-transition:	-moz-transform 400ms ease,
+						padding 1s ease;
+	-webkit-transition:	-webkit-transform 400ms ease,
+						padding 1s ease;
+	transition:			transform 400ms ease,
+						padding 1s ease;
+}
+a#toggle.active {
+	padding:0;
+	-o-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	transform:rotate(180deg);
+	-o-transition:		-o-transform 400ms ease,
+						padding 1s ease;
+	-moz-transition:	-moz-transform 400ms ease,
+						padding 1s ease;
+	-webkit-transition:	-webkit-transform 400ms ease,
+						padding 1s ease;
+	transition:			transform 400ms ease,
+						padding 1s ease;
 }
 
 /* AVATAR */
@@ -506,11 +515,26 @@ img.aligncenter {
 	margin:0px auto 0px auto;
 	padding:0px;
 	list-style-type:none;
-	height:100%;
 	text-align: right;
-    position:relative;
 	float:right;
 	z-index:10;
+}
+#subpages ul.sublinks {
+	position:relative;
+}
+.sublinks li ul.children {
+	display:none;
+}
+.sublinks li:hover ul.children {
+	display:inherit;
+}
+#subpages .children {
+	position:absolute;
+	width:100%;
+	max-width:none;
+	background:#E2E2E2;
+	left:0;
+	right:0;
 }
 #subpages .links {
 	display:table-cell;
@@ -555,7 +579,6 @@ img.aligncenter {
 	margin:0;
 }
 #subpages li {
-	position:relative;
 	padding:0;
 	line-height:1.5;
 	text-align: center;
@@ -572,7 +595,7 @@ img.aligncenter {
 	-moz-transition:border 300ms;
 	transition:border 300ms;
 }
-#subpages li a:hover {
+#subpages li:hover a {
 	color:#222;
 }
 #subpages li.current-menu-item a,
@@ -584,6 +607,7 @@ img.aligncenter {
 	display:table;
 	margin:auto;
 	width:100%;
+	padding:1rem 0;
 }
 .limit {
 	width:100%;
@@ -1154,10 +1178,16 @@ a:focus {
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 }
-#footer .red a, .red, .red a {color:#f9343e;}
-#footer .twitterblue a, .twitterblue, .twitterblue a {color:#33ccff;}
-#footer .black a, .black, .black a {color:#222;}
-#footer .blue a, .blue, .blue a {color:#0067c6;}
+#footer .red a,	.red, .red a,
+#footer .twitterblue a, .twitterblue, .twitterblue a,
+#footer .black a, .black, .black a,
+#footer .blue a, .blue, .blue a {
+	color:#E2E2E2;
+}
+#footer .red a:hover, .red a:hover {color:#f9343e;}
+#footer .twitterblue a:hover, .twitterblue a:hover {color:#33ccff;}
+#footer .black a:hover, .black a:hover {color:#222;}
+#footer .blue a:hover, .blue a:hover {color:#0067c6;}
 #footer li.follow {
 	display:inline-block;
 	font-size:24pt;
@@ -1568,9 +1598,6 @@ table.meetings tr:nth-of-type(odd) {
  
 			/* MENUS IN MOBILE AND TABLET */
 			@media screen and (max-width: 720px) and (max-height:500px), (max-width:720px), (max-height:500px) {
-				#toggle {
-					display:inline-block;
-				}
 				#login {
 					padding:0 1em;
 					box-sizing:border-box;
@@ -1581,11 +1608,14 @@ table.meetings tr:nth-of-type(odd) {
 					height:auto;
 				}
 				#login a {
-					padding:0.5em;
+					padding:1em;
 					height:auto;
 					font-size:1em;
 					font-size:1rem;
 					display:inline-block;
+				}
+				.menu-right {
+					top:110px;
 				}
 				.wrapper #nav ul li {
 					width:100%;

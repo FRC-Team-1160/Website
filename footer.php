@@ -17,7 +17,7 @@
 							<span class="team1160-heart-outline"></span>
 						</a>
 					</li>
-					<li class="follow">
+					<li class="follow blue">
 						<a href="http://www.facebook.com/team1160" target="_blank">
 							<span class="team1160-social-facebook-circular"></span>
 						</a>
@@ -105,7 +105,7 @@
 				</script>
 			<?php } ?>
 		<!-- NAVIGATION -->
-			<script src="<?php bloginfo('template_directory');?>/js/responsive-nav.min.js"	type="text/javascript"></script>
+			<script src="<?php bloginfo('template_directory');?>/js/responsive-nav.min.js?ver=2"	type="text/javascript"></script>
 			
 		<!-- SMOOTH SCROLL -->
 			<script src="<?php bloginfo('template_directory');?>/js/smoothscroll.js"		type="text/javascript"></script>
@@ -125,7 +125,7 @@
 <!--GOOGLE SUGGESTED THAT WE LOAD ALL UNIMPORTANT SCRIPTS HERE, SO HERE YA GO, BUT HTML5 STATES THAT IT REQUIRES THE PROPERTY TAG, SO THATS WHY THAT'S THERE...-->
 
 			<!--MAIN STYLES-->
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>?ver=3.4.1" />
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>?ver=3.6.3.1" />
 			<link property="stylesheet" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/print.css?ver=1.0" media="print" />
 			<!--end MAIN STYLES-->
 
@@ -135,29 +135,23 @@
 
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />
 			
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css?ver=2.1" />
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css?ver=3.1" />
 			
 			<?php if(is_front_page()) { ?>
-				<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css?ver=2.1.1" />
+				<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css?ver=2.2" />
 			<?php } ?>
 
 			<!-- JUST SOME RANDOM CODE THAT HELPS THE SITE LOAD -->
-					<script src="<?php bloginfo('template_directory');?>/js/_/blue-footed-booby.js"		type="text/javascript"></script>
+					<script src="<?php bloginfo('template_directory');?>/js/_/blue-footed-booby.js?ver=3.1"		type="text/javascript"></script>
 			
-					<!-- For the button version -->
-					<script type="text/javascript">
-						$(window).load(function() {
-							$('.button').booby();
-						});
-					</script>
-
-					<script type="text/javascript">
-						$(window).load(function() {
-							$('.button').booby({
-								'enterOn' : 'blue-foot'
-							});
-						});
-					</script>
+			<!-- Kona -->
+			<script type="text/javascript">
+				$(window).load(function() {
+					$('body').booby({
+						'enterOn' : 'blue-foot'
+					});
+				});
+			</script>
 
 </body>
 </html>

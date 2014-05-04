@@ -22,7 +22,7 @@
 		<!--CSS-->
 		
 		<!-- MAIN STYLES WERE MOVED TO THE FOOTER SO THEY WOULD BE QUICKER -->
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css?ver=2">
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/schedules.css" />
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/assets/typography.css" />
 			
@@ -333,7 +333,7 @@
 					<div class="menu">
 						<div class="logo">
 							<a href="/" title="Titanium Robotics, FRC Team 1160">
-								<img class="screen" src="<?php bloginfo('template_directory'); ?>/assets/titanium-robotics-logo-white.svg" style="margin-top:10px; height:74px" height="74" alt="logo-bird">
+								<img class="screen" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" style="height:94px" alt="logo-bird">
 								<img class="print" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" style="height:2.5em" alt="logo-text" />
 							</a>
 						</div>
@@ -341,8 +341,7 @@
 						<div class="menu-right screen">
 							<div class="icon">
 								<a href="#" id="toggle" title="Open Menu" >
-									<span class="team1160-th-menu">
-									</span>
+									<img style="height:24px;" src="http://ti-static.titaniumrobotics.com/site/theme-Ti-22/assets/ui/ui-menu.svg?ver=3.2.1">
 								</a>
 							</div>
 						</div>
@@ -395,7 +394,7 @@
 					if ($children) { 
 						$parent_title = get_the_title($post->post_parent);?>
 				<div class="links <?php if(!has_post_thumbnail( $post_id )) {} else{?>withthumbnail<?php } ?>">
-					<ul>
+					<ul class="sublinks">
 						<li<?php 
 							if (is_page($post->post_parent))
 							{ 

@@ -29,3 +29,13 @@ js/_/raptorize.js
 index.html
 
 .htaccess copy2
+
+wp-config.php
+
+ti-static/_/*
+
+UI-ORIGINALS/*
+
+ti-static/*
+
+docs/*

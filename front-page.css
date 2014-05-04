@@ -879,10 +879,9 @@ figure h1 {
 .gallery .button {
 	position:absolute;
 	bottom:1em;
-	left:1em;
-	right:1em;
+	background:rgba(255, 255, 255, 0.75);
 	text-align: center;
-	margin:0;
+	margin:0 auto;
 }
 .rightside .entry span {
 	background: rgba(255, 255, 255, 0.75);

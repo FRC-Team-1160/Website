@@ -1,5 +1,45 @@
 <?php
+/* MESSAGE */
+/**
+ * Generic function to show a message to the user using WP's 
+ * standard CSS classes to make use of the already-defined
+ * message colour scheme.
+ *
+ * @param $message The message you want to tell the user.
+ * @param $errormsg If true, the message is an error, so use 
+ * the red message style. If false, the message is a status 
+  * message, so use the yellow information message style.
+ */
+function showMessage($message, $errormsg = false)
+{
+	if ($errormsg) {
+		echo '<div id="message" class="error">';
+	}
+	else {
+		echo '<div id="message" class="updated fade">';
+	}
 
+	echo "<p><strong>$message</strong></p></div>";
+}    
+
+/**
+ * Just show our message (with possible checking if we only want
+ * to show message to certain users.
+ */
+function showAdminMessages()
+{
+    // Shows as an error message. You could add a link to the right page if you wanted.
+    showMessage("Hey there, you! You may notice that uploading images is weird. Yeah, well I made a small change to the way images are served and now it messed up the upload. I'm trying to figure it out, so just be patient! If you need to upload anything, I can do it manually via FTP, so just email me and we can figure something out! Thanks! <br />— Nathan ", true);
+}
+
+/** 
+  * Call showAdminMessages() when showing other admin 
+  * messages. The message only gets shown in the admin
+  * area, but not on the frontend of your WordPress site. 
+  */
+add_action('admin_notices', 'showAdminMessages');     
+
+/*************/
 add_action( 'after_setup_theme', 'titanium_theme_setup' );
 
 function titanium_theme_setup() {
