@@ -39,3 +39,5 @@ UI-ORIGINALS/*
 ti-static/*
 
 docs/*
+
+.gitignore
