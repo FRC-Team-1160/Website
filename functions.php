@@ -9,7 +9,7 @@
  * @param $errormsg If true, the message is an error, so use 
  * the red message style. If false, the message is a status 
   * message, so use the yellow information message style.
- */
+ *//*
 function showMessage($message, $errormsg = false)
 {
 	if ($errormsg) {
@@ -25,7 +25,7 @@ function showMessage($message, $errormsg = false)
 /**
  * Just show our message (with possible checking if we only want
  * to show message to certain users.
- */
+ *//*
 function showAdminMessages()
 {
     // Shows as an error message. You could add a link to the right page if you wanted.
@@ -36,7 +36,7 @@ function showAdminMessages()
   * Call showAdminMessages() when showing other admin 
   * messages. The message only gets shown in the admin
   * area, but not on the frontend of your WordPress site. 
-  */
+  *//*
 add_action('admin_notices', 'showAdminMessages');     
 
 /*************/

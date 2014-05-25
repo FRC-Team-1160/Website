@@ -106,7 +106,7 @@
 
 							<?php } else { ?>
 
-								<article class="entry">
+								<article class="entry<?php if (is_page_template('page-contact-us.php')) { ?>-1-2<?php } ?>">
 
 							<?php } ?>
 
@@ -159,16 +159,29 @@
 							<?php endif ?>
 <?php } ?>
 
-	<?php // CALENDAR ?>
+	<?php // EDIT LINK ?>
 
-								
+								<?php if (!is_home() && current_user_can('edit_posts')) {?>
+								<div class="separate"></div>
+								<?php
+									edit_post_link('edit');
+
+								}?>
+
+								<div class="clear"></div>
+
+								<?php if (is_page_template('two-column.php')) { ?>
+									
+									</div><!--only in two-columns and contact-->
+
+								<?php } ?>
+
+							</article>
 
 	<?php // CONTACT PAGE SPECIFIC ?>
 
 								<?php if (is_page_template('page-contact-us.php')) { ?>
-
-								<div class="separate"></div>
-
+								<article class="entry-1-2">
 										<?php if(isset($emailSent) && $emailSent == true) { ?>
 											<div class="thanks">
 												<p>Thanks, your email was sent successfully.</p>
@@ -216,28 +229,11 @@
 												<input type="hidden" name="submitted" id="submitted" value="true" />
 									
 									</form>
+								</article>
 								<?php } ?>
 
 								<?php } else {} ?>
 
-	<?php // EDIT LINK ?>
-
-								<?php if (!is_home() && current_user_can('edit_posts')) {?>
-								<div class="separate"></div>
-								<?php
-									edit_post_link('edit');
-
-								}?>
-
-								<div class="clear"></div>
-
-								<?php if (is_page_template('two-column.php')) { ?>
-									
-									</div>
-
-								<?php } ?>
-
-							</article>
 
 							<div class="clear"></div>
 
