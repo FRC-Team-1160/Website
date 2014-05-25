@@ -125,7 +125,7 @@
 <!--GOOGLE SUGGESTED THAT WE LOAD ALL UNIMPORTANT SCRIPTS HERE, SO HERE YA GO, BUT HTML5 STATES THAT IT REQUIRES THE PROPERTY TAG, SO THATS WHY THAT'S THERE...-->
 
 			<!--MAIN STYLES-->
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>?ver=3.6.3.1" />
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>?ver=3.6.9.8" />
 			<link property="stylesheet" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/print.css?ver=1.0" media="print" />
 			<!--end MAIN STYLES-->
 
@@ -135,10 +135,10 @@
 
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />
 			
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css?ver=3.1" />
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css?ver=3.2.2" />
 			
 			<?php if(is_front_page()) { ?>
-				<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css?ver=2.2" />
+				<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css?ver=2.9" />
 			<?php } ?>
 
 			<!-- JUST SOME RANDOM CODE THAT HELPS THE SITE LOAD -->

@@ -4,7 +4,7 @@ Template Name: With Bookmarks Bar
 */
 ?>
 <?php get_header(); ?>
-<div id="contents" class="sidebar">
+<div class="contents" class="sidebar">
 
 				<div class="side">
 					

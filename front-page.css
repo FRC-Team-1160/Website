@@ -797,7 +797,7 @@
 .gallery .item {
 	height: 0;
 	width:100%;
-	padding-bottom:45%;
+	padding-bottom:30%;
 	overflow: hidden;
 	text-align: center;
 	background: #222;
@@ -826,35 +826,43 @@
 }
 
 figure .rightside {
-	width:40%;
 	position:absolute;
 	left:2em;
 	top:4em;
 	bottom:4.5em;
-	font-size:12pt;
 	text-align:left;
 	color:#222;
 	overflow: hidden;
 }
 figure .entry {
-	padding:2em;
+	padding:1.5em;
 	overflow: hidden;
+	max-width:100%;
 }
 
 figure h1 {
 	font-size:18pt;
 }
+.entry {
+	max-width:31.5em;
+}
+
+.gallery a {
+	font-weight:normal;
+}
 
 /* HOME CONTAINERS */
-.homecontainer {
-	width:100%;
-	float:left;
-	margin:auto;
-}
-.homecontainer .entry {
-	padding:6em 0;
+div.homecontainer {
 	width:80%;
+	max-width:64em;
 	margin:auto;
+	border-width:0 0 2px;
+}
+div.homecontainer:last-child {
+	border-width:0;
+}
+.bold::first-line {
+	font-weight:bold;
 }
 .sponsored {
 	width:66.66666%;
@@ -870,10 +878,10 @@ figure h1 {
 	text-align:center;
 }
 .social ul li{
-	font-size:24pt;
+	font-size:200%;
 	display:inline-block;
 	text-align:center;
-	padding:0;
+	padding:0.5em 0.25em;
 	margin:0;
 }
 .gallery .button {
@@ -897,6 +905,9 @@ figure h1 {
 }
 
 			@media screen and (max-width: 720px) {
+				.homecontainer [class*='entry-']:first-of-type {
+					padding-bottom:1em;
+				}
 				.sponsored, .social {
 					width:96%;
 					border-radius:6px;
@@ -906,24 +917,18 @@ figure h1 {
 					margin-bottom:0.5em;	
 				}
 				.gallery .item {
-					height:250px;
+					padding-bottom:40%;
 				}
 				figure .rightside {
-					left: 2em;
-					right: 2em;
+					left: 1rem;
+					right: 1rem;
 					width: auto;
-					top: 4em;
+					top: 2rem;
+					bottom:0;
 				}
 				figure .entry {
-					padding:2em;
+					padding:1em;
 					overflow: hidden;
-				}
-				.feature-icon {
-					display:block;
-					float:none !important;
-					margin:0!important;
-					width:100%;
-					text-align:center;
 				}
 				.rightside p {
 						display: none;
@@ -933,5 +938,6 @@ figure h1 {
 				.rightside h3 {
 						position:absolute;
 						bottom:3em;
+						font-size:1rem;
 				}
 			}

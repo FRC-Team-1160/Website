@@ -178,9 +178,9 @@
 												<p class="error">Sorry, an error occured: please check the fields with error messages.<p>
 											<?php } ?>
 
-										<h1>
+										<h2>
 											Contact Titanium Robotics
-										</h1>
+										</h2>
 										
 										<form action="<?php the_permalink(); ?>" class="pure-form" id="contactForm" method="post">
 											<fieldset class="pure-group contactform">
@@ -190,17 +190,17 @@
 														<span class="error"><?=$nameError;?></span>
 													<?php } ?>
 
-												<input type="text" required="required" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" placeholder="Name" class="pure-input-1-2" />
+												<input type="text" required="required" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" placeholder="Name" class="pure-input-1" />
 												
 											<!-- EMAIL -->
 													<?php if($emailError != '') { ?>
 														<span class="error"><?=$emailError;?></span>
 													<?php } ?>
 
-												<input type="email" required="required" name="email" id="email" placeholder="Email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="pure-input-1-2" />
+												<input type="email" required="required" name="email" id="email" placeholder="Email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="pure-input-1" />
 												
 											<!-- EMAIL -->
-												<input type="text" required name="subject" id="email" placeholder="Subject" class="pure-input-1-2" />
+												<input type="text" required name="subject" id="email" placeholder="Subject" class="pure-input-1" />
 
 											</fieldset>
 												
@@ -209,7 +209,7 @@
 														<span class="error"><?=$commentError;?></span>
 													<?php } ?>
 
-												<textarea name="comments" required="required" id="commentsText" rows="8" placeholder="Message" class="pure-input-1-2"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
+												<textarea name="comments" required="required" id="commentsText" rows="8" placeholder="Message" class="pure-input-1"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
 											<div class="clear"></div>		
 												<input type="submit" class="pure-button pure-input"></button>
 										
@@ -348,11 +348,8 @@
 					<div class="rightside">
 						<article class="entry">
 							<h3>
-									<span><?php the_title(); ?></span>
+									<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><span><?php the_title(); ?></span></a>
 							</h3>
-							<?php $excerpt = get_the_excerpt( ) ?>
-							<p><span><?php echo $excerpt ?></span></p>
-							<a class="button" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">Read the Article</a>
 						</article>
 					</div>
 					<div class="clear"></div>
@@ -368,38 +365,30 @@
 
 		<div class="clear"></div>
 
-		<div id="FIRST" class="first homecontainer">
-			<div class="entry leftside">
+		<div class="homecontainer">
+			<div class="entry-1-2 leftside">
 				<div>
-						<h1>Team 1160 is a FIRST<sup>&reg;</sup> Team</h1>
-						<h3>What is FIRST<sup>&reg;</sup> and what do they do?</h3>
-					<p>
-						<img style="width:194px; padding-right:1rem; float:left" src="http://ti-static.titaniumrobotics.com/logos/FIRST/FIRST.svg"><!--
-						-->Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow"><strong>Dean Kamen</strong></a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow"><strong><em>FIRST</em></strong></a><em><sup> ®</sup></em><em> </em>(For Inspiration and Recognition of Science and Technology) in 1989 to inspire appreciation of science and technology in young people.
+						<img style="height:9em; display:block; margin:0 auto 16px;" src="http://ti-static.titaniumrobotics.com/logos/FIRST/FIRST.svg">
+						<h1>Team 1160 is a FIRST&reg; FRC Team</h1>
+						<h3>What is FIRST&reg; and what do they do?</h3>
+					<p><!--
+						--><strong>FIRST stands for For Inspiration and Recognition of Science and Technology</strong>. Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow"><strong>Dean Kamen</strong></a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow"><strong>FIRST</strong></a>in 1989 to inspire appreciation of science and technology in young people. <em>FIRST</em> inspires people young and old to learn through robotics.
 					</p>
-					<p>
-						The way of life FIRST promotes, Gracious Professionalism<sup>™</sup>, is a way of working that encourages high-quality work, emphasizes the value of others, and respects individuals and the community. To learn more about <em>FIRST<sup>&reg;</sup></em>, visit <strong><a target="_blank" href="http://www.usfirst.org/" rel="nofollow">www.usfirst.org </a></strong>.
-					</p>
+					<p><strong>FRC</strong>, the league that Titanium Robotics competes in, is the High School level robotics league and stands for <strong>FIRST Robotics Competition</strong>
 					<p>
 						<a class="button" href="/about-first">Read the Full Article</a>
 					</p>
 				</div>
 			</div>
-			<div class="clear"></div>
-		</div>
-
-		<div class="clear"></div>
-
-		<div id="location" class="location homecontainer">
-			<div class="entry leftside">
-				<span class="red feature-icon team1160-location-outline" style="font-size:9em; float:left; padding:0 15px 0 0;" title="Location Pin"></span>
+			<div class="entry-1-2 leftside">
+				<span class="red feature-icon team1160-location-outline" style="font-size:9em; height:9rem; display:block; margin:0 auto 16px; width:1em;" title="Location Pin"></span>
 				<div>
 					<h1>
 						Team 1160 is located in San Marino, CA.
 					</h1>
-					<h4>
-						We have been fortunate enough to be able to convert a small classroom into a workshop.  We also use the College &amp; Career Center as a computer lab.
-					</h4>
+					<p>
+						We have converted a classroom at our school into a full workshop and use our College and Career Center as a computer lab. All of our work is done in these two rooms during the season.
+					</p>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -408,10 +397,28 @@
 		
 		<div class="clear"></div>
 
-		<div id="sponsors" class="sponsored homecontainer">
-			<div class="entry sponsors">
-				<h1>Titanium Sponsors</h1>
-				<table style="width:100%;">
+		<div class="homecontainer">
+			<div class="entry-1-2">
+				<img src="http://ti-static.titaniumrobotics.com/uploads/2014/02/DSC_0139.jpg" />
+			</div>
+			<div class="entry-1-2 bold">
+				<p>
+					Titanium Robotics is an FRC team with roughly 50 members, mostly from San Marino High School in San Marino, CA, although some members are from surrounding schools and areas such as South Pasadena and Arcadia.<br />
+				</p>
+				<p>
+					Team 1160 provides a place in the normal school environment for students to learn how to apply their skills in Science, Technology, Engineering, and Mathematics. We're a group of students and mentors whose main goals are to provide the next generation of STEM leaders.
+				</p>
+				<a href="/about-us" class="button">Read More</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
+		
+		<div class="homecontainer">
+			<div class="entry-3-4 sponsored leftside">
+				<h2>Titanium Sponsors</h2>
+				<table style="width:100%;" class="sponsors">
 					<tbody>
 						<tr>
 							<td>
@@ -422,11 +429,8 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
-
-		<div id="social" class="social homecontainer">
-			<div class="entry">
-				<h1>Follow Us</h1>
+			<div class="entry-1-4 social leftside">
+				<h2>Follow Us</h2>
 				<ul>
 					<li class="follow blue">
 						<a href="http://www.facebook.com/team1160" target="_blank">
@@ -457,5 +461,22 @@
 			</div>
 			<div class="clear"></div>
 		</div>
+
+		<div class="clear"></div>
+		
+		<div id="why-the-bird" class="homecontainer">
+			<div class="entry-1-4">
+				<img src="http://ti-static.titaniumrobotics.com/logos/logo.svg" />
+			</div>
+			<div class="entry-3-4">
+				<h2>Why the bird?</h2>
+				<p>
+					Many years ago, Team 1160 was renamed "Firebird Robotics" (we had originally been named Titanium) which is where the firebird logo comes from. The colors were also changed from blue and white to red and gold.
+				</p>
+				<p>
+					In 2012, we felt that we needed to reconnect with our school, whose colors are blue and white and mascot is the Titan, making a drastic change by going into the season as Titanium Robotics. We maintained the logo so that teams that have had long-standing relationships with our team would be able to recognize our team as the same.
+				</p>
+			</div>
 			<div class="clear"></div>
+		</div>
  <?php endif ?>

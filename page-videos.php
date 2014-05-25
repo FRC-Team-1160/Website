@@ -1,6 +1,5 @@
 <?php get_header();?>
-		<div id="contents">
-			<div class="press">
+		<div class="contents">
 			<?php 
 			  $temp = $wp_query; 
 			  $wp_query = null; 
@@ -9,11 +8,7 @@
 
 			  while ($wp_query->have_posts()) : $wp_query->the_post(); 
 			?>
-
-					<div class="post columned two">
-						<div class="post-content">
-						<div class="entry">
-							<div class="everything">
+						<div class="entry-1-3">
 							<a href="<?php the_permalink() ?>" rel="link" title="Link to <?php the_title(); ?>">
 								<h3>
 										<?php the_title(); ?>
@@ -21,11 +16,7 @@
 							</a>
 								<?php the_excerpt();?>
 								<div class="clear"></div>
-							</div>
 						</div>
-
-								<div class="clear"></div>
-					</div></div>
 				<?php endwhile; ?>
 
 					<div class="clear"></div>
@@ -61,8 +52,5 @@
 					  $wp_query = null; 
 					  $wp_query = $temp;  // Reset
 					?>
-				</div>
-
-			</div>
 
 <?php get_footer(); ?>

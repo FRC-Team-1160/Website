@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<div id="contents">
+	<div class="contents">
 		<div class="blog">
 			<div class="blog-content">
 					<?php require ('loop.php') ?>

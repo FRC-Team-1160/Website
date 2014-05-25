@@ -4,7 +4,7 @@ Template Name: Press & Media
 */
 ?>
 <?php get_header();?>
-		<div id="contents">
+		<div class="contents">
 			<div class="press">
 
 				<div class="side">

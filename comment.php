@@ -4,7 +4,7 @@ Template Name: With Comments
 */
 ?>
 <?php get_header(); ?>
-<div id="contents">
+<div class="contents">
 	<?php if (have_posts()) : ?>
 		<?php while (have_posts()) : the_post(); ?>
 			<div class="post"><div class="post-content"><div class="entry">

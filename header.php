@@ -24,8 +24,14 @@
 		<!-- MAIN STYLES WERE MOVED TO THE FOOTER SO THEY WOULD BE QUICKER -->
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css?ver=2">
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/schedules.css" />
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/assets/typography.css" />
-			
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/assets/typography.css?ver=2.2.2" />
+			<style>
+
+				.print {
+					display:none;
+					visibility:hidden;
+				}
+			</style>
 			<?php
 				$custom_fields = get_post_custom();
 				$construction = $custom_fields['construction'];
@@ -311,8 +317,7 @@
 		<div class="<?php if (is_front_page()) : ?>frontpage wrapper<?php else:?>normal wrapper<?php endif; ?>" id="page">
 
 			<!--START - NAVIGATION-->
-
-						<div id="login" class="screen">
+				<div id="login" class="screen">
 							<?php wp_loginout( get_permalink() ); ?>
 							<?php if(is_user_logged_in()) {
 								echo "&nbsp;|&nbsp;";
@@ -325,7 +330,7 @@
 
 							}
 							?>
-						</div>
+				</div>
 		
 			<header id="menuwrap" class="custom-background">
 				
@@ -333,7 +338,7 @@
 					<div class="menu">
 						<div class="logo">
 							<a href="/" title="Titanium Robotics, FRC Team 1160">
-								<img class="screen" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" style="height:94px" alt="logo-bird">
+								<img class="logo-screen screen" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" alt="logo-bird">
 								<img class="print" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" style="height:2.5em" alt="logo-text" />
 							</a>
 						</div>

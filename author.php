@@ -8,7 +8,7 @@ else :
 $curauth = get_userdata(intval($author));
 endif;
 ?>
-<div id="contents">
+<div class="contents">
 <!-- START - ABOUT AUTHOR -->
     <div class="post"><div class="post-content"><div class="entry">
 <fieldset>
@@ -142,7 +142,7 @@ Other Users
 <!-- END - OTHERS -->
 <!-- START - ELSE -->
 <?php } else{ ?>
-<div id="contents">
+<div class="contents">
     <div class="post"><div class="post-content"><div class="entry">
     Please log in to view this page.
     </div>

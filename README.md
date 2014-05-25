@@ -1,8 +1,21 @@
-#TEAM1160 v3.1
+#Team1160 v4.0 "BERYLLIUM"
 
 ##Theme by Titanium Robotics and Nathan Wong
 
-This is the third version of the Titanium Robotics Theme for titaniumrobotics.com.  You are allowed to download and use this theme on your own blog, but it was designed specifically for the titaniumrobotics.com web structure and is therefore, personalized with specific urls and icons.
+This is the fourth version of the Titanium Robotics Theme for titaniumrobotics.com.  You are allowed to download and use this theme on your own blog, but it was designed specifically for the titaniumrobotics.com web structure and is therefore, personalized with specific urls and icons.
+
+#About
+
+In this version of Team 1160's theme, Beryllium, everything from typography to user-interface to load time has been considered and designed to work in better harmony. The design is more robust, the typography is beautiful, and every aspect of the page has been meticulously thought over and designed to be beautiful, modern, and easy to use.
+
+##Typography
+Typography has been enhanced both aesthetics-wise and performance-wise through the use of standard ratios and Google Fonts. "Source Sans Pro" has been selected for the font because it is the standard font used in all of Titanium Robotics's marketing materials.
+
+##UI
+The User-Interface has been enhanced so that it follows basic rules of front-end web design. We reduced the number of clicks required to reach a destination, and we've enhanced the visibility of objects and the contrast on some of the more hard to see elements. The mobile version utilizes "responsivenav.js" in order to enhance the menu in a mobile environment. The anchors in mobile apps have been increased in size in order to prevent unintentional tappage.
+
+##Performance & Speed
+Performance and speed have drastically increased in this version. 
 
 #Usage
 ##Logo

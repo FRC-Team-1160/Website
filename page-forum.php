@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="contents">
+<div class="contents">
 	<div class="post">
 	<div class="post-content">
 	<?php if (current_user_can(edit_posts) ) { ?>

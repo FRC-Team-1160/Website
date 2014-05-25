@@ -4,7 +4,7 @@ Template Name: List All Subpages sidebar
 */
 ?>
 <?php get_header();?>
-		<div id="contents">
+		<div class="contents">
 
 				<div class="side">
 					<div class="entry">
