@@ -689,38 +689,16 @@ img.aligncenter {
 	visibility:hidden;
 	height:0;
 }
-.thumbnail h1 {
+.thumbnail span {
 	position: absolute;
-	text-align: center;
+	background:rgba(255, 255, 255, 0.3);
+	padding:0 1rem 0 2.5rem;
+	bottom:2rem;
+	left:0;
+}
+.thumbnail h1 {
 	color: #FFF;
-	text-shadow:0 0 10px #222;
-	font-size:150%;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-align: center;
-	-moz-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-moz-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	opacity:0;  /* make things invisible upon start */
-	animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-	animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-	animation-duration:1s;
-	animation-delay: 3s;
-	-webkit-animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-	-webkit-animation-duration:1s;
-	-webkit-animation-delay: 3s;
+	text-shadow:0 0 10px #444;
 }
 
 /* CLEAR CLASSES */
@@ -1095,7 +1073,8 @@ a {
 	color:#0067c6;
 	font-weight:inherit;
 	text-decoration:none;
-	display:inline;
+	display:inline-block;
+	border-bottom:1px solid;
 	transition:			color 300ms;
 	-webkit-transition:	color 300ms;
 	-moz-transition:	color 300ms;

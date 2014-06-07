@@ -22,9 +22,11 @@
 						<div class="thumbnail">
 							<div class="featured screen" style="background-image: url('<?php echo $thumbnail; ?>')!important;">
 							</div>
-							<h1>
-								<?php the_title(); ?>
-							</h1>
+							<span>
+								<h1>
+									<?php the_title(); ?>
+								</h1>
+							</span>
 						</div>
 
 				<?php }
@@ -339,16 +341,16 @@
 				?>
 
 
-			<figure class="item"
+			<figure class="item thumbnail"
 				style="background-image: url('<?php echo $thumbnail ?>') !important; background-size:cover !important; background-position:center center;">
-					<div class="rightside">
-						<article class="entry">
-							<h3>
-									<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><span><?php the_title(); ?></span></a>
-							</h3>
-						</article>
-					</div>
-					<div class="clear"></div>
+				<span>
+					<h1>
+						<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+							<?php the_title(); ?>
+						</a>
+					</h1>
+				</span>
+			<div class="clear"></div>
 			</figure>
 			<?php endwhile; endif; ?>
 			<div class="controls">
