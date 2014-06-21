@@ -35,13 +35,6 @@ paginate_comments_links( array('prev_text' => '&larr;', 'next_text' => '&rarr;')
  <?php else : // this is displayed if there are no comments so far ?>
  
 	<?php if ( comments_open() ) : ?>
-		<!-- If comments are open, but there are no comments. -->
-	 <?php else : // comments are closed ?>
-		<!-- If comments are closed. -->
-		<p class="nocomments">Comments are closed.</p>
- 
-	<?php endif; ?>
-<?php endif; ?>
 <fieldset><legend><span class="fs1" aria-hidden="true" data-icon="&#xe014;"></span><?php comment_form_title( 'Leave a Reply!', 'Leave a Reply to %s!' ); ?></legend></fieldset>
 <div id="cancel-comment-reply">
     <small><?php cancel_comment_reply_link('CANCEL REPLY') ?></small></div>
@@ -74,6 +67,12 @@ paginate_comments_links( array('prev_text' => '&larr;', 'next_text' => '&rarr;')
 </p>
 <?php do_action('comment_form', $post->ID); ?>
 </form>
+	 <?php else : // comments are closed ?>
+		<!-- If comments are closed. -->
+		<h3>Comments are closed.</h3>
+ 
+	<?php endif; ?>
+<?php endif; ?>
 </div>
 </div>
  

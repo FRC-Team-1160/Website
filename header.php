@@ -17,13 +17,13 @@
 		<!--TITANIUM ROBOTICS LOGO || USES REL=LOGO (RELOGO.ORG) FOR MAINTAINING THE LOGO-->
 			<link rel="logo" 
 				type="image/svg" 
-				href="<?php bloginfo('template_directory'); ?>/assets/logo.svg"/>
+				href="http://ti-static.titaniumrobotics.com/logos/logo.svgz" />
 
 		<!--CSS-->
 		
 		<!-- MAIN STYLES WERE MOVED TO THE FOOTER SO THEY WOULD BE QUICKER -->
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css?ver=2">
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/schedules.css" />
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/schedules.css?ver=2" />
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/assets/typography.css?ver=2.2.2" />
 			<style>
 
@@ -32,6 +32,26 @@
 					visibility:hidden;
 				}
 			</style>
+			<?php if(is_page('forum')) : ?>
+				<style>
+					.topics {
+						list-style-type:none;
+						width:100%;
+						padding:1rem;
+					}
+					.topics ul li {
+						list-style-type:none;
+					}
+					.topics ul li:nth-of-type(odd) {
+						background:#D2D2D2;
+					}
+					.topics ul li a {
+						border:none;
+						width:100%;
+						padding:1rem;
+					}
+				</style>
+			<?php endif; ?>
 			<?php
 				$custom_fields = get_post_custom();
 				$construction = $custom_fields['construction'];
@@ -384,7 +404,7 @@
 							</ul>
 						</div>
 					<?php } ?>
-		<?php if(!is_author() && !is_search() && !is_404() &&!is_home()) : ?>
+		<?php if(!is_author() && !is_search() && !is_404() &&!is_home() && !is_category()) : ?>
 				<?php
 
 					if($post->post_parent)
@@ -411,7 +431,7 @@
 				</div>
 				<?php } ?>
 		<?php endif; ?>
-		<?php if(is_single()) : ?>
+		<?php if(is_single() && 'forum'!==get_post_type()) : ?>
 				<div class="links <?php if(has_post_thumbnail( $post )) { ?> withthumbnail<?php }?>">
 				<ul style="width:100%;">
 					<li style="width:100%; padding:0;">

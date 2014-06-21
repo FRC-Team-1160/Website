@@ -114,6 +114,9 @@ function titanium_theme_setup() {
 
 	// CUSTOM POST TYPE HACK FOR IFTTT
 	add_filter('wp_insert_post_data', 'redirect_xmlrpc_to_custom_post_type', 99, 2);
+	
+	// ADD A CUSTOM TAXONOMY
+	add_action( 'init', 'create_forum_taxonomies', 0 );
 }
 
 function titanium_post_types() {
@@ -146,6 +149,7 @@ function titanium_post_types() {
 			'rewrite' => array( 'slug' => 'press-release', 'with_front' => false ),
 			'taxonomies' => array( 'post_tag', 'category '),
 			'can_export' => true,
+			'menu_icon' => 'dashicons-megaphone',
 		)
 	);
 	register_post_type( 'Mentors', 
@@ -177,6 +181,8 @@ function titanium_post_types() {
 			'rewrite' => array( 'slug' => 'mentor', 'with_front' => false ),
 			'taxonomies' => array( 'post_tag', 'category '),
 			'can_export' => true,
+			'menu_position' => 100,
+			'menu_icon' => 'dashicons-businessman',
 		)
 	);
 	register_post_type( 'videos', 
@@ -208,6 +214,7 @@ function titanium_post_types() {
 			'rewrite' => array( 'slug' => 'video', 'with_front' => false ),
 			'taxonomies' => array( 'post_tag', 'category '),
 			'can_export' => true,
+			'menu_icon' => 'dashicons-video-alt2',
 		)
 	);
 	register_post_type( 'cabinet', 
@@ -239,9 +246,179 @@ function titanium_post_types() {
 			'rewrite' => array( 'slug' => 'team-leadership', 'with_front' => false ),
 			'taxonomies' => array( 'post_tag', 'category '),
 			'can_export' => true,
+			'menu_position' => 100,
+			'menu_icon' => 'dashicons-groups',
+			'capability_type' => 'leader',
+
+		)
+	);
+	register_post_type( 'forum', 
+		array(
+			'labels' => array(
+				'name' => __( 'Forums' ),
+				'singular_name' => __( 'Forum' ),
+				'add_new' => __( 'Add New Forum' ),
+				'add_new_item' => __( 'Add New Forum' ),
+				'edit' => __( 'Edit Forum' ),
+				'edit_item' => __( 'Edit Forum' ),
+				'new_item' => __( 'New Forum' ),
+				'view' => __( 'View Forum' ),
+				'view_item' => __( 'View Forum' ),
+				'search_items' => __( 'Search Forums' ),
+				'not_found' => __( 'No Forums Found' ),
+				'not_found_in_trash' => __( 'No Forums found in Trash' ),
+				'parent' => __( 'Parent Forum' ),
+			),
+			'supports' => array(
+				'title',
+				'author',
+				'excerpt',
+				'editor',
+				'thumbnail',
+				'revisions',
+				'page-attributes',
+				'comments'
+			),
+			'public' => true,
+			'rewrite' => array( 'slug' => 'forum', 'with_front' => false ),
+			'taxonomies' => array( 'post_tag', 'category '),
+			'can_export' => true,
+			'menu_icon' => 'dashicons-text',
+			'hierarchical' => true,
+			'capability_type' => 'forum',
+			'capabilities' => array(
+				'publish_posts' => 'publish_forums',
+				'edit_posts' => 'edit_forums',
+				'edit_others_posts' => 'edit_others_forums',
+				'delete_posts' => 'delete_forums',
+				'delete_others_posts' => 'delete_others_forums',
+				'read_private_posts' => 'read_private_forums',
+				'edit_post' => 'edit_forum',
+				'delete_post' => 'delete_forum',
+				'read_post' => 'read_forum',
+			),
+
 		)
 	);
 }
+function ti_stop_guests( ) {
+    global $post;
+
+    if ( $post->post_type == 'forum' ) {
+        if ( !is_user_logged_in() ) {
+        	auth_redirect();
+        }
+    }
+}
+
+add_action('get_header', 'ti_stop_guests');
+
+add_filter( 'map_meta_cap', 'my_map_meta_cap', 10, 4 );
+
+function my_map_meta_cap( $caps, $cap, $user_id, $args ) {
+
+	/* If editing, deleting, or reading a forum, get the post and post type object. */
+	if ( 'edit_forum' == $cap || 'delete_forum' == $cap || 'read_forum' == $cap ) {
+		$post = get_post( $args[0] );
+		$post_type = get_post_type_object( $post->post_type );
+
+		/* Set an empty array for the caps. */
+		$caps = array();
+	}
+
+	/* If editing a forum, assign the required capability. */
+	if ( 'edit_forum' == $cap ) {
+		if ( $user_id == $post->post_author )
+			$caps[] = $post_type->cap->edit_posts;
+		else
+			$caps[] = $post_type->cap->edit_others_posts;
+	}
+
+	/* If deleting a forum, assign the required capability. */
+	elseif ( 'delete_forum' == $cap ) {
+		if ( $user_id == $post->post_author )
+			$caps[] = $post_type->cap->delete_posts;
+		else
+			$caps[] = $post_type->cap->delete_others_posts;
+	}
+
+	/* If reading a private forum, assign the required capability. */
+	elseif ( 'read_forum' == $cap ) {
+
+		if ( 'private' != $post->post_status )
+			$caps[] = 'read';
+		elseif ( $user_id == $post->post_author )
+			$caps[] = 'read';
+		else
+			$caps[] = $post_type->cap->read_private_posts;
+	}
+
+	/* Return the capabilities required by the user. */
+	return $caps;
+}
+
+// create two taxonomies, genres and writers for the post type "forum"
+function create_forum_taxonomies() {
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'Topics', 'taxonomy general name'),
+		'name_colon'		=> __( 'Topic:' ),
+		'singular_name'     => _x( 'Topic', 'taxonomy singular name'),
+		'search_items'      => __( 'Search Topics' ),
+		'all_items'         => __( 'All Topics' ),
+		'parent_item'       => __( 'Parent Topic Cateogry' ),
+		'parent_item_colon' => __( 'Parent Topic Category:' ),
+		'edit_item'         => __( 'Edit Topic Category' ),
+		'update_item'       => __( 'Update Topic Category' ),
+		'add_new_item'      => __( 'Add New Topic Category' ),
+		'new_item_name'     => __( 'New Category Name' ),
+		'menu_name'         => __( 'Topic Categories' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'topic' ),
+	);
+
+	register_taxonomy( 'topics', array( 'forum' ), $args );
+
+	// Add new taxonomy, NOT hierarchical (like tags)
+	/*$labels = array(
+		'name'                       => _x( 'Writers', 'taxonomy general name' ),
+		'singular_name'              => _x( 'Writer', 'taxonomy singular name' ),
+		'search_items'               => __( 'Search Writers' ),
+		'popular_items'              => __( 'Popular Writers' ),
+		'all_items'                  => __( 'All Writers' ),
+		'parent_item'                => null,
+		'parent_item_colon'          => null,
+		'edit_item'                  => __( 'Edit Writer' ),
+		'update_item'                => __( 'Update Writer' ),
+		'add_new_item'               => __( 'Add New Writer' ),
+		'new_item_name'              => __( 'New Writer Name' ),
+		'separate_items_with_commas' => __( 'Separate writers with commas' ),
+		'add_or_remove_items'        => __( 'Add or remove writers' ),
+		'choose_from_most_used'      => __( 'Choose from the most used writers' ),
+		'not_found'                  => __( 'No writers found.' ),
+		'menu_name'                  => __( 'Writers' ),
+	);
+
+	$args = array(
+		'hierarchical'          => false,
+		'labels'                => $labels,
+		'show_ui'               => true,
+		'show_admin_column'     => true,
+		'update_count_callback' => '_update_post_term_count',
+		'query_var'             => true,
+		'rewrite'               => array( 'slug' => 'writer' ),
+	);
+
+	register_taxonomy( 'writer', 'forum', $args );*/
+}
+	register_taxonomy_for_object_type( 'Topics', 'forum' );
 
 function titanium_jquery_enqueue() {
 	 wp_deregister_script('jquery');
@@ -286,8 +463,8 @@ function titanium_register_sidebars() {
 		)
 	);
 	register_sidebars(1, array(
-		'name' => 'Bookmarks Bar',
-		'id' => 'bookmarks',
+		'name' => 'forummarks Bar',
+		'id' => 'forummarks',
 		'before_widget' => '<div class="cont">',
 		'after_widget' => '<div class="clear"></div></div>',
 		'before_title' => '<h3>',
@@ -323,10 +500,14 @@ function custom_login_logo() {
 		text-shadow:none
 	}
 	.login {
-		 background:#E6E6E6!important;
+		 background:url(http://ti-static.titaniumrobotics.com/uploads/2014/02/DSC_0111.jpg)!important;
+		 background-size:cover!important;
+	}
+	.login label {
+		color:#FFF;
 	}
 	h1 a {
-		background-image: url('.get_bloginfo('template_directory').'/assets/logo.svg) !important;
+		background-image: url(http://ti-static.titaniumrobotics.com/logos/logo.svgz) !important;
 		background-size: auto 134px!important;
 		height:150px !important;
 		width:100% !important;
@@ -338,7 +519,7 @@ function custom_login_logo() {
 		-webkit-border-radius:0!important;
 		border-radius:0!important;
 		border:none!important;
-		padding:0 0 46px!important;
+		padding:0 0 10px!important;
 		background:none!important;
 	}
 	.login form .input, .login input[type="text"] {
@@ -358,10 +539,12 @@ function custom_login_logo() {
 		 right:0!important;
 		 top:0 !important;
 		 bottom:0 !important;
-		 height:366px;!important;
+		 height:410px!important;
 		 width:283px;
 		 margin:auto!important;
 		 padding:26px 24px!important;
+		 background: rgba(0, 103, 198, 0.5);
+		 border:0.75em solid #FFF;
 	 }
 	 .login #nav, .login #backtoblog {
 		text-shadow:none;
@@ -389,10 +572,28 @@ function custom_login_logo() {
 		}
 		#login {
 			height:446px;
-	}
+		}
+	 }
+	 .wp-core-ui .button-primary {
+	 	background:none;
+	 	border:2px solid #FFF;
+	 	color:#FFF !important;
+	 	box-shadow:none!important;
+	 }
+	 .wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover{
+	 	background:none !important;
+	 	color:#0082f9!important;
+	 	border-color:#0082f9!important;
+	 }
+	 .wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {
+	 	height:33px!important;
+	 }
+	 input[type=checkbox]:checked:before {
+	 	color:#0067C6!important;
 	 }
 	</style>';
 	echo '<link rel="icon" href="'.get_bloginfo('template_directory').'/assets/favicon.ico" />';
+	echo '<link rel="stylesheet" href="'.get_bloginfo('template_directory').'/forms.css" />';
 
 }
 

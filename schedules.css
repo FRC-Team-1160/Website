@@ -16,7 +16,7 @@
     background: #cce0f3;
 }
 .gce-page-list .gce-list .gce-list-event {
-    background:none;
+    background:none!important;
 }
 .gce-page-list .gce-list p span, .gce-page-list .gce-list div span {
     display:inline-block;

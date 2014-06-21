@@ -64,20 +64,42 @@
 														<h6>A Post by <?php the_author(); ?></h6>
 															<h4>Categories</h4>
 																<?php
-																	// get the category IDs assigned to post
-																	$categories = wp_get_post_categories( $post->ID, array( 'fields' => 'ids' ) );
+																	$taxonomy = 'category';
+
+																	// get the term IDs assigned to post.
+																	$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
 																	// separator between links
 																	$separator = ', ';
 
-																	if ( $categories ) {
+																	if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
 
-																		$cat_ids = implode( ',' , $categories );
-																		$cats = wp_list_categories( 'title_li=&style=none&echo=0&include=' . $cat_ids );
-																		$cats = rtrim( trim( str_replace( '<br />',  $separator, $cats ) ), $separator );
-																		
+																		$term_ids = implode( ',' , $post_terms );
+																		$terms = wp_list_categories( 'title_li=&style=none&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids );
+																		$terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
+
 																		// display post categories
-																		echo  $cats;
+																		echo  $terms;
 																	}
+																?>
+
+																<?php if('forum' == get_post_type()) :
+																	$taxonomy = 'topics';
+
+																	// get the term IDs assigned to post.
+																	$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
+																	// separator between links
+																	$separator = ', ';
+
+																	if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
+
+																		$term_ids = implode( ',' , $post_terms );
+																		$terms = wp_list_categories( 'title_li=&style=none&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids );
+																		$terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
+
+																		// display post categories
+																		echo  $terms;
+																	}
+																	endif;
 																?>
 															<h4>Tags</h4>
 															<section class="tags">
@@ -118,7 +140,7 @@
 								
 									<fieldset class="title"><legend>
 										
-										<?php if (is_home()) { ?>
+										<?php if (is_home() || is_category() || is_tax()) { ?>
 											<a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>">
 												<?php the_title(); ?>
 											</a>
@@ -148,7 +170,7 @@
 							<div class="clear"></div>
 <?php
 						}}} else {
-?>
+?><?php if (is_single()) { echo '<h2>'; the_title(); echo '</h2>'; } ?>
 							
 								<?php the_content();?>
 
@@ -464,7 +486,7 @@
 		
 		<div id="why-the-bird" class="homecontainer">
 			<div class="entry-1-4">
-				<img src="http://ti-static.titaniumrobotics.com/logos/logo.svg" />
+				<img src="http://ti-static.titaniumrobotics.com/logos/logo.svgz" />
 			</div>
 			<div class="entry-3-4">
 				<h2>Why the bird?</h2>

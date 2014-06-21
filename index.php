@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); if (!is_category()): ?>
 	<div class="contents" class="sidebar">
 		<div class="blog">
 			<div class="blog-content">
@@ -13,4 +13,4 @@
 	            </div>
 			</div>
 	</div>
-<?php get_footer(); ?>
+<?php endif; get_footer(); ?>
