@@ -122,25 +122,6 @@
 					});
 				</script>
 
-<!--GOOGLE SUGGESTED THAT WE LOAD ALL UNIMPORTANT SCRIPTS HERE, SO HERE YA GO, BUT HTML5 STATES THAT IT REQUIRES THE PROPERTY TAG, SO THATS WHY THAT'S THERE...-->
-
-			<!--MAIN STYLES-->
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>?ver=3.6.10.2" />
-			<link property="stylesheet" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/print.css?ver=1.0" media="print" />
-			<!--end MAIN STYLES-->
-
-			<!--START GOOGLE FONTS-SOURCE SANS PRO-->
-			<link property="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
-			<!--END GOOGLE FONTS-SOURCE SANS PRO-->
-
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />
-			
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css?ver=3.2.2" />
-			
-			<?php if(is_front_page()) { ?>
-				<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css?ver=2.10.2" />
-			<?php } ?>
-
 			<!-- JUST SOME RANDOM CODE THAT HELPS THE SITE LOAD -->
 					<script src="<?php bloginfo('template_directory');?>/js/_/blue-footed-booby.js?ver=3.1"		type="text/javascript"></script>
 			
@@ -152,6 +133,7 @@
 					});
 				});
 			</script>
+			<?php include_once("analyticstracking.php") ?>
 
 </body>
 </html>

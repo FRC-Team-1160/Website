@@ -1,6 +1,7 @@
 /*
 Theme Name: Beryllium
 Theme URI: http://www.TitaniumRobotics.com
+Github Theme URI: https://github.com/FRC-Team-1160/Website
 Description: A theme customized for FIRST Team 1160, Titanium Robotics.
 Sleeker, more unique, modern look; newer, more content-specific coding; HTML5 Valid (most of the time).
 Author: Nathan Wong
@@ -58,15 +59,16 @@ code {
 	margin:1em auto;
 	padding:1em;
 	width:75%;
+	font-size:0.9em;
 	background-color:#444444;
 	color:#fff;
 	border-left:5px solid #0067c6;
-	-webkit-border-radius:1em;
-	border-radius:1em;
+	font-family:'source code pro', monospace;
 }
-code .inline {
+code.inline {
 	display:inline-block;
-	padding:5px;
+	width:auto;
+	padding:0 0.25em;
 	margin:0;
 }
 blockquote {
@@ -1159,16 +1161,50 @@ a:focus {
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 }
+
+/*COLORS*/
+
 #footer .red a,	.red, .red a,
 #footer .twitterblue a, .twitterblue, .twitterblue a,
 #footer .black a, .black, .black a,
-#footer .blue a, .blue, .blue a {
+#footer .blue a, .blue, .blue a,
+.au, .au a,
+.titanium, .titanium a,
+.rubiks, .rubiks a,
+.cu-2, .cu-2 a,
+.nature, .nature a,
+.black-wire, .black-wire a
+{
 	color:#B2B2B2;
+	transition:color 300ms;
+	-webkit-transition:color 300ms;
+	-moz-transition:color 300ms;
+	-o-transition:color 300ms;
+	-ms-transition:color 300ms;
 }
-#footer .red a:hover, .red a:hover {color:#f9343e;}
-#footer .twitterblue a:hover, .twitterblue a:hover {color:#33ccff;}
-#footer .black a:hover, .black a:hover {color:#222;}
-#footer .blue a:hover, .blue a:hover {color:#0067c6;}
+
+.red:hover, .blue:hover, .twitterblue:hover, .au:hover, .titanium:hover,.rubiks:hover, .cu-2:hover, .nature:hover, .black:hover, .black-wire:hover {
+	transition:color 300ms;
+	-webkit-transition:color 300ms;
+	-moz-transition:color 300ms;
+	-o-transition:color 300ms;
+	-ms-transition:color 300ms;
+}
+
+#footer .red a:hover, .red:hover, .red a:hover {color:#f9343e;}
+
+#footer .twitterblue a:hover, .twitterblue:hover, .twitterblue a:hover {color:#33ccff;}
+
+#footer .black a:hover, .black:hover, .black a:hover, .black-wire:hover, .black-wire a:hover {color:#222;}
+
+#footer .blue a:hover, .blue:hover, .blue a:hover {color:#0067c6;}
+
+.au:hover, .au a:hover {color:#F7EB5F;}
+.titanium:hover, .titanium a:hover {color:#9AA5AE;}
+.rubiks:hover, .rubiks a:hover {color:#4F87A0;}
+.cu-2:hover, .cu-2 a:hover {color:#A9C4E6;}
+.nature:hover, .nature a:hover {color:#00A887;}
+
 #footer li.follow {
 	display:inline-block;
 	font-size:200%;
