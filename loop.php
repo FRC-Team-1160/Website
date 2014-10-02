@@ -419,7 +419,7 @@
 
 		<div class="homecontainer">
 			<div class="entry-1-2">
-				<img src="http://ti-static.titaniumrobotics.com/uploads/2014/02/DSC_0139.jpg" />
+				<img src="http://ti-static.titaniumrobotics.com/uploads/2014/02/DSC_0139-1024x678.jpg" />
 			</div>
 			<div class="entry-1-2 bold">
 				<p>
