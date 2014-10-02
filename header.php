@@ -5,9 +5,10 @@
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,">
 			<meta name="keywords" content="robotics, FRC, Team 1160, FRC 1160, Titanium Robotics, Titanium FRC, Titanium 1160, Team Titanium, FRC Robotics, San Marino, San Marino High School, FRC Team 1160, Team 1160 FRC, San Marino Robotics, Firebird Robotics" />
+			<meta name="description" content="Titanium Robotics is an FRC robotics team dedicated to teaching real-life applications and furthering STEM education through experiences that cannot be taught in a regular classroom environment." />
 
 		<!--TITLE-->
-			<title><?php wp_title(''); ?> // <?php bloginfo('name'); ?></title>
+			<title><?php wp_title('', '//'); ?><?php bloginfo('name'); ?></title>
 
 		<!--LINKS-->
 			<link rel="alternate"	title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
