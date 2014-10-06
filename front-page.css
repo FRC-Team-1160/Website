@@ -902,7 +902,14 @@ div.homecontainer:last-child {
 					margin-bottom:0.5em;	
 				}
 				.gallery .item {
-					padding-bottom:40%;
+					padding-bottom:50%;
+				}
+				.gallery .controls {
+					display:none;
+					visiblity:hidden;
+				}
+				.gallery .thumbnail span {
+					bottom:1rem;
 				}
 				figure .rightside {
 					left: 1rem;
