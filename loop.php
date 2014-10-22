@@ -130,7 +130,7 @@
 
 							<?php } else { ?>
 
-								<article class="entry<?php if (is_page_template('page-contact-us.php')) { ?>-1-2<?php } ?>">
+								<article class="entry<?php if (is_page_template('page-contact-us.php')) { ?>-3-4<?php } ?>">
 
 							<?php } ?>
 
@@ -205,7 +205,7 @@
 	<?php // CONTACT PAGE SPECIFIC ?>
 
 								<?php if (is_page_template('page-contact-us.php')) { ?>
-								<article class="entry-1-2">
+								<article class="entry-1-4">
 										<?php if(isset($emailSent) && $emailSent == true) { ?>
 											<div class="thanks">
 												<p>Thanks, your email was sent successfully.</p>
@@ -215,9 +215,9 @@
 												<p class="error">Sorry, an error occured: please check the fields with error messages.<p>
 											<?php } ?>
 
-										<h2>
+										<h3>
 											Contact Titanium Robotics
-										</h2>
+										</h3>
 										
 										<form action="<?php the_permalink(); ?>" class="pure-form" id="contactForm" method="post">
 											<fieldset class="pure-group contactform">

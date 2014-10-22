@@ -8,7 +8,7 @@
 			<meta name="description" content="Titanium Robotics is an FRC robotics team dedicated to teaching real-life applications and furthering STEM education through experiences that cannot be taught in a regular classroom environment." />
 
 		<!--TITLE-->
-			<title><?php wp_title('', '//'); ?><?php bloginfo('name'); ?></title>
+			<title><?php wp_title('&nbsp;//&nbsp;', true, 'right'); ?><?php bloginfo('name', '//'); ?></title>
 
 		<!--LINKS-->
 			<link rel="alternate"	title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
@@ -351,10 +351,24 @@
 								<img class="print" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" style="height:2.5em" alt="logo-text" />
 							</a>
 						</div>
-
+						<?php /*SEARCH BAR? MAKE THE LOGO CLASS LEFT TEXT-ALIGN <span style="float:right;width: 33%;"><form style="
+											    margin: 1rem 1.5rem;
+											"><input type="search" style="
+											    height: 100px;
+											    background: none;
+											    border: none;
+											    border-bottom: 1px solid #0067c6;
+											    box-shadow: none;
+											    border-radius: 0;
+											    -webkit-appearance: none;
+											    width: 100%;
+											    font-size: 1.5rem;
+											    text-transform: uppercase;
+											    font-weight: bold;
+											" placeholder="i'm looking for. . ."></form></span>*/ ?>
 						<div class="menu-right screen">
 							<div class="icon">
-								<a href="#" id="toggle" title="Open Menu" >
+								<a href="#" id="toggle" style="border:none" title="Open Menu" >
 									<img style="height:24px;" src="http://ti-static.titaniumrobotics.com/site/theme-Ti-22/assets/ui/ui-menu.svg?ver=3.2.1">
 								</a>
 							</div>
