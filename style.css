@@ -257,10 +257,14 @@ img.aligncenter {
 }
 
 /* NAVIGATION */
+.logo {
+	text-align:center;
+}
 .logo-screen {
-	height:94px;
+	height:100px;
 	display: inline;
 	vertical-align: bottom;
+	margin:1rem 1.5rem;
 }
 #menuwrap {
 	width:80%;
@@ -407,8 +411,8 @@ img.aligncenter {
 	-ms-transition:border-bottom 300ms;
 }
 .logo a {
-	float:left;
 	max-width:80%;
+	border:none;
 }
 #icon-nav {
 	margin:auto;

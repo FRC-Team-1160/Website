@@ -19,7 +19,7 @@ Performance and speed have drastically increased in this version.
 
 #Customization and features and stuff
 ##Logo
-The logo used in this theme is 94px in height. You may replace the logo with your own logo, but remember to replace the link too.
+The logo used in this theme is 100px in height. You may replace the logo with your own logo, but remember to replace the link too.
 
 ##Colors
 The main color is:#0067C6, it's the bright blue that is basically everywhere. If you want to replace it, just do a find all and replace with whatever color you would like to use.
