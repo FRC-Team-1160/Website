@@ -40,7 +40,7 @@ This doc is currently a work in progress. It may or may not be completed, but it
 * basically all the same things....
 * basically stable.... or something.....
 
-###v4.0
+###v4.0 "Beryllium"
 
 * So many new things... not going to waste the time to write them
 
@@ -55,11 +55,21 @@ This doc is currently a work in progress. It may or may not be completed, but it
 * Some things that were added to make weird changes in CSS look perfectly intentional
 
 
-###v3.0:
+###v3.0 "Lithium":
 
 * New Navigation & Header (Easier to use, Easier to navigate site, More Dynamic and ROBUST)
 * New Splash Page (Cleaner, Easier to navigate, More Modern, More Unique)
 * Update to Fonts (Now using Google Webfonts to quicken load times, Change to sizing of Headings., Update to the Icon Font)
+
+###v2.0 "Helium":
+
+* I don't even remember... I think it introduced responsiveness... it was a really bad design
+
+###v1.0 "Hydrogen":
+
+* Super Unstable
+* Bad.
+* Didn't work at all
 
 The website can be seen at [www.titaniumrobotics.com](http://www.titaniumrobotics.com)
 
