@@ -17,7 +17,7 @@ The User-Interface has been enhanced so that it follows basic rules of front-end
 ##Performance & Speed
 Performance and speed have drastically increased in this version. 
 
-#Usage
+#Customization and features and stuff
 ##Logo
 The logo used in this theme is 94px in height. You may replace the logo with your own logo, but remember to replace the link too.
 
@@ -27,8 +27,22 @@ The main color is:#0067C6, it's the bright blue that is basically everywhere. If
 ###SVG Files
 SVG files probably have #0067C6 or something that Adobe Illustrator converted a Pantone color to as one of the colors. You might want to change those too.
 
+##Page Under Construction
+To set a page as "Under Construction," go to the "Custom Fields" section of the Wordpress page and add a new "construction" field with the value "Under Construction." To disable, just delete the field.
+
 ##WIP
 This doc is currently a work in progress. It may or may not be completed, but it's quite easy to customize this theme to your liking as long as you're thorough.
+
+####v4.1
+
+* Bug crushing
+* better responsiveness
+* basically all the same things....
+* basically stable.... or something.....
+
+###v4.0
+
+* So many new things... not going to waste the time to write them
 
 ####v3.1
 
