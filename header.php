@@ -326,23 +326,9 @@
 		<div class="<?php if (is_front_page()) : ?>frontpage wrapper<?php else:?>normal wrapper<?php endif; ?>" id="page">
 
 			<!--START - NAVIGATION-->
-				<div id="login" class="screen">
-							<?php wp_loginout( get_permalink() ); ?>
-							<?php if(is_user_logged_in()) {
-								echo "&nbsp;|&nbsp;";
-							$url = admin_url( '', 'http' );
-							?>
-							<a href="<?php echo $url; ?>">Dashboard</a>
-							<?php
-							}
-							else {
-
-							}
-							?>
-				</div>
 		
 			<header id="menuwrap" class="custom-background">
-				
+				<div class="border">
 				<div id="icon-nav">
 					<div class="menu">
 						<div class="logo">
@@ -350,6 +336,13 @@
 								<img class="logo-screen screen" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" alt="logo-bird">
 								<img class="print" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" style="height:2.5em" alt="logo-text" />
 							</a>
+							<div class="menu-right screen">
+								<div class="icon">
+									<a href="#" id="toggle" style="border:none" title="Open Menu" >
+										<img style="height:24px;" src="http://ti-static.titaniumrobotics.com/site/theme-Ti-22/assets/ui/ui-menu.svg?ver=3.2.1">
+									</a>
+								</div>
+							</div>
 						</div>
 						<?php /*SEARCH BAR? MAKE THE LOGO CLASS LEFT TEXT-ALIGN <span style="float:right;width: 33%;"><form style="
 											    margin: 1rem 1.5rem;
@@ -366,29 +359,35 @@
 											    text-transform: uppercase;
 											    font-weight: bold;
 											" placeholder="i'm looking for. . ."></form></span>*/ ?>
-						<div class="menu-right screen">
-							<div class="icon">
-								<a href="#" id="toggle" style="border:none" title="Open Menu" >
-									<img style="height:24px;" src="http://ti-static.titaniumrobotics.com/site/theme-Ti-22/assets/ui/ui-menu.svg?ver=3.2.1">
-								</a>
-							</div>
-						</div>
 					</div>
 					
 				</div>
+					<div class="nav screen" id="nav">
+						<?php
+							wp_nav_menu(
+								array(
+									'theme_location'	=>	'Main-Navigation',
+									'menu_id'			=>	'menu',
+									'menu_class'		=>	'ti22 menu-1',
+								)
+							);
+						?>
+						<div class="login screen">
+									<?php wp_loginout( get_permalink() ); ?>
+									<?php if(is_user_logged_in()) {
+										echo "&nbsp;|&nbsp;";
+									$url = admin_url( '', 'http' );
+									?>
+									<a href="<?php echo $url; ?>">Dashboard</a>
+									<?php
+									}
+									else {
 
-					<?php
-						wp_nav_menu(
-							array(
-								'theme_location'	=>	'Main-Navigation',
-								'container_id'		=>	'nav',
-								'container_class'	=>	'nav screen',
-								'menu_id'			=>	'menu',
-								'menu_class'		=>	'ti22 menu-1',
-							)
-						);
-					?>
-				
+									}
+									?>
+						</div>
+					</div>
+				</div>
 			</header>
 		<div class="clear"></div>
 	<?php if(!is_front_page() && !is_404() && !is_search() && !is_home()) : ?>

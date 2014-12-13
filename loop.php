@@ -383,9 +383,7 @@
 			</div>
 			</div>
 
-		<div class="clear"></div>
-
-		<div class="homecontainer">
+		<div class="homecontainer clear">
 			<div class="entry-1-2 leftside">
 				<div>
 						<img style="height:9em; display:block; margin:0 auto 16px;" src="http://ti-static.titaniumrobotics.com/logos/FIRST/FIRST.svg">
@@ -401,7 +399,7 @@
 				</div>
 			</div>
 			<div class="entry-1-2 leftside">
-				<span class="red feature-icon team1160-location-outline" style="font-size:9em; height:9rem; display:block; margin:0 auto 16px; width:1em;" title="Location Pin"></span>
+				<span class="rubiks feature-icon team1160-location-outline" style="font-size:9em; height:9rem; display:block; margin:0 auto 16px; width:1em;" title="Location Pin"></span>
 				<div>
 					<h1>
 						Team 1160 is located in San Marino, CA.
@@ -414,10 +412,8 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-		
-		<div class="clear"></div>
 
-		<div class="homecontainer">
+		<div class="homecontainer clear">
 			<div class="entry-1-2">
 				<img src="http://ti-static.titaniumrobotics.com/uploads/2014/02/DSC_0139-1024x678.jpg" />
 			</div>
@@ -432,10 +428,8 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-
-		<div class="clear"></div>
 		
-		<div class="homecontainer">
+		<div class="homecontainer clear">
 			<div class="entry-3-4 sponsored leftside">
 				<h2>Titanium Sponsors</h2>
 				<table style="width:100%;" class="sponsors">
@@ -481,10 +475,8 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-
-		<div class="clear"></div>
 		
-		<div id="why-the-bird" class="homecontainer">
+		<div id="why-the-bird" class="homecontainer clear">
 			<div class="entry-1-4">
 				<img src="http://ti-static.titaniumrobotics.com/logos/logo.svgz" />
 			</div>
@@ -497,6 +489,5 @@
 					In 2012, we felt that we needed to reconnect with our school, whose colors are blue and white and mascot is the Titan, making a drastic change by going into the season as Titanium Robotics. We maintained the logo so that teams that have had long-standing relationships with our team would be able to recognize our team as the same.
 				</p>
 			</div>
-			<div class="clear"></div>
 		</div>
  <?php endif ?>

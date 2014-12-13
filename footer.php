@@ -1,14 +1,15 @@
 <div class="clear"></div>
 <?php wp_reset_query(); ?>
 <?php if(!is_attachment()) { ?>
-	<footer id="footer" class="custom-background">
+</div>
+	<footer class="custom-background">
 		
 		<div class="footer-container">
 			
 			<div class="footer-right">
 				<div class="copy">
-					<p class="nomargin">&copy;<?php echo date(Y)?>&nbsp;<a href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a>. All rights reserved.</p>
-					<p>Designed by Nathan Wong</p>
+					<p class="nomargin rubiks">&copy;<?php echo date(Y)?>&nbsp;<?php bloginfo('name'); ?>. All rights reserved.</p>
+					<p class="nature">Designed &amp; coded with <span class="red team1160-">&#xe65c;</span> by Nathan Wong in California</p>
 				</div>
 
 				<ul class="s">
@@ -48,9 +49,6 @@
 		</div>
 		<div class="clear"></div>
 	</footer>
-</div>
-<div class="clear"></div>
-</div>
 <?php } ?>
 	
 <?php wp_footer(); ?>
@@ -126,7 +124,7 @@
 				<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
 			<!--END GOOGLE FONTS-SOURCE SANS PRO-->
 
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>?ver=3.6.10.14" />
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>?ver=3.6.11" />
 
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />			
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css?ver=3.2.3" />			

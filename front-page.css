@@ -829,13 +829,15 @@
 }
 
 .gallery .thumbnail span {
-	bottom:4.5rem;
+	padding: 8% 5%;
+	border-width:8px;
 }
 
 .gallery h1 a {
 	color:#FFF;
 	border-bottom:1px solid #0067C6;
 	display:inline-block;
+	font-size:32px;
 }
 
 /* HOME CONTAINERS */
@@ -843,7 +845,12 @@ div.homecontainer {
 	width:80%;
 	max-width:64em;
 	margin:auto;
-	border-width:0 0 2px;
+}
+div.homecontainer:first-of-type {
+	border-width:none;
+}
+div.homecontainer+div.homecontainer {
+	border-width:2px 0 0;
 }
 div.homecontainer:last-child {
 	border-width:0;
