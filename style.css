@@ -6,7 +6,7 @@ Description: A theme customized for FIRST Team 1160, Titanium Robotics.
 Sleeker, more unique, modern look; newer, more content-specific coding; HTML5 Valid (most of the time).
 Author: Nathan Wong
 Author URI: www.itsallwong.com
-Version: 5.1
+Version: 5.1.1
 .
 .
 */
@@ -301,6 +301,11 @@ header .border {
 	padding:1rem;
 	text-transform: uppercase;
 	font-weight:bold;
+
+	-webkit-transition-timing-function:cubic-bezier(0.85, 0.0, 1.0, 1.0);
+	-moz-transition-timing-function:cubic-bezier(0.85, 0.0, 1.0, 1.0);
+	-o-transition-timing-function:cubic-bezier(0.85, 0.0, 1.0, 1.0);
+	transition-timing-function:cubic-bezier(0.85, 0.0, 1.0, 1.0);
 }
 #nav.home-links {
 	border-bottom-width:0;
@@ -327,7 +332,7 @@ header .border {
 #nav ul.submenu li a:hover {
 	color:#222;
 }
-#nav ul#menu li:hover ul.sub-menu {
+#nav li:hover ul.sub-menu {
 	left:0;
 	box-shadow:0 3px 0px 0px #9B9B9B;
 	box-shadow:0 3px 0px 0px rgba(0, 0, 0, 0.3);
@@ -457,20 +462,27 @@ header .border {
 }
 #toggle {
 	display:none;
-	padding-top:10px;
+	float:right;
+	padding-top:15px;
 	padding-bottom:0px;
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
 	-o-transform: rotate(0deg);
 	transform: rotate(0deg);
-	-webkit-transition:	padding 800ms linear,
-						-webkit-transform 800ms linear;
-	-moz-transition:	padding 800ms linear,
-						-moz-transform 800ms linear;
-		-o-transition:	padding 800ms linear,
-						-o-transform 800ms linear;
-	transition:	padding 800ms linear,
-						transform 800ms linear;
+	-webkit-transition-property:padding,-webkit-transform;
+	-moz-transition-property:padding,-moz-transform;
+	-o-transition-property:padding,-o-transform;
+	transition-property:padding, transform;				
+	
+	-webkit-transition-duration:400ms;
+	-moz-transition-duration:400ms;
+	-o-transition-duration:400ms;
+	transition-duration:400ms;
+
+	-webkit-transition-timing-function:cubic-bezier(0.85, 0.0, 1.0, 1.0);
+	-moz-transition-timing-function:cubic-bezier(0.85, 0.0, 1.0, 1.0);
+	-o-transition-timing-function:cubic-bezier(0.85, 0.0, 1.0, 1.0);
+	transition-timing-function:cubic-bezier(0.85, 0.0, 1.0, 1.0);
 }
 #toggle.active {
 	-webkit-transform: rotate(180deg);
@@ -479,14 +491,20 @@ header .border {
 	transform: rotate(180deg);
 	padding-top:0;
 	padding-bottom:10px;
-	-webkit-transition:	padding 800ms linear,
-						-webkit-transform 800ms linear;
-	-moz-transition:	padding 800ms linear,
-						-moz-transform 800ms linear;
-		-o-transition:	padding 800ms linear,
-						-o-transform 800ms linear;
-	transition:	padding 800ms linear,
-						transform 800ms linear;
+	-webkit-transition-property:padding,-webkit-transform;
+	-moz-transition-property:padding,-moz-transform;
+	-o-transition-property:padding,-o-transform;
+	transition-property:padding, transform;				
+	
+	-webkit-transition-duration:400ms;
+	-moz-transition-duration:400ms;
+	-o-transition-duration:400ms;
+	transition-duration:400ms;
+
+	-webkit-transition-timing-function:cubic-bezier(0.85, 0.0, 1.0, 1.0);
+	-moz-transition-timing-function:cubic-bezier(0.85, 0.0, 1.0, 1.0);
+	-o-transition-timing-function:cubic-bezier(0.85, 0.0, 1.0, 1.0);
+	transition-timing-function:cubic-bezier(0.85, 0.0, 1.0, 1.0);
 }
 /* AVATAR */
 
@@ -620,10 +638,9 @@ header .border {
 /* CONTENTS CONTAINER */
 .contents {
 	color:#1D1D1D;
-	margin:auto;
 	word-wrap: break-word;
 	background:#FFF;
-	width:80%;
+	width:100%;
 	-webkit-transition: float 2s, margin 2s, padding 2s;
 	-o-transition: float 2s, margin 2s, padding 2s;
 	-moz-transition: float 2s, margin 2s, padding 2s;
@@ -740,6 +757,8 @@ header .border {
 .post-content {
 	min-height:300px;
 	display:block;
+	width:80%;
+	margin:auto;
 }
 fieldset.title {
 	margin:0;
@@ -937,12 +956,12 @@ time {
 	width: 100%; 
 	text-align: center; 
 	margin: 0; padding: 30px 0;
-	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+	background: -moz-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background:-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
@@ -1471,7 +1490,7 @@ table.meetings tr:nth-of-type(odd) {
 
 			@media screen and (max-width: 45em) {
 				#toggle {	/*Navigation Icon*/
-					display:block;
+					display:inline-block;
 				}
 				#toggle a {
 					border:none;
@@ -1654,13 +1673,17 @@ table.meetings tr:nth-of-type(odd) {
 				}
 				.login {
 					box-sizing:border-box;
+					display:inline-block;
 					position:relative;
 					width:100%;
 					text-align:center;
 					border-radius:0;
 					height:auto;
+					margin-top:8px;
+					margin-top:0.5rem;
 					margin-bottom:16px;
 					margin-bottom:1rem;
+					top:0;
 				}
 				.login a {
 					padding: 0.5em;
@@ -1677,7 +1700,7 @@ table.meetings tr:nth-of-type(odd) {
 				}
 				.wrapper #nav ul li {
 					width:40%;
-					margin:2.5%;
+					margin:0.5em 2.5%;
 					background:none;
 					text-align:center;
 					display:inline-block;
@@ -1707,7 +1730,7 @@ table.meetings tr:nth-of-type(odd) {
 				#nav {
 					overflow:hidden !important;
 				}
-				#nav ul#menu li:hover ul.sub-menu {
+				#nav li:hover ul.sub-menu {
 					display:none;
 					visibility:hidden;
 				}

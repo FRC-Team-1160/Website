@@ -339,7 +339,7 @@
 							<div class="menu-right screen">
 								<div class="icon">
 									<a href="#" id="toggle" style="border:none" title="Open Menu" >
-										<img style="height:24px;" src="http://ti-static.titaniumrobotics.com/site/theme-Ti-22/assets/ui/ui-menu.svg?ver=3.2.1">
+										<img style="height:24px;" src="http://ti-static.titaniumrobotics.com/site/theme-Ti-22/assets/ui/ui-menu.svg?ver=4.2">
 									</a>
 								</div>
 							</div>
@@ -367,7 +367,6 @@
 							wp_nav_menu(
 								array(
 									'theme_location'	=>	'Main-Navigation',
-									'menu_id'			=>	'menu',
 									'menu_class'		=>	'ti22 menu-1',
 								)
 							);
@@ -382,6 +381,7 @@
 									}
 									?>
 						</div>
+						<div class="clear"></div>
 					</div>
 				</div>
 			</header>

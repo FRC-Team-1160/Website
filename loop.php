@@ -5,8 +5,6 @@
 		<?php if(have_posts()) :?>
 		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;?>
 		<?php while(have_posts()) : the_post(); ?>
-			
-			<div class="post-content">
 
 	<?php // FEATURED IMAGE ?>
 		<?php if(has_post_thumbnail( $post_id )) {?>
@@ -35,6 +33,7 @@
 				<div class="no-thumbnail"></div>
 		<?php } ?>
 
+<div class="post-content">
 
 	<?php // SIDEBAR FOR TWO COLUMN & BOOKMARKS ?>
 
