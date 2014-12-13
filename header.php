@@ -373,15 +373,11 @@
 							);
 						?>
 						<div class="login screen">
-									<?php wp_loginout( get_permalink() ); ?>
 									<?php if(is_user_logged_in()) {
-										echo "&nbsp;|&nbsp;";
-									$url = admin_url( '', 'http' );
-									?>
-									<a href="<?php echo $url; ?>">Dashboard</a>
-									<?php
+
 									}
 									else {
+									wp_loginout( get_permalink() );
 
 									}
 									?>
