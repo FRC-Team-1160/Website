@@ -102,11 +102,28 @@
 					});
 				</script>
 			<?php } ?>
-		<!-- NAVIGATION -->
-			<script src="<?php bloginfo('template_directory');?>/js/responsive-nav.min.js?ver=2"	type="text/javascript"></script>
-			
-		<!-- SMOOTH SCROLL -->
-			<script src="<?php bloginfo('template_directory');?>/js/smoothscroll.js"		type="text/javascript"></script>
+
+		<!--UNIMPORTANT CSS CODE-->
+			<!--START GOOGLE FONTS-SOURCE SANS PRO-->
+				<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
+			<!--END GOOGLE FONTS-SOURCE SANS PRO-->
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />			
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css?ver=3.2.3" />
+			<link property="stylesheet" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/print.css?ver=1.0" media="print" />
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/schedules.css?ver=2" />
+			<?php
+				$custom_fields = get_post_custom();
+				$construction = $custom_fields['construction'];
+					if(!empty($construction)) {
+						foreach ( $construction as $key => $value ) {
+						if ($value == 'under construction') {
+			?>
+				<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/construction.css?ver=1" />
+			<?php
+						}
+					}
+				}
+			?>
 
 		<!-- LIGATURES -->
 			<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/liga.js"></script>
@@ -119,32 +136,6 @@
 						customToggle:"toggle",
 					});
 				</script>
-		<!-- CSS CODE -->
-			<!--START GOOGLE FONTS-SOURCE SANS PRO-->
-				<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
-			<!--END GOOGLE FONTS-SOURCE SANS PRO-->
-
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>?ver=3.7" />
-
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/team-1160-icons.css" />			
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css?ver=3.2.3" />			
-			<?php if(is_front_page()) { ?>
-				<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css?ver=2.11.4" />
-			<?php } ?>
-
-			<style>
-
-				.print {
-					display:none;
-					visibility:hidden;
-				}
-			</style>
-			<link property="stylesheet" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/print.css?ver=1.0" media="print" />
-		
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css?ver=2">
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/schedules.css?ver=2" />
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/assets/typography.css?ver=2.3" />
-
 			<!-- JUST SOME RANDOM CODE THAT HELPS THE SITE LOAD -->
 					<script src="<?php bloginfo('template_directory');?>/js/_/blue-footed-booby.js?ver=3.1"		type="text/javascript"></script>
 			

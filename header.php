@@ -19,8 +19,58 @@
 			<link rel="logo" 
 				type="image/svg" 
 				href="http://ti-static.titaniumrobotics.com/logos/logo.svgz" />
+		<!--SCRIPTS-->
+			<?php wp_head(); ?>
 
-		<!--CSS-->
+			<!-- NAVIGATION -->
+				<script src="<?php bloginfo('template_directory');?>/js/responsive-nav.min.js?ver=2"	type="text/javascript" async></script>
+				
+			<!-- SMOOTH SCROLL -->
+				<script src="<?php bloginfo('template_directory');?>/js/smoothscroll.js"		type="text/javascript" async></script>
+
+		<!-- ICONS FONT FOR IE9 -->
+			<!--[if lte IE 7]>
+				<script src="<?php bloginfo('template_directory'); ?>/fonts/ie7.js"		type="text/javascript"></script>
+				<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/fonts/ie7.css" />
+			<![endif]-->
+
+		<!-- HTML5 FOR IE9 -->
+			<!--[if lt IE 9]>
+				<script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
+			<![endif]-->
+
+		<!-- ANNOUNCE THAT IE ISN'T IDEAL - STYLES -->
+		<!--[if IE]>
+			<style>
+				#ie-announcement {
+					background: #7fb3e2;
+					line-height:1.5;
+					text-align:center;
+					padding:10px;
+					box-sizing:border-box;
+					display:block;
+				}
+			</style>
+		<![endif]-->
+
+<!--CSS-->
+			
+			<style>
+				.print {
+					display:none;
+					visibility:hidden;
+				}
+			</style>
+
+		<!--MAIN STYLESHEET-->
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>" /> <!-- NO VERSIONING HERE BECAUSE IT SHOULD REMAIN THE SAME -->
+	
+			<?php if(is_front_page()) { ?>
+				<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css?ver=2.11.4" />
+			<?php } ?>
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css?ver=2">
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/assets/typography.css?ver=2.3" />
+
 			<?php if(is_page('forum')) : ?>
 				<style>
 					.topics {
@@ -41,201 +91,6 @@
 					}
 				</style>
 			<?php endif; ?>
-			<?php
-				$custom_fields = get_post_custom();
-				$construction = $custom_fields['construction'];
-					if(!empty($construction)) {
-						foreach ( $construction as $key => $value ) {
-						if ($value == 'under construction') {
-			?>
-							<style>
-							.team1160-flash-outline {
-								float:left;
-								margin:auto;
-								width:2em;
-								font-size:5em;
-								color:#0067c6;
-								padding:1em 0;
-								position:relative;
-								text-align:center;
-								-webkit-animation-name: ColorChange;
-								-moz-animation-name: ColorChange;
-								-o-animation-name: ColorChange;
-								animation-name: ColorChange;
-								-webkit-animation-duration: 10s;
-								-moz-animation-duration: 10s;
-								-o-animation-duration: 10s;
-								animation-duration: 10s;
-								-webkit-animation-iteration-count: infinite;
-								-moz-animation-iteration-count: infinite;
-								-o-animation-iteration-count: infinite;
-								animation-iteration-count: infinite;
-								-webkit-animation-timing-function: linear;
-								-moz-animation-timing-function: linear;
-								-o-animation-timing-function: linear;
-								animation-timing-function: linear;
-							}
-							.team1160-flash-outline .team1160-starburst-outline {
-								font-size:2em;
-								color:#0067c6;
-								position:absolute;
-								top: 0.25em;
-								left: 0;
-								right: 0;
-								bottom: 0.28em;
-								-webkit-animation-duration: 25s;
-								-webkit-animation-name: rotate;
-								-webkit-animation-iteration-count: infinite;
-								-webkit-animation-timing-function: linear;
-								-o-animation-duration: 25s;
-								-o-animation-name: rotate;
-								-o-animation-iteration-count: infinite;
-								-o-animation-timing-function: linear;
-								-moz-animation-duration: 25s;
-								-moz-animation-name: rotate;
-								-moz-animation-iteration-count: infinite;
-								-moz-animation-timing-function: linear;
-								animation-duration: 25s;
-								animation-name: rotate;
-								animation-iteration-count: infinite;
-								animation-timing-function: linear;
-							}
-							@keyframes rotate {
-								from {
-									transform:rotate(0deg)
-								}
-								to {
-									transform:rotate(360deg)
-								}
-							}
-							@-o-keyframes rotate {
-								from {
-									-o-transform:rotate(0deg)
-								}
-								to {
-									-o-transform:rotate(360deg)
-								}
-							}
-							@-webkit-keyframes rotate {
-								from {
-									-webkit-transform:rotate(0deg)
-								}
-								to {
-									-webkit-transform:rotate(360deg)
-								}
-							}
-							@-moz-keyframes rotate {
-								from {
-									-moz-transform:rotate(0deg)
-								}
-								to {
-									-moz-transform:rotate(360deg)
-								}
-							}
-							.team1160-starburst-outline.reverse {
-								-webkit-animation-name: reverse;
-								-moz-animation-name: reverse;
-								-o-animation-name: reverse;
-								animation-name: reverse;
-								color:#7fb3e2;
-								font-weight:normal;
-							}
-
-							@keyframes reverse {
-								from {
-									transform:rotate(0deg)
-								}
-								to {
-									transform:rotate(-360deg)
-								}
-							}
-							@-o-keyframes reverse {
-								from {
-									-o-transform:rotate(0deg)
-								}
-								to {
-									-o-transform:rotate(-360deg)
-								}
-							}
-							@-webkit-keyframes reverse {
-								from {
-									-webkit-transform:rotate(0deg)
-								}
-								to {
-									-webkit-transform:rotate(-360deg)
-								}
-							}
-							@-moz-keyframes reverse {
-								from {
-									-moz-transform:rotate(0deg)
-								}
-								to {
-									-moz-transform:rotate(-360deg)
-								}
-							}
-
-							@keyframes ColorChange {
-								0% {
-									color:#1B9120;
-								}
-								16% {
-									color:#7F00C6;
-								}
-								49% {
-									color:#0067c6;
-								}
-								82% {
-									color:#1B9120;
-								}
-							}
-							@-o-keyframes ColorChange {
-								0% {
-									color:#1B9120;
-								}
-								16% {
-									color:#7F00C6;
-								}
-								49% {
-									color:#0067c6;
-								}
-								82% {
-									color:#1B9120;
-								}
-							}
-							@-webkit-keyframes ColorChange {
-								0% {
-									color:#1B9120;
-								}
-								16% {
-									color:#7F00C6;
-								}
-								49% {
-									color:#0067c6;
-								}
-								82% {
-									color:#1B9120;
-								}
-							}
-							@-moz-keyframes ColorChange {
-								0% {
-									color:#1B9120;
-								}
-								16% {
-									color:#7F00C6;
-								}
-								49% {
-									color:#0067c6;
-								}
-								82% {
-									color:#1B9120;
-								}
-							}
-							</style>
-			<?php
-						}
-					}
-				}
-			?>
 			<?php if(is_page_template('albums.php')) { ?>
 				<style>
 					img.alignleft, .alignleft {
@@ -281,35 +136,6 @@
 					}
 				</style>
 				<![endif]-->
-		
-		<!--SCRIPTS-->
-			<?php wp_head(); ?>
-
-		<!-- ICONS FONT FOR IE9 -->
-			<!--[if lte IE 7]>
-				<script src="<?php bloginfo('template_directory'); ?>/fonts/ie7.js"		type="text/javascript"></script>
-				<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/fonts/ie7.css" />
-			<![endif]-->
-
-		<!-- HTML5 FOR IE9 -->
-			<!--[if lt IE 9]>
-				<script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
-			<![endif]-->
-
-		<!-- ANNOUNCE THAT IE ISN'T IDEAL - STYLES -->
-		<!--[if IE]>
-			<style>
-				#ie-announcement {
-					background: #7fb3e2;
-					line-height:1.5;
-					text-align:center;
-					padding:10px;
-					box-sizing:border-box;
-					display:block;
-				}
-			</style>
-		<![endif]-->
-
 	</head>
 
 <?php flush(); ?>
@@ -339,7 +165,7 @@
 							<div class="menu-right screen">
 								<div class="icon">
 									<a href="#" id="toggle" style="border:none" title="Open Menu" >
-										<img style="height:24px;" src="http://ti-static.titaniumrobotics.com/site/theme-Ti-22/assets/ui/ui-menu.svg?ver=4.2">
+										<img style="height:20px;" src="http://ti-static.titaniumrobotics.com/site/theme-Ti-22/assets/ui/ui-menu.svg?ver=4.2">
 									</a>
 								</div>
 							</div>
