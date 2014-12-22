@@ -55,7 +55,7 @@
 /* NAVIGATION */
 .logo
 {
-    margin: -3px 0 0 -3px;
+    margin: -3px 0 0 -3px; /* this is to accomodate for the 3px blue border around the menu */
 
     text-align: left;
 }
