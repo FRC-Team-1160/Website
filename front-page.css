@@ -1,6 +1,18 @@
-.gallery .control-operator:target ~ .controls .control-button {
-	color: #ccc;
-	color: rgba(255, 255, 255, 0.4);
+.gallery
+{
+    position: absolute;
+    top: 0;
+
+    overflow: hidden;
+}
+/*.gap {
+	padding-top:20em;
+	padding-bottom:;
+}*/
+.gallery .control-operator:target ~ .controls .control-button
+{
+    color: #ccc;
+    color: rgba(255, 255, 255, .4);
 }
 
 .gallery .control-button:first-of-type,
@@ -17,926 +29,941 @@
 .items-5 .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
 .items-5 .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),
 .items-5 .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4),
-.items-5 .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5) {
-	color: white;
-	color: rgba(255, 255, 255, 0.8);
+.items-5 .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5)
+{
+    color: white;
+    color: rgba(255, 255, 255, .8);
 }
 
-.gallery .item:first-of-type {
-	position: relative;
-	opacity: 1;
-	z-index:15;
+.gallery .item:first-of-type
+{
+    position: relative;
+    z-index: 15;
+
+    opacity: 1;
 }
 
-.gallery .item {
-	position: absolute;
-	z-index:0;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 1;
-	-webkit-transition: opacity .5s;
-	-o-transition: opacity .5s;
-	transition: opacity .5s;
-	animation-timing-function:linear !important;
-	-webkit-animation-timing-function:linear !important;
+.gallery .item
+{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    transition: opacity .5s;
+    -webkit-animation-timing-function: linear !important;
+            animation-timing-function: linear !important;
+    /*height: 100%;*/
+
+    opacity: 1;
 }
 
-.gallery .control-operator {
-	display: none;
+.gallery .control-operator
+{
+    display: none;
 }
 
-.gallery .control-operator:target ~ .item {
-	pointer-events: none;
-	opacity: 0;
-	-webkit-animation: none;
-	-o-animation: none;
-	animation: none;
+.gallery .control-operator:target ~ .item
+{
+    -webkit-animation: none;
+            animation: none;
+    pointer-events: none;
+
+    opacity: 0;
 }
 
-.gallery .control-operator:target ~ .controls .control-button {
-	-webkit-animation: none;
-	-o-animation: none;
-	animation: none;
-	animation-timing-function:linear;
-	-webkit-animation-timing-function:linear;
+.gallery .control-operator:target ~ .controls .control-button
+{
+    -webkit-animation: none;
+            animation: none;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 
-@-webkit-keyframes controlAnimation-2 {
-	0% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+@-webkit-keyframes controlAnimation-2
+{
+    0%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 
-	14.3%, 50% {
-		color: white;
-		color: rgba(255, 255, 255, 0.8);
-	}
+    14.3%,
+    50%
+    {
+        color: white;
+        color: rgba(255, 255, 255, .8);
+    }
 
-	64.3%, 100% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+    64.3%,
+    100%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 }
 
-@-o-keyframes controlAnimation-2 {
-	0% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+@keyframes controlAnimation-2
+{
+    0%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 
-	14.3%, 50% {
-		color: white;
-		color: rgba(255, 255, 255, 0.8);
-	}
+    14.3%,
+    50%
+    {
+        color: white;
+        color: rgba(255, 255, 255, .8);
+    }
 
-	64.3%, 100% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+    64.3%,
+    100%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 }
 
-@keyframes controlAnimation-2 {
-	0% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+@-webkit-keyframes galleryAnimation-2
+{
+    0%
+    {
+        z-index: 11;
 
-	14.3%, 50% {
-		color: white;
-		color: rgba(255, 255, 255, 0.8);
-	}
+        -webkit-transform: translateX(-99em);
+                transform: translateX(-99em);
+    }
 
-	64.3%, 100% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+    14.3%,
+    5%
+    {
+        z-index: 11;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    19.3%,
+    100%
+    {
+        z-index: 1;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
 }
 
-@-webkit-keyframes galleryAnimation-2 {
-	0% {
-		transform:translateX(-99em);
-		-ms-transform:translateX(-99em);
-		-webkit-transform:translateX(-99em);
-		z-index:11;
-	}
+@keyframes galleryAnimation-2
+{
+    0%
+    {
+        z-index: 11;
 
-	14.3%, 5% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:11;
-	}
+        -webkit-transform: translateX(-99em);
+                transform: translateX(-99em);
+    }
 
-	19.3%, 100% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:1;
-	}
+    14.3%,
+    5%
+    {
+        z-index: 11;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    19.3%,
+    100%
+    {
+        z-index: 1;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
 }
 
-@-o-keyframes galleryAnimation-2 {
-	0% {
-		transform:translateX(-99em);
-		-ms-transform:translateX(-99em);
-		-webkit-transform:translateX(-99em);
-		z-index:11;
-	}
+.items-2.autoplay .control-button
+{
+    -webkit-animation: controlAnimation-2 14s infinite;
+            animation: controlAnimation-2 14s infinite;
 
-	14.3%, 5% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:11;
-	}
-
-	19.3%, 100% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:1;
-	}
+    color: #ccc;
+    color: rgba(255, 255, 255, .4);
 }
 
-@keyframes galleryAnimation-2 {
-	0% {
-		transform:translateX(-99em);
-		-ms-transform:translateX(-99em);
-		-webkit-transform:translateX(-99em);
-		z-index:11;
-	}
-
-	14.3%, 5% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:11;
-	}
-
-	19.3%, 100% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:1;
-	}
+.items-2.autoplay .item
+{
+    -webkit-animation: galleryAnimation-2 14s infinite;
+            animation: galleryAnimation-2 14s infinite;
 }
 
-.items-2.autoplay .control-button {
-	-webkit-animation: controlAnimation-2 14s infinite;
-	-o-animation: controlAnimation-2 14s infinite;
-	animation: controlAnimation-2 14s infinite;
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-}
+.items-2 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1)
+{
+    pointer-events: auto;
 
-.items-2.autoplay .item {
-	-webkit-animation: galleryAnimation-2 14s infinite;
-	-o-animation: galleryAnimation-2 14s infinite;
-	animation: galleryAnimation-2 14s infinite;
-}
-
-.items-2 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
-	pointer-events: auto;
-	opacity: 1;
+    opacity: 1;
 }
 
 .items-2 .control-button:nth-of-type(1),
-.items-2 .item:nth-of-type(1) {
-	-webkit-animation-delay: -2s;
-	-o-animation-delay: -2s;
-	animation-delay: -2s;
+.items-2 .item:nth-of-type(1)
+{
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
 }
 
-.items-2 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
-	pointer-events: auto;
-	opacity: 1;
+.items-2 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2)
+{
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 .items-2 .control-button:nth-of-type(2),
-.items-2 .item:nth-of-type(2) {
-	-webkit-animation-delay: 5s;
-	-o-animation-delay: 5s;
-	animation-delay: 5s;
+.items-2 .item:nth-of-type(2)
+{
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
 }
 
-@-webkit-keyframes controlAnimation-3 {
-	0% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+@-webkit-keyframes controlAnimation-3
+{
+    0%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 
-	9.5%, 33.3% {
-		color: white;
-		color: rgba(255, 255, 255, 0.8);
-	}
+    9.5%,
+    33.3%
+    {
+        color: white;
+        color: rgba(255, 255, 255, .8);
+    }
 
-	42.9%, 100% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+    42.9%,
+    100%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 }
 
-@-o-keyframes controlAnimation-3 {
-	0% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+@keyframes controlAnimation-3
+{
+    0%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 
-	9.5%, 33.3% {
-		color: white;
-		color: rgba(255, 255, 255, 0.8);
-	}
+    9.5%,
+    33.3%
+    {
+        color: white;
+        color: rgba(255, 255, 255, .8);
+    }
 
-	42.9%, 100% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+    42.9%,
+    100%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 }
 
-@keyframes controlAnimation-3 {
-	0% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+@-webkit-keyframes galleryAnimation-3
+{
+    0%
+    {
+        z-index: 11;
 
-	9.5%, 33.3% {
-		color: white;
-		color: rgba(255, 255, 255, 0.8);
-	}
+        -webkit-transform: translateX(-99em);
+                transform: translateX(-99em);
+    }
 
-	42.9%, 100% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+    9.5%,
+    33.3%
+    {
+        z-index: 11;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    42.9%,
+    100%
+    {
+        z-index: 1;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
 }
 
-@-webkit-keyframes galleryAnimation-3 {
-	0% {
-		transform:translateX(-99em);
-		-ms-transform:translateX(-99em);
-		-webkit-transform:translateX(-99em);
-		z-index:11;
-	}
+@keyframes galleryAnimation-3
+{
+    0%
+    {
+        z-index: 11;
 
-	9.5%, 33.3% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:11;
-	}
+        -webkit-transform: translateX(-99em);
+                transform: translateX(-99em);
+    }
 
-	42.9%, 100% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:1;
-	}
+    9.5%,
+    33.3%
+    {
+        z-index: 11;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    42.9%,
+    100%
+    {
+        z-index: 1;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
 }
 
-@-o-keyframes galleryAnimation-3 {
-	0% {
-		transform:translateX(-99em);
-		-ms-transform:translateX(-99em);
-		-webkit-transform:translateX(-99em);
-		z-index:11;
-	}
+.items-3.autoplay .control-button
+{
+    -webkit-animation: controlAnimation-3 21s infinite;
+            animation: controlAnimation-3 21s infinite;
 
-	9.5%, 33.3% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:11;
-	}
-
-	42.9%, 100% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:1;
-	}
+    color: #ccc;
+    color: rgba(255, 255, 255, .4);
 }
 
-@keyframes galleryAnimation-3 {
-	0% {
-		transform:translateX(-99em);
-		-ms-transform:translateX(-99em);
-		-webkit-transform:translateX(-99em);
-		z-index:11;
-	}
+.items-3.autoplay .item
+{
+    z-index: 0;
 
-	9.5%, 33.3% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:11;
-	}
-
-	42.9%, 100% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:1;
-	}
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation: galleryAnimation-3 21s infinite;
+            animation: galleryAnimation-3 21s infinite;
 }
 
-.items-3.autoplay .control-button {
-	-webkit-animation: controlAnimation-3 21s infinite;
-	-o-animation: controlAnimation-3 21s infinite;
-	animation: controlAnimation-3 21s infinite;
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-}
+.items-3 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1)
+{
+    pointer-events: auto;
 
-.items-3.autoplay .item {
-	-webkit-animation: galleryAnimation-3 21s infinite;
-	-o-animation: galleryAnimation-3 21s infinite;
-	animation: galleryAnimation-3 21s infinite;
-	transform:		translateX(0);
-	-ms-transform:	translateX(0);
-	-webkit-transform:translateX(0);
-	z-index:		0;
-}
-
-.items-3 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
-	pointer-events: auto;
-	opacity: 1;
+    opacity: 1;
 }
 
 .items-3 .control-button:nth-of-type(1),
-.items-3 .item:nth-of-type(1) {
-	-webkit-animation-delay: -2s;
-	-o-animation-delay: -2s;
-	animation-delay: -2s;
+.items-3 .item:nth-of-type(1)
+{
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
 }
 
-.items-3 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
-	pointer-events: auto;
-	opacity: 1;
+.items-3 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2)
+{
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 .items-3 .control-button:nth-of-type(2),
-.items-3 .item:nth-of-type(2) {
-	-webkit-animation-delay: 5s;
-	-o-animation-delay: 5s;
-	animation-delay: 5s;
+.items-3 .item:nth-of-type(2)
+{
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
 }
 
-.items-3 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
-	pointer-events: auto;
-	opacity: 1;
+.items-3 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3)
+{
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 .items-3 .control-button:nth-of-type(3),
-.items-3 .item:nth-of-type(3) {
-	-webkit-animation-delay: 12s;
-	-o-animation-delay: 12s;
-	animation-delay: 12s;
+.items-3 .item:nth-of-type(3)
+{
+    -webkit-animation-delay: 12s;
+            animation-delay: 12s;
 }
 
-@-webkit-keyframes controlAnimation-4 {
-	0% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+@-webkit-keyframes controlAnimation-4
+{
+    0%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 
-	7.1%, 25% {
-		color: white;
-		color: rgba(255, 255, 255, 0.8);
-	}
+    7.1%,
+    25%
+    {
+        color: white;
+        color: rgba(255, 255, 255, .8);
+    }
 
-	32.1%, 100% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+    32.1%,
+    100%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 }
 
-@-o-keyframes controlAnimation-4 {
-	0% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+@keyframes controlAnimation-4
+{
+    0%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 
-	7.1%, 25% {
-		color: white;
-		color: rgba(255, 255, 255, 0.8);
-	}
+    7.1%,
+    25%
+    {
+        color: white;
+        color: rgba(255, 255, 255, .8);
+    }
 
-	32.1%, 100% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+    32.1%,
+    100%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 }
 
-@keyframes controlAnimation-4 {
-	0% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+@-webkit-keyframes galleryAnimation-4
+{
+    0%
+    {
+        z-index: 11;
 
-	7.1%, 25% {
-		color: white;
-		color: rgba(255, 255, 255, 0.8);
-	}
+        -webkit-transform: translateX(-99em);
+                transform: translateX(-99em);
+    }
 
-	32.1%, 100% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+    7.1%,
+    25%
+    {
+        z-index: 11;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    32.1%,
+    100%
+    {
+        z-index: 1;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
 }
 
-@-webkit-keyframes galleryAnimation-4 {
-	0% {
-		transform:translateX(-99em);
-		-ms-transform:translateX(-99em);
-		-webkit-transform:translateX(-99em);
-		z-index:11;
-	}
+@keyframes galleryAnimation-4
+{
+    0%
+    {
+        z-index: 11;
 
-	7.1%, 25% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:11;
-	}
+        -webkit-transform: translateX(-99em);
+                transform: translateX(-99em);
+    }
 
-	32.1%, 100% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:1;
-	}
+    7.1%,
+    25%
+    {
+        z-index: 11;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    32.1%,
+    100%
+    {
+        z-index: 1;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
 }
 
-@-o-keyframes galleryAnimation-4 {
-	0% {
-		transform:translateX(-99em);
-		-ms-transform:translateX(-99em);
-		-webkit-transform:translateX(-99em);
-		z-index:11;
-	}
+.items-4.autoplay .control-button
+{
+    -webkit-animation: controlAnimation-4 60s infinite ;
+            animation: controlAnimation-4 60s infinite ;
 
-	7.1%, 25% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:11;
-	}
-
-	32.1%, 100% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:1;
-	}
+    color: #ccc;
+    color: rgba(255, 255, 255, .4);
 }
 
-@keyframes galleryAnimation-4 {
-	0% {
-		transform:translateX(-99em);
-		-ms-transform:translateX(-99em);
-		-webkit-transform:translateX(-99em);
-		z-index:11;
-	}
+.items-4.autoplay .item
+{
+    z-index: 0;
 
-	7.1%, 25% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:11;
-	}
-
-	32.1%, 100% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:1;
-	}
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation: galleryAnimation-4 60s infinite;
+            animation: galleryAnimation-4 60s infinite;
 }
 
-.items-4.autoplay .control-button {
-	-webkit-animation: controlAnimation-4 60s infinite ;
-	-o-animation: controlAnimation-4 60s infinite ;
-	animation: controlAnimation-4 60s infinite ;
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-}
+.items-4 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1)
+{
+    pointer-events: auto;
 
-.items-4.autoplay .item {
-	-webkit-animation: 	galleryAnimation-4 60s infinite;
-	-o-animation: 		galleryAnimation-4 60s infinite;
-	animation: 			galleryAnimation-4 60s infinite;
-	transform:		translateX(0);
-	-ms-transform:	translateX(0);
-	-webkit-transform:translateX(0);
-	z-index:		0;
-}
-
-.items-4 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
-	pointer-events: auto;
-	opacity: 1;
+    opacity: 1;
 }
 
 .items-4 .control-button:nth-of-type(1),
-.items-4 .item:nth-of-type(1) {
-	-webkit-animation-delay: -2s;
-	-o-animation-delay: -2s;
-	animation-delay: -2s;
+.items-4 .item:nth-of-type(1)
+{
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
 }
 
-.items-4 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
-	pointer-events: auto;
-	opacity: 1;
+.items-4 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2)
+{
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 .items-4 .control-button:nth-of-type(2),
-.items-4 .item:nth-of-type(2) {
-	-webkit-animation-delay: 13s;
-	-o-animation-delay: 13s;
-	animation-delay: 13s;
+.items-4 .item:nth-of-type(2)
+{
+    -webkit-animation-delay: 13s;
+            animation-delay: 13s;
 }
 
-.items-4 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
-	pointer-events: auto;
-	opacity: 1;
+.items-4 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3)
+{
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 .items-4 .control-button:nth-of-type(3),
-.items-4 .item:nth-of-type(3) {
-	-webkit-animation-delay: 28s;
-	-o-animation-delay: 28s;
-	animation-delay: 28s;
+.items-4 .item:nth-of-type(3)
+{
+    -webkit-animation-delay: 28s;
+            animation-delay: 28s;
 }
 
-.items-4 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
-	pointer-events: auto;
-	opacity: 1;
+.items-4 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4)
+{
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 .items-4 .control-button:nth-of-type(4),
-.items-4 .item:nth-of-type(4) {
-	-webkit-animation-delay: 43s;
-	-o-animation-delay: 43s;
-	animation-delay: 43s;
+.items-4 .item:nth-of-type(4)
+{
+    -webkit-animation-delay: 43s;
+            animation-delay: 43s;
 }
 
-@-webkit-keyframes controlAnimation-5 {
-	0% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+@-webkit-keyframes controlAnimation-5
+{
+    0%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 
-	5.7%, 20% {
-		color: white;
-		color: rgba(255, 255, 255, 0.8);
-	}
+    5.7%,
+    20%
+    {
+        color: white;
+        color: rgba(255, 255, 255, .8);
+    }
 
-	25.7%, 100% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+    25.7%,
+    100%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 }
 
-@-o-keyframes controlAnimation-5 {
-	0% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+@keyframes controlAnimation-5
+{
+    0%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 
-	5.7%, 20% {
-		color: white;
-		color: rgba(255, 255, 255, 0.8);
-	}
+    5.7%,
+    20%
+    {
+        color: white;
+        color: rgba(255, 255, 255, .8);
+    }
 
-	25.7%, 100% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+    25.7%,
+    100%
+    {
+        color: #ccc;
+        color: rgba(255, 255, 255, .4);
+    }
 }
 
-@keyframes controlAnimation-5 {
-	0% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+@-webkit-keyframes galleryAnimation-5
+{
+    0%
+    {
+        z-index: 11;
 
-	5.7%, 20% {
-		color: white;
-		color: rgba(255, 255, 255, 0.8);
-	}
+        -webkit-transform: translateX(-99em);
+                transform: translateX(-99em);
+    }
 
-	25.7%, 100% {
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-	}
+    5.7%,
+    20%
+    {
+        z-index: 11;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    25.7%,
+    100%
+    {
+        z-index: 1;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
 }
 
-@-webkit-keyframes galleryAnimation-5 {
-	0% {
-		transform:translateX(-99em);
-		-ms-transform:translateX(-99em);
-		-webkit-transform:translateX(-99em);
-		z-index:11;
-	}
+@keyframes galleryAnimation-5
+{
+    0%
+    {
+        z-index: 11;
 
-	5.7%, 20% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:11;
-	}
+        -webkit-transform: translateX(-99em);
+                transform: translateX(-99em);
+    }
 
-	25.7%, 100% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:1;
-	}
+    5.7%,
+    20%
+    {
+        z-index: 11;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    25.7%,
+    100%
+    {
+        z-index: 1;
+
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
 }
 
-@-o-keyframes galleryAnimation-5 {
-	0% {
-		transform:translateX(-99em);
-		-ms-transform:translateX(-99em);
-		-webkit-transform:translateX(-99em);
-		z-index:11;
-	}
+.items-5.autoplay .control-button
+{
+    -webkit-animation: controlAnimation-5 35s infinite;
+            animation: controlAnimation-5 35s infinite;
 
-	5.7%, 20% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:11;
-	}
-
-	25.7%, 100% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:1;
-	}
+    color: #ccc;
+    color: rgba(255, 255, 255, .4);
 }
 
-@keyframes galleryAnimation-5 {
-	0% {
-		transform:translateX(-99em);
-		-ms-transform:translateX(-99em);
-		-webkit-transform:translateX(-99em);
-		z-index:11;
-	}
-
-	5.7%, 20% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:11;
-	}
-
-	25.7%, 100% {
-		transform:translateX(0);
-		-ms-transform:translateX(0);
-		-webkit-transform:translateX(0);
-		z-index:1;
-	}
+.items-5.autoplay .item
+{
+    -webkit-animation: galleryAnimation-5 35s infinite;
+            animation: galleryAnimation-5 35s infinite;
 }
 
-.items-5.autoplay .control-button {
-	-webkit-animation: controlAnimation-5 35s infinite;
-	-o-animation: controlAnimation-5 35s infinite;
-	animation: controlAnimation-5 35s infinite;
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
-}
+.items-5 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1)
+{
+    pointer-events: auto;
 
-.items-5.autoplay .item {
-	-webkit-animation: galleryAnimation-5 35s infinite;
-	-o-animation: galleryAnimation-5 35s infinite;
-	animation: galleryAnimation-5 35s infinite;
- }
-
-.items-5 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
-	pointer-events: auto;
-	opacity: 1;
+    opacity: 1;
 }
 
 .items-5 .control-button:nth-of-type(1),
-.items-5 .item:nth-of-type(1) {
-	-webkit-animation-delay: -2s;
-	-o-animation-delay: -2s;
-	animation-delay: -2s;
+.items-5 .item:nth-of-type(1)
+{
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
 }
 
-.items-5 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
-	pointer-events: auto;
-	opacity: 1;
+.items-5 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2)
+{
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 .items-5 .control-button:nth-of-type(2),
-.items-5 .item:nth-of-type(2) {
-	-webkit-animation-delay: 5s;
-	-o-animation-delay: 5s;
-	animation-delay: 5s;
+.items-5 .item:nth-of-type(2)
+{
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
 }
 
-.items-5 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
-	pointer-events: auto;
-	opacity: 1;
+.items-5 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3)
+{
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 .items-5 .control-button:nth-of-type(3),
-.items-5 .item:nth-of-type(3) {
-	-webkit-animation-delay: 12s;
-	-o-animation-delay: 12s;
-	animation-delay: 12s;
+.items-5 .item:nth-of-type(3)
+{
+    -webkit-animation-delay: 12s;
+            animation-delay: 12s;
 }
 
-.items-5 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
-	pointer-events: auto;
-	opacity: 1;
+.items-5 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4)
+{
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 .items-5 .control-button:nth-of-type(4),
-.items-5 .item:nth-of-type(4) {
-	-webkit-animation-delay: 19s;
-	-o-animation-delay: 19s;
-	animation-delay: 19s;
+.items-5 .item:nth-of-type(4)
+{
+    -webkit-animation-delay: 19s;
+            animation-delay: 19s;
 }
 
-.items-5 .control-operator:nth-of-type(5):target ~ .item:nth-of-type(5) {
-	pointer-events: auto;
-	opacity: 1;
+.items-5 .control-operator:nth-of-type(5):target ~ .item:nth-of-type(5)
+{
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 .items-5 .control-button:nth-of-type(5),
-.items-5 .item:nth-of-type(5) {
-	-webkit-animation-delay: 26s;
-	-o-animation-delay: 26s;
-	animation-delay: 26s;
+.items-5 .item:nth-of-type(5)
+{
+    -webkit-animation-delay: 26s;
+            animation-delay: 26s;
 }
 
-.gallery .control-button {
-	color: #ccc;
-	color: rgba(255, 255, 255, 0.4);
+.gallery .control-button
+{
+    color: #ccc;
+    color: rgba(255, 255, 255, .4);
 }
 
-.gallery .control-button:hover {
-	color: white;
-	color: rgba(255, 255, 255, 0.8);
+.gallery .control-button:hover
+{
+    color: white;
+    color: rgba(255, 255, 255, .8);
 }
 
 /*
 	Theme controls how everything looks in Gallery CSS.
 */
 
-.gallery {
-	position: relative;
-	overflow: hidden;
+.gallery
+{
+    position: relative;
+
+    overflow: hidden;
 }
 
-.gallery .item {
-	height: 0;
-	width:100%;
-	padding-bottom:30%;
-	overflow: hidden;
-	background: #222;
+.gallery .item
+{
+    /*padding-bottom:30%;*/
+    overflow: hidden;
+    /*height: 0;*/
+
+    width: 100%;
+
+    background: #222;
 }
 
-.gallery .controls {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	z-index:100;
+.gallery .controls
+{
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+
+    width: 100%;
+
+    text-align: center;
 }
 
-.gallery .control-button {
-	display: inline-block;
-	font-weight:bold;
-	margin: 0 .02em;
-	font-size: 3em;
-	text-align: center;
-	text-decoration: none;
-	-webkit-transition: color .1s;
-	-o-transition: color .1s;
-	transition: color .1s;
-		color: #ccc;
-		color: rgba(255, 255, 255, 0.4);
+.gallery .control-button
+{
+    font-size: 3em;
+    font-weight: bold;
+
+    display: inline-block;
+
+    margin: 0 .02em;
+    transition: color .1s;
+    text-align: center;
+    text-decoration: none;
+
+    color: #ccc;
+    color: rgba(255, 255, 255, .4);
 }
 
-.entry {
-	max-width:31.5em;
+.entry
+{
+    max-width: 31.5em;
 }
 
-.gallery .thumbnail span {
-	padding: 8% 5%;
-	border-width:8px;
-}
+.gallery h1 a
+{
+    font-size: 32px;
 
-.gallery h1 a {
-	color:#FFF;
-	border-bottom:1px solid #0067C6;
-	display:inline-block;
-	font-size:32px;
+    display: inline-block;
+
+    color: #fff;
+    border-bottom: 1px solid #0067c6;
 }
 
 /* HOME CONTAINERS */
-div.homecontainer {
-	width:80%;
-	max-width:64em;
-	margin:auto;
+div.homecontainer
+{
+    width: 80%;
+    max-width: 64em;
+    margin: auto;
 }
-div.homecontainer:first-of-type {
-	border-width:none;
+div.homecontainer:first-of-type
+{
+    border-width: none;
 }
-div.homecontainer+div.homecontainer {
-	border-width:2px 0 0;
+div.homecontainer + div.homecontainer
+{
+    border-width: 2px 0 0;
 }
-div.homecontainer:last-child {
-	border-width:0;
+div.homecontainer:last-child
+{
+    border-width: 0;
 }
-.bold::first-line {
-	font-weight:bold;
+.bold::first-line
+{
+    font-weight: bold;
 }
-.sponsored {
-	margin-right:1%;
-	margin-left:2%;
-	float:left;
+.sponsored
+{
+    float: left;
+
+    margin-right: 1%;
+    margin-left: 2%;
 }
-.social {
-	float:left;
+.social
+{
+    float: left;
 }
-.social ul {
-	text-align:center;
+.social ul
+{
+    text-align: center;
 }
-.social ul li{
-	font-size:200%;
-	display:inline-block;
-	text-align:center;
-	padding:0.5em 0.25em;
-	margin:0;
+.social ul li
+{
+    font-size: 200%;
+
+    display: inline-block;
+
+    margin: 0;
+    padding: .5em .25em;
+
+    text-align: center;
 }
-.gallery .button {
-	position:absolute;
-	bottom:1em;
-	background:rgba(255, 255, 255, 0.75);
-	text-align: center;
-	margin:0 auto;
+.gallery .button
+{
+    position: absolute;
+    bottom: 1em;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, .75);
 }
-.rightside .entry span {
-	background: rgba(255, 255, 255, 0.75);
-	line-height: 2;
-	padding: 5px;
-	margin: 0;
+.rightside .entry span
+{
+    line-height: 2;
+
+    margin: 0;
+    padding: 5px;
+
+    background: rgba(255, 255, 255, .75);
 }
-#location {
-	background-color:#444;
-	color:#FFF;
-	-webkit-font-smoothing: antialiased;
+#location
+{
+    color: #fff;
+    background-color: #444;
+
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-			@media screen and (max-width: 720px) {
-				.homecontainer [class*='entry-']:first-of-type {
-					padding-bottom:1em;
-				}
-				.sponsored, .social {
-					width:96%;
-					border-radius:6px;
-					background:#FFF;
-					float:none;
-					margin:auto;
-					margin-bottom:0.5em;	
-				}
-				.gallery .item {
-					padding-bottom:50%;
-				}
-				.gallery .controls {
-					display:none;
-					visiblity:hidden;
-				}
-				.gallery .thumbnail span {
-					bottom:1rem;
-				}
-				figure .rightside {
-					left: 1rem;
-					right: 1rem;
-					width: auto;
-					top: 2rem;
-					bottom:0;
-				}
-				figure .entry {
-					padding:1em;
-					overflow: hidden;
-				}
-				.rightside p {
-						display: none;
-						
-						visibility: hidden;
-				}
-				.rightside h3 {
-						position:absolute;
-						bottom:3em;
-						font-size:1rem;
-				}
-			}
+@media screen and (max-width: 720px)
+{
+    .homecontainer [class*='entry-']:first-of-type
+    {
+        padding-bottom: 1em;
+    }
+    .sponsored,
+    .social
+    {
+        float: none;
+
+        width: 96%;
+        margin: auto;
+        margin-bottom: .5em;
+
+        border-radius: 6px;
+        background: #fff;
+    }
+    .gallery .controls
+    {
+        display: none;
+
+        visiblity: hidden;
+    }
+    figure .rightside
+    {
+        top: 2rem;
+        right: 1rem;
+        bottom: 0;
+        left: 1rem;
+
+        width: auto;
+    }
+    figure .entry
+    {
+        overflow: hidden;
+
+        padding: 1em;
+    }
+    .rightside p
+    {
+        display: none;
+        visibility: hidden;
+    }
+    .rightside h3
+    {
+        font-size: 1rem;
+
+        position: absolute;
+        bottom: 3em;
+    }
+}

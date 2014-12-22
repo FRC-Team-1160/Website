@@ -18,13 +18,13 @@
 					if (!empty($thumbnail)) {
 				?>
 						<div class="thumbnail">
-							<div class="featured screen" style="background-image: url('<?php echo $thumbnail; ?>')!important;">
-							</div>
 							<span>
 								<h1>
 									<?php the_title(); ?>
 								</h1>
 							</span>
+							<div class="featured screen" style="background-image: url('<?php echo $thumbnail; ?>')!important;">
+							</div>
 						</div>
 
 				<?php }
@@ -340,7 +340,7 @@
 					<? } ?>
 				</div>
 <?php else: ?>
-		<div class="clear"></div>
+		<div class="clear gap"></div>
 			<div class="screen gallery autoplay items-4">
 			<div id="item-1" class="control-operator"></div>
 			<div id="item-2" class="control-operator"></div>

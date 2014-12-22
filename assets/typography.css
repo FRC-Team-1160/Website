@@ -1,136 +1,183 @@
+/* TYPOGRAPHY STYLES */
+body
+{
+    font-size: 16px;
 
-body {
-	font-size: 16px;
-	text-rendering:optimizeLegibility;
-	font-feature-settings:"kern" 1;
-}
-
-body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
-	font-size-adjust: 0.5;
-}
-
-#page {
-	font-size: 1em;
-	/* equivalent to 16px */
-	line-height: 1.25;
-	/* equivalent to 20px */
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: 'kern' 1;
+       -moz-font-feature-settings: 'kern' 1;
+            font-feature-settings: 'kern' 1;
 }
 
-@media (min-width: 43.75em) {
-	#page {
-	font-size: 1em;
-	/* equivalent to 16px */
-	line-height: 1.375;
-	/* equivalent to 22px */
-	}
+body,
+caption,
+th,
+td,
+input,
+textarea,
+select,
+option,
+legend,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-size-adjust: .5;
 }
 
-h1 {
-	font-size: 2em;
-	/* 2x body copy size = 32px */
-	line-height: 1.25;
-	/* 45px / 36px */
+#page
+{
+    font-size: 1em;
+    /* equivalent to 16px */
+    line-height: 1.25;
+    /* equivalent to 20px */
 }
 
-@media (min-width: 43.75em) {
-	h1 {
-	font-size: 2.5em;
-	/* 2.5x body copy size = 40px */
-	line-height: 1.125;
-	}
+@media (min-width: 43.75em)
+{
+    #page
+    {
+        font-size: 1em;
+        /* equivalent to 16px */
+        line-height: 1.375;
+        /* equivalent to 22px */
+    }
 }
 
-@media (min-width: 56.25em) {
-	h1 {
-	font-size: 3em;
-	/* 3x body copy size = 48px */
-	line-height: 1.05;
-	/* keep to a multiple of the 20px line height and something more appropriate for display headings */
-	}
+h1
+{
+    font-size: 2em;
+    /* 2x body copy size = 32px */
+    line-height: 1.25;
+    /* 45px / 36px */
 }
 
-h2 {
-	font-size: 1.625em;
-	/* 1.625x body copy size = 26px */
-	line-height: 1.15384615;
-	/* 30px / 26px */
+@media (min-width: 43.75em)
+{
+    h1
+    {
+        font-size: 2.5em;
+        /* 2.5x body copy size = 40px */
+        line-height: 1.125;
+    }
 }
 
-@media (min-width: 43.75em) {
-	h2 {
-	font-size: 2em;
-	/* 2x body copy size = 32px */
-	line-height: 1.25;
-	}
+@media (min-width: 56.25em)
+{
+    h1
+    {
+        font-size: 3em;
+        /* 3x body copy size = 48px */
+        line-height: 1.05;
+        /* keep to a multiple of the 20px line height and something more appropriate for display headings */
+    }
 }
 
-@media (min-width: 56.25em) {
-	h2 {
-	font-size: 2.25em;
-	/* 2.25x body copy size = 36px */
-	line-height: 1.25;
-	}
+h2
+{
+    font-size: 1.625em;
+    /* 1.625x body copy size = 26px */
+    line-height: 1.15384615;
+    /* 30px / 26px */
 }
 
-h3 {
-	font-size: 1.375em;
-	/* 1.375x body copy size = 22px */
-	line-height: 1.13636364;
-	/* 25px / 22px */
+@media (min-width: 43.75em)
+{
+    h2
+    {
+        font-size: 2em;
+        /* 2x body copy size = 32px */
+        line-height: 1.25;
+    }
 }
 
-@media (min-width: 43.75em) {
-	h3 {
-	font-size: 1.5em;
-	/* 1.5x body copy size = 24px */
-	line-height: 1.25;
-	}
+@media (min-width: 56.25em)
+{
+    h2
+    {
+        font-size: 2.25em;
+        /* 2.25x body copy size = 36px */
+        line-height: 1.25;
+    }
 }
 
-@media (min-width: 56.25em) {
-	h3 {
-	font-size: 1.75em;
-	/* 1.75x body copy size = 28px */
-	line-height: 1.25;
-	}
+h3
+{
+    font-size: 1.375em;
+    /* 1.375x body copy size = 22px */
+    line-height: 1.13636364;
+    /* 25px / 22px */
 }
 
-h4 {
-	font-size: 1.125em;
-	/* 1.125x body copy size = 18px */
-	line-height: 1.11111111;
+@media (min-width: 43.75em)
+{
+    h3
+    {
+        font-size: 1.5em;
+        /* 1.5x body copy size = 24px */
+        line-height: 1.25;
+    }
 }
 
-@media (min-width: 43.75em) {
-	h4 {
-	line-height: 1.22222222;
-	/* (22px / 18px */
-	}
+@media (min-width: 56.25em)
+{
+    h3
+    {
+        font-size: 1.75em;
+        /* 1.75x body copy size = 28px */
+        line-height: 1.25;
+    }
 }
 
-blockquote {
-	font-size: 1.25em;
-	/* 20px / 16px */
-	line-height: 1.25;
-	/* 25px / 20px */
+h4
+{
+    font-size: 1.125em;
+    /* 1.125x body copy size = 18px */
+    line-height: 1.11111111;
 }
 
-blockquote p {
-	margin:0;
+@media (min-width: 43.75em)
+{
+    h4
+    {
+        line-height: 1.22222222;
+        /* (22px / 18px */
+    }
 }
 
-@media (min-width: 43.75em) {
-	blockquote {
-	font-size: 1.5em;
-	/* 24px / 16px = */
-	line-height: 1.45833333;
-	/* 35px / 24px */
-	}
+blockquote
+{
+    font-size: 1.25em;
+    /* 20px / 16px */
+    line-height: 1.25;
+    /* 25px / 20px */
 }
-p {
-	margin:12pt 0;
-	margin:1rem 0;
+
+blockquote p
+{
+    margin: 0;
 }
-p.nopadding {
-	margin:0;
+
+@media (min-width: 43.75em)
+{
+    blockquote
+    {
+        font-size: 1.5em;
+        /* 24px / 16px = */
+        line-height: 1.45833333;
+        /* 35px / 24px */
+    }
+}
+p
+{
+    margin: 12pt 0;
+    margin: 1rem 0;
+}
+p.nopadding
+{
+    margin: 0;
 }

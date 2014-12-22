@@ -6,9 +6,9 @@
 					<?php get_required_files() ?>
 
 				<div class="side">
-					<?php 
-					if (function_exists('dynamic_sidebar') && dynamic_sidebar('sidebar_right')) : 
-					else : 
+					<?php
+					if (function_exists('dynamic_sidebar') && dynamic_sidebar('sidebar_right')) :
+					else :
 					?>
 					<?php endif; ?>
 				</div>

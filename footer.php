@@ -131,7 +131,7 @@
 		<!-- NAVIGATION HOOK-UP -->
 				<script type="text/javascript">
 					var navigation = responsiveNav("#nav", {
-						transition:400,
+						transition:1000,
 						label:"Open Menu",
 						customToggle:"toggle",
 					});
