@@ -143,16 +143,38 @@
 <!--		<BODY> START		-->
 
 	<body class="<?php if (is_front_page()) : ?>front<?php elseif(is_attachment()):?>attachments<?php else: endif; ?>">
-		
+
 			<!--TELL IE USERS THAT THE WEBSITE IS GOING TO LOOK WEIRD-->
 			<!--[if IE]>
 				<div id="ie-announcement">Hey! You're using Internet Explorer, which may cause our website to look funny!  The solution is to <a href="http://browsehappy.com/">try a different browser</a>.  <a href="http://blogs.computerworld.com/18552/12_reasons_not_to_use_internet_explorer_ever">Why?</a></div>
 			<![endif]-->
 <?php if(!is_attachment()) { ?>
+<?php // FEATURED IMAGE
+	if (!is_home()) {
+		global $post;
+				if(has_post_thumbnail( $post_id )) {
+
+					$post_image_id = get_post_thumbnail_id($post_to_use->ID);
+
+					if ($post_image_id) {
+
+						$thumbnail = wp_get_attachment_image_src( $post_image_id, 'post-thumbnail', false);
+						if ($thumbnail) (string)$thumbnail = $thumbnail[0];
+
+					}
+				}
+
+				if (!empty($thumbnail)) {
+?>
+				<div class="featured-image screen" style="background-image: url('<?php echo $thumbnail; ?>')!important;"></div>
+
+<?php }// if it has a thumbnail
+	}//if it isn't the blog index ?>
+
 		<div class="<?php if (is_front_page()) : ?>frontpage wrapper<?php else:?>normal wrapper<?php endif; ?>" id="page">
 
 			<!--START - NAVIGATION-->
-		
+
 			<header id="menuwrap" class="custom-background">
 				<div class="border">
 				<div id="icon-nav">
@@ -186,7 +208,7 @@
 											    font-weight: bold;
 											" placeholder="i'm looking for. . ."></form></span>*/ ?>
 					</div>
-					
+
 				</div>
 					<div class="nav screen" id="nav">
 						<?php
@@ -239,14 +261,14 @@
 						$children = wp_list_pages(
 							"title_li=&child_of=".$post->ID."&echo=0"
 						);
-					
-					if ($children) { 
+
+					if ($children) {
 						$parent_title = get_the_title($post->post_parent);?>
 				<div class="links <?php if(!has_post_thumbnail( $post_id )) {} else{?>withthumbnail<?php } ?>">
 					<ul class="sublinks">
-						<li<?php 
+						<li<?php
 							if (is_page($post->post_parent))
-							{ 
+							{
 							echo " class=\"current-menu-item\"";
 							}
 							?>><a href="<?php echo get_permalink($post->post_parent) ?>"><?php echo $parent_title;?></a></li>
@@ -275,3 +297,20 @@
 		</a>
 	</div>
 <?php } ?>
+
+
+<?php //FEATURED IMAGE-CONTINUED (TITLE OF PAGE)
+	if(!is_home()) {
+				if (!empty($thumbnail)) {
+			?>
+						<div class="thumbnail">
+							<span>
+								<h1>
+									<?php the_title(); ?>
+								</h1>
+							</span>
+						</div>
+
+			<?php } //if has a thumbnail
+		} //if isn't a blog page
+?>

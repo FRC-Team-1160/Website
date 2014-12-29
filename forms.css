@@ -171,6 +171,8 @@ textarea
     overflow: auto; /* 1 */
 
     vertical-align: top; /* 2 */
+
+    border-bottom:3px solid #9aa5ae;
 }
 
 input,
@@ -188,10 +190,13 @@ textarea
 
     transition: 100ms linear border;
 
-    border: 3px solid #ccc;
+    border-bottom:3px solid #9aa5ae;
     border-radius: 0;
 
     -webkit-font-smoothing: antialiased;
+
+	background: #dad8d6;
+	background:rgba(154, 165, 174, 0.2);
 }
 
 input:focus,
@@ -199,8 +204,11 @@ select:focus,
 textarea:focus
 {
     border-color: #00a887;
+    border-color:rgba(255, 255, 255, 0); /* hide the border if rgba is supported */
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
+
+	background:rgba(0, 168, 135, 0.2);
 }
 .pure-checkbox,
 .pure-radio
@@ -227,13 +235,18 @@ textarea:focus:invalid,
 select:focus:invalid
 {
     color: #b94a48;
-    border: 3px solid #ee5f5b;
+
+    border-color:#e9322d;
+
+	background: #f5a3a0;
+	background:rgba(238, 95, 91, 0.5);
 }
 input:focus:invalid:focus,
 textarea:focus:invalid:focus,
 select:focus:invalid:focus
 {
-    border-color: #e9322d;
+	background: #f5a3a0;
+	background:rgba(238, 95, 91, 0.5);
 }
 select
 {
@@ -345,18 +358,14 @@ legend
 {
     z-index: 2;
 }
-.pure-group input:first-child
+/*.pure-group input:first-child
 {
-    top: 3px;
-
     border-radius: 0;
 }
 .pure-group input:last-child
 {
-    top: -6px;
-
     border-radius: 0;
-}
+}*/
 .pure-group button
 {
     margin: .35em 0;

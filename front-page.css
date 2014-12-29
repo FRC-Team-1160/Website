@@ -3,7 +3,7 @@
     position: absolute;
     top: 0;
 
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 /*.gap {
 	padding-top:20em;
@@ -781,13 +781,13 @@
 {
     position: relative;
 
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .gallery .item
 {
     /*padding-bottom:30%;*/
-    overflow: hidden;
+    /*overflow: hidden;*/
     /*height: 0;*/
 
     width: 100%;
@@ -835,6 +835,19 @@
 
     color: #fff;
     border-bottom: 1px solid #0067c6;
+}
+
+.gallery .featured
+{
+	z-index:-100;
+	top:-11em;
+	height: 200%;
+}
+.gallery .thumbnail {
+	overflow:visible;
+}
+figure {
+	z-index:1;
 }
 
 /* HOME CONTAINERS */
@@ -950,7 +963,7 @@ div.homecontainer:last-child
     }
     figure .entry
     {
-        overflow: hidden;
+        /*overflow: hidden;*/
 
         padding: 1em;
     }
@@ -966,4 +979,8 @@ div.homecontainer:last-child
         position: absolute;
         bottom: 3em;
     }
+    .gallery .featured
+	{
+		height: 500px;
+	}
 }

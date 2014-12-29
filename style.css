@@ -56,6 +56,7 @@ a
     font-weight: inherit;
 
     display: inline-block;
+
     transition: color 300ms;
     text-decoration: none;
 
@@ -164,12 +165,17 @@ td
 /* CONTENTS CONTAINER */
 .contents
 {
+    position: relative;
+    z-index: 999;
+
     width: 100%;
+
     transition: float 2s, margin 2s, padding 2s;
     word-wrap: break-word;
 
     color: #1d1d1d;
-    background: #fff;
+    background: #fff; /*fall back for when a browser doesn't support rgba*/
+    background:rgba(255, 255, 255, 0.9);
 }
 .contents .blog .post
 {
@@ -202,8 +208,6 @@ td
 
     width: 100%;
     min-height: 100%;
-
-    background: #fff;
 }
 .wrapper .blog .blog-content
 {
@@ -213,21 +217,27 @@ td
 }
 
 /* FEATURED IMAGES */
+.featured-image,
 .featured
 {
-    position: absolute;
-    z-index: -1;
+    position: fixed;
     top: 0;
 
-    float: left;
-
     width: 100%;
-    height: 40em;
+    height: 100%;
 
     background-position: center center;
     background-size: cover;
 
-    -webkit-filter: grayscale(100%);
+    -webkit-filter: grayscale(1);
+}
+.blog .featured-image,
+.blog .featured
+{
+    position: absolute;
+    z-index: -99;
+
+    background-attachment: fixed;
 }
 .thumbnail
 {
@@ -237,22 +247,19 @@ td
     overflow: hidden;
 
     width: 100%;
-    height: 40em;
+    height: 100%;
+    padding-bottom: 4em;
 
     text-align: center;
 
     color: white;
     border: none;
 }
-.post .thumbnail img,
-.press .thumbnail img
+.blog .thumbnail
 {
-    display: block;
-    float: none;
+    display: inline-block;
 
-    margin: auto;
-
-    border: none;
+    padding-top: 4em;
 }
 .thumbnail:before
 {
@@ -283,13 +290,17 @@ td
     width: 100%;
     max-width: 80%;
     margin: auto;
-    padding: 20% 0;
+    padding: 10% 0;
 
     text-align: center;
     vertical-align: middle;
 
     border: 10px solid #fff;
     background: rgba(0,103,198, .5);
+}
+.blog .thumbnail span
+{
+    height: 20em;
 }
 .thumbnail h1
 {
@@ -327,9 +338,8 @@ td
     display: block;
 
     margin: auto;
-    transition: float 2s, margin 2s, padding 2s;
 
-    background: #fff;
+    transition: float 2s, margin 2s, padding 2s;
 }
 .post-content
 {
@@ -501,6 +511,7 @@ time
     padding: 0;
 
     list-style: none;
+
     transition: float 2s, margin 2s, padding 2s, height 2s;
 }
 
@@ -531,6 +542,7 @@ time
 
     width: 100%;
     padding: 5px 1em;
+
     transition: all 500ms;
 
     border-style: solid;
@@ -648,7 +660,8 @@ img.aligncenter
     max-width: 100%;
     margin: .5em 1em;
 
-    background: #fff;;
+    background: #fff;
+    background:rgba(255, 255, 255, 0.5);
 }
 .wp-caption a
 {
@@ -698,7 +711,6 @@ img.aligncenter
     float: left;
 
     width: 100%;
-    margin: 0 auto 18px;
 }
 .gallery .gallery-item
 {
@@ -747,6 +759,7 @@ img.aligncenter
     right: 10px;
     bottom: -5em;
     left: 10px;
+
     transition: opacity 300ms, bottom 300ms;
 
     opacity: 0;
@@ -756,6 +769,7 @@ img.aligncenter
 .gallery .gallery-item:hover .gallery-caption
 {
     bottom: 10px;
+
     transition: opacity 300ms, bottom 300ms;
 
     opacity: 1;
@@ -900,10 +914,6 @@ img.aligncenter
 }
 
 /* COLUMNED PAGE */
-.contents .press
-{
-    background: #fff;
-}
 .contents .post.columned
 {
     position: relative;
@@ -927,8 +937,6 @@ img.aligncenter
     float: left;
 
     padding: 1em .5em;
-
-    background: #fff;
 }
 .clip.thumbnail,
 .clip.no-thumbnail
@@ -1029,7 +1037,7 @@ footer p
     text-align: center;
     vertical-align: middle;
 
-    color: #969696;
+    color: #737373;
 }
 
 /*COLORS*/
@@ -1061,7 +1069,7 @@ footer .blue a,
 {
     transition: color 300ms;
 
-    color: #b2b2b2;
+    color: #737373;
 }
 
 .red:hover,
@@ -1404,16 +1412,14 @@ table.meetings tr:nth-of-type(odd)
     {
         width: 95%;
     }
+    .featured-image,
     .featured
     {
-        height: 20em;
-    }
-    .thumbnail
-    {
-        height: 20em;
+        height: 100%;
     }
     .thumbnail span
     {
+        max-width: 95%;
         padding: 2em;
     }
     .everything .descriptions p,

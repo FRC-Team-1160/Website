@@ -73,7 +73,7 @@
     line-height: 1;
 
     position: relative;
-    z-index: 100;
+    z-index: 9999;
 
     display: block;
 
@@ -101,6 +101,7 @@ header .border
     font-weight: bold;
 
     overflow: visible !important;
+
     transition-timing-function: cubic-bezier(.85, .0, 1.0, 1.0)!important;
     vertical-align: middle;
     text-transform: uppercase;
@@ -169,6 +170,7 @@ header .border
     display: block;
 
     padding: .5em .5em;
+
     transition: border 300ms;
 
     color: #737373;
@@ -271,6 +273,7 @@ header .border
 
     padding-top: 18px;
     padding-bottom: 30px;
+
     transition-timing-function: cubic-bezier(.85, .0, 1.0, 1.0);
     transition-duration: 500ms;
     transition-property: padding, -webkit-transform;
@@ -282,6 +285,7 @@ header .border
 {
     padding-top: 30px;
     padding-bottom: 18px;
+
     transition-timing-function: cubic-bezier(.85, .0, 1.0, 1.0);
     transition-duration: 500ms;
     transition-property: padding, -webkit-transform;
@@ -315,7 +319,7 @@ header .border
     height: 98%;
     padding: 1em;
 
-    color: #c2c2c2;
+    color: #737373;
     border: 3px solid;
     border-right: 0;
 }
@@ -334,6 +338,8 @@ header .border
     padding: 0;
 
     list-style: none;
+
+    background: rgba(255, 255, 255, .6);
 }
 #subpages ul
 {
@@ -395,6 +401,8 @@ header .border
     float: none;
 
     text-align: center;
+
+    margin:0;
 }
 #subpages .title
 {

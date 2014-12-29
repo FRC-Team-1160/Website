@@ -136,17 +136,6 @@
 						customToggle:"toggle",
 					});
 				</script>
-			<!-- JUST SOME RANDOM CODE THAT HELPS THE SITE LOAD -->
-					<script src="<?php bloginfo('template_directory');?>/js/_/blue-footed-booby.js?ver=3.1"		type="text/javascript"></script>
-			
-			<!-- Kona -->
-			<script type="text/javascript">
-				$(window).load(function() {
-					$('body').booby({
-						'enterOn' : 'blue-foot'
-					});
-				});
-			</script>
 			<?php include_once("analyticstracking.php") ?>
 
 </body>
