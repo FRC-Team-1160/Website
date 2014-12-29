@@ -14,6 +14,11 @@
 			<link rel="alternate"	title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 			<link rel="pingback"					href="<?php bloginfo('pingback_url'); ?>" />
 			<link rel="icon"		type="application/rss+xml"	href="<?php bloginfo('template_directory') ?>/assets/favicon.ico" />
+			<!-- APPLE TOUCH ICONS -->
+				<link rel="apple-touch-icon" href="http://ti-static.titaniumrobotics.com/logos/apple-touch-icons/touch-icon-iphone.png">
+				<link rel="apple-touch-icon" sizes="76x76" href="http://ti-static.titaniumrobotics.com/logos/apple-touch-icons/touch-icon-ipad.png">
+				<link rel="apple-touch-icon" sizes="120x120" href="http://ti-static.titaniumrobotics.com/logos/apple-touch-icons/touch-icon-iphone-retina.png">
+				<link rel="apple-touch-icon" sizes="152x152" href="http://ti-static.titaniumrobotics.com/logos/apple-touch-icons/touch-icon-ipad-retina.png">
 
 		<!--TITANIUM ROBOTICS LOGO || USES REL=LOGO (RELOGO.ORG) FOR MAINTAINING THE LOGO-->
 			<link rel="logo" 
