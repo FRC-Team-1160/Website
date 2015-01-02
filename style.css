@@ -175,7 +175,7 @@ td
 
     color: #1d1d1d;
     background: #fff; /*fall back for when a browser doesn't support rgba*/
-    background:rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, .9);
 }
 .contents .blog .post
 {
@@ -230,6 +230,10 @@ td
     background-size: cover;
 
     -webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+            filter: gray;
+            filter: grayscale(100%);
 }
 .blog .featured-image,
 .blog .featured
@@ -365,6 +369,10 @@ fieldset.title
     padding: 3.5em 5em;
 
     border: 0;
+}
+.entry.contact
+{
+    padding: 3.5em 0;
 }
 .homecontainer [class*='entry-'],
 .contents [class*='entry-']
@@ -661,7 +669,7 @@ img.aligncenter
     margin: .5em 1em;
 
     background: #fff;
-    background:rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, .5);
 }
 .wp-caption a
 {

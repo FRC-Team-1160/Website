@@ -13,7 +13,7 @@ Template Name: Contact
 		} else {
 			$name = trim($_POST['contactName']);
 		}
-	
+
 		if(trim($_POST['email']) === '')  {
 			$emailError = 'Please enter a valid email address.';
 			$hasError = true;
@@ -23,7 +23,7 @@ Template Name: Contact
 		} else {
 			$email = trim($_POST['email']);
 		}
-	
+
 		if(trim($_POST['comments']) === '') {
 			$commentError = 'Please enter a message.';
 			$hasError = true;
@@ -34,16 +34,17 @@ Template Name: Contact
 				$comments = trim($_POST['comments']);
 			}
 		}
-	
+				$topic = trim($_POST['topic']);
+
 		if(!isset($hasError)) {
 			$emailTo = get_option('tz_email');
 			if (!isset($emailTo) || ($emailTo == '') ){
 				$emailTo = get_option('admin_email');
 			}
-			$subject = '[Titanium Robotics] Contact Form Submission From '.$name;
-			$body = "Titanium Robotics Contact Form Submission:\n\n\n\nName\n\n$name\n\nEmail\n\n$email\n\nComments\n\n$comments";
+			$subject = $topic;
+			$body = "Titanium Robotics Contact Form Submission:\n\n\n\nName\n\n" . $name . "\n\nEmail\n\n" . $email . "\n\nMessage\n\n" . $comments;
 			$headers = 'From: '.$name.' <'.$email.'>' . "\r\n" . 'Reply-To: ' . $email;
-	
+
 			wp_mail($emailTo, $subject, $body, $headers);
 			$emailSent = true;
 		}
@@ -51,6 +52,11 @@ Template Name: Contact
 	}
 ?>
 <?php get_header(); ?>
+
+<script type="text/javascript">
+      document.location.href="#message";
+</script>
+
 <div class="contents">
 	<?php require('loop.php');
 	get_required_files(); ?>

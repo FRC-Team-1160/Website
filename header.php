@@ -21,8 +21,8 @@
 				<link rel="apple-touch-icon" sizes="152x152" href="http://ti-static.titaniumrobotics.com/logos/apple-touch-icons/touch-icon-ipad-retina.png">
 
 		<!--TITANIUM ROBOTICS LOGO || USES REL=LOGO (RELOGO.ORG) FOR MAINTAINING THE LOGO-->
-			<link rel="logo" 
-				type="image/svg" 
+			<link rel="logo"
+				type="image/svg"
 				href="http://ti-static.titaniumrobotics.com/logos/logo.svgz" />
 		<!--SCRIPTS-->
 			<?php wp_head(); ?>

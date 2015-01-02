@@ -127,13 +127,13 @@
 								</aside>
 
 								<article class="rightcontent">
-									<div class="entry">
 
 							<?php } else { ?>
 
-								<article class="entry<?php if (is_page_template('page-contact-us.php')) { ?>-3-4<?php } ?>">
+								<article class="<?php if (is_page_template('page-contact-us.php')) { ?>entry-3-4<?php } ?>">
 
 							<?php } ?>
+									<div class="entry">
 
 	<?php // TITLE ?>
 
@@ -192,25 +192,21 @@
 
 								<div class="clear"></div>
 
-								<?php if (is_page_template('two-column.php')) { ?>
-
 									</div><!--only in two-columns and contact-->
-
-								<?php } ?>
 
 							</article>
 
 	<?php // CONTACT PAGE SPECIFIC ?>
 
-								<?php if (is_page_template('page-contact-us.php')) { ?>
+						<?php if (is_page_template('page-contact-us.php')) { ?>
 								<article class="entry-1-4">
+									<div class="entry contact">
 										<?php if(isset($emailSent) && $emailSent == true) { ?>
-											<div class="thanks">
+											<div class="thanks" id="message">
 												<p>Thanks, your email was sent successfully.</p>
 											</div>
-										<?php } else { ?>
-											<?php if(isset($hasError) || isset($captchaError)) { ?>
-												<p class="error">Sorry, an error occured: please check the fields with error messages.<p>
+										<?php } elseif(isset($hasError) || isset($captchaError)) { ?>
+												<p class="error" id="message">Sorry, an error occured: please check the fields with error messages.</p>
 											<?php } ?>
 
 										<h3>
@@ -234,8 +230,8 @@
 
 												<input type="email" required="required" name="email" id="email" placeholder="Email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="pure-input-1" />
 
-											<!-- EMAIL -->
-												<input type="text" required name="subject" id="email" placeholder="Subject" class="pure-input-1" />
+											<!-- EMAIL SUBJECT -->
+												<input type="text" name="topic" id="topic" placeholder="Subject" value="<?php if(isset($_POST['topic']))  echo $_POST['topic'];?>" class="pure-input-1" />
 
 											</fieldset>
 
@@ -246,15 +242,14 @@
 
 												<textarea name="comments" required="required" id="commentsText" rows="8" placeholder="Message" class="pure-input-1"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
 											<div class="clear"></div>
-												<input type="submit" class="pure-button pure-input"></button>
+												<input type="submit" class="pure-button pure-input" onclick="location.href = '#message'" />
 
 												<input type="hidden" name="submitted" id="submitted" value="true" />
 
 									</form>
-								</article>
-								<?php } ?>
-
-								<?php } else {} ?>
+								</div>
+							</article>
+						<?php } //IF PAGE TEMPLATE IS CONTACT ?>
 
 
 							<div class="clear"></div>
@@ -336,5 +331,5 @@
 							?>
 							<div class="clear"></div>
 						</div>
-					<? } ?>
+					<? } //navigation, if isn't a page or isn't single page?>
 				</div>
