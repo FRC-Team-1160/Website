@@ -499,8 +499,8 @@
 
 .items-4.autoplay .control-button
 {
-    -webkit-animation: controlAnimation-4 60s infinite ;
-            animation: controlAnimation-4 60s infinite ;
+    -webkit-animation: controlAnimation-4 30s infinite ;
+            animation: controlAnimation-4 30s infinite ;
 
     color: #ccc;
     color: rgba(255, 255, 255, .4);
@@ -512,8 +512,8 @@
 
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    -webkit-animation: galleryAnimation-4 60s infinite;
-            animation: galleryAnimation-4 60s infinite;
+    -webkit-animation: galleryAnimation-4 30s infinite;
+            animation: galleryAnimation-4 30s infinite;
 }
 
 .items-4 .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1)
