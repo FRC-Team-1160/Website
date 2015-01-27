@@ -15,21 +15,21 @@
 			<link rel="pingback"					href="<?php bloginfo('pingback_url'); ?>" />
 			<link rel="icon"		type="application/rss+xml"	href="<?php bloginfo('template_directory') ?>/assets/favicon.ico" />
 			<!-- APPLE TOUCH ICONS -->
-				<link rel="apple-touch-icon" href="http://ti-static.titaniumrobotics.com/logos/apple-touch-icons/touch-icon-iphone.png">
-				<link rel="apple-touch-icon" sizes="76x76" href="http://ti-static.titaniumrobotics.com/logos/apple-touch-icons/touch-icon-ipad.png">
-				<link rel="apple-touch-icon" sizes="120x120" href="http://ti-static.titaniumrobotics.com/logos/apple-touch-icons/touch-icon-iphone-retina.png">
-				<link rel="apple-touch-icon" sizes="152x152" href="http://ti-static.titaniumrobotics.com/logos/apple-touch-icons/touch-icon-ipad-retina.png">
+				<link rel="apple-touch-icon" href="/ti-static/logos/apple-touch-icons/touch-icon-iphone.png">
+				<link rel="apple-touch-icon" sizes="76x76" href="/ti-static/logos/apple-touch-icons/touch-icon-ipad.png">
+				<link rel="apple-touch-icon" sizes="120x120" href="/ti-static/logos/apple-touch-icons/touch-icon-iphone-retina.png">
+				<link rel="apple-touch-icon" sizes="152x152" href="/ti-static/logos/apple-touch-icons/touch-icon-ipad-retina.png">
 
 		<!--TITANIUM ROBOTICS LOGO || USES REL=LOGO (RELOGO.ORG) FOR MAINTAINING THE LOGO-->
 			<link rel="logo"
 				type="image/svg"
-				href="http://ti-static.titaniumrobotics.com/logos/logo.svgz" />
+				href="/ti-static/logos/logo.svgz" />
 		<!--SCRIPTS-->
 			<?php wp_head(); ?>
 
 			<!-- NAVIGATION -->
 				<script src="<?php bloginfo('template_directory');?>/js/responsive-nav.min.js?ver=2"	type="text/javascript" async></script>
-				
+
 			<!-- SMOOTH SCROLL -->
 				<script src="<?php bloginfo('template_directory');?>/js/smoothscroll.js"		type="text/javascript" async></script>
 
@@ -192,7 +192,7 @@
 							<div class="menu-right screen">
 								<div class="icon">
 									<a href="#" id="toggle" style="border:none" title="Open Menu" >
-										<img style="height:20px;" src="http://ti-static.titaniumrobotics.com/site/theme-Ti-22/assets/ui/ui-menu.svg?ver=4.2">
+										<img style="height:20px;" src="/ti-static/site/theme-Ti-22/assets/ui/ui-menu.svg?ver=4.2">
 									</a>
 								</div>
 							</div>

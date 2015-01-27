@@ -55,8 +55,6 @@ a
 {
     font-weight: inherit;
 
-    display: inline-block;
-
     transition: color 300ms;
     text-decoration: none;
 
@@ -575,6 +573,14 @@ time
 }
 
 /* SPONSORS TABLE  */
+.sponsors
+{
+    display: inline-block;
+
+    width: 100%;
+
+    text-align: center;
+}
 .contents .sponsors a
 {
     border-width: 0;
@@ -630,6 +636,7 @@ img.alignright
 {
     float: right;
 
+    max-width: 60%;
     margin: 0 0 1em 1em;
     margin-right: -5em;
     margin-right: -5rem;
@@ -638,6 +645,7 @@ img.alignleft
 {
     float: left;
 
+    max-width: 60%;
     margin: 0 1em 1em 0;
     margin-left: -5em;
     margin-left: -5rem;

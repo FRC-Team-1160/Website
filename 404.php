@@ -5,11 +5,11 @@
         <meta name="description" content="404">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Error 404</title>
-        <link property="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link property="stylesheet" href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
         <link rel="author" href="humans.txt">
         <style type="text/css">
             html {
-                background:url('http://ti-static.titaniumrobotics.com/site/theme-Ti-22/assets/robot-fail.gif') no-repeat center;
+                background:url('/ti-static/site/theme-Ti-22/assets/robot-fail.gif') no-repeat center;
                 background-size:cover;
                 height:100%;
                 width:100%;

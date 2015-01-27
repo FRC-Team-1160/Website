@@ -53,10 +53,6 @@ Template Name: Contact
 ?>
 <?php get_header(); ?>
 
-<script type="text/javascript">
-      document.location.href="#message";
-</script>
-
 <div class="contents">
 	<?php require('loop.php');
 	get_required_files(); ?>

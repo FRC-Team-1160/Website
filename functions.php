@@ -500,14 +500,14 @@ function custom_login_logo() {
 		text-shadow:none
 	}
 	.login {
-		 background:url(http://ti-static.titaniumrobotics.com/uploads/2014/02/DSC_0111.jpg)!important;
+		 background:url(/ti-static/uploads/2014/02/DSC_0111.jpg)!important;
 		 background-size:cover!important;
 	}
 	.login label {
 		color:#FFF;
 	}
 	h1 a {
-		background-image: url(http://ti-static.titaniumrobotics.com/logos/logo.svgz) !important;
+		background-image: url(/ti-static/logos/logo.svgz) !important;
 		background-size: auto 134px!important;
 		height:150px !important;
 		width:100% !important;

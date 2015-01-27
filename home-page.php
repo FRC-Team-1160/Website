@@ -57,7 +57,7 @@ Template Name: Home Page
 		<div class="homecontainer clear">
 			<div class="entry-1-2 leftside">
 				<div>
-						<img style="height:9em; display:block; margin:0 auto 16px;" src="http://ti-static.titaniumrobotics.com/logos/FIRST/FIRST.svg">
+						<img style="height:9em; display:block; margin:0 auto 16px;" src="/ti-static/logos/FIRST/FIRST.svg">
 						<h1>Team 1160 is a FIRST&reg; FRC Team</h1>
 						<h3>What is FIRST&reg; and what do they do?</h3>
 					<p><!--
@@ -86,7 +86,7 @@ Template Name: Home Page
 
 		<div class="homecontainer clear">
 			<div class="entry-1-2">
-				<img src="http://ti-static.titaniumrobotics.com/uploads/2014/02/DSC_0139-1024x678.jpg" />
+				<img src="/ti-static/uploads/2014/02/DSC_0139-1024x678.jpg" />
 			</div>
 			<div class="entry-1-2 bold">
 				<p>
@@ -107,8 +107,8 @@ Template Name: Home Page
 					<tbody>
 						<tr>
 							<td>
-								<a href="http://www.boeing.com" target="_blank"><img alt="Boeing" src="http://www.titaniumrobotics.com/wp-content/themes/Website-master/assets/sponsor1.png" /></a><a href="http://www.nasa.gov" target="_blank">
-								<img alt="NASA" src="http://www.titaniumrobotics.com/wp-content/themes/Website-master/assets/sponsor2.png" /></a><a href="http://www.jpl.nasa.gov" target="_blank"><img alt="JPL" src="http://www.titaniumrobotics.com/wp-content/themes/Website-master/assets/sponsor3.png" /></a><a href="http://www.ccsm.org" target="_blank"><img alt="Chinese Club" src="http://www.titaniumrobotics.com/wp-content/themes/Website-master/assets/sponsor4.png" /></a><a href="http://www.sanmarinohs.org" target="_blank">SMHS PTSA</a>
+								<a href="http://www.boeing.com" target="_blank"><img alt="Boeing" src="/wp-content/themes/Website-master/assets/sponsor1.png" /></a><a href="http://www.nasa.gov" target="_blank">
+								<img alt="NASA" src="/wp-content/themes/Website-master/assets/sponsor2.png" /></a><a href="http://www.jpl.nasa.gov" target="_blank"><img alt="JPL" src="/wp-content/themes/Website-master/assets/sponsor3.png" /></a><a href="http://www.ccsm.org" target="_blank"><img alt="Chinese Club" src="/wp-content/themes/Website-master/assets/sponsor4.png" /></a><a href="http://www.sanmarinohs.org" target="_blank">SMHS PTSA</a>
 							</td>
 						</tr>
 					</tbody>
@@ -149,7 +149,7 @@ Template Name: Home Page
 
 		<div id="why-the-bird" class="homecontainer clear">
 			<div class="entry-1-4">
-				<img src="http://ti-static.titaniumrobotics.com/logos/logo.svgz" />
+				<img src="/ti-static/logos/logo.svgz" />
 			</div>
 			<div class="entry-3-4">
 				<h2>Why the bird?</h2>

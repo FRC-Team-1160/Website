@@ -204,9 +204,15 @@
 										<?php if(isset($emailSent) && $emailSent == true) { ?>
 											<div class="thanks" id="message">
 												<p>Thanks, your email was sent successfully.</p>
+													<script type="text/javascript">
+													      document.location.href="#message";
+													</script>
 											</div>
 										<?php } elseif(isset($hasError) || isset($captchaError)) { ?>
 												<p class="error" id="message">Sorry, an error occured: please check the fields with error messages.</p>
+													<script type="text/javascript">
+													      document.location.href="#message";
+													</script>
 											<?php } ?>
 
 										<h3>
@@ -242,7 +248,7 @@
 
 												<textarea name="comments" required="required" id="commentsText" rows="8" placeholder="Message" class="pure-input-1"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
 											<div class="clear"></div>
-												<input type="submit" class="pure-button pure-input" onclick="location.href = '#message'" />
+												<input type="submit" class="pure-button pure-input" />
 
 												<input type="hidden" name="submitted" id="submitted" value="true" />
 
