@@ -470,11 +470,9 @@ fieldset.title
 }
 .sidebarpad
 {
-    font-weight: 700;
-
     padding: 52.5pt 0;
 
-    text-align: right;
+    text-align: center;
 }
 .sidebarpad p
 {
