@@ -42,7 +42,7 @@ Template Name: Contact
 				$emailTo = get_option('admin_email');
 			}
 			$subject = $topic;
-			$body = "Titanium Robotics Contact Form Submission:\n\n\n\nName\n\n" . $name . "\n\nEmail\n\n" . $email . "\n\nMessage\n\n" . $comments;
+			$body = time() . "Titanium Robotics Contact Form Submission:\n\n\n\nName\n\n" . $name . "\n\nEmail\n\n" . $email . "\n\nMessage\n\n" . $comments;
 			$headers = 'From: '.$name.' <'.$email.'>' . "\r\n" . 'Reply-To: ' . $email;
 
 			wp_mail($emailTo, $subject, $body, $headers);
