@@ -791,8 +791,6 @@
     /*height: 0;*/
 
     width: 100%;
-
-    background: #222;
 }
 
 .gallery .controls
@@ -840,14 +838,22 @@
 .gallery .featured
 {
 	z-index:-100;
-	top:-11em;
-	height: 200%;
 }
 .gallery .thumbnail {
 	overflow:visible;
 }
 figure {
 	z-index:1;
+}
+
+.front .thumbnail {
+	padding:10% 0 25% 0;
+	font-size:2em;
+}
+.front .featured {
+	background:url('/ti-static/site/theme-Ti-22/assets/blue-cover.jpg');
+	background-size:cover;
+	background-position: center;
 }
 
 /* HOME CONTAINERS */

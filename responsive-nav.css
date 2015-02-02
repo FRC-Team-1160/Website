@@ -98,13 +98,11 @@ header .border
 #nav
 {
     font-family: inherit;
-    font-weight: bold;
 
     overflow: visible !important;
 
     transition-timing-function: cubic-bezier(.85, .0, 1.0, 1.0)!important;
     vertical-align: middle;
-    text-transform: uppercase;
 }
 #nav.home-links
 {

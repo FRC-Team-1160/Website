@@ -4,10 +4,7 @@ Template Name: Home Page
 */
 ?>
 <?php get_header();?>
-
-
-
-		<div class="clear gap"></div>
+<!--<div class="clear gap"></div>
 			<div class="screen gallery autoplay items-4">
 			<div id="item-1" class="control-operator"></div>
 			<div id="item-2" class="control-operator"></div>
@@ -42,14 +39,19 @@ Template Name: Home Page
 			<div class="clear"></div>
 			</figure>
 			<?php endwhile; endif; ?>
-			<div class="controls">
+			<!--<div class="controls">
 			<a href="#item-1" class="control-button">&mdash;</a>
 			<a href="#item-2" class="control-button">&mdash;</a>
 			<a href="#item-3" class="control-button">&mdash;</a>
 			<a href="#item-4" class="control-button">&mdash;</a>
-			</div>
-			</div>
+			</div>-->
+			<!--</div>-->
 		<?php flush(); ?>
+<div class="front featured"></div>
+<div class="thumbnail">
+<h1><em>Feelings are important, but it's the physics that matters.</em></h1>
+</div>
+
 <div class="clear"></div>
 <div class="contents">
 
@@ -57,15 +59,15 @@ Template Name: Home Page
 		<div class="homecontainer clear">
 			<div class="entry-1-2 leftside">
 				<div>
-						<img style="height:9em; display:block; margin:0 auto 16px;" src="/ti-static/logos/FIRST/FIRST.svg">
+						<img style="height:9rem; display:block; margin:0 auto 16px;" src="/ti-static/logos/FIRST/FIRST.svg">
 						<h1>Team 1160 is a FIRST&reg; FRC Team</h1>
 						<h3>What is FIRST&reg; and what do they do?</h3>
 					<p><!--
-						--><strong>FIRST stands for For Inspiration and Recognition of Science and Technology</strong>. Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow"><strong>Dean Kamen</strong></a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow"><strong>FIRST</strong></a>in 1989 to inspire appreciation of science and technology in young people. <em>FIRST</em> inspires people young and old to learn through robotics.
+						--><strong>FIRST stands for For Inspiration and Recognition of Science and Technology</strong>. Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow"><strong>Dean Kamen</strong></a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow"><strong>FIRST</strong></a> in 1989 to inspire appreciation of science and technology in young people. <em>FIRST</em> inspires people young and old to learn through robotics.
 					</p>
 					<p><strong>FRC</strong>, the league that Titanium Robotics competes in, is the High School level robotics league and stands for <strong>FIRST Robotics Competition</strong>
 					<p>
-						<a class="button" href="/about-first">Read the Full Article</a>
+						<a class="button" href="/about-first">Read More</a>
 					</p>
 				</div>
 			</div>

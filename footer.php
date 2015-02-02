@@ -3,13 +3,13 @@
 <?php if(!is_attachment()) { ?>
 </div>
 	<footer class="custom-background">
-		
+
 		<div class="footer-container">
-			
+
 			<div class="footer-right">
 				<div class="copy">
 					<p class="nomargin rubiks">&copy;<?php echo date(Y)?>&nbsp;<?php bloginfo('name'); ?>. All rights reserved.</p>
-					<p class="nature">Designed &amp; coded with <span class="red team1160-">&#xe65c;</span> by Nathan Wong in California</p>
+					<p class="nature">Designed &amp; coded with <span class="red team1160-">&#xe65c;</span> in San Marino</p>
 				</div>
 
 				<ul class="s">
@@ -50,7 +50,6 @@
 		<div class="clear"></div>
 	</footer>
 <?php } ?>
-	
 <?php wp_footer(); ?>
 
 			<!-- RESPONSIVE VIDEOS -->

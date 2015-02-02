@@ -306,12 +306,9 @@ td
 }
 .thumbnail h1
 {
-    font-weight: 700;
-
-    text-transform: uppercase;
+    font-weight: 300;
 
     color: #fff;
-    text-shadow: 0 0 10px #444;
 }
 
 /* CLEAR CLASSES */
@@ -660,7 +657,7 @@ img.aligncenter
 {
     font-size: 13px;
     font-size: .9rem;
-    font-weight: bold;
+    font-weight: normal;
 
     display: block;
 
@@ -1171,7 +1168,7 @@ footer li.follow
 .copy
 {
     font-size: 13px;
-    font-weight: bold;
+    font-weight: normal;
 
     float: right;
 
