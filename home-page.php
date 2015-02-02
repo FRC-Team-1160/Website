@@ -49,7 +49,8 @@ Template Name: Home Page
 		<?php flush(); ?>
 <div class="front featured"></div>
 <div class="thumbnail">
-<h1><em>Feelings are important, but it's the physics that matters.</em></h1>
+<h1><em>Feelings are important, but it's the physics that matters.</em></h1><br />
+<h1 class="team1160-bird" style="display:inline; margin:0 0.25em"></h1><h1 class="team1160-first" style="display:inline; margin:0 0.25em"></h1>
 </div>
 
 <div class="clear"></div>
@@ -67,7 +68,7 @@ Template Name: Home Page
 					</p>
 					<p><strong>FRC</strong>, the league that Titanium Robotics competes in, is the High School level robotics league and stands for <strong>FIRST Robotics Competition</strong>
 					<p>
-						<a class="button" href="/about-first">Read More</a>
+						<a class="button" href="/about-first">More About FIRST&reg;</a>
 					</p>
 				</div>
 			</div>
@@ -78,7 +79,7 @@ Template Name: Home Page
 						Team 1160 is located in San Marino, CA.
 					</h1>
 					<p>
-						We have converted a classroom at our school into a full workshop and use our College and Career Center as a computer lab. All of our work is done in these two rooms during the season.
+						Our team is located in San Marino, California and is a part of San Marino High School. We work with teachers and students along with professionals around the area to provide a high quality STEM (and FIRST &reg;) experience.
 					</p>
 				</div>
 				<div class="clear"></div>
@@ -97,7 +98,7 @@ Template Name: Home Page
 				<p>
 					Team 1160 provides a place in the normal school environment for students to learn how to apply their skills in Science, Technology, Engineering, and Mathematics. We're a group of students and mentors whose main goal is to provide the world with the next generation of STEM leaders.
 				</p>
-				<a href="/about-us" class="button">Read More</a>
+				<a href="/about-us" class="button">More about Our Team</a>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -105,16 +106,13 @@ Template Name: Home Page
 		<div class="homecontainer clear">
 			<div class="entry-3-4 sponsored leftside">
 				<h2>Titanium Sponsors</h2>
-				<table style="width:100%;" class="sponsors">
-					<tbody>
-						<tr>
-							<td>
-								<a href="http://www.boeing.com" target="_blank"><img alt="Boeing" src="/wp-content/themes/Website-master/assets/sponsor1.png" /></a><a href="http://www.nasa.gov" target="_blank">
-								<img alt="NASA" src="/wp-content/themes/Website-master/assets/sponsor2.png" /></a><a href="http://www.jpl.nasa.gov" target="_blank"><img alt="JPL" src="/wp-content/themes/Website-master/assets/sponsor3.png" /></a><a href="http://www.ccsm.org" target="_blank"><img alt="Chinese Club" src="/wp-content/themes/Website-master/assets/sponsor4.png" /></a><a href="http://www.sanmarinohs.org" target="_blank">SMHS PTSA</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<p><span class="sponsors"><br />
+<a target="_blank" href="http://www.boeing.com" target="_blank"><img src="/wp-content/themes/Website-master/assets/sponsor1.png" alt="Boeing" /></a><!-- --><a target="_blank" href="http://www.nasa.gov" target="_blank"><!-- --><img src="/wp-content/themes/Website-master/assets/sponsor2.png" alt="NASA" /></a><!-- --><a target="_blank" href="http://www.jpl.nasa.gov" target="_blank"><img src="/wp-content/themes/Website-master/assets/sponsor3.png" alt="JPL" /></a><!-- --><a target="_blank" href="http://www.ccsm.org" target="_blank"><img src="/wp-content/themes/Website-master/assets/sponsor4.png" alt="Chinese Club" width="100" /></a><!-- --><a target="_blank" href="http://www.sanmarinohs.org" target="_blank">SMHS PTSA</a></span></p>
+<p style="text-align: center;">The Richard Weis Family</p>
+<p style="text-align: center;">The Andrew Rooke Family</p>
+					<p>
+						<a class="button" href="/donations">Become a Sponsor</a>
+					</p>
 			</div>
 			<div class="entry-1-4 social leftside">
 				<h2>Follow Us</h2>

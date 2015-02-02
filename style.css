@@ -1055,100 +1055,56 @@ footer p
 
 footer .red a,
 .red,
-.red a,
-footer .twitterblue a,
-.twitterblue,
-.twitterblue a,
-footer .black a,
-.black,
-.black a,
-footer .blue a,
-.blue,
-.blue a,
-.au,
-.au a,
-.titanium,
-.titanium a,
-.rubiks,
-.rubiks a,
-.cu-2,
-.cu-2 a,
-.nature,
-.nature a,
-.black-wire,
-.black-wire a
-{
-    transition: color 300ms;
-
-    color: #737373;
-}
-
-.red:hover,
-.blue:hover,
-.twitterblue:hover,
-.au:hover,
-.titanium:hover,
-.rubiks:hover,
-.cu-2:hover,
-.nature:hover,
-.black:hover,
-.black-wire:hover
-{
-    transition: color 300ms;
-}
-
-footer .red a:hover,
-.red:hover,
-.red a:hover
+.red a
 {
     color: #f9343e;
 }
 
-footer .twitterblue a:hover,
-.twitterblue:hover,
-.twitterblue a:hover
+footer .twitterblue a,
+.twitterblue,
+.twitterblue a
 {
     color: #3cf;
 }
 
-footer .black a:hover,
-.black:hover,
-.black a:hover,
-.black-wire:hover,
-.black-wire a:hover
+footer .black a,
+.black,
+.black a,
+.black-wire,
+.black-wire a
 {
     color: #222;
 }
 
-footer .blue a:hover,
-.blue:hover,
-.blue a:hover
+footer .blue a,
+.blue,
+.blue a
 {
     color: #0067c6;
 }
 
-.au:hover,
-.au a:hover
+.au,
+.au a
 {
     color: #f7eb5f;
 }
-.titanium:hover,
-.titanium a:hover
+.titanium,
+.titanium a
 {
     color: #9aa5ae;
 }
-.rubiks:hover,
-.rubiks a:hover
+.rubiks,
+.rubiks a
 {
     color: #4f87a0;
 }
-.cu-2:hover,
-.cu-2 a:hover
+.cu-2,
+.cu-2 a
 {
     color: #a9c4e6;
 }
-.nature:hover,
-.nature a:hover
+.nature,
+.nature a
 {
     color: #00a887;
 }
