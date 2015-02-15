@@ -55,7 +55,7 @@
 /* NAVIGATION */
 .logo
 {
-    margin: -3px 0 0 -3px; /* this is to accomodate for the 3px blue border around the menu */
+    margin: -3px 0 0; /* this is to accomodate for the 3px blue border at the top */
 
     text-align: left;
 }
@@ -63,7 +63,7 @@
 {
     display: inline;
 
-    height: 100px;
+    height: 5.5em;
     margin: 0;
 
     vertical-align: bottom;
@@ -77,16 +77,15 @@
 
     display: block;
 
-    width: 80%;
     height: 100%;
-    margin: 1rem auto 0;
-    margin-top: 0;
+    margin: 0;
 }
 header .border
 {
-    margin: 1rem 0 0;
+    width: 100%;
+    margin: 0;
 
-    border-width: 3px 3px 0;
+    border-width: 3px 0 0;
     border-style: solid;
     border-color: #0067c6;
     background: rgba(255, 255, 255, .75);
@@ -99,7 +98,13 @@ header .border
 {
     font-family: inherit;
 
+    position: relative;
+
+    display: inline-block;
     overflow: visible !important;
+
+    max-width: 70%;
+    margin: 0 1em;
 
     transition-timing-function: cubic-bezier(.85, .0, 1.0, 1.0)!important;
     vertical-align: middle;
@@ -113,18 +118,22 @@ header .border
     display: inline-block;
 
     width: 100%;
-    margin: .5em auto;
+    margin: 0;
 
-    text-align: center;
+    text-align: left;
 }
 .wrapper #nav li
 {
     display: inline-block;
 
     width: auto;
-    margin: 0 .25em;
+    margin: 3px;
 
     text-align: left;
+}
+.wrapper #nav li li
+{
+    margin: 3px 0;
 }
 #nav ul.sub-menu
 {
@@ -209,18 +218,14 @@ header .border
     color: #222;
     border: 3px solid #0067c6;
 }
-#nav li:hover
-{
-    background: #e2e2e2;
-}
 #nav li:hover a
 {
     transition: color 300ms;
 
     color: #222;
 }
-#nav li:hover a,
-#subpages .links li:hover a
+#nav li:hover > a,
+#subpages .links li:hover > a
 {
     transition: border 300ms;
 
@@ -234,8 +239,9 @@ header .border
 }
 #icon-nav
 {
-    width: 100%;
-    margin: auto;
+    display: inline-block;
+
+    vertical-align: middle;
 }
 .menu
 {
@@ -314,7 +320,6 @@ header .border
     font-weight: bold;
     line-height: 1;
 
-    height: 98%;
     padding: 1em;
 
     color: #737373;
@@ -331,7 +336,7 @@ header .border
 
 #subpages
 {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
 
@@ -398,9 +403,9 @@ header .border
 {
     float: none;
 
-    text-align: center;
+    margin: 0;
 
-    margin:0;
+    text-align: center;
 }
 #subpages .title
 {
@@ -411,7 +416,7 @@ header .border
 
     height: 100%;
 
-    vertical-align: middle
+    vertical-align: middle;
     /*font-size:24pt;
   font-weight:400;*/
 }
@@ -446,7 +451,7 @@ header .border
     display: inline-block;
 
     height: 100%;
-    margin: .5em;
+    margin: .5em 3px;
     padding: 0;
 
     text-align: center;
@@ -455,7 +460,7 @@ header .border
 {
     font-weight: normal;
 
-    padding: 0 .5em;
+    padding: .25em .5em;
 
     color: #737373;
     border: 0;
@@ -490,9 +495,6 @@ header .border
     float: none;
 
     margin: auto;
-
-    border-width: 0 3px;
-    border-color: #0067c6;
 }
 
 
@@ -545,25 +547,6 @@ header .border
     #toggle a
     {
         border: none;
-    }
-    #menuwrap
-    {
-        top: 0;
-
-        width: 100%;
-    }
-    #menuwrap
-    {
-        width: 95%;
-        margin: 1em auto 0;
-    }
-    #subpages
-    {
-        width: 95%;
-    }
-    .logo
-    {
-        margin-bottom: 1em;
     }
     .login
     {
@@ -630,7 +613,11 @@ header .border
     }
     #nav
     {
+        display: block;
         overflow: hidden !important;
+
+        width: 95%;
+        margin: auto;
     }
     #nav li:hover ul.sub-menu
     {

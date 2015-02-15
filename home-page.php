@@ -47,7 +47,7 @@ Template Name: Home Page
 			</div>-->
 			<!--</div>-->
 		<?php flush(); ?>
-<div class="front featured"></div>
+<div class="filter featured"></div>
 <div class="thumbnail">
 <h1><em>Feelings are important, but it's the physics that matters.</em></h1><br />
 <h1 class="team1160-bird" style="display:inline; margin:0 0.25em"></h1><h1 class="team1160-first" style="display:inline; margin:0 0.25em"></h1>
@@ -60,11 +60,11 @@ Template Name: Home Page
 		<div class="homecontainer clear">
 			<div class="entry-1-2 leftside">
 				<div>
-						<img style="height:9rem; display:block; margin:0 auto 16px;" src="/ti-static/logos/FIRST/FIRST.svg">
+						<img style="height:9rem; display:block; margin:0 auto 16px;" src="/ti-static/logos/FIRST/FIRST.svgz">
 						<h1>Team 1160 is a FIRST&reg; FRC Team</h1>
 						<h3>What is FIRST&reg; and what do they do?</h3>
 					<p><!--
-						--><strong>FIRST stands for For Inspiration and Recognition of Science and Technology</strong>. Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow"><strong>Dean Kamen</strong></a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow"><strong>FIRST</strong></a> in 1989 to inspire appreciation of science and technology in young people. <em>FIRST</em> inspires people young and old to learn through robotics.
+						--><strong>FIRST stands for For Inspiration and Recognition of Science and Technology</strong>. Accomplished inventor <a target="_blank" href="http://www.usfirst.org/aboutus/content.aspx?id=48" rel="nofollow">Dean Kamen</a> founded <a target="_blank" href="http://www.usfirst.org/" rel="nofollow">FIRST&reg;</a> in 1989 to inspire appreciation of science and technology in young people. FIRST&reg; inspires people young and old to learn through robotics.
 					</p>
 					<p><strong>FRC</strong>, the league that Titanium Robotics competes in, is the High School level robotics league and stands for <strong>FIRST Robotics Competition</strong>
 					<p>
@@ -89,7 +89,7 @@ Template Name: Home Page
 
 		<div class="homecontainer clear">
 			<div class="entry-1-2">
-				<img src="/ti-static/uploads/2014/02/DSC_0139-1024x678.jpg" />
+				<img src="/ti-static/uploads/2014/02/DSC_0139-300x198.jpg" />
 			</div>
 			<div class="entry-1-2 bold">
 				<p>
@@ -154,7 +154,7 @@ Template Name: Home Page
 			<div class="entry-3-4">
 				<h2>Why the bird?</h2>
 				<p>
-					Many years ago, Team 1160 was renamed "Firebird Robotics" (we had originally been named Titanium) which is where the firebird logo comes from. The colors were also changed from blue and white to red and gold.
+					Many years ago, Team 1160 was renamed "Firebird Robotics" (we had originally been named Titanium) which is where the firebird logo comes from. The colors were also red and gold.
 				</p>
 				<p>
 					In 2012, we felt that we needed to reconnect with our school, whose colors are blue and white and mascot is the Titan, making a drastic change by going into the season as Titanium Robotics. We maintained the logo so that teams that have had long-standing relationships with our team would be able to recognize our team as the same.

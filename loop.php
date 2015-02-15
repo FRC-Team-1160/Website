@@ -323,8 +323,8 @@
 								'current' => $current,
 								'show_all' => false,
 								'type' => 'plain',
-								'prev_text' => __('&larr;'),
-								'next_text' => __('&rarr;'),
+								'prev_text' => __('<span class="team1160-chevron-left"></span>'),
+								'next_text' => __('<span class="team1160-chevron-right"></span>'),
 								);
 
 							if( $wp_rewrite->using_permalinks() )

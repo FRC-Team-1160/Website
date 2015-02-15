@@ -8,7 +8,7 @@
 			<meta name="description" content="Titanium Robotics is an FRC robotics team dedicated to teaching real-life applications and furthering STEM education through experiences that cannot be taught in a regular classroom environment." />
 
 		<!--TITLE-->
-			<title><?php wp_title('&nbsp;//&nbsp;', true, 'right'); ?><?php bloginfo('name', '//'); ?></title>
+			<title><?php wp_title('&nbsp;//&nbsp;', true, 'right'); bloginfo('name', '//'); ?></title>
 
 		<!--LINKS-->
 			<link rel="alternate"	title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
@@ -73,8 +73,7 @@
 			<?php if(is_front_page()) { ?>
 				<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css?ver=2.11.4" />
 			<?php } ?>
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css?ver=2">
-			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/assets/typography.css?ver=2.3" />
+			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/responsive-nav.css">
 
 			<?php if(is_page('forum')) : ?>
 				<style>
@@ -186,8 +185,7 @@
 					<div class="menu">
 						<div class="logo">
 							<a href="/" title="Titanium Robotics, FRC Team 1160">
-								<img class="logo-screen screen" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" alt="logo-bird">
-								<img class="print" src="<?php bloginfo('template_directory'); ?>/assets/logo.svg" style="height:2.5em" alt="logo-text" />
+								<img class="logo-screen" src="/ti-static/logos/logo.svgz" alt="logo-bird">
 							</a>
 							<div class="menu-right screen">
 								<div class="icon">
@@ -305,8 +303,8 @@
 
 
 <?php //FEATURED IMAGE-CONTINUED (TITLE OF PAGE)
-	if(!is_home()) {
-				if (!empty($thumbnail)) {
+	if(!(is_home() || is_page_template('home-page.php'))) {
+		if(!empty($thumbnail)) {
 			?>
 						<div class="thumbnail">
 							<span>
@@ -316,6 +314,7 @@
 							</span>
 						</div>
 
-			<?php } //if has a thumbnail
-		} //if isn't a blog page
+			<?php
+	}
+		}//if isn't a blog page and if has a thumbnail
 ?>
