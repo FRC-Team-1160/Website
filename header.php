@@ -242,15 +242,11 @@
 				<div class="table">
 					<?php if(!has_post_thumbnail( $post_id )) {?>
 						<div class="title">
-							<ul>
-								<li>
-										<h3>
+										<h1>
 											<?php
 												wp_title("", true);
 											?>
-										</h3>
-								</li>
-							</ul>
+										</h1>
 						</div>
 					<?php } ?>
 		<?php if(!is_author() && !is_search() && !is_404() &&!is_home() && !is_category()) : ?>
@@ -267,7 +263,7 @@
 
 					if ($children) {
 						$parent_title = get_the_title($post->post_parent);?>
-				<div class="links <?php if(!has_post_thumbnail( $post_id )) {} else{?>withthumbnail<?php } ?>">
+				<div class="links screen<?php if(!has_post_thumbnail( $post_id )) {} else{?> withthumbnail<?php } ?>">
 					<ul class="sublinks">
 						<li<?php
 							if (is_page($post->post_parent))
@@ -281,7 +277,7 @@
 				<?php } ?>
 		<?php endif; ?>
 		<?php if(is_single() && 'forum'!==get_post_type()) : ?>
-				<div class="links <?php if(has_post_thumbnail( $post )) { ?> withthumbnail<?php }?>">
+				<div class="links screen <?php if(has_post_thumbnail( $post )) { ?> withthumbnail<?php }?>">
 				<ul style="width:100%;">
 					<li style="width:100%; padding:0;">
 						<?php the_breadcrumb(); ?>

@@ -88,7 +88,7 @@ header .border
     border-width: 3px 0 0;
     border-style: solid;
     border-color: #0067c6;
-    background: rgba(255, 255, 255, .75);
+    background: rgba(255, 255, 255, .85);
 }
 .stuck
 {
@@ -501,7 +501,7 @@ header .border
 
 
 /* MENUS IN MOBILE AND TABLET */
-@media screen and (max-width: 45em), (max-width:64em)
+@media screen and (max-width: 53em)
 {
     #subpages .links
     {

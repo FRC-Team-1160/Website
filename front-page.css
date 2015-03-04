@@ -855,10 +855,11 @@ figure {
 	background-size:cover;
 	background-position: center;
 }
-.filter.featured {
+/*.filter.featured {
 	background:none;
 	background:rgba(0, 0, 0, 0.2);
 }
+this section is commented out because we may need it eventually. this adds a dark filter over the front page cover so that the text is easier to read. you need to add a div.filter.featured right before the div.thumbnail in home-page.php*/
 
 /* HOME CONTAINERS */
 div.homecontainer

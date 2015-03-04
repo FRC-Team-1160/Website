@@ -47,7 +47,6 @@ Template Name: Home Page
 			</div>-->
 			<!--</div>-->
 		<?php flush(); ?>
-<div class="filter featured"></div>
 <div class="thumbnail">
 <h1><em>Feelings are important, but it's the physics that matters.</em></h1><br />
 <h1 class="team1160-bird" style="display:inline; margin:0 0.25em"></h1><h1 class="team1160-first" style="display:inline; margin:0 0.25em"></h1>
@@ -107,7 +106,11 @@ Template Name: Home Page
 			<div class="entry-3-4 sponsored leftside">
 				<h2>Titanium Sponsors</h2>
 				<p><span class="sponsors"><br />
-<a target="_blank" href="http://www.boeing.com" target="_blank"><img src="/wp-content/themes/Website-master/assets/sponsor1.png" alt="Boeing" /></a><!-- --><a target="_blank" href="http://www.nasa.gov" target="_blank"><!-- --><img src="/wp-content/themes/Website-master/assets/sponsor2.png" alt="NASA" /></a><!-- --><a target="_blank" href="http://www.jpl.nasa.gov" target="_blank"><img src="/wp-content/themes/Website-master/assets/sponsor3.png" alt="JPL" /></a><!-- --><a target="_blank" href="http://www.ccsm.org" target="_blank"><img src="/wp-content/themes/Website-master/assets/sponsor4.png" alt="Chinese Club" width="100" /></a><!-- --><a target="_blank" href="http://www.sanmarinohs.org" target="_blank">SMHS PTSA</a></span></p>
+<a href="http://www.boeing.com" target="_blank"><img src="/ti-static/site/theme-Ti-22/assets/boeing.svgz" style="width:330px; height:auto;" alt="Boeing" /></a><!--
+--><a href="http://www.nasa.gov" target="_blank"><!-- --><img src="/ti-static/site/theme-Ti-22/assets/nasa.svgz"style="width:120px; height:auto;" alt="NASA" /></a><!--
+--><a href="http://www.jpl.nasa.gov" target="_blank"><img src="/ti-static/site/theme-Ti-22/assets/JPL.svgz"style="width:120px;height:auto" alt="JPL" /></a><!--
+--><a href="http://www.ccsm.org" target="_blank"><img src="/ti-static/site/theme-Ti-22/assets/chinese-club.svgz" alt="Chinese Club" style="width:100px; height:auto;" /></a><!--
+--><a href="http://www.sanmarinohs.org" target="_blank">SMHS PTSA</a></span>
 <p style="text-align: center;">The Richard Weis Family</p>
 <p style="text-align: center;">The Andrew Rooke Family</p>
 					<p>

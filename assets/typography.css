@@ -36,6 +36,8 @@ h4,
 h5,
 h6 {
     font-weight: 400;
+    letter-spacing: -2em;
+    letter-spacing: -0.05em;
 }
 
 #page
@@ -128,7 +130,6 @@ h3
     {
         font-size: 1.5em;
         /* 1.5x body copy size = 24px */
-        line-height: 1.25;
     }
 }
 
@@ -138,7 +139,6 @@ h3
     {
         font-size: 1.75em;
         /* 1.75x body copy size = 28px */
-        line-height: 1.25;
     }
 }
 

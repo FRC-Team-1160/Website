@@ -12,7 +12,7 @@
 					<p class="nature">Designed &amp; coded with <span class="red team1160-">&#xe65c;</span> in San Marino</p>
 				</div>
 
-				<ul class="s">
+				<ul class="screen">
 					<li class="follow red">
 						<a href="http://www.titaniumrobotics.com/for-students/donations/">
 							<span class="team1160-heart-outline"></span>
