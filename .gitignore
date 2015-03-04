@@ -41,3 +41,6 @@ ti-static/*
 docs/*
 
 .gitignore
+.htaccess-brandbook
+
+business plan-web-small.pdf
