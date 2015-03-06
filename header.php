@@ -176,10 +176,10 @@
 	}//if it isn't the blog index ?>
 
 		<div class="<?php if (is_front_page()) : ?>frontpage wrapper<?php else:?>normal wrapper<?php endif; ?>" id="page">
-
+			<header>
 			<!--START - NAVIGATION-->
 
-			<header id="menuwrap" class="custom-background">
+			<div id="menuwrap" class="custom-background">
 				<div class="border">
 				<div id="icon-nav">
 					<div class="menu">
@@ -235,7 +235,7 @@
 						<div class="clear"></div>
 					</div>
 				</div>
-			</header>
+			</div>
 		<div class="clear"></div>
 	<?php if(!is_front_page() && !is_404() && !is_search() && !is_home()) : ?>
 			<div id="subpages"><div class="limit">
@@ -314,3 +314,4 @@
 	}
 		}//if isn't a blog page and if has a thumbnail
 ?>
+</heder>

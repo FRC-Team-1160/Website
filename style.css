@@ -28,9 +28,7 @@ Version: 5.1.1
 html,
 body
 {
-	font-family: 'Source Sans Pro', 'Helvetica', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
-	line-height: 1.5;
-
+    font-family: 'Source Sans Pro', 'Trebuchet MS', 'Verdana', 'Arial', 'Helvetica', sans-serif;
 	z-index: -1;
 
 	height: 100%;
@@ -39,8 +37,6 @@ body
 
 	color: #222;
 	background: #eee;
-
-	-webkit-text-size-adjust: none;
 }
 
 /*
@@ -105,17 +101,17 @@ code
 {
 	font-family: monospace;
 	font-family: 'source code pro', monospace;
-	font-size: .9em;
+	/*font-size: .9em;
 
 	display: block;
 
-	width: 75%;
+	width: 100%;
 	margin: 1em auto;
 	padding: 1em;
 
 	color: #fff;
 	border-left: 5px solid #0067c6;
-	background-color: #444;
+	background-color: #444;*/
 }
 code.inline
 {

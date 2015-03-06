@@ -163,6 +163,9 @@ header .border
     box-shadow: 0 3px 0 0 #9b9b9b;
     box-shadow: 0 3px 0 0 rgba(0, 0, 0, .3);
 }
+#nav li:before {
+    display:block;
+}
 .wrapper #nav li.current-menu-item a,
 .wrapper #nav li.current-page-ancestor a,
 #subpages li.current-menu-item a,
@@ -496,9 +499,55 @@ header .border
 
     margin: auto;
 }
+/*
+*TABLE OF CONTENTS STYLES THIS IS FOR TABLE OF CONTENTS PLUS PLUGIN.
+*/
+#toc_container.ducttape {
+    position: fixed;
+    left: 5%;
+    top:13em;
+    max-height:80%;
+    overflow:scroll;
+    width: 25%;
+    transition:300ms ease-in-out top;
+    font-size:0.9em;
+}
+#toc_container.tighter {
+    top:3em;
+    transition:300ms ease-in-out top;
+}
+#toc_container ul {
+    margin:0;
+    padding:0;
+}
+.toc_list li {
+    list-style-type: none;
+}
 
+.toc_list a {
+    border: none;
+    background: rgba(220, 220, 220, 0.9);
+    padding: 0.5em 1.5em;
+    padding-right:0;
+    width: 100%;
+    display: block;
+    transition:300ms ease-in-out color;
+}
 
+.toc_list li li a {
+    padding-left: 2.5em;
+    background: rgba(230, 230, 230, 0.9);
+    transition:300ms ease-in-out color;
+}
 
+.toc_list li li li a {
+    padding-left: 3.5em;
+}
+
+.toc_list li a:hover {
+    background: rgba(240, 240, 240, 0.9);
+    transition:300ms ease-in-out color;
+}
 
 /* MENUS IN MOBILE AND TABLET */
 @media screen and (max-width: 53em)

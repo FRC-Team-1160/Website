@@ -4,7 +4,8 @@ Template Name: Home Page
 */
 ?>
 <?php get_header();?>
-<!--<div class="clear gap"></div>
+<!--THIS IS THE SLIDER THAT WE NO LONGER USE
+<div class="clear gap"></div>
 			<div class="screen gallery autoplay items-4">
 			<div id="item-1" class="control-operator"></div>
 			<div id="item-2" class="control-operator"></div>
@@ -67,7 +68,7 @@ Template Name: Home Page
 					</p>
 					<p><strong>FRC</strong>, the league that Titanium Robotics competes in, is the High School level robotics league and stands for <strong>FIRST Robotics Competition</strong>
 					<p>
-						<a class="button" href="/about-first">More About FIRST&reg;</a>
+						<a class="button" href="/FIRST">More About FIRST&reg;</a>
 					</p>
 				</div>
 			</div>
@@ -97,7 +98,7 @@ Template Name: Home Page
 				<p>
 					Team 1160 provides a place in the normal school environment for students to learn how to apply their skills in Science, Technology, Engineering, and Mathematics. We're a group of students and mentors whose main goal is to provide the world with the next generation of STEM leaders.
 				</p>
-				<a href="/about-us" class="button">More about Our Team</a>
+				<a href="/about" class="button">More about Our Team</a>
 			</div>
 			<div class="clear"></div>
 		</div>

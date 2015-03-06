@@ -102,6 +102,7 @@
 				</script>
 			<?php } ?>
 
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<!--UNIMPORTANT CSS CODE-->
 			<!--START GOOGLE FONTS-SOURCE SANS PRO-->
 				<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
@@ -111,6 +112,7 @@
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/forms.css?ver=3.2.3" />
 			<link property="stylesheet" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/print.css?ver=1.0" media="print" />
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/schedules.css?ver=2" />
+				<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/prism.css" />
 			<?php
 				$custom_fields = get_post_custom();
 				$construction = $custom_fields['construction'];
@@ -128,6 +130,9 @@
 		<!-- LIGATURES -->
 			<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/liga.js"></script>
 
+		<!-- PRISM CODE HIGHLIGHTER -->
+			<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/prism.js"></script>
+
 		<!-- NAVIGATION HOOK-UP -->
 				<script type="text/javascript">
 					var navigation = responsiveNav("#nav", {
@@ -137,6 +142,23 @@
 					});
 				</script>
 			<?php include_once("analyticstracking.php") ?>
+
+			<script>
+				(function($) {
+					var  mn = $("#toc_container");
+					    mns = "tighter";
+					    hdr = $('header').height();
+
+					$(window).scroll(function() {
+					  if( $(this).scrollTop() > hdr ) {
+					    mn.addClass(mns);
+					  } else {
+					    mn.removeClass(mns);
+					  }
+					});
+				})( jQuery );
+			</script>
+
 
 </body>
 </html>

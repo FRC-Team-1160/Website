@@ -1,6 +1,7 @@
 /* TYPOGRAPHY STYLES */
 body
 {
+    line-height: 1.4;
     font-size: 18px;
     font-weight:300;
 
@@ -8,6 +9,8 @@ body
     -webkit-font-feature-settings: 'kern' 1;
        -moz-font-feature-settings: 'kern' 1;
             font-feature-settings: 'kern' 1;
+
+    -webkit-text-size-adjust: none;
 }
 
 body,
