@@ -46,7 +46,8 @@ legend
 button,
 input,
 select,
-textarea
+textarea,
+.button
 {
     font-size: 1em; /* 1 */
 
@@ -70,7 +71,8 @@ select
  */
 
 button,
-input
+input,
+.button
 {
     line-height: normal;
 }
@@ -89,7 +91,8 @@ button,
 input[type='button'],
 /* 1 */
 input[type='reset'],
-input[type='submit']
+input[type='submit'],
+.button
 {
     cursor: pointer; /* 3 */
 
@@ -102,7 +105,8 @@ input[type='submit']
  */
 
 button[disabled],
-input[disabled]
+input[disabled],
+.button-disabled
 {
     cursor: default;
 }

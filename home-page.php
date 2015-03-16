@@ -112,8 +112,7 @@ Template Name: Home Page
 --><a href="http://www.jpl.nasa.gov" target="_blank"><img src="/ti-static/site/theme-Ti-22/assets/JPL.svgz"style="width:120px;height:auto" alt="JPL" /></a><!--
 --><a href="http://www.ccsm.org" target="_blank"><img src="/ti-static/site/theme-Ti-22/assets/chinese-club.svgz" alt="Chinese Club" style="width:100px; height:auto;" /></a><!--
 --><a href="http://www.sanmarinohs.org" target="_blank">SMHS PTSA</a></span>
-<p style="text-align: center;">The Richard Weis Family</p>
-<p style="text-align: center;">The Andrew Rooke Family</p>
+<p style="text-align: center;">The Rooke Family</p>
 					<p>
 						<a class="button" href="/donations">Become a Sponsor</a>
 					</p>

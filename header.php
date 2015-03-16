@@ -59,7 +59,7 @@
 		<![endif]-->
 
 <!--CSS-->
-			
+
 			<style>
 				.print {
 					display:none;
@@ -69,7 +69,6 @@
 
 		<!--MAIN STYLESHEET-->
 			<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('stylesheet_url'); ?>" /> <!-- NO VERSIONING HERE BECAUSE IT SHOULD REMAIN THE SAME -->
-	
 			<?php if(is_front_page()) { ?>
 				<link property="stylesheet" rel="stylesheet"	type="text/css"	href="<?php bloginfo('template_directory'); ?>/front-page.css?ver=2.11.4" />
 			<?php } ?>
@@ -297,6 +296,7 @@
 	</div>
 <?php } ?>
 
+</header>
 
 <?php //FEATURED IMAGE-CONTINUED (TITLE OF PAGE)
 	if(!(is_home() || is_page_template('home-page.php'))) {
@@ -314,4 +314,3 @@
 	}
 		}//if isn't a blog page and if has a thumbnail
 ?>
-</heder>

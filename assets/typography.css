@@ -51,7 +51,7 @@ h6 {
     /* equivalent to 20px */
 }
 
-@media (min-width: 43.75em)
+@media (max-width: 43.75em)
 {
     #page
     {
@@ -70,7 +70,7 @@ h1
     /* 45px / 36px */
 }
 
-@media (min-width: 43.75em)
+@media (max-width: 43.75em)
 {
     h1
     {
@@ -80,7 +80,7 @@ h1
     }
 }
 
-@media (min-width: 56.25em)
+@media (max-width: 56.25em)
 {
     h1
     {
@@ -99,7 +99,7 @@ h2
     /* 30px / 26px */
 }
 
-@media (min-width: 43.75em)
+@media (max-width: 43.75em)
 {
     h2
     {
@@ -109,7 +109,7 @@ h2
     }
 }
 
-@media (min-width: 56.25em)
+@media (max-width: 56.25em)
 {
     h2
     {
@@ -127,7 +127,7 @@ h3
     /* 25px / 22px */
 }
 
-@media (min-width: 43.75em)
+@media (max-width: 43.75em)
 {
     h3
     {
@@ -136,7 +136,7 @@ h3
     }
 }
 
-@media (min-width: 56.25em)
+@media (max-width: 56.25em)
 {
     h3
     {
@@ -152,7 +152,7 @@ h4
     line-height: 1.11111111;
 }
 
-@media (min-width: 43.75em)
+@media (max-width: 43.75em)
 {
     h4
     {
@@ -163,10 +163,17 @@ h4
 
 blockquote
 {
-    font-size: 1.25em;
+    font-size: 1.6em;
     /* 20px / 16px */
-    line-height: 1.25;
+    line-height: 1.5;
     /* 25px / 20px */
+}
+blockquote:before {
+    width:4rem;
+    display:block;
+    height:0px;
+    border:3px solid #0067C6;
+    content:' ';
 }
 
 blockquote p
@@ -174,7 +181,7 @@ blockquote p
     margin: 0;
 }
 
-@media (min-width: 43.75em)
+@media (max-width: 43.75em)
 {
     blockquote
     {

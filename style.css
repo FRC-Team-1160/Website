@@ -122,17 +122,9 @@ code.inline
 }
 blockquote
 {
-	width: 75%;
-	margin: 1em auto;
-	padding: 1em;
+	margin: 1rem -4rem;
 
-	color: #424242;
-	border-width: 0;
-	border-right-width: 5px;
-	border-right-style: solid;
-	border-left: 5px solid #0067c6;
-	background: #f2f2f2;
-	background: rgba(255, 255, 255, 0.7);
+	color: #0067C6;
 }
 img
 {
@@ -307,17 +299,31 @@ td
 }
 
 /* CLEAR CLASSES */
-.clear
-{
-	clear: both;
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clear:before,
+.clear:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
-.clearleft
-{
-	clear: left;
+
+.clear:after {
+    clear: both;
 }
-.clearright
-{
-	clear: right;
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clear {
+    *zoom: 1;
 }
 
 /* SINGLE POSTS */
@@ -1048,34 +1054,26 @@ footer p
 
 /*COLORS*/
 
-footer .red a,
-.red,
-.red a
+.blue,
+footer .blue a,
+.blue a
 {
-	color: #f9343e;
+	color: #0067c6;
 }
 
-footer .twitterblue a,
-.twitterblue,
-.twitterblue a
-{
-	color: #3cf;
+.gray,
+footer .gray a,
+.gray a {
+	color:#dad8d6;
 }
 
-footer .black a,
 .black,
+footer .black a,
 .black a,
 .black-wire,
 .black-wire a
 {
 	color: #222;
-}
-
-footer .blue a,
-.blue,
-.blue a
-{
-	color: #0067c6;
 }
 
 .au,
@@ -1104,6 +1102,59 @@ footer .blue a,
 	color: #00a887;
 }
 
+.red,
+footer .red a,
+.red a
+{
+	color: #f9343e;
+}
+
+.twitterblue,
+footer .twitterblue a,
+.twitterblue a
+{
+	color: #3cf;
+}
+
+.blue--block
+{
+	background-color: #0067c6;
+}
+
+.gray--block
+{
+	background-color:#dad8d6;
+}
+
+.black--block
+{
+	background-color: #222;
+}
+
+.au--block
+{
+	background-color: #f7eb5f;
+}
+
+.titanium--block
+{
+	background-color: #9aa5ae;
+}
+
+.rubiks--block
+{
+	background-color: #4f87a0;
+}
+.cu-2--block
+{
+	background-color: #a9c4e6;
+}
+.nature--block
+{
+	background-color: #00a887;
+}
+
+/*FOOTER*/
 footer li.follow
 {
 	font-size: 200%;
