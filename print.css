@@ -8,16 +8,19 @@
     html,
     body
     {
+        font-family: 'Source Sans Pro', sans-serif;
+
         background: none;
-        font-family:'Source Sans Pro', sans-serif;
     }
-    #page {
-        width:80%;
-        margin:auto;
-        margin-top:5em;
+    #page
+    {
+        width: 80%;
+        margin: auto;
+        margin-top: 5em;
     }
-    .logo {
-        width:15em;
+    .logo
+    {
+        width: 15em;
     }
     img.print
     {
@@ -44,13 +47,11 @@
     .thumbnail h1,
     #subpages h1
     {
-        font-weight: bold;
-
         position: relative;
 
         display: inline-block;
 
-        padding:1em 0 0;
+        padding: 1em 0 0;
 
         -webkit-animation: none;
                 animation: none;
@@ -65,14 +66,16 @@
         display: block;
         float: none;
 
+        width: auto;
+        max-width: 100%;
+        height: auto;
         margin: auto;
-        max-width:100%;
-        width:auto;
-        height:auto;
     }
-    .wp-caption-text {
-        font-style:italic;
-        text-align:center;
+    .wp-caption-text
+    {
+        font-style: italic;
+
+        text-align: center;
     }
     .normal,
     .wrapper
@@ -84,7 +87,8 @@
     {
         border: none;
     }
-    aside, article
+    aside,
+    article
     {
         padding: 1em;
     }
@@ -106,10 +110,14 @@
     {
         color: black;
     }
-    .copy {
-        text-align:center;
+    .copy
+    {
+        width: 100%;
+
+        text-align: center;
     }
-    .copy:after {
-        content:'Information found on www.titaniumrobotics.com';
+    .copy:after
+    {
+        content: 'Information found on www.titaniumrobotics.com';
     }
 }

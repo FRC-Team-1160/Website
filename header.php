@@ -276,11 +276,9 @@
 				<?php } ?>
 		<?php endif; ?>
 		<?php if(is_single() && 'forum'!==get_post_type()) : ?>
-				<div class="links screen <?php if(has_post_thumbnail( $post )) { ?> withthumbnail<?php }?>">
-				<ul style="width:100%;">
-					<li style="width:100%; padding:0;">
+				<div class="links screen <?php if(has_post_thumbnail()) { ?>withthumbnail<?php }?>">
+				<ul class="sublinks">
 						<?php the_breadcrumb(); ?>
-					</li>
 				</ul>
 				</div>
 		<?php endif; ?>

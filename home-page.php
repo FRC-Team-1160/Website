@@ -113,8 +113,8 @@ Template Name: Home Page
 --><a href="http://www.ccsm.org" target="_blank"><img src="/ti-static/site/theme-Ti-22/assets/chinese-club.svgz" alt="Chinese Club" style="width:100px; height:auto;" /></a><!--
 --><a href="http://www.sanmarinohs.org" target="_blank">SMHS PTSA</a></span>
 <p style="text-align: center;">The Rooke Family</p>
-					<p>
-						<a class="button" href="/donations">Become a Sponsor</a>
+					<p class="center">
+						<a class="button-large" href="/donations">Become a Sponsor</a>
 					</p>
 			</div>
 			<div class="entry-1-4 social leftside">

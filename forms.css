@@ -176,7 +176,7 @@ textarea
 
     vertical-align: top; /* 2 */
 
-    border-bottom:3px solid #9aa5ae;
+    border-bottom: 3px solid #9aa5ae;
 }
 
 input,
@@ -194,13 +194,12 @@ textarea
 
     transition: 100ms linear border;
 
-    border-bottom:3px solid #9aa5ae;
+    border-bottom: 3px solid #9aa5ae;
     border-radius: 0;
+    background: #dad8d6;
+    background: rgba(154, 165, 174, .2);
 
     -webkit-font-smoothing: antialiased;
-
-	background: #dad8d6;
-	background:rgba(154, 165, 174, 0.2);
 }
 
 input:focus,
@@ -208,11 +207,10 @@ select:focus,
 textarea:focus
 {
     border-color: #00a887;
-    border-color:rgba(255, 255, 255, 0); /* hide the border if rgba is supported */
+    border-color: rgba(255, 255, 255, 0); /* hide the border if rgba is supported */
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-
-	background:rgba(0, 168, 135, 0.2);
+    background: rgba(0, 168, 135, .2);
 }
 .pure-checkbox,
 .pure-radio
@@ -239,18 +237,16 @@ textarea:focus:invalid,
 select:focus:invalid
 {
     color: #b94a48;
-
-    border-color:#e9322d;
-
-	background: #f5a3a0;
-	background:rgba(238, 95, 91, 0.5);
+    border-color: #e9322d;
+    background: #f5a3a0;
+    background: rgba(238, 95, 91, .5);
 }
 input:focus:invalid:focus,
 textarea:focus:invalid:focus,
 select:focus:invalid:focus
 {
-	background: #f5a3a0;
-	background:rgba(238, 95, 91, 0.5);
+    background: #f5a3a0;
+    background: rgba(238, 95, 91, .5);
 }
 select
 {
@@ -413,7 +409,8 @@ legend
 .pure-button,
 button,
 input[type='submit'],
-select
+select,
+.button
 {
     line-height: normal;
     /* Structure */
@@ -452,10 +449,11 @@ a:focus
 
 .tags a,
 .pure-button,
-.button,
+[class^='button'],
 button,
 input[type='submit'],
-select
+select,
+.button-medium
 {
     font-family: inherit;
     font-size: inherit;
@@ -501,7 +499,7 @@ select
 .tags a:active,
 .pure-button-active,
 .pure-button:active,
-.button:active,
+[class^='button']:active,
 button:active,
 input[type='submit']:active,
 select:active
@@ -564,6 +562,58 @@ a.pure-button-selected
 .login-password label
 {
     display: block;
+}
+
+/* BUTTONS */
+
+[class*='button-small'],
+input[type='submit'][class*='button-small']
+{
+    font-size: 1rem;
+    font-weight: normal;
+
+    letter-spacing: inherit;
+    text-transform: none;
+
+    border-width: 1px;
+}
+
+[class*='button-large'],
+input[type='submit'][class*='button-large']
+{
+    font-size: 1.625rem;
+}
+
+[class*='--inverted']
+{
+    color: #fff;
+    border-color: transparent;
+    background-color: #4f87a0;
+}
+
+[class*='--inverted']:active
+{
+    color: #4f87a0;
+    background-color: transparent;
+}
+
+.center > [class*='button']
+{
+    margin: 1rem 0;
+
+    text-align: center;
+}
+
+.center
+{
+    text-align: center;
+}
+
+span.center
+{
+    display: block;
+
+    width: 100%;
 }
 
 @media only screen and (max-width : 720px)

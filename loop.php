@@ -38,10 +38,12 @@
 
 <div class="post-content">
 
+								<article>
+
 	<?php // SIDEBAR FOR TWO COLUMN & BOOKMARKS ?>
 
 							<?php if (is_page_template('two-column.php', 'bookmarks.php') || is_single() || is_home()) { ?>
-								<aside class="sidebar-left">
+								<aside class="entry-1-3">
 									<section class="sidebar-content">
 										<div class="sidebarpad">
 
@@ -126,14 +128,8 @@
 									</section>
 								</aside>
 
-								<article class="rightcontent">
-
-							<?php } else { ?>
-
-								<article class="<?php if (is_page_template('page-contact-us.php')) { ?>entry-3-4<?php } ?>">
-
-							<?php } ?>
-									<div class="entry">
+							<?php } else {}?>
+									<div class="entry<?php if (is_page_template('two-column.php', 'bookmarks.php') || is_single() || is_home()) {?>-2-3<?php } elseif (is_page_template('page-contact-us.php')) {?>-1-2<?php }?>">
 
 	<?php // TITLE ?>
 
@@ -199,8 +195,8 @@
 	<?php // CONTACT PAGE SPECIFIC ?>
 
 						<?php if (is_page_template('page-contact-us.php')) { ?>
-								<article class="entry-1-4">
-									<div class="entry contact">
+								<article class="entry-1-2">
+									<div class="contact">
 										<?php if(isset($emailSent) && $emailSent == true) { ?>
 											<div class="thanks" id="message">
 												<p>Thanks, your email was sent successfully.</p>
@@ -248,7 +244,7 @@
 
 												<textarea name="comments" required="required" id="commentsText" rows="8" placeholder="Message" class="pure-input-1"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
 											<div class="clear"></div>
-												<input type="submit" class="pure-button pure-input" />
+												<span class="center"><input type="submit" class="button" /></span>
 
 												<input type="hidden" name="submitted" id="submitted" value="true" />
 

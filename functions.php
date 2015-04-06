@@ -639,15 +639,16 @@ function filter_where($where = '') {
 
 function the_breadcrumb() {
 	if (!is_home()) {
-		echo '<a href="';
+		echo '<li><a href="';
 		echo get_settings('home');
 		echo '">';
 		bloginfo('name');
-		echo "</a> / ";
+		echo "</a> &gt;</li>";
 		if (is_category() || is_single()) {
+			echo '<li>';
 			the_category(' + ');
 			if (is_single()) {
-				echo " / ";
+				echo " &gt;</li> ";
 				the_title();
 			}
 		} elseif (is_page()) {

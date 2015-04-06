@@ -32,14 +32,22 @@ h6
 {
     font-size-adjust: .5;
 }
+
 h1,
-h2,
+h2
+{
+    font-weight:300;
+    letter-spacing: -1px;
+    letter-spacing: -0.05em;
+}
+
 h3,
 h4,
 h5,
-h6 {
-    font-weight: 400;
-    letter-spacing: -2em;
+h6
+{
+    font-weight: normal;
+    letter-spacing: -1px;
     letter-spacing: -0.05em;
 }
 
@@ -64,9 +72,9 @@ h6 {
 
 h1
 {
-    font-size: 2em;
+    font-size: 3em;
     /* 2x body copy size = 32px */
-    line-height: 1.25;
+    line-height: 1.05;
     /* 45px / 36px */
 }
 
@@ -80,22 +88,11 @@ h1
     }
 }
 
-@media (max-width: 56.25em)
-{
-    h1
-    {
-        font-size: 3em;
-        /* 3x body copy size = 48px */
-        line-height: 1.05;
-        /* keep to a multiple of the 20px line height and something more appropriate for display headings */
-    }
-}
-
 h2
 {
-    font-size: 1.625em;
+    font-size: 2.25em;
     /* 1.625x body copy size = 26px */
-    line-height: 1.15384615;
+    line-height: 1.25;
     /* 30px / 26px */
 }
 
@@ -109,19 +106,9 @@ h2
     }
 }
 
-@media (max-width: 56.25em)
-{
-    h2
-    {
-        font-size: 2.25em;
-        /* 2.25x body copy size = 36px */
-        line-height: 1.25;
-    }
-}
-
 h3
 {
-    font-size: 1.375em;
+    font-size: 1.75em;
     /* 1.375x body copy size = 22px */
     line-height: 1.13636364;
     /* 25px / 22px */
@@ -133,15 +120,6 @@ h3
     {
         font-size: 1.5em;
         /* 1.5x body copy size = 24px */
-    }
-}
-
-@media (max-width: 56.25em)
-{
-    h3
-    {
-        font-size: 1.75em;
-        /* 1.75x body copy size = 28px */
     }
 }
 
@@ -159,6 +137,17 @@ h4
         line-height: 1.22222222;
         /* (22px / 18px */
     }
+}
+
+h5,
+h6
+{
+    font-size:1em;
+}
+
+h6
+{
+    font-weight:300;
 }
 
 blockquote
@@ -189,14 +178,18 @@ blockquote p
         /* 24px / 16px = */
         line-height: 1.45833333;
         /* 35px / 24px */
-        width:100%;
+        margin-left:-2rem;
+    }
+    blockquote:before {
+        width:2em;
     }
 }
 p
 {
-    margin: 12pt 0;
+    margin: 18px 0;
     margin: 1rem 0;
 }
+
 p.nopadding
 {
     margin: 0;
