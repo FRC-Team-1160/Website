@@ -630,7 +630,14 @@ span.center
 
 @media only screen and (max-width : 480px)
 {
-    button[type='submit']
+    button[type='submit'],
+    .tags a,
+    .pure-button,
+    [class^="button"],
+    button,
+    input[type='submit'],
+    select,
+    .button-medium
     {
         margin: .7em 0 0;
     }
