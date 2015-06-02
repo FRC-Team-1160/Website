@@ -107,6 +107,7 @@ header .border
     margin: 0 1em;
 
     transition-timing-function: cubic-bezier(.85, .0, 1.0, 1.0)!important;
+    -webkit-transition-timing-function: cubic-bezier(.85, .0, 1.0, 1.0)!important;
     vertical-align: middle;
 }
 #nav.home-links
@@ -282,6 +283,7 @@ header .border
     padding-bottom: 30px;
 
     transition-timing-function: cubic-bezier(.85, .0, 1.0, 1.0);
+    -webkit-transition-timing-function: cubic-bezier(.85, .0, 1.0, 1.0);
     transition-duration: 500ms;
     transition-property: padding, -webkit-transform;
     transition-property: padding, transform;
@@ -294,6 +296,7 @@ header .border
     padding-bottom: 18px;
 
     transition-timing-function: cubic-bezier(.85, .0, 1.0, 1.0);
+    -webkit-transition-timing-function: cubic-bezier(.85, .0, 1.0, 1.0);
     transition-duration: 500ms;
     transition-property: padding, -webkit-transform;
     transition-property: padding, transform;

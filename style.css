@@ -1636,7 +1636,7 @@ table.meetings tr:nth-of-type(odd)
 
         width: 100%;
         margin: auto;
-        padding: 3em;
+        padding: 1.5em;
     }
     .entry + .entry,
     [class*='entry-'] + [class*='entry-']

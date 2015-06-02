@@ -849,6 +849,7 @@ figure {
 .front .thumbnail {
 	padding:10% 0 25% 0;
 	font-size:2em;
+	background:rgba(0,0,0, 0.1);
 }
 .front .featured {
 	/*background:url('/ti-static/site/theme-Ti-22/assets/cover.jpg');*/
@@ -941,10 +942,6 @@ div.homecontainer:last-child
 
 @media screen and (max-width: 720px)
 {
-	.homecontainer [class*='entry-']:first-of-type
-	{
-		padding-bottom: 1em;
-	}
 	.sponsored,
 	.social
 	{
